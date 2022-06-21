@@ -22,10 +22,12 @@ The main purpose of this project is:
  <li>to help you find a better financial plan for your retirement
 </ul>
 
-<P><b>This tool is focused almost entirely on the retirement phase of life (spending), not on the working phase of life (saving)</b>.
+<P><b>This tool is focused almost entirely on the retirement phase of life (spending), not on the 
+working phase of life (saving)</b>.
 
 <P>The level of detail in this tool is higher than usual.
-Whereas most tools focus on a high-level rate of return, this tool actually goes through every single day of your retirement, and applies transactions to your accounts.
+Whereas most tools focus on a high-level rate of return, this tool actually goes through every single day of your retirement, 
+and applies transactions to your accounts.
 It also calculates a basic tax return at the end of every year.
 
 <P>The level of detail will not reflect your actual reality 100%, but it will get you closer to reality than most other tools.
@@ -37,11 +39,12 @@ So this tool tries to reach a compromise, and <b>tries to reflect reality to a r
 Every retirement financial plan should be supported by a robust simulation showing you the numbers.
 Personal finance is quite complex.
 There are many moving parts, and those parts all work together in your particular case can be found only with a simulator. 
-<b>You can't do these calculations in your head, and you shouldn't rely entirely on <em>rules of thumb</em>, because such rules usually have exceptions.</b>
+<b>You can't do these calculations in your head, and you shouldn't rely entirely on <em>rules of thumb</em>, because such 
+rules usually have exceptions.</b>
 
 <P>This tool has:
 <ul>
- <li>helped me find thousands in additional dollars in additional cash flow
+ <li>helped me find thousands of additional dollars in cash flow
  <li>increased my level of confidence in my financial plan
  <li>helped me answer many different questions
  <li>helped me in speaking to a financial advisor
@@ -58,7 +61,7 @@ This tool has a limited scope:
 
 In spite of these limitations, you may find it useful to examine the example scenario outputs.
 
-<P>There are two important issues which I hope to address soon:
+<P>There are <b>two important issues which I hope to address soon</b>:
 <ul>
   <li>add support for ETFs (Exchange-traded funds, an asset class that is very widely held)
   <li>add support for LIRA/LIF accounts
@@ -70,13 +73,14 @@ In general, I would like to improve the tool. I could use some assistance with t
 Features include:
 <ul>
  <li>input-output using text files
- <li>the text input is a <em>scenario</em>, a text file describing details of your accounts, assets, transactions, 
+ <li>the input text file is a <em>scenario</em>, a text file describing details of your accounts, assets, transactions, 
   start-date for retirement, expected CPP benefit, pension, and so on
- <li>internally, the system runs through every single day of your entire retirement life, and applies transactions defined in your scenario file
+ <li>internally, the system runs through every single day of your entire retirement life, and applies transactions defined 
+ in your scenario file
  <li>some scenarios have randomness, and some don't 
  <li>the randomness only comes from variation in the market price of securities
- <li>basic tax returns, both federal and provincial (territories not included at present)
- <li>output in .csv (comma-separated) files, which are easily imported into spreadsheet tools (and thereby charted)
+ <li>basic tax returns are calculated, both federal and provincial (territories not included at present)
+ <li>the output is in .csv (comma-separated) files, which are easily imported into spreadsheet tools (and thereby charted)
  <li>log output shows transactions, yearly summaries, and tax returns
  <li>you can repeat a scenario multiple times, to reflect the spread in outcomes caused by randomness (Monte Carlo simulation)
  <li>the tool can run multiple scenarios in sequence 
@@ -103,7 +107,7 @@ Features include:
 </ul>
 
 <h2>Example Scenarios</h2>
-These example scenarios are included in the source. 
+These example scenarios are included in the source code. 
 They are listed in rough order of increasing complexity.
 
 <P>Note that the <em>.ini</em> file is the scenario file, and the remaining files in the directory are outputs that 
@@ -136,19 +140,20 @@ they retire at 65, from OAS, GIS, and CPP. The same can be said if you made 100K
 you are 65. 
 
 <P><b>It's the net cash flow that's most important.</b> That's where the focus should be. 
-Example from two scenarios, A vs B: A has 14k less tax than B, but only 2.9k more net cash than B.
-If you leave out the net, and only focus on the tax saving, then you aren't fully informed.
+An example I saw had two scenarios, A vs B: A had 14k less tax than B, but only 2.9k more net cash than B.
+If you leave out the net cash, and only focus on the tax saving, then you aren't fully informed.
 
 <P><b>Spending generally decreases significantly in old age.</b>
 Many people think in terms of having a flat cash flow, the same from retirement until death.
 But, in reality, that's not usually what happens. 
-That being the case, it's a challenge to generate a cash flow curve that starts out higher and ends up lower, 
+It's a challenge to generate a cash flow curve that starts out higher and ends up lower, 
 because the natural tendency for cash flow is to grow over time.
-For those on a government pension (with no other savings), the cash flow is basically flat over time.
+For those on a government pension (with no other savings), the cash flow is basically flat over time, and there's not much you 
+can do about it.
 
 <P><b>Many people die too rich</b>.
 The psychology of the saver is different from the psychology of the spender.
-Some people spend many years as a saver, and later fail to change into a spender.
+Some spend many years as a saver, and later fail to change into a spender.
 They keep growing their net worth until the end.
 That isn't necessarily the wrong thing to do, but for many it's likely not the best outcome.
 Oversaving can be as bad as overspending; perhaps it's best to avoid extremes.
@@ -160,13 +165,13 @@ During retirement, there's no need to be so conservative.
 Periodically selling a small portion of your principal can generate a lot more cash flow, 
 and is almost always better than relying solely on the dividends.   
 
-<P><b>Selling stocks when the market is up, as opposed to when you want the cash, is very beneficial.</b>
+<P><b>Selling stocks when the market is up, as opposed to when you want the cash, or a fixed schedule, is very beneficial.</b>
 Given the large possible swings in stock prices, it makes sense to do <em>profit-taking</em> when the price is up.
 You then save the cash for you future needs in 1-2 years (perhaps by purchasing a GIC).
 You should avoid being compelled to sell stocks at a particular time.
 The typical recession lasts about 1.5 years. 
 
-<P><b>Desiring a sizeable legacy changes your strategy significantly.</b> 
+<P><b>Desiring a sizeable legacy changes your plan significantly.</b> 
 You have to understand what your goal is for your estate.
 Some want to leave a significant legacy, and others want to spend as much as they can.
 Both points of view are valid. 
@@ -185,21 +190,15 @@ Getting started:
 <ul>
  <li>download the <a href='https://www.eclipse.org/downloads/'>Eclipse</a> IDE (Integrated Development Environment). 
  Install Eclipse to a convenient location on your computer. This is a tool that programmers use to run and 
- edit code. In your case, you just want to run the code, not change it.
- <li>add the <em>JavaCC Eclipse plugin</em>em>. 
- In Eclipse: Help -> Eclipse Marketplace -> Find: 'javacc', and install the plugin.
+ edit code. In most cases, you just want to run the code, not change it.
+ <li>add the <em>JavaCC Eclipse plugin</em>. 
+ In Eclipse: Help -> Eclipse Marketplace -> Find: <em>javacc</em>em>, and install the plugin.
  JavaCC is the tool that parses the input scenario file.
 </ul>
 
-<P>When you open Eclipse, it asks you to point it to your <em>workspace</em> folder. 
-That simply means a folder that holds a number of projects.
+<P>When you open Eclipse, it asks you to point it to your <em>workspace</em> folder, which is simply 
+a folder that holds a number of projects.
 For example, I have these folders on my computer: 
-<ul>
- <li>my Eclipse <em>workspace</em> folder is: <em>C:\johanley\ProjectsPhoton\</em>
- <li>my workspace contains the <em>end-game</em> project folder: <em>C:\johanley\ProjectsPhoton\end-game</em>
-</ul>
-
-In summary, on my machine, the folders are like this:
 <pre>
 C:\johanley\ProjectsPhoton\   (my workspace folder)
   end-game                    (the project folder for the end-game project)
@@ -212,14 +211,15 @@ C:\johanley\ProjectsPhoton\   (my workspace folder)
     README.md
 </pre>
 
-<P>Yours will look the same, but of course with a different workspace folder.
+<P>Your setup will be similar, but with a different workspace folder.
 
 <P><b>First, create a workspace folder on your machine.</b> 
-Then you need to import the source code into a new project in your workspace.
+
+<P>Next, you need to import the source code into a new project in your workspace.
 <ul> 
  <li>go to the <a href='https://github.com/johanley/end-game'>github repository</a>. 
- <li>click on the  "Code" button.
- <li>click on Download ZIP. This will put a zip file containing all the code into your downloads folder.
+ <li>click on the <em>Code</em> button.
+ <li>click on <em>Download ZIP</em>. This will put a zip file containing all the code into your downloads folder.
  <li>change the name of the zip from <em>end-game-master.zip</em> to <em>end-game.zip</em>.
  <li>copy the zip file to your workspace folder
  <li>unzip the zip file in place
@@ -231,6 +231,7 @@ Then you need to import the source code into a new project in your workspace.
  <li>in Eclipse: File -> New -> Java project ... 
 </ul>
 
+Now you are ready to experiment with your own scenarios.
 <ul>
  <li>create your own scenario file. You can place the scenario anywhere you want. 
  Many will find it convenient to follow the existing pattern under the <em>scenario</em> folder in the project.
