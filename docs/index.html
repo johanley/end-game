@@ -13,9 +13,63 @@
 
 <h2>End Game: Personal finance simulator for retired Canadians</h2>
 
+<P>The source code is <a href='https://github.com/johanley/end-game'>here</a>.
  
- <P>The source code is <a href='https://github.com/johanley/end-game'>here</a>.
- 
+<h2>Overview<h2>
+The main purpose of this project is to: 
+<ul> 
+ <li>help you explore different financial retirement scenarios  
+ <li>help you find a better retirement plan
+</ul>
+
+<P>This tool is focused almost entirely on the retirement phase of life (spending), not the working phase of life (saving).
+
+<P>The level of detail is higher than you typically see in such tools.
+The tool actually goes through every single day of your retirement, and applies transactions to your accounts.
+It also calculates a basic tax return at the end of every year.
+
+<P>The level of detail will not reflect your actual reality 100%, but it will get you closer to reality than most other tools.
+It's a trade off: in a perfect world, matching reality 100% is of course desirable; but to implement in software all possible cases
+for all possible conditions is not practical. So, this tool tries to reach a compromise, and tries to reflect 
+reality "to reasonable degree", but not with 100% accuracy. 
+
+<P>
+Every retirement financial plan should be supported by a robust simulation showing you the numbers.
+Personal finance is quite complex.
+There are many moving parts, and the end result of how those parts all work together in your particular situation 
+can be found only with a simulator. You can't do these calculations in your head, and  
+you shouldn't rely entirely on "rules of thumb", because such rules usually have exceptions.
+
+<P>This tool has:
+<ul>
+ <li>helped me "find" thousands in additional dollars in cash flow
+ <li>increased my level of confidence in my financial plan
+ <li>helped me answer many different questions
+</ul>
+
+<h2>Limitations<h2>
+I'm going to tell you the defects of this tool up front, because I don't want to waste your time.
+
+This tool currently reflects the financial situation of its author, and is limited in scope:
+<ul>
+ <li>there's no logic for spouses
+ <li>the set of supported securities is small: cash, stocks, and GICs. (A glaring omission is ETFs, which will likely be addressed soon.)
+ <li>it supports RSP/RIF, TFSA, non-registered accounts, and simple bank accounts, but no other types of accounts (I'll likely add LIRA/LIF in the near future).
+</ul>
+
+In spite of these limitations, you may find it useful to examine the outputs and design of this code.
+
+<h2>Input and Output<h2>
+
+The input and output of this tool are simple text files.
+The input file is called a scenario file. 
+It details your current holdings in various accounts, transactions in the accounts, OAS, CPP, GIS, your federal and 
+provincial tax returns, and so on.  
+
+This tool is implemented using the Java programming language.
+It takes its input from editable text files, to let you easily run different scenarios.
+(The input text files are parsed using the JavaCC parser generator.)
+
 
 </body>
 </html>
