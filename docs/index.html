@@ -102,6 +102,30 @@ Features include:
  <li>the life-table stats from Statistics Canada are for the Canada-wide case, not for the specific province
 </ul>
 
+<h2>Example Scenarios</h2>
+These example scenarios are included in the source. 
+They are listed in rough order of increasing complexity.
+
+<P>Note that the <em>.ini</em> file is the scenario file, and the remaining files in the directory are outputs that 
+result from executing the scenario. The provincial tax return is for PE, Prince Edward Island, simply because 
+that's where the author resides. The tool allows for all other provinces as well.
+
+<table class='report'>
+ <tr><th>ID<th>Description
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/01.1'>01.1</a><td>Never worked, no savings, retires at 65. OAS/GIS, rent 700. PE. Deterministic.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/01.2'>01.2</a><td>Worker with no savings, retires at 65. CPP 300/month, OAS/GIS. PE. Deterministic.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/01.3'>01.3</a><td>Worker with no savings, retires at 65. Average CPP 673/month, OAS/GIS, PE. Deterministic.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/01.4'>01.4</a><td> Worker with no savings, retires at 65. CPP max monthly 1175.75, OAS/GIS. PE. Deterministic.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/02.1'>02.1</a><td>Only a TFSA with 50k in blue-chip dividends. Half the average CPP. 3% dividend growth, 3% stock price growth.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/02.2'>02.2</a><td>Only a TFSA with 100k in blue-chip dividends. Half the average CPP. 3% dividend growth, 3% stock price growth.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/02.3'>02.3</a><td>Only a RIF with 100k in blue-chip dividends. Half the average CPP. 3% dividend growth, 3% stock price growth.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/02.4'>02.4</a><td>Only a NRA with 100k in blue-chip dividends. Half the average CPP. 3% dividend growth, 3% stock price growth.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/03.1'>03.1</a><td>Dividends only, never sell stocks. 3% dividend growth, 3% stock price growth.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/07.1'>07.1</a><td>Pension 2000 monthly, no other savings, house unsold, retires at 65. Average CPP 673/month, OAS/GIS. PE. Deterministic.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/07.2'>07.2</a><td>Govt of Canada pension 2234.00/month, no other savings, house unsold, retires at 65. Average CPP 673/month, OAS/GIS. PE. Deterministic.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/07.3'>07.3</a><td>GOC large pension 5483/month, no other savings, house unsold, retires at 65. Average CPP 673/month, OAS/GIS. PE. Deterministic.
+</table>
+
 <h2>Lessons Learned</h2>
 
 <b>Those with no savings will have cash flow in the low 20s.</b>
@@ -157,6 +181,67 @@ The output spreadsheet files of this project usually incorporate this stat as a 
  
 <h2>Running The Code</h2>
 
+Getting started:
+<ul>
+ <li>download the <a href='https://www.eclipse.org/downloads/'>Eclipse</a> IDE (Integrated Development Environment). 
+ Install Eclipse to a convenient location on your computer. This is a tool that programmers use to run and 
+ edit code. In your case, you just want to run the code, not change it.
+ <li>add the <em>JavaCC Eclipse plugin</em>em>. 
+ In Eclipse: Help -> Eclipse Marketplace -> Find: 'javacc', and install the plugin.
+ JavaCC is the tool that parses the input scenario file.
+</ul>
+
+<P>When you open Eclipse, it asks you to point it to your <em>workspace</em> folder. 
+That simply means a folder that holds a number of projects.
+For example, I have these folders on my computer: 
+<ul>
+ <li>my Eclipse <em>workspace</em> folder is: <em>C:\johanley\ProjectsPhoton\</em>
+ <li>my workspace contains the <em>end-game</em> project folder: <em>C:\johanley\ProjectsPhoton\end-game</em>
+</ul>
+
+In summary, on my machine, the folders are like this:
+<pre>
+C:\johanley\ProjectsPhoton\   (my workspace folder)
+  end-game                    (the project folder for the end-game project)
+    docs            
+    input
+    lib
+    scenario
+    src
+    LICENSE.txt
+    README.md
+</pre>
+
+<P>Yours will look the same, but of course with a different workspace folder.
+
+<P><b>First, create a workspace folder on your machine.</b> 
+Then you need to import the source code into a new project in your workspace.
+<ul> 
+ <li>go to the <a href='https://github.com/johanley/end-game'>github repository</a>. 
+ <li>click on the  "Code" button.
+ <li>click on Download ZIP. This will put a zip file containing all the code into your downloads folder.
+ <li>change the name of the zip from <em>end-game-master.zip</em> to <em>end-game.zip</em>.
+ <li>copy the zip file to your workspace folder
+ <li>unzip the zip file in place
+ <li>your folders should follow the pattern shown above
+</ul>
+
+<P>Once that is done, you have to tell Eclipse about the project folder:
+<ul>
+ <li>in Eclipse: File -> New -> Java project ... 
+</ul>
+
+<ul>
+ <li>create your own scenario file. You can place the scenario anywhere you want. 
+ Many will find it convenient to follow the existing pattern under the <em>scenario</em> folder in the project.
+ You'll likely want to explore multiple scenarios, so you might create multiple folders under <em>scenario</em>, one folder 
+ for each new scenario. 
+ <li>execute the <em>RunSimulation</em> class. 
+ You need to tell it the file location of your scenario file.
+ The simplest way is to hard-code it in the <em>RunSimulation</em> class itself. 
+</ul>
+
+
 <h2>Web Site Versus Stand-alone</h2>
 When deploying this code under a web site:
 <ul>
@@ -178,29 +263,6 @@ Advantages of running this code locally on your computer:
 </ul> 
  
 
-<h2>Example Scenarios</h2>
-These example scenarios are included in the source. 
-They are listed in rough order of increasing complexity.
-
-<P>Note that the <em>.ini</em> file is the scenario file, and the remaining files in the directory are outputs that 
-result from executing the scenario. The provincial tax return is for PE, Prince Edward Island, simply because 
-that's where the author resides. The tool allows for all other provinces as well.
-
-<table class='report'>
- <tr><th>ID<th>Description
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/01.1'>01.1</a><td>Never worked, no savings, retires at 65. OAS/GIS, rent 700. PE. Deterministic.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/01.2'>01.2</a><td>Worker with no savings, retires at 65. CPP 300/month, OAS/GIS. PE. Deterministic.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/01.3'>01.3</a><td>Worker with no savings, retires at 65. Average CPP 673/month, OAS/GIS, PE. Deterministic.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/01.4'>01.4</a><td> Worker with no savings, retires at 65. CPP max monthly 1175.75, OAS/GIS. PE. Deterministic.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/02.1'>02.1</a><td>Only a TFSA with 50k in blue-chip dividends. Half the average CPP. 3% dividend growth, 3% stock price growth.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/02.2'>02.2</a><td>Only a TFSA with 100k in blue-chip dividends. Half the average CPP. 3% dividend growth, 3% stock price growth.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/02.3'>02.3</a><td>Only a RIF with 100k in blue-chip dividends. Half the average CPP. 3% dividend growth, 3% stock price growth.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/02.4'>02.4</a><td>Only a NRA with 100k in blue-chip dividends. Half the average CPP. 3% dividend growth, 3% stock price growth.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/03.1'>03.1</a><td>Dividends only, never sell stocks. 3% dividend growth, 3% stock price growth.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/07.1'>07.1</a><td>Pension 2000 monthly, no other savings, house unsold, retires at 65. Average CPP 673/month, OAS/GIS. PE. Deterministic.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/07.2'>07.2</a><td>Govt of Canada pension 2234.00/month, no other savings, house unsold, retires at 65. Average CPP 673/month, OAS/GIS, and maybe GIS. PE. Deterministic.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/07.3'>07.3</a><td>GOC large pension 5483/month, no other savings, house unsold, retires at 65. Average CPP 673/month, OAS/GIS, and maybe GIS. PE. Deterministic.
-</table>
 
 </body>
 </html>
