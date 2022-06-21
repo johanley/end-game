@@ -22,9 +22,9 @@ The main purpose of this project is to:
  <li>help you find a better financial plan for your retirement
 </ul>
 
-<P><b>This tool is focused almost entirely on the retirement phase of life (spending), not the working phase of life (saving)</b>.
+<P><b>This tool is focused almost entirely on the retirement phase of life (spending), not on the working phase of life (saving)</b>.
 
-<P>The level of detail is higher than you typically see in such tools.
+<P>The level of detail in this tool is higher than usual.
 The tool actually goes through every single day of your retirement, and applies transactions to your accounts.
 It also calculates a basic tax return at the end of every year.
 
@@ -36,7 +36,7 @@ So, this tool tries to reach a compromise, and <b>tries to reflect reality to a 
 <P>
 Every retirement financial plan should be supported by a robust simulation showing you the numbers.
 Personal finance is quite complex.
-There are many moving parts, and the end result of how those parts all work together in your particular situation 
+There are many moving parts, and the end result of how those parts all work together in your particular case 
 can be found only with a simulator. 
 <b>You can't do these calculations in your head, and you shouldn't rely entirely on <em>rules of thumb</em>, because such rules usually have exceptions.</b>
 
@@ -44,13 +44,13 @@ can be found only with a simulator.
 <ul>
  <li>helped me find thousands in additional dollars in additional cash flow
  <li>increased my level of confidence in my financial plan
- <li>>helped me answer many different questions
+ <li>helped me answer many different questions
 </ul>
 
 <h2>Limitations</h2>
 I'm going to tell you the defects of this tool up front, because I don't want to waste your time.
 
-This tool currently reflects the financial situation of its author, and is limited in scope:
+This tool has a limited scope:
 <ul>
  <li>there's no logic for spouses
  <li>the set of supported securities is only cash, stocks, and GICs. (A glaring omission is ETFs, which will likely be addressed soon.)
@@ -60,7 +60,7 @@ This tool currently reflects the financial situation of its author, and is limit
 
 In spite of these limitations, you may find it useful to examine the example scenario outputs.
 
-<h2>Feautures</h2>
+<h2>Features</h2>
 Features include:
 <ul>
  <li>input-output using text files
@@ -72,7 +72,7 @@ Features include:
  <li>basic tax returns, both federal and provincial (territories not included at present)
  <li>output in .csv (comma-separated) files, which are easily imported into spreadsheet tools (and thereby charted)
  <li>log output shows transactions, yearly summaries, and tax returns
- <li>you repeat a scenario multiple times, to reflect the spread in outcomes caused by randomness (Monte Carlo simulation)
+ <li>you can repeat a scenario multiple times, to reflect the spread in outcomes caused by randomness (Monte Carlo simulation)
  <li>the tool can run multiple scenarios in sequence 
  <li>the code is implemented in Java, and can be run on any computer
  <li>changes to the market prices of stock are applied once a year
@@ -82,12 +82,19 @@ Features include:
  For example, the sale of a primary residence can be modeled as a simple windfall deposited to your bank account, since 
  no tax is paid on the capital gain when you sell your home.  
 
-There are two distinct types of scenarios:
+<P>There are two distinct types of scenarios:
 <ul> 
  <li>those with precisely predictable cash flows (OAS, CPP, GIS, annuities, pensions)
  <li>those without precisely predictable cash flows (assets vary in value with the market price)
 </ul>
 
+<P>Examples of approximations made by the tool:
+<ul> 
+ <li>stock prices are updated just once a year (using a policy you define) 
+ <li>the tax return is calculated and applied simply at the end of the year, and not later in the following year
+ <li>OAS clawbacks are applied (for high income earners) all in one year; in reality, the clawback is applied over 2 calendar years
+ <li>the life-table stats from Statistics Canada are for the Canada-wide case, not for the specific province
+</ul>
 
 <h2>Lessons Learned</h2>
 
@@ -115,7 +122,7 @@ They keep growing their net worth until the end.
 That isn't necessarily the wrong thing to do, but for many it's likely not the best outcome.
 Oversaving can be as bad as overspending; perhaps it's best to avoid extremes.
 
-<P>Living only off of dividends is almost always an error.</b>
+<P><b>Living only off of dividends is almost always an error.</b>
 Some investors are enthusiastic about dividend stocks, and attempt to generate cash flow only from the dividends, 
 without selling any of the principal invested in the stocks.
 During retirement, there's no need to be so conservative.
@@ -123,8 +130,8 @@ Periodically selling a small portion of your principal can generate a lot more c
 and is almost always better than relying solely on the dividends.   
 
 <P><b>Selling stocks when the market is up, as opposed to when you want the cash, is very beneficial.</b>
-Given the large possible swings in stock prices, it makes sense to do <em>profit-taking</em> when the price is up, 
-sell stock, and save the cash for you future needs in 1-2 years (perhaps by purchasing a GIC).
+Given the large possible swings in stock prices, it makes sense to do <em>profit-taking</em> when the price is up.
+You then save the cash for you future needs in 1-2 years (perhaps by purchasing a GIC).
 You should avoid being compelled to sell stocks at a particular time.
 The typical recession lasts about 1.5 years. 
 
@@ -135,9 +142,10 @@ Both points of view are valid.
 But you have to know which is best for you, and act accordingly.
 
 <P><b>Retirement planning is different from other projects, because it involves your own death.</b>
-It's useful to be reminded that it may, by chance, happen sooner rather than later.
-The basic statistics from Statcan in this regard is interesting: the idea is that you start with a cohort of 
+It's useful to be reminded that you might, by chance, die sooner rather than later.
+The basic statistic from Statcan in this regard is interesting: the idea is that you start with a cohort of 
 100,000 people at birth, and you list the number of people that are still alive, at each year of age.
+(The output spreadsheet files of this project usually incorporate this stat as a reminder of its importance.)
 
  
 <h2>Running The Code</h2>
