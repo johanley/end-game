@@ -42,9 +42,9 @@ can be found only with a simulator.
 
 <P>This tool has:
 <ul>
- <li><b>helped me <em>find</em> thousands in additional dollars in cash flow</b>
- <li><b>increased my level of confidence in my financial plan</b>
- <li><b>helped me answer many different questions</b>
+ <li>helped me find thousands in additional dollars in additional cash flow
+ <li>increased my level of confidence in my financial plan
+ <li>>helped me answer many different questions
 </ul>
 
 <h2>Limitations</h2>
@@ -53,9 +53,9 @@ I'm going to tell you the defects of this tool up front, because I don't want to
 This tool currently reflects the financial situation of its author, and is limited in scope:
 <ul>
  <li>there's no logic for spouses
- <li>the set of supported securities is too small: cash, stocks, and GICs. (A glaring omission is ETFs, which will likely be addressed soon.)
+ <li>the set of supported securities is only cash, stocks, and GICs. (A glaring omission is ETFs, which will likely be addressed soon.)
  <li>there's no logic specific to insurance, debt, real estate, charitable donations, and so on.
- <li>it supports RSP/RIF, TFSA, non-registered accounts, and simple bank accounts, but no other types of accounts (I'll likely add LIRA/LIF in the near future).
+ <li>it supports RSP/RIF, TFSA, non-registered accounts, and simple bank accounts, but no other types of accounts. (I'll likely add LIRA/LIF in the near future).
 </ul>
 
 In spite of these limitations, you may find it useful to examine the example scenario outputs.
@@ -64,22 +64,23 @@ In spite of these limitations, you may find it useful to examine the example sce
 Features include:
 <ul>
  <li>input-output using text files
- <li>the text input is a 'scenario', a text file describing details of your accounts, assets, transactions, 
+ <li>the text input is a <em>scenario</em>, a text file describing details of your accounts, assets, transactions, 
   start-date for retirement, expected CPP benefit, pension, and so on
- <li>internally, the system runs through every single day of your entire retirement life, and applies transactions you define in your scenario file
+ <li>internally, the system runs through every single day of your entire retirement life, and applies transactions defined in your scenario file
  <li>some scenarios have randomness, and some don't 
  <li>the randomness only comes from variation in the market price of securities
  <li>basic tax returns, both federal and provincial (territories not included at present)
- <li>output in .csv (comma-separated) files, which are easily imported into spreadsheet tools and graphed
+ <li>output in .csv (comma-separated) files, which are easily imported into spreadsheet tools (and thereby charted)
  <li>log output shows transactions, yearly summaries, and tax returns
  <li>you repeat a scenario multiple times, to reflect the spread in outcomes caused by randomness (Monte Carlo simulation)
  <li>the tool can run multiple scenarios in sequence 
  <li>the code is implemented in Java, and can be run on any computer
  <li>changes to the market prices of stock are applied once a year
- <li>some items that aren't modeled explicitly can still be effectively modeled by the system. 
-  For example, the sale of a primary residence can be modeled as a simple windfall deposited to your bank account, since 
-  no tax is paid on the capital gain when you sell your home.  
 </ul>
+
+<P>Some items that aren't modeled explicitly can still be effectively modeled by the system. 
+ For example, the sale of a primary residence can be modeled as a simple windfall deposited to your bank account, since 
+ no tax is paid on the capital gain when you sell your home.  
 
 There are two distinct types of scenarios:
 <ul> 
@@ -89,6 +90,56 @@ There are two distinct types of scenarios:
 
 
 <h2>Lessons Learned</h2>
+
+<b>Those with no savings will have cash flow in the low 20s.</b>
+The cash flow for those who have no savings is basically the same no matter what your past history: it's in the low 20s.
+This is because of how GIS works. GIS is designed to support cash flow up to a certain level, but not beyond that level.
+Someone who has made 30K a year for their entire life, and has no savings, will have cash flow in the low 20s when 
+they retire at 65, from OAS, GIS, and CPP. The same can be said if you made 100K a year, but spent it all and have no savings when 
+you are 65. 
+
+<P><b>It's the net cash flow that's most important.</b> That's where the focus should be. 
+Example from two scenarios, A vs B: A has 14k less tax than B, but only 2.9k more net cash than B.
+If you leave out the net, and only focus on the tax saving, then you aren't fully informed.
+
+<P><b>Spending generally decreases significantly in old age.</b>
+Many people think in terms of having a flat cash flow, the same from retirement until death.
+But, in reality, that's not usually what happens. 
+That being the case, it's a challenge to generate a cash flow curve that starts out higher and ends up lower, 
+because the natural tendency for cash flow is to grow over time.
+
+<P><b>Many people die too rich</b>.
+The psychology of the saver is different from the psychology of the spender.
+Some people spend many years as a saver, and later fail to change into a spender.
+They keep growing their net worth until the end.
+That isn't necessarily the wrong thing to do, but for many it's likely not the best outcome.
+Oversaving can be as bad as overspending; perhaps it's best to avoid extremes.
+
+<P>Living only off of dividends is almost always an error.</b>
+Some investors are enthusiastic about dividend stocks, and attempt to generate cash flow only from the dividends, 
+without selling any of the principal invested in the stocks.
+During retirement, there's no need to be so conservative.
+Periodically selling a small portion of your principal can generate a lot more cash flow, 
+and is almost always better than relying solely on the dividends.   
+
+<P><b>Selling stocks when the market is up, as opposed to when you want the cash, is very beneficial.</b>
+Given the large possible swings in stock prices, it makes sense to do <em>profit-taking</em> when the price is up, 
+sell stock, and save the cash for you future needs in 1-2 years (perhaps by purchasing a GIC).
+You should avoid being compelled to sell stocks at a particular time.
+The typical recession lasts about 1.5 years. 
+
+<P><b>Desiring a sizeable legacy changes your strategy significantly.</b> 
+You have to understand what your goal is for your estate.
+Some want to leave a significant legacy, and others want to spend as much as they can.
+Both points of view are valid. 
+But you have to know which is best for you, and act accordingly.
+
+<P><b>Retirement planning is different from other projects, because it involves your own death.</b>
+It's useful to be reminded that it may, by chance, happen sooner rather than later.
+The basic statistics from Statcan in this regard is interesting: the idea is that you start with a cohort of 
+100,000 people at birth, and you list the number of people that are still alive, at each year of age.
+
+ 
 <h2>Running The Code</h2>
 <h2>Example Scenarios</h2>
 
