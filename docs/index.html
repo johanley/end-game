@@ -16,28 +16,27 @@
 <P>The source code is <a href='https://github.com/johanley/end-game'>here</a>.
  
 <h2>Overview</h2>
-The main purpose of this project is to: 
+The main purpose of this project is: 
 <ul> 
- <li>help you explore different retirement scenarios  
- <li>help you find a better financial plan for your retirement
+ <li>to help you explore different retirement scenarios  
+ <li>to help you find a better financial plan for your retirement
 </ul>
 
 <P><b>This tool is focused almost entirely on the retirement phase of life (spending), not on the working phase of life (saving)</b>.
 
 <P>The level of detail in this tool is higher than usual.
-The tool actually goes through every single day of your retirement, and applies transactions to your accounts.
+Whereas most tools focus on a high-level rate of return, this tool actually goes through every single day of your retirement, and applies transactions to your accounts.
 It also calculates a basic tax return at the end of every year.
 
 <P>The level of detail will not reflect your actual reality 100%, but it will get you closer to reality than most other tools.
-It's a trade off: in a perfect world, matching reality 100% is of course desirable; but to implement in software all possible cases
-for all possible conditions is not practical. 
-So, this tool tries to reach a compromise, and <b>tries to reflect reality to a reasonable degree, but not with 100% accuracy</b>. 
+It's a trade off: in a perfect world, matching reality 100% is of course desirable; but to implement all possible cases
+for all possible conditions is not practical here. 
+So this tool tries to reach a compromise, and <b>tries to reflect reality to a reasonable degree, but not with 100% accuracy</b>. 
 
 <P>
 Every retirement financial plan should be supported by a robust simulation showing you the numbers.
 Personal finance is quite complex.
-There are many moving parts, and the end result of how those parts all work together in your particular case 
-can be found only with a simulator. 
+There are many moving parts, and those parts all work together in your particular case can be found only with a simulator. 
 <b>You can't do these calculations in your head, and you shouldn't rely entirely on <em>rules of thumb</em>, because such rules usually have exceptions.</b>
 
 <P>This tool has:
@@ -45,20 +44,27 @@ can be found only with a simulator.
  <li>helped me find thousands in additional dollars in additional cash flow
  <li>increased my level of confidence in my financial plan
  <li>helped me answer many different questions
+ <li>helped me in speaking to a financial advisor
 </ul>
 
 <h2>Limitations</h2>
-I'm going to tell you the defects of this tool up front, because I don't want to waste your time.
-
 This tool has a limited scope:
 <ul>
- <li>there's no logic for spouses
- <li>the set of supported securities is only cash, stocks, and GICs. (A glaring omission is ETFs, which will likely be addressed soon.)
+ <li>there's no spousal logic.
+ <li>the set of supported securities is only cash, stocks, and GICs. 
+ <li>it supports RSP/RIF, TFSA, non-registered accounts, and simple bank accounts, but no other types of accounts. 
  <li>there's no logic specific to insurance, debt, real estate, charitable donations, and so on.
- <li>it supports RSP/RIF, TFSA, non-registered accounts, and simple bank accounts, but no other types of accounts. (I'll likely add LIRA/LIF in the near future).
 </ul>
 
 In spite of these limitations, you may find it useful to examine the example scenario outputs.
+
+<P>There are two important issues which I hope to address soon:
+<ul>
+  <li>add support for ETFs (Exchange-traded funds, an asset class that is very widely held)
+  <li>add support for LIRA/LIF accounts
+ </ul>
+
+In general, I would like to improve the tool. I could use some assistance with that.
 
 <h2>Features</h2>
 Features include:
@@ -114,6 +120,7 @@ Many people think in terms of having a flat cash flow, the same from retirement 
 But, in reality, that's not usually what happens. 
 That being the case, it's a challenge to generate a cash flow curve that starts out higher and ends up lower, 
 because the natural tendency for cash flow is to grow over time.
+For those on a government pension (with no other savings), the cash flow is basically flat over time.
 
 <P><b>Many people die too rich</b>.
 The psychology of the saver is different from the psychology of the spender.
@@ -144,13 +151,45 @@ But you have to know which is best for you, and act accordingly.
 <P><b>Retirement planning is different from other projects, because it involves your own death.</b>
 It's useful to be reminded that you might, by chance, die sooner rather than later.
 The basic statistic from Statcan in this regard is interesting: the idea is that you start with a cohort of 
-100,000 people at birth, and you list the number of people that are still alive, at each year of age.
-(The output spreadsheet files of this project usually incorporate this stat as a reminder of its importance.)
+100,000 people at birth, and you then simply list the number of people that are still alive at each year of age.
+The output spreadsheet files of this project usually incorporate this stat as a reminder of its importance.
 
  
 <h2>Running The Code</h2>
-<h2>Example Scenarios</h2>
 
+<h2>Web Site Versus Stand-alone</h2>
+When deploying this code under a web site:
+<ul>
+ <li>pro: the user doesn't need to install any software
+ <li>pro: it's easier to run a scenario, at least when getting started
+ <li>con: web sites come and go, and usually die with the person who created them
+ <li>con: the user exposes their personal financial information to a third party, and that may not be secure
+ <li>con: some scenarios take a while to execute, and waiting for a web site to respond can be frustrating
+</ul>
+
+Advantages of running this code locally on your computer:
+<ul>
+ <li>con: for non-programmers, learning how to run the code takes some effort (but it's not that hard, I swear!)
+ <li>pro: scenarios that take a while to execute can provide feedback as they run 
+ <li>pro: the user is not dependent on a web site
+ <li>pro: the user can alter the code directly, if need be
+ <li>pro: not limited by time or disk space
+ <li>pro: it executes faster than a web site
+</ul> 
+ 
+
+<h2>Example Scenarios</h2>
+These example scenarios are included in the source. 
+They are listed in rough order of increasing complexity.
+
+<P>Note that the <em>.ini</em> file is the scenario file, and the remaining files in the directory are outputs that 
+result from executing the scenario. The provincial tax return is that for PE, Prince Edward Island, simply because 
+that's where the author resides. The toll allows for other provinces as well.
+
+<table class='report'>
+ <tr><th>ID<th>Description
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/01.1'>01.1</a><td>Never worked, no savings, retires at 65. OAS/GIS, rent 700. PE. Deterministic.
+</table>
 
 </body>
 </html>
