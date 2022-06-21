@@ -11,18 +11,18 @@
 
 <body>
 
-<h2>End Game: Personal finance simulator for retired Canadians</h2>
+<h2>End Game - personal finance simulator for retired Canadians</h2>
 
 <P>The source code is <a href='https://github.com/johanley/end-game'>here</a>.
  
 <h2>Overview</h2>
 The main purpose of this project is to: 
 <ul> 
- <li>help you explore different financial retirement scenarios  
- <li>help you find a better retirement plan
+ <li>help you explore different retirement scenarios  
+ <li>help you find a better financial plan for your retirement
 </ul>
 
-<P>This tool is focused almost entirely on the retirement phase of life (spending), not the working phase of life (saving).
+<P><b>This tool is focused almost entirely on the retirement phase of life (spending), not the working phase of life (saving)</b>.
 
 <P>The level of detail is higher than you typically see in such tools.
 The tool actually goes through every single day of your retirement, and applies transactions to your accounts.
@@ -30,21 +30,21 @@ It also calculates a basic tax return at the end of every year.
 
 <P>The level of detail will not reflect your actual reality 100%, but it will get you closer to reality than most other tools.
 It's a trade off: in a perfect world, matching reality 100% is of course desirable; but to implement in software all possible cases
-for all possible conditions is not practical. So, this tool tries to reach a compromise, and tries to reflect 
-reality "to reasonable degree", but not with 100% accuracy. 
+for all possible conditions is not practical. 
+So, this tool tries to reach a compromise, and <b>tries to reflect reality to a reasonable degree, but not with 100% accuracy</b>. 
 
 <P>
 Every retirement financial plan should be supported by a robust simulation showing you the numbers.
 Personal finance is quite complex.
 There are many moving parts, and the end result of how those parts all work together in your particular situation 
-can be found only with a simulator. You can't do these calculations in your head, and  
-you shouldn't rely entirely on "rules of thumb", because such rules usually have exceptions.
+can be found only with a simulator. 
+<b>You can't do these calculations in your head, and you shouldn't rely entirely on <em>rules of thumb</em>, because such rules usually have exceptions.</b>
 
 <P>This tool has:
 <ul>
- <li>helped me "find" thousands in additional dollars in cash flow
- <li>increased my level of confidence in my financial plan
- <li>helped me answer many different questions
+ <li><b>helped me <em>find</em> thousands in additional dollars in cash flow</b>
+ <li><b>increased my level of confidence in my financial plan</b>
+ <li><b>helped me answer many different questions</b>
 </ul>
 
 <h2>Limitations</h2>
@@ -53,18 +53,44 @@ I'm going to tell you the defects of this tool up front, because I don't want to
 This tool currently reflects the financial situation of its author, and is limited in scope:
 <ul>
  <li>there's no logic for spouses
- <li>the set of supported securities is small: cash, stocks, and GICs. (A glaring omission is ETFs, which will likely be addressed soon.)
+ <li>the set of supported securities is too small: cash, stocks, and GICs. (A glaring omission is ETFs, which will likely be addressed soon.)
+ <li>there's no logic specific to insurance, debt, real estate, charitable donations, and so on.
  <li>it supports RSP/RIF, TFSA, non-registered accounts, and simple bank accounts, but no other types of accounts (I'll likely add LIRA/LIF in the near future).
 </ul>
 
-In spite of these limitations, you may find it useful to examine the outputs and design of this code.
+In spite of these limitations, you may find it useful to examine the example scenario outputs.
 
-<h2>Input and Output</h2>
+<h2>Feautures</h2>
+Features include:
+<ul>
+ <li>input-output using text files
+ <li>the text input is a 'scenario', a text file describing details of your accounts, assets, transactions, 
+  start-date for retirement, expected CPP benefit, pension, and so on
+ <li>internally, the system runs through every single day of your entire retirement life, and applies transactions you define in your scenario file
+ <li>some scenarios have randomness, and some don't 
+ <li>the randomness only comes from variation in the market price of securities
+ <li>basic tax returns, both federal and provincial (territories not included at present)
+ <li>output in .csv (comma-separated) files, which are easily imported into spreadsheet tools and graphed
+ <li>log output shows transactions, yearly summaries, and tax returns
+ <li>you repeat a scenario multiple times, to reflect the spread in outcomes caused by randomness (Monte Carlo simulation)
+ <li>the tool can run multiple scenarios in sequence 
+ <li>the code is implemented in Java, and can be run on any computer
+ <li>changes to the market prices of stock are applied once a year
+ <li>some items that aren't modeled explicitly can still be effectively modeled by the system. 
+  For example, the sale of a primary residence can be modeled as a simple windfall deposited to your bank account, since 
+  no tax is paid on the capital gain when you sell your home.  
+</ul>
 
-The input and output of this tool are simple text files.
-The input file is called a <em>scenario</emscenario>em> file. 
-It details your current holdings in various accounts, transactions in the accounts, OAS, CPP, GIS, your federal and 
-provincial tax returns, and so on.  
+There are two distinct types of scenarios:
+<ul> 
+ <li>those with precisely predictable cash flows (OAS, CPP, GIS, annuities, pensions)
+ <li>those without precisely predictable cash flows (assets vary in value with the market price)
+</ul>
+
+
+<h2>Lessons Learned</h2>
+<h2>Running The Code</h2>
+<h2>Example Scenarios</h2>
 
 
 </body>
