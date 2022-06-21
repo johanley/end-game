@@ -1,0 +1,790 @@
+/*
+  JavaCC file defining the tokens/syntax of the personal finance scenario file.
+
+  .jj - > [javacc] -> .java -> [javac] -> .class 
+
+  http://eclipse-javacc.sourceforge.net/  
+*/
+options {
+  static = false;
+  ignore_case = true;
+}
+
+PARSER_BEGIN(ScenarioParser)
+package endgame.input.syntax;
+
+import java.io.*;
+import java.util.*;
+import hirondelle.date4j.*;
+import endgame.Scenario;
+import endgame.model.*;  
+import endgame.account.*;
+import endgame.account.tfsa.*;
+import endgame.account.rif.*; 
+import endgame.account.nra.*;
+import endgame.bank.*;
+import endgame.entitlements.*;
+import endgame.tax.*;
+import endgame.tax.provincial.*;
+import endgame.security.stock.*;
+import endgame.security.stock.price.*;
+import endgame.security.stock.liquidation.*;
+import endgame.security.stock.commission.*;
+import endgame.security.stock.transaction.*;
+import endgame.security.pension.annuity.*;  
+import endgame.security.gic.*;
+import endgame.survival.*;
+import endgame.transaction.*; 
+import endgame.util.*;
+
+/** Input the name of a scenario file, output a {@link Scenario} object holding its data in memory. */
+public class ScenarioParser {
+
+  /*
+   USING LEXICAL STATES IS TRICKY.
+   I find it's much simpler to ensure that tokens are easily distinguishable.
+   Remember that longest wins; in the case of a tie, then first-in-parser-file wins.
+   Private tokens (with '#') only match as part of a bigger token, and never on their own.
+   
+   My control of whitespace needs improvement.
+  */
+
+  /** Value: {@value}. */
+  public static final String SYNTAX_VERSION = "v1.0.0"; 
+
+  /**
+   Run this parser as a stand-alone class.
+   Pass in the scenario file location as the first and only arg on the command line.
+  */
+  public static void main(String... args) throws ParseException, IOException {
+    Scenario scenario = parse(args[0]);
+    log(scenario.toString());
+  }
+
+  /** Parse a scenario file into a Scenario object. */
+  public static Scenario parse(String scenarioFile) throws ParseException, IOException {
+    ScenarioParser parser = buildFrom(scenarioFile);
+    return parser.parseInput();
+  } 
+  
+  /** Factory method to make a parser object. */
+  private static ScenarioParser buildFrom(String scenarioFile) throws ParseException, IOException {
+    FileInputStream fis = new FileInputStream(scenarioFile);
+    InputStreamReader in = new InputStreamReader(fis, "UTF-8");
+    ScenarioParser result = new ScenarioParser(in);
+    result.scenario.scenarioFile = scenarioFile;
+    return result;
+  }
+
+  /**  Parse a scenario file into a {@link Scenario} object.  */
+  private Scenario parseInput() throws ParseException, IOException {
+    log("Parsing file: " + scenario.scenarioFile);
+    all();
+    createImplicitTransactionsForInitialHoldings();
+    return scenario;
+  }
+
+  private void createImplicitTransactionsForInitialHoldings() {
+    GicTransactions.accrueAndRedeemInitialPositions(scenario);
+  }
+   
+  /**
+   THE OBJECTIVE OF THIS CLASS: to insert the scenario data from a text file into this object,
+   where it can be readily accessed later, in the course of running the simulation.
+  */
+  private Scenario scenario = new Scenario();
+
+  private static void log(String msg) {
+    Log.log(msg);
+  }
+  
+  private static String noQuotes(String input) {
+    return input.replace("\"", "");
+  }
+}
+
+PARSER_END(ScenarioParser)
+
+/* Things to ignore. */
+SKIP :
+{
+  " "
+| "\r"
+| "\t"
+| "\n"
+|  < COMMENT : "#" (~["\n", "\r"])* ("\r"|"\n"|"\r\n") >
+}
+
+/* Punctuation. */
+TOKEN : {
+ < DASH : "-" > | 
+ < COLON : ":" > | 
+ < COMMA : "," > |
+ < #COMMA_SPACE : ","(" ")* > |  /* I guess whitespace is skipped only outside of a token. */
+ < UNDERSCORE : "_" > |
+ < BLOCK_START : "{" > |
+ < BLOCK_END : "}" > |
+ < EQUALS : "=" > | 
+ < QUOTE : "\""> |
+ < #STARRY_DATE : "*-" > | 
+ < #ELLIPSIS : ".." > | 
+ < #PIPE : "|" > |  
+ < #SPACES : (" ")* >   
+}
+
+/*
+ Dates.
+ Remember that longest wins, and then first-match wins in the case of a tie.
+ Private tokens (with '#') only match as part of a bigger token, never on their own.
+*/
+TOKEN : {
+ < #DD : ("01"|"02"|"03"|"04"|"05"|"06"|"07"|"08"|"09"|"10"|"11"|"12"|"13"|"14"|"15"|"16"|"17"|"18"|"19"|"20"|"21"|"22"|"23"|"24"|"25"|"26"|"27"|"28"|"29"|"30"|"31") > | 
+ < #MM : ("01"|"02"|"03"|"04"|"05"|"06"|"07"|"08"|"09"|"10"|"11"|"12") > |
+ < #YYYY : (< DIGIT >) {4} > |
+ < YYYY_MM_DD : (< YYYY >)(< DASH >)(< MM >)(< DASH >)(< DD>) > | 
+ < YYYY_MM : (< YYYY >)(< DASH >)(< MM >) > | 
+ < MM_DD : (< MM >)(< DASH >)(< DD>) > | 
+ < DATE_LIST : ((< MM_DD >< COMMA >)+<MM_DD>) > |    
+ < WHEN_CONTROL: <WHEN_LIST>(<SPACES><PIPE><SPACES><DATE_RANGE>)? > | 
+ < #WHEN_LIST: ("on")<SPACES>(<WHEN><COMMA_SPACE>)*<WHEN> > |  
+ < #WHEN : (<YYYY_MM_DD> | <STARRY_DATE><MM_DD> | <STARRY_DATE><DD>) > |
+ < #DATE_RANGE: (<YYYY_MM_DD><ELLIPSIS><YYYY_MM_DD> | <ELLIPSIS><YYYY_MM_DD> | <YYYY_MM_DD><ELLIPSIS>)> 
+}
+
+/* Numeric data. */
+TOKEN : {
+ < DOUBLE : (< WHOLE_DOLLARS >)(<FRACTION>)("D") > |
+ < NUM : (< DIGIT >)+ > |
+ < PERCENT_LIST :  ((<PERCENT>< COMMA >)+<PERCENT>) > | 
+ < PERCENT : (< WHOLE_DOLLARS >)(< FRACTION >)?("%")> | 
+ < MONEY_RANGE : (<MONEY> <UNDERSCORE> <MONEY>) > |    /*an ellipsis has cross-talk with number formats. */ 
+ < MONEY : (< WHOLE_DOLLARS >)(< PENNIES >) > | 
+ < WHOLE_DOLLARS : ("-")?(< DIGIT >)+ > |
+ < #FRACTION : (".")(< DIGIT >) {1,3} > |
+ < #PENNIES : (".")(< DIGIT >) {2,3} > |
+ < #DIGIT : [ "0"-"9" ] >
+}
+
+/*
+ Text-y data: descriptions, stock ticker symbols, and so on.
+ Using a delimiter for free-form text (a double quote) lets me avoid dealing defining lexical states.
+ That results in a significant simplification of this parser.
+ I had trouble using lexical states for this task.
+*/
+TOKEN : {
+  < QUOTED_TEXT : < QUOTE > (~["\r", "\n", "\""])+  < QUOTE> > 
+}
+
+TOKEN : {
+ < BANK: "bank" > | 
+ < RIF : "rif" > | 
+ < TFSA : "tfsa" > | 
+ < NRA : "nra" > |
+ < PROV_TERR : ("NL"|"NS"|"PE"|"NB"|"QC"|"ON"|"MN"|"SK"|"AB"|"BC"|"YT"|"NT"|"NU") > |
+ < SPEND_BANK_BALANCE_ABOVE : "spend-bank-balance-above" >  /* to avoid cross-talk with 'bank' token */ 
+}
+
+/*
+ This method defines the order of appearance of all items in the file.
+ The order of items is not flexible. It needs to follow this pattern.
+*/ 
+void all() : { } {
+  version()
+  description()
+  projectRoot()
+  numIterations()
+  (stockPricePolicy())?
+  simulationStartDate()
+  simulationEndDate()
+  dateOfBirth()
+  (annualTestForSurvival())?
+  sex()
+  yearZeroAmounts()
+  oas()
+  (cpp())?
+  (rifMinimumWithdrawals())?
+  federalTaxes()
+  provincialTax()
+  (stocks())?
+  (commission())?
+  (tfsaRoom())?
+  accounts()
+  (sequentialLiquidation())?
+  (annualTfsaTopUp())?
+  (smallEmployment())*
+  transactions()
+  < EOF > 
+}
+
+/*
+ A hard-coded version number for the syntax of the scenario file.
+ This must be updated with every published change in the syntax, no matter how trivial.
+ 
+ The java code that talks to this file is hard-coded to a specific syntax-version.
+ This will break old scenario files, if the user updates the code.
+ Using a project branch for each release can mitigate this problem.
+
+ I don't know if there's a way to reference the public field defined above; it's thus repeated here.
+*/
+void version() : { } {
+  "syntax-version" <EQUALS> "v1.0.0"
+}
+
+void description() : {} {
+  "description" <EQUALS> <QUOTED_TEXT> { scenario.description = noQuotes(token.image.trim()); } 
+}
+
+void projectRoot() : { } { 
+  "project-root" <EQUALS> <QUOTED_TEXT> { scenario.projectRoot = noQuotes(token.image.trim()); }
+}  
+
+void numIterations() : {} {
+  "number-of-iterations" < EQUALS > < NUM > {
+    scenario.numIterations = Integer.valueOf(token.image);
+    if (scenario.numIterations > 100) {
+      throw new IllegalArgumentException("Number of iterations exceeds the max (100): " + scenario.numIterations);
+    }
+  } 
+}
+void dateOfBirth() : {} {
+  "date-of-birth" < EQUALS > < YYYY_MM_DD >  {scenario.dateOfBirth = token.image;}
+}
+void annualTestForSurvival() : { } {
+  "annual-test-for-survival" {scenario.annualTestForSurvival = true;}
+} 
+void simulationStartDate() : {} {
+  "simulation-start-date" < EQUALS > < YYYY_MM_DD > { scenario.startDate = token.image; }
+}
+void simulationEndDate() : { } {
+  "simulation-end-date" < EQUALS > < YYYY_MM_DD > {scenario.endDate = token.image;}
+}
+void sex() : {} {
+  "sex" < EQUALS > ("male" | "female") {scenario.sex = Sex.valueOf(token.image.toUpperCase());}
+}
+void federalTaxes(): {
+ String initialYear = "";
+ String personalAmt = ""; String personalAmtAdditional = ""; String personalAmtThreshold = ""; 
+ String ageAmt = ""; String ageAmtThreshold = "";
+ String pensionIncomeMax = ""; 
+ TaxBrackets taxBrackets = null;
+ TaxBrackets rifWithholdingTaxBrackets = null;
+ String taxCapGainFrac=""; String stdRetAge=""; String divTaxNum=""; String divTaxDen="";
+} {
+ "federal-tax" <BLOCK_START>
+   "initial-year" < EQUALS > < NUM > { initialYear = token.image; }
+   "personal-amount" < EQUALS > < MONEY > { personalAmt = token.image; }
+   "personal-amount-additional" < EQUALS > < MONEY > { personalAmtAdditional = token.image; }
+   "personal-amount-threshold" < EQUALS > < MONEY_RANGE > { personalAmtThreshold = token.image; }
+   "age-amount" < EQUALS > < MONEY >  { ageAmt = token.image; }
+   "age-amount-threshold" < EQUALS > < MONEY >  { ageAmtThreshold = token.image; }
+   "pension-income-max" < EQUALS > < MONEY >  { pensionIncomeMax = token.image; }
+   (taxBrackets = taxBrackets())
+   (rifWithholdingTaxBrackets = rifWithholdingTaxBrackets())
+   "standard-retirement-age" <EQUALS> <NUM> {stdRetAge=token.image;}
+   "taxable-capital-gain-fraction" <EQUALS> <DOUBLE> {taxCapGainFrac=token.image;}
+   "dividend-tax-credit-numer" <EQUALS> <NUM> {divTaxNum=token.image;} 
+   "dividend-tax-credit-denom" <EQUALS> <NUM> {divTaxDen=token.image;}
+ <BLOCK_END> 
+  { scenario.taxReturn = FederalTaxReturn.valueOf (
+      scenario,
+      initialYear, scenario.dateOfBirth, personalAmt, personalAmtAdditional, personalAmtThreshold,
+      ageAmt, ageAmtThreshold,
+      pensionIncomeMax, taxBrackets, rifWithholdingTaxBrackets,
+      stdRetAge, taxCapGainFrac, divTaxNum, divTaxDen
+    );
+  }
+}
+TaxBrackets taxBrackets() : { TaxBrackets result = new TaxBrackets(); TaxBracket tb = null;} {
+  "tax-brackets" <BLOCK_START>
+    (tb = taxBracket() { result.add(tb); })+
+  <BLOCK_END>
+  { return result; }
+}
+TaxBrackets rifWithholdingTaxBrackets() : { TaxBrackets result = new TaxBrackets(); TaxBracket tb = null; } {
+  "rif-withholding-tax-brackets" <BLOCK_START>
+    (tb = taxBracket() { result.add(tb); })+
+  <BLOCK_END>
+  { return result; }
+}
+TaxBracket taxBracket() : { String rate = ""; String max = ""; } {
+  < PERCENT > { rate = token.image; } < COLON > < MONEY > { max = token.image; }
+  { return TaxBracket.valueOf(rate, max); }
+}
+
+void provincialTax(): {
+ ProvincialTaxFields fields = new ProvincialTaxFields();
+} {
+ "provincial-tax" <BLOCK_START> 
+   "jurisdiction" <EQUALS> <PROV_TERR> { fields.jurisdiction = token.image; }
+   (fields.taxBrackets = taxBrackets()) 
+   "personal-amount" < EQUALS > < MONEY > {  fields.personalAmt = token.image; }
+   ("personal-amount-supplement" <EQUALS> <MONEY>  { fields.personalAmtSupplement = token.image; })?
+   ("personal-amount-threshold"  <EQUALS> <MONEY> { fields.personalAmtThreshold = token.image; })? 
+   ("personal-amount-rate"  <EQUALS> <PERCENT>  { fields.personalAmtRate = token.image; })?
+   "age-amount" < EQUALS > < MONEY > {  fields.ageAmt = token.image; }
+   ("age-amount-threshold" < EQUALS > < MONEY > { fields.ageAmtThreshold  = token.image; })?
+   ("ageAmtSupplement" < EQUALS > < MONEY >  { fields.ageAmtSupplement  = token.image; })?
+   ("ageAmtSupplementThreshold" < EQUALS > < MONEY > { fields.ageAmtSupplementThreshold  = token.image; })?
+   ("ageAmtSupplementRate" < EQUALS > < PERCENT > { fields.ageAmtSupplementRate  = token.image; })?
+   "pension-income-max" < EQUALS > < MONEY >  { fields.pensionIncomeMax = token.image; }
+   "dividend-gross-up-mult" <EQUALS> <PERCENT> { fields.dvdGrossUpMult = token.image; }
+   ("low-income-basic" < EQUALS > < MONEY > { fields.lowIncomeBasic = token.image; })? 
+   ("low-income-age" < EQUALS > < MONEY > { fields.lowIncomeAge = token.image; })? 
+   ("low-income-threshold" < EQUALS > < MONEY > {  fields.lowIncomeThreshold = token.image; })?
+   ("low-income-rate" < EQUALS > < PERCENT > {  fields.lowIncomeRate = token.image; })?
+   ("age-tax-credit" < EQUALS > < MONEY > {  fields.ageTaxCredit = token.image; })? 
+   ("age-tax-credit-threshold" < EQUALS > < MONEY > {  fields.ageTaxCreditThreshold = token.image; })?
+   ("surtax-threshold-1" <EQUALS> <MONEY> {  fields.surtaxThreshold1 = token.image; })?
+   ("surtax-rate-1" <EQUALS> <PERCENT> {  fields.surtaxRate1 = token.image; })?
+   ("surtax-threshold-2" <EQUALS> <MONEY> {  fields.surtaxThreshold2 = token.image; })?
+   ("surtax-rate-2" <EQUALS> <PERCENT>{  fields.surtaxRate2 = token.image; })?
+   ("schedule-b-threshold" <EQUALS> <MONEY> {fields.scheduleBThreshold = token.image;})?
+   ("schedule-b-rate" <EQUALS> <PERCENT> {fields.scheduleBRate = token.image;})?
+   ("live-alone-amount"  <EQUALS> <MONEY> {fields.liveAloneAmt = token.image;})?
+   ("pension-income-rate" <EQUALS> <PERCENT>  {fields.pensionIncomeRate = token.image;})? 
+   (fields.healthPremiumTaxBrackets = healthPremiumTaxBrackets())? 
+ <BLOCK_END>
+  { scenario.provincialTaxReturn = fields.deduceFromFieldsPresent(scenario.taxReturn);
+    scenario.taxReturn.setProvincialReturn(scenario.provincialTaxReturn); }
+}
+TaxBrackets healthPremiumTaxBrackets() : { TaxBrackets result = new TaxBrackets(); TaxBracket tb = null; } {
+  "health-premium-tax-brackets" <BLOCK_START>
+    (tb = taxBracket() { result.add(tb); })+
+  <BLOCK_END>
+  { return result; }
+}
+
+
+void stocks() : { } {
+  "stocks" <BLOCK_START>
+    (stock())* 
+  <BLOCK_END>
+}
+void stock() : { String symbol = ""; String price = ""; Dividend dividend = null;} {
+  <QUOTED_TEXT> { symbol = noQuotes(token.image); } <BLOCK_START>
+     "price" < EQUALS > < MONEY > { price = token.image; }
+      { dividend = dividend(); }
+  <BLOCK_END>
+  {
+    Stock stock = Stock.valueOf(symbol, price, dividend, scenario.startDate);  
+    scenario.stocks.add(stock);
+    scenario.transactionals.add(new DividendPayment(stock));
+  }
+}
+Dividend dividend() : { String amount = ""; String when = ""; String growth = "";} {
+  "dividend" <BLOCK_START> 
+    <WHEN_CONTROL> { when = token.image; }
+    "amount" < EQUALS > < MONEY > { amount = token.image; }
+    "growth" < EQUALS > < PERCENT > { growth = token.image; }
+  <BLOCK_END>
+  { return Dividend.valueOf(amount, when, growth); }
+}
+
+
+void stockPricePolicy() : { String when = ""; } {
+  "update-stock-prices" <BLOCK_START>
+    <WHEN_CONTROL> { when = token.image; }
+    (fixedGrowthRate() | rangedGrowthRate() | gaussianGrowthRate()|explicitGrowthList())
+  <BLOCK_END>
+  {scenario.transactionals.add(new UpdateStockPrices(when));}
+}
+void fixedGrowthRate() : { String percent = ""; } {
+  "fixed" <EQUALS> < PERCENT > { percent = token.image; }
+  { scenario.stockPrices = new FixedGrowthRate(percent); }
+}
+void rangedGrowthRate() : { String lower = ""; String upper = "";} {
+  "range" <EQUALS> < PERCENT > { lower = token.image; } <UNDERSCORE> < PERCENT > { upper = token.image; }
+  { scenario.stockPrices = new RangedGrowthRate(lower, upper); }
+}
+void gaussianGrowthRate() : { String mean = ""; String stdDev = "";} {
+  "gaussian" "mean" <EQUALS> < PERCENT > { mean = token.image; } "std-dev" <EQUALS> < PERCENT > { stdDev = token.image; }
+  { scenario.stockPrices = new GaussianGrowthRate(mean, stdDev); }
+}
+void explicitGrowthList() : { String percentList = ""; } {
+  "explicit-list" <EQUALS> <PERCENT_LIST> { percentList = token.image; }
+  { scenario.stockPrices = new ExplicitGrowthList(percentList); }
+}
+
+
+
+void commission(): { } {
+  "stock-commission" <EQUALS> (fixedPercentCommish() | fixedAmountCommish() | customCommish())
+}
+void fixedPercentCommish() : { String percent = "";} {
+  "fixed-percent" < PERCENT > { percent = token.image; }
+  { scenario.commission = new FixedPercentCommish(percent); }
+}
+void fixedAmountCommish() : { String amount = "";} {
+  "fixed-amount" < MONEY > { amount = token.image; }
+  { scenario.commission = new FixedAmountCommish(amount); }
+}
+/* This requires custom coding. Updated the class specified below.*/
+void customCommish() : {} {
+  "custom-schedule" 
+  { scenario.commission = new CustomCommish(); }
+}
+
+
+void tfsaRoom() : { String initialRoom = ""; String yearlyLimit = "";} {
+ "tfsa-room" <BLOCK_START>
+   "initial-room" < EQUALS > < MONEY > { initialRoom = token.image; }
+   "yearly-limit"  < EQUALS > < MONEY > { yearlyLimit = token.image; }
+  <BLOCK_END>
+  { scenario.tfsaRoom = TfsaRoom.valueOf(initialRoom, yearlyLimit); }
+}
+
+void rifMinimumWithdrawals() : { } {
+  { scenario.rifMinima = new RifMinima(scenario.dateOfBirth);  }
+  "rif-minimum-withdrawals" <BLOCK_START>
+      (rifMinimumWithdrawal())+
+  <BLOCK_END>
+}
+void rifMinimumWithdrawal() : { String age = ""; String percent = ""; String noPercentSign = "";} {
+ < NUM > { age = token.image; } < EQUALS > < PERCENT > { percent = token.image; }
+ {
+   noPercentSign = percent.substring(0, percent.length()-1);
+   scenario.rifMinima.addTableRow(Integer.valueOf(age), Double.valueOf(noPercentSign)/100.0D);
+ }
+}
+
+void accounts() : { BankAccount bank = null; Tfsa tfsa = null; Rif rif = null; Nra nra = null;} {
+  "accounts" <BLOCK_START>
+    bank = bank() { scenario.bank = bank; }
+    (rif = rif() { scenario.rif = rif; } )?
+    (tfsa = tfsa()  { scenario.tfsa = tfsa; } )?
+    (nra = nra() {  scenario.nra = nra; })?
+  <BLOCK_END>
+}
+BankAccount bank() : { String cash = ""; String limit = ""; } {
+  "bank" <BLOCK_START>
+    "cash" < EQUALS > < MONEY > { cash = token.image; }
+    "small-balance-limit" < EQUALS > < MONEY > { limit = token.image;}
+  <BLOCK_END>
+  { return BankAccount.valueOf(cash, limit);  }
+}
+Rif rif() : {
+   String cash = ""; String conversionDate="";    
+   Set<StockPosition> stockPositions = new LinkedHashSet<StockPosition>(); Rif result = null;
+   Set<GtdInvestmentCert> gicPositions = new LinkedHashSet<GtdInvestmentCert>();
+} {
+   "rif" <BLOCK_START>
+     "convert-rsp-to-rif" <EQUALS> <YYYY_MM_DD> { conversionDate = token.image;} 
+     "cash" < EQUALS > < MONEY > { cash = token.image; }
+     (stockPositions = stockPositions())?
+     (gicPositions = gicPositions())?
+   <BLOCK_END>
+   {
+     result = Rif.valueOf(cash, stockPositions, gicPositions, scenario.taxReturn, conversionDate);  
+     scenario.rifValueJan1 = result.value();
+     return result;
+   }
+}
+Tfsa tfsa() : {
+  String cash = "";  Set<StockPosition> stockPositions = new LinkedHashSet<StockPosition>();
+  Set<GtdInvestmentCert> gicPositions = new LinkedHashSet<GtdInvestmentCert>();
+} {
+   "tfsa" <BLOCK_START>
+     "cash" < EQUALS > < MONEY > { cash = token.image; }
+     (stockPositions = stockPositions())?
+     (gicPositions = gicPositions())?
+   <BLOCK_END>
+   { return Tfsa.valueOf(cash, stockPositions, gicPositions, scenario.tfsaRoom); }
+}
+Nra nra() : {
+  String cash = "";
+  Set<StockPosition> stockPositions = new LinkedHashSet<StockPosition>();
+  Set<GtdInvestmentCert> gicPositions = new LinkedHashSet<GtdInvestmentCert>();
+  Set<BookValue> bookValues = new LinkedHashSet<BookValue>();
+ } {
+   "nra" <BLOCK_START>
+     "cash" < EQUALS > < MONEY > { cash = token.image; }
+     (stockPositions = stockPositions())?
+     (gicPositions = gicPositions())?
+     (bookValues = bookValues())
+   <BLOCK_END>
+   { return Nra.valueOf(cash, stockPositions, gicPositions, bookValues, scenario.taxReturn, scenario.capitalGainLoss); }
+}
+Set<StockPosition> stockPositions(): { String symbol = ""; String shares = ""; Set<StockPosition> result = new LinkedHashSet<StockPosition>();} {
+  "stock-positions" <BLOCK_START>
+    (      < NUM > { shares = token.image; } < QUOTED_TEXT > { symbol = noQuotes(token.image); }
+      { result.add(StockPosition.valueOf(scenario.stockFrom(symbol), shares)); }
+    )+
+  <BLOCK_END>
+  { return result;  }
+}
+Set<BookValue> bookValues(): { String symbol = ""; String amount = ""; Set<BookValue> result = new LinkedHashSet<BookValue>();} {
+  "stock-book-values" <BLOCK_START>
+    (      < MONEY > { amount = token.image; }
+      < QUOTED_TEXT > { symbol = noQuotes(token.image); }
+      { result.add(BookValue.valueOf(symbol, amount)); }
+    )+
+  <BLOCK_END>
+  { return result; }
+}
+Set<GtdInvestmentCert> gicPositions() : {
+  String principal=""; String soldBy=""; String interestRate=""; String term=""; String redemptionDate="";
+  Set<GtdInvestmentCert> result = new LinkedHashSet<GtdInvestmentCert>();
+}{
+  "gic-positions" <BLOCK_START>
+   (
+     <QUOTED_TEXT> {soldBy = noQuotes(token.image);}
+     <MONEY> {principal = token.image;}
+     <PERCENT> {interestRate = token.image;}
+     <NUM> {term = token.image;} "-year"
+     "matures" <YYYY_MM_DD> {redemptionDate = token.image;}
+     {result.add(GtdInvestmentCert.fromRedemptionDate(principal, soldBy, interestRate, redemptionDate, term));}
+   )+
+  <BLOCK_END>
+  { return result;  }
+}
+
+
+void sequentialLiquidation(): {
+   List<Account> accounts = new ArrayList<Account>(); List<Stock> stocks = new ArrayList<Stock>();
+   String avoid=""; String when=""; String amount=""; String percent="";
+} {
+    "sequential-liquidation" <BLOCK_START>
+      "avoid-downturn-years" <EQUALS> <NUM> {avoid = token.image;}
+      "account-sequence" < EQUALS > ((<NRA> {accounts.add(scenario.nra);} |
+                                      <RIF> {accounts.add(scenario.rif);}  |
+                                      <TFSA> {accounts.add(scenario.tfsa);})(<COMMA>)?)+  
+       "stock-sequence" <EQUALS> < QUOTED_TEXT > { for(String ticker : Util.chopList(noQuotes(token.image))) {
+                                              stocks.add(scenario.stockFrom(ticker));
+                                          }}
+       (
+         /* careful: cross-talk in the loop iterations, unless you always set both amount and percent. */
+         "sell" (<MONEY> {amount=token.image;percent="";} | <PERCENT> {percent=token.image;amount="";}) <WHEN_CONTROL> {when=token.image;}
+         {scenario.transactionals.add(SequentialLiquidation.valueOf(avoid,accounts,stocks,amount,percent,when));}
+       )+
+     <BLOCK_END>       
+}
+
+void annualTfsaTopUp() : {
+   List<Account> accounts = new ArrayList<Account>(); List<Stock> stocks = new ArrayList<Stock>();
+   String when= ""; Transactional tfsaTopUp = null;
+} {  
+    "annual-tfsa-top-up" <BLOCK_START>
+      "account-sequence" < EQUALS > ((<NRA> {accounts.add(scenario.nra);} | <RIF> {accounts.add(scenario.rif);})(<COMMA>)?)+  
+      "stock-sequence" <EQUALS> < QUOTED_TEXT > { for(String ticker : Util.chopList(noQuotes(token.image))) {
+                                              stocks.add(scenario.stockFrom(ticker));
+                                          }}
+       <WHEN_CONTROL> { when = token.image; }
+   <BLOCK_END>
+   {
+     tfsaTopUp = new TfsaTopUp(when, accounts, stocks);
+     scenario.transactionals.add(tfsaTopUp);
+   }
+}
+
+/* In this case, items inside the transaction block can come in any order. */
+void transactions() : { } {
+  "transactions {"
+    (
+     bankDebitCredit() |
+     sweepCash() |
+     spendBankBalanceAbove() |
+     buySellStock() |
+     buyGic() |
+     transferStock() |
+     moveStock() |
+     annuityPayment() |
+     stockSplit()
+    )*
+  <BLOCK_END>
+  {
+    PayTaxes payTaxes = new PayTaxes("on *-12-31");
+    scenario.transactionals.add(payTaxes); 
+  }
+}
+Account nonBankAccount() : { Account account = null; } {
+  (< TFSA > { account = scenario.tfsa; }| < RIF> { account = scenario.rif; }| < NRA> { account = scenario.nra; }) 
+  { return account; }
+}
+void sweepCash() : { Account account = null; String when = "";} {
+  "sweep-cash-from" (account = nonBankAccount()) <WHEN_CONTROL> { when = token.image; }  
+  {
+    SweepCashFrom sweep = new SweepCashFrom(account, when);
+    scenario.transactionals.add(sweep); 
+  }
+}
+void bankDebitCredit(): { String amount = ""; String when = "";} {
+  "bank-debit-credit" < MONEY > {amount = token.image;} <WHEN_CONTROL> { when = token.image; }
+  {
+    BankDebitCredit spending = new BankDebitCredit(new Money(amount), when);
+    scenario.transactionals.add(spending);
+  }
+}
+void spendBankBalanceAbove(): { String amount = ""; String when = "";} {
+  <SPEND_BANK_BALANCE_ABOVE> < MONEY > {amount = token.image;} <WHEN_CONTROL> { when = token.image; }
+  {
+    SplurgeSpending splurgeSpending = new SplurgeSpending(new Money(amount), when);
+    scenario.transactionals.add(splurgeSpending);
+  }
+}
+
+void yearZeroAmounts(): { String netIncBefAdj=""; String netInc=""; String oasInc=""; String empInc=""; String tfsaRoom="";} {
+  "year-zero-amounts" <BLOCK_START>
+    "net-income-before-adjustments" <EQUALS> <MONEY> { netIncBefAdj=token.image; }
+    "net-income" <EQUALS> <MONEY> { netInc=token.image; }
+    "oas-income" <EQUALS> <MONEY> { oasInc=token.image; }
+    "employment-income" <EQUALS> <MONEY> { empInc=token.image; }
+ <BLOCK_END>
+ { scenario.yearZero = new YearZero(netIncBefAdj, netInc, oasInc, empInc); }  
+}
+
+void oas() : {
+  String amt = ""; String start = ""; String paymentDay = "";
+  String monthlyRew=""; String boostAge=""; String boostPercent=""; String clawThres=""; String clawPercent=""; 
+  String exempt = ""; String startWinBegin=""; String startWinEnd="";
+} {
+  "oas" <BLOCK_START>
+    "monthly-amount-at-65" < EQUALS > < MONEY > { amt = token.image; }
+    "start-month" < EQUALS > < YYYY_MM > { start = token.image; }
+    "payment-day" < EQUALS > < NUM >  { paymentDay = token.image; }
+    "clawback-threshold"  <EQUALS> <MONEY> { clawThres=token.image; }
+    "clawback-percent" <EQUALS> <PERCENT> { clawPercent=token.image; }
+    "monthly-reward" <EQUALS> <PERCENT> { monthlyRew=token.image;}
+    "boost-age" <EQUALS> <NUM> { boostAge=token.image; }
+    "boost-percent"  <EQUALS> <PERCENT> { boostPercent=token.image; }
+    "start-window-begin" <EQUALS> <NUM> { startWinBegin=token.image; }
+    "start-window-end" <EQUALS> <NUM> { startWinEnd=token.image; }
+    "gis-employment-exemption" <EQUALS> <MONEY> {exempt=token.image;}
+  <BLOCK_END>
+  {
+    OasPayment oas = OasPayment.valueOf(
+      start, amt, scenario.dateOfBirth, paymentDay, monthlyRew,
+      boostAge, boostPercent, clawThres, clawPercent, startWinBegin, startWinEnd, exempt
+    );
+    scenario.transactionals.add(oas);
+  }
+}
+
+void cpp() : {
+  String nominalAmt = ""; String start = ""; String paymentDay = "";
+  String monReward=""; String monPenalty=""; String nominalStart=""; String startWinBeg=""; String startWinEnd="";
+  String survivorAmt=""; String survivorDate="";
+} {
+  "cpp" <BLOCK_START>
+    "nominal-monthly-amount" < EQUALS > < MONEY > { nominalAmt = token.image; }
+    "start-month" < EQUALS > < YYYY_MM > { start = token.image; }
+    "payment-day" < EQUALS > < NUM >  { paymentDay = token.image; }
+    "monthly-reward" <EQUALS> <PERCENT> { monReward=token.image; }
+    "monthly-penalty" <EQUALS> <PERCENT> { monPenalty=token.image; }
+    "start-window-begin" <EQUALS> <NUM> { startWinBeg=token.image; }
+    "start-nominal" <EQUALS> <NUM> { nominalStart=token.image; }
+    "start-window-end" <EQUALS> <NUM> { startWinEnd=token.image; }
+    (      "survivor-benefit-amount" <EQUALS> <MONEY> {survivorAmt=token.image;}  
+      "survivor-benefit-start" <EQUALS> <YYYY_MM_DD> {survivorDate=token.image;} 
+    )? 
+  <BLOCK_END> 
+  {
+    CppPayment cpp = CppPayment.valueOf(
+      start, nominalAmt, scenario.dateOfBirth, paymentDay, monReward, monPenalty, nominalStart, startWinBeg, startWinEnd,
+      survivorAmt, survivorDate
+    );
+    scenario.transactionals.add(cpp);
+  }
+}
+
+void buySellStock() : {
+  Account account = null; String action=""; String numShares=""; String symbol=""; String when="";
+} {
+  ("buy-stock" | "sell-stock") {action=token.image;}
+  (account = nonBankAccount())
+  < NUM > {numShares=token.image;} "shares"
+  <QUOTED_TEXT> {symbol=noQuotes(token.image);} 
+  <WHEN_CONTROL> {when=token.image;}
+  {scenario.transactionals.add(new BuySellStock(when, numShares, account, symbol, action)); } 
+}
+
+/* Buying a GIC results in both a buy-transaction and a redemption-transaction. */
+void buyGic() : {
+  Account account=null; String soldBy=""; String principal=""; String interestRate="";
+  String term=""; String date="";
+} {
+  /* buy-gic rif "Home Trust" 5000.00 5.5% 2-year : 2020-06-21 */
+  "buy-gic" (account = nonBankAccount())
+  <QUOTED_TEXT> {soldBy = noQuotes(token.image);}
+  <MONEY> {principal = token.image;}
+  <PERCENT> {interestRate = token.image;}
+  <NUM> {term = token.image;} "-year"
+  <COLON> <YYYY_MM_DD> {date = token.image;}
+  { GicTransactions.buyAccrueAndRedeem(scenario, date, account, principal, soldBy, interestRate, term);}
+}
+
+void transferStock() : {
+  Account account = null; String action=""; String numShares=""; String symbol=""; String when=""; String amount=null;
+} {
+  ("transfer-stock-in" | "transfer-stock-out") {action=token.image;}
+  (account = nonBankAccount())
+  (< NUM > {numShares=token.image;} "shares" | <MONEY> {amount=token.image;})
+  <QUOTED_TEXT> {symbol=noQuotes(token.image);} 
+  <WHEN_CONTROL> {when=token.image;}
+  {
+    if (amount == null) { 
+      scenario.transactionals.add(TransferStock.byNumShares(account, action, numShares, symbol, when));
+    }
+    else {
+      scenario.transactionals.add(TransferStock.byMarketValue(account, action, amount, symbol, when));
+    }
+  } 
+}
+
+void moveStock() : {
+  Account from=null; Account to=null; String numShares=""; String symbol="";
+  String when=""; String amount=null;
+} {
+  "move-stock" "from"
+  (from = nonBankAccount())
+  "to"
+  (to = nonBankAccount())
+  ( <NUM> {numShares=token.image;} "shares" | <MONEY> {amount=token.image;} )
+  <QUOTED_TEXT> {symbol=noQuotes(token.image);}
+  <WHEN_CONTROL> {when=token.image;}  
+  {
+    if (amount == null) { 
+      scenario.transactionals.add(MoveStock.byNumShares(from, to, numShares, symbol, when));
+    }
+    else {
+      scenario.transactionals.add(MoveStock.byMarketValue(from, to, amount, symbol, when));
+    }
+  } 
+}
+
+/*
+ There's no actual limit on the amount, but this is intended for low gross monthly incomes,
+ for retired people making a bit of cash to supplement their income.
+*/
+void smallEmployment(): {
+   String startDate=""; String endDate=""; String gross=""; String paidOn=""; 
+} {
+  "small-employment" <BLOCK_START> 
+    "start-date" <EQUALS> <YYYY_MM_DD> {startDate=token.image;}
+    "stop-date" <EQUALS> <YYYY_MM_DD> {endDate=token.image;}
+    "gross-monthly-income" <EQUALS> <MONEY> {gross=token.image;}
+    "paid-on" <EQUALS> <NUM> {paidOn=token.image;}
+  <BLOCK_END>
+  { scenario.transactionals.add(new EmploymentPayday(startDate, endDate, gross, paidOn)); }
+}
+
+void annuityPayment(): {
+  String amount=""; String when="";
+} {
+  "annuity-payment" <MONEY> { amount=token.image;} <WHEN_CONTROL> {when=token.image;}
+  { scenario.transactionals.add(new AnnuityPayment(when, amount)); }
+}
+
+void stockSplit(): {
+  String when=""; String factor=""; Set<String> tickers = new LinkedHashSet<String>();
+} {
+   "stock-split"
+   <NUM> {factor=token.image;} "-to-1"
+   <QUOTED_TEXT>
+   {
+     for(String ticker : Util.chopList(noQuotes(token.image))) {
+        tickers.add(ticker);
+     }
+   }
+   <WHEN_CONTROL> {when=token.image;}
+   { scenario.transactionals.add(StockSplit.valueOf(when, tickers, factor)); }
+}

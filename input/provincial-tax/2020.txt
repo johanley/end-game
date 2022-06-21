@@ -1,0 +1,266 @@
+provincial-tax {
+  jurisdiction = QC 
+  tax-brackets {
+    15.0% : 44545.00    
+    20.0% : 89080.00    
+    24.0% : 108390.00   
+    24.75% : 100000000.00
+  }
+  personal-amount = 15532.00
+  age-amount = 3267.00
+  pension-income-max = 2902.00
+  dividend-gross-up-mult = 16.146%
+  schedule-b-threshold = 35205.00
+  schedule-b-rate = 18.75%
+  live-alone-amount = 1780.00 # Enter 0.00 if you don't live alone!
+  pension-income-rate = 1.25% 
+}
+
+
+provincial-tax {
+  # Numbers from 2020.
+  jurisdiction = ON
+  tax-brackets {
+    5.05% : 44740.00    
+    9.15% : 89482.00    
+    11.16% : 150000.00    
+    12.16% : 220000.00    
+    13.16% : 100000000.00
+  }
+  personal-amount = 10783.00
+  age-amount = 5265.00
+  age-amount-threshold = 39193.00
+  pension-income-max = 1491.00
+  dividend-gross-up-mult = 10.0%
+  low-income-basic = 498.00 # line 71 x 2!
+  surtax-threshold-1 = 4830.00
+  surtax-rate-1 = 20% 
+  surtax-threshold-2 = 6182.00
+  surtax-rate-2 = 36%
+  # strange 'plateau' structure, with 0% for some brackets having a small width
+  health-premium-tax-brackets {
+    0.0% : 20000.00
+    6.0% : 25000.00
+    0.0% : 36000.00 # example of a 'plateau'
+    6.0% : 38500.00
+    0.0% : 48000.00
+    25.0% : 48600.00
+    0.0%  : 72000.00
+    25.0% : 72600.00
+    0.0% : 200000.00
+    25.0% : 200600.00
+  }
+}
+
+
+provincial-tax {
+  # Numbers from 2020.
+  jurisdiction = NS 
+  tax-brackets {
+    8.79% : 29590.00    
+    14.95% : 59180.00    
+    16.67% : 93000.00   
+    17.5% : 150000.00   
+    21.0% : 100000000.00
+  }
+  personal-amount = 8481.00
+  personal-amount-supplement = 3000.00
+  personal-amount-threshold = 25000.00
+  personal-amount-rate = 6%
+  age-amount = 4141.00
+  age-amount-threshold = 30828.00
+  age-amount-supplement = 1465.00
+  age-amount-supplement-threshold = 25000.00
+  age-amount-supplement-rate = 2.93%
+  pension-income-max = 1173.00
+  dividend-gross-up-mult = 8.85%
+  low-income-basic = 300.00
+  low-income-threshold = 15000.00
+  low-income-rate = 5.00%
+  age-tax-credit-threshold = 24000.00
+}
+
+provincial-tax {
+  # Numbers from 2020.
+  jurisdiction = NU 
+  tax-brackets {
+    4% : 46277.00    
+    7% : 92555.00    
+    9% : 150473.00   
+    11.5% : 100000000.00
+  }
+  personal-amount = 16304.00  
+  age-amount = 10408.00 
+  age-amount-threshold = 38508.00 
+  pension-income-max = 2000.00
+  dividend-gross-up-mult = 5.51%
+}
+
+provincial-tax {
+  # Numbers from 2020.
+  jurisdiction = NT 
+  tax-brackets {
+    5.9% : 43957.00    
+    8.6% : 87916.00    
+    12.2% : 142932.00   
+    14.05% : 100000000.00
+  }
+  personal-amount = 15093.00  
+  age-amount = 7382.00 
+  age-amount-threshold = 38508.00 
+  pension-income-max = 1000.00
+  dividend-gross-up-mult = 11.5%
+}
+
+provincial-tax {
+  # Numbers from 2020.
+  jurisdiction = YT 
+  tax-brackets {
+    6.4% : 48535.00    
+    9.0% : 97069.00    
+    10.9% : 150473.00   
+    12.8% : 500000.00   
+    15.0% : 100000000.00
+  }
+  personal-amount = 13229.00  # same as fed
+  age-amount = 7637.00 # same as fed
+  age-amount-threshold = 38508.00 # same as fed
+  pension-income-max = 2000.00
+  dividend-gross-up-mult = 12.02%
+}
+
+
+
+provincial-tax {
+  # Numbers from 2020.
+  jurisdiction = BC
+  tax-brackets {
+    5.06% : 41725.00    
+    7.7% : 83451.00    
+    10.5% : 95812.00    
+    12.29% : 116344.00    
+    14.7% : 157748.00    
+    16.8% : 220000.00    
+    20.5% : 100000000.00
+  }
+  personal-amount = 10949.00
+  age-amount = 4910.00
+  age-amount-threshold = 36552.00
+  pension-income-max = 1000.00
+  dividend-gross-up-mult = 12.0%
+  low-income-basic = 476.00
+  low-income-threshold = 21185.00
+  low-income-rate = 3.56%
+}
+
+
+provincial-tax {
+  # Numbers from 2020.
+  jurisdiction = MB
+  tax-brackets {
+    10.8% : 33389.00    
+    12.75% : 72164.00    
+    17.4% : 100000000.00
+  }
+  personal-amount = 9838.00
+  age-amount = 3728.00
+  age-amount-threshold = 27749.00
+  pension-income-max = 1000.00
+  dividend-gross-up-mult = 8.0%
+}
+
+provincial-tax {
+  # Numbers from 2020.
+  jurisdiction = AB
+  tax-brackets {
+    10% : 131220.00    
+    12% : 157464.00    
+    13% : 209952.00    
+    14% : 314928.00    
+    15% : 100000000.00
+  }
+  personal-amount = 19369.00
+  age-amount = 5397.00
+  age-amount-threshold = 40179.00
+  pension-income-max = 1491.00
+  dividend-gross-up-mult = 10.0%
+}
+
+
+provincial-tax {
+  # Numbers from 2020.
+  jurisdiction = SK
+  tax-brackets {
+    10.5% : 45225.00    
+    12.5% : 129214.00    
+    14.5% : 100000000.00
+  }
+  personal-amount = 16065.00
+  age-amount = 4894.00
+  age-amount-threshold = 36430.00
+  pension-income-max = 1000.00
+  dividend-gross-up-mult = 11.0%
+}
+
+provincial-tax {
+  # Numbers from 2020. 
+  jurisdiction = NL 
+  tax-brackets {
+    8.7% : 37929.00    
+    14.5% : 75858.00    
+    15.8% : 135432.00   
+    17.3% : 189604.00   
+    18.3% : 100000000.00
+  }
+  personal-amount = 9498.00
+  age-amount = 6063.00
+  age-amount-threshold = 33226.00
+  pension-income-max = 1000.00
+  dividend-gross-up-mult = 5.4%
+  low-income-basic = 859.00
+  low-income-threshold = 20537.00
+  low-income-rate = 16.00%
+}
+
+provincial-tax {
+  # Numbers from 2020 
+  jurisdiction = PE 
+  tax-brackets {
+    9.8% : 31984.00    
+    13.8% : 63969.00    
+    16.7% : 100000000.00
+  }
+  personal-amount = 10000.00
+  age-amount = 3764.00
+  age-amount-threshold = 28019.00
+  pension-income-max = 1000.00
+  dividend-gross-up-mult = 10.5%
+  low-income-basic = 678.00
+  low-income-age = 250.00 # PE
+  low-income-threshold = 17455.00
+  low-income-rate = 3.00%
+}
+
+provincial-tax {
+  # Usually there are significant differences between jurisdictions!
+  # Each jurisdiction has its own set of fields.
+  # Ref: https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package.html
+  # Numbers from 2020.
+  jurisdiction = NB 
+  tax-brackets {
+    9.68% : 43401.00    
+    14.82% : 86803.00    
+    16.52% : 141122.00   
+    17.84% : 160776.00   
+    20.30% : 100000000.00
+  }
+  personal-amount = 10459.00
+  age-amount = 5107.00
+  age-amount-threshold = 38019.00
+  pension-income-max = 1000.00
+  dividend-gross-up-mult = 14%
+  low-income-basic = 678.00
+  low-income-threshold = 17455.00
+  low-income-rate = 3.00%
+}
+
