@@ -242,15 +242,18 @@ sell 6.0% on *-11-26 | ..2034-12-31</pre>       # only end-date
 In this case, the ":" character is used.
 <pre>buy-gic rif "Cda Trust" 5700.00 2.5% 1-year : 2024-06-21</pre>
 
-<p><pre>syntax-version = v1.0.0</pre>
-<br>The syntax may change over time. 
+
+
+<h2 id='examplesnippets'>Example Snippets for the Scenario File</h2>
+
+<p><pre>syntax-version = v1.0.0</pre><br>
 This version id states that this scenario file was created with a given version of the syntax (which may change over time).
 
-<P><pre>description = "101.6: Fixed 3% growth in stock prices..."</pre>
-<br>A free-form, high-level description of important aspects of the scenario. 
+<P><pre>description = "101.6: Fixed 3% growth in stock prices..."</pre><br>
+A free-form, high-level description of important aspects of the scenario. 
 
-<P><pre>number-of-iterations = 1</pre>
-<br>Usually 1. You change it to more than 1 when you want to repeat the scenario, from start to finish, multiple times.
+<P><pre>number-of-iterations = 1</pre><br>
+Usually 1. You change it to more than 1 when you want to repeat the scenario, from start to finish, multiple times.
 This only makes sense if the various iterations have different results.
 For example, when stock prices are generated using randomness, running multiple iterations makes logical sense, to see the general spread in the resulting outputs.
 
@@ -260,15 +263,15 @@ For example, when stock prices are generated using randomness, running multiple 
   # range = -5%_10%
   fixed = 3% # no randomness here
   # explicit-list = 5%,5%,5%,5%,5%,-7% # in order of year; recycles if end is reached
-}</pre>
-<br>Controls how stock prices change over time.
+}</pre><br>
+Controls how stock prices change over time.
 In this example, the prices are updated only on November 25 of each year.
 The <em>gaussian</em> style means that price increases follow a <a href='https://en.wikipedia.org/wiki/Normal_distribution'>Gaussian distribution</a>.
 The <em>range</em> example above means that the percentage price increase is randomly selected between -5% and +10%.
 
 <P><pre>simulation-start-date = 2022-01-01
-simulation-end-date = 2042-12-31</pre>
-<br>The start and end dates for running the simulation. 
+simulation-end-date = 2042-12-31</pre><br>
+The start and end dates for running the simulation. 
 If multiple iterations are run, then each iteration starts with the start date.
 There can also, optionally, be a test to see if the person has died at the end of the year.
 If that is activated, then the simulation will often terminate before the end date is reached. 
@@ -277,8 +280,8 @@ If that is activated, then the simulation will often terminate before the end da
 
 <P><pre>date-of-birth = 1962-03-01
 annual-test-for-survival
-sex = male</pre>
-<br>The person's date of birth is used for various calculations.
+sex = male</pre><br>
+The person's date of birth is used for various calculations.
 If <em>annual-test-for-survival</em> is included, then at the end of each simulated year, a statistical 
 test is performed by the system, to see if the person will survive into the next year. If not, then they die in the simulation, 
 and the simulation/iteration is terminated.
