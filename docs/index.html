@@ -207,13 +207,15 @@ Here, you just want to run the code, not change it.
 <h2 id='syntax'>Syntax of the Scenario File</h2>
 The scenario file has a specific syntax.
 That is, the text in the scenario file has to <em>make sense</em> to the code.
-You have to follow those rules, or the scenario will not execute properly.
+You have to follow those rules, or an error will result, and the code will stop executing.
 
 <P>It's usually best to start with an example scenario file that is closest to your situation.
 
 <P>Note that a leading # character means that text is a comment.
 
-<P>There's a special <em>on</em> syntax for controlling when transactions are applied.
+<h3 id='whencontrol'>The <em>on</em> statement</h3>
+
+<P>There's a special <em>on</em> syntax for controlling when transactions are applied, and it occurs in various places.
 Examples:
 
 <pre>bank-debit-credit 925.00 on *-01</pre>
@@ -239,6 +241,31 @@ sell 6.0% on *-11-26 | ..2034-12-31</pre>       # only end-date
 <P>An exception to the above is the purchase of a GIC, which always uses a specific date.
 In this case, the ":" character is used.
 <pre>buy-gic rif "Cda Trust" 5700.00 2.5% 1-year : 2024-06-21</pre>
+
+<p><pre>syntax-version = v1.0.0</pre>
+<b>The syntax may change over time. 
+This version id states that this scenario file was created with a given version of the syntax (which may change over time).
+
+<P><pre>description = "101.6: Fixed 3% growth in stock prices..."</pre>
+<br>A free-form, high-level description of important aspects of the scenario. 
+
+<P><pre>number-of-iterations = 1</pre>
+<br>Usually 1. You change it to more than 1 when you want to repeat the scenario, from start to finish, multiple times.
+This only makes sense if the various iterations have different results.
+For example, when stock prices are generated using randomness, running multiple iterations makes logical sense, to see the general spread in the resulting outputs.
+
+<P><pre>update-stock-prices {
+  on *-11-25 # when stock prices are to be updated
+  # gaussian mean = 5.0%  std-dev = 5.0% 
+  # range = -5%_10%
+  fixed = 3% # no randomness here
+  # explicit-list = 5%,5%,5%,5%,5%,-7% # in order of year; recycles if end is reached
+}</pre>
+<br>Controls how stock prices change over time.
+In this example, the prices are updated only on November 25 of each year.
+The <em>gaussian</em> style means that price increases follow a <a href='https://en.wikipedia.org/wiki/Normal_distribution'>Gaussian distribution</a>.
+The <em>range</em> example above means that the percentage price increase is randomly selected between -5% and +10%.
+
 
 
 <!-- 
