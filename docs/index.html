@@ -184,51 +184,54 @@ The basic statistic from Statcan in this regard is interesting: the idea is that
 The output spreadsheet files of this project usually incorporate this stat as a reminder of its importance.
 
  
-<h2>Running The Code</h2>
+<h2>Running The Code In Eclipse</h2>
 
-To get started, the first step is to install the <em>Eclipse</em> tool.
-This is a tool that programmers use to run and edit code. 
-In most cases, you just want to run the code, not change it.
-<ul>
- <li><a href='https://www.eclipse.org/downloads/'>download</a> the Eclipse installer. 
- <li>install Eclipse to a convenient location on your computer.
- <li>launch Eclipse. (The first time you launch it, it might show a screen intended only for beginners. Close it.) 
- <li>add the <em>JavaCC Eclipse plugin</em>. JavaCC is the tool that parses the input scenario file. 
- In Eclipse: Help -> Eclipse Marketplace -> Find: <em>javacc</em>, and install the plugin.
-</ul>
+To run the code, this project recommends the <em>Eclipse</em> tool, a  
+tool that programmers use to run and edit code. 
+Here, you just want to run the code, not change it.
 
-<P>When you open Eclipse, it asks you to point it to your <em>workspace</em> folder, which is simply 
-a folder that holds a number of projects.
-For example, I have these folders on my computer: 
+<P><b>First, create a workspace folder on your machine.</b>
+When you launch Eclipse, you need to point to a workspace folder.
+A workspace folder contains project folders, each of which contains the source code for a project.  
+
+<P>An example setup:
 <pre>
-C:\johanley\ProjectsPhoton\   (my workspace folder)
-  end-game                    (the project folder for the end-game project)
+C:\bob\myworkspace\            [the workspace folder]
+  C:\bob\myworkspace\end-game  [the project folder for end-game]
+    ./settings
     docs            
-    input
-    lib
+    input             
+    lib               [the various files and folders in the project]
     scenario
     src
+    .classpath
+    .gitignore
+    .project
     LICENSE.txt
     README.md
 </pre>
 
 <P>Your setup will be similar, but with a different workspace folder.
 
-<P><b>First, create a workspace folder on your machine.</b> 
-
-<P>Next, you need to import the source code into a new project in your workspace.
+<P>Next, you need to put the source code into the above folder structure
 <ul> 
- <li>go to the <a href='https://github.com/johanley/end-game'>github repository</a>. 
- <li>click on the <em>Code</em> button.
- <li>click on <em>Download ZIP</em>. 
- <li>change the name of the zip from <em>end-game-master.zip</em> to <em>end-game.zip</em>.
- <li>copy the zip file to your workspace folder, and unzip it.
+ <li>go to the <a href='https://github.com/johanley/end-game'>github repository</a> 
+ <li>click on the <em>Code</em> button
+ <li>click on <em>Download ZIP</em>
+ <li>go to the download folder, and change the name from <em>end-game-master.zip</em> to <em>end-game.zip</em>
+ <li>copy the zip file to your workspace folder
+ <li>unzip end-game.zip
  <li>your folders should follow the pattern shown above!
 </ul>
 
-<P>Next, you have to tell Eclipse about the project folder:
+<P>Next, you run Eclipse, following these steps: 
 <ul>
- <li>in Eclipse: File -> New -> Java project ... 
+ <li><a href='https://www.eclipse.org/downloads/'>download</a> the Eclipse installer 
+ <li>install Eclipse to a convenient location on your computer
+ <li>launch Eclipse, and point it to your workspace directory (that you created earlier).
+ (The first time you launch Eclipse, it might show a screen intended only for beginners. Close it.)
+ <li>add the <em>JavaCC Eclipse plugin</em>. JavaCC is the tool that parses the input scenario file. 
+ Eclipse menu: Help -> Eclipse Marketplace -> Find: <em>javacc</em>, and install the plugin.
 </ul>
 
 Now you are ready to experiment with your own scenarios.
