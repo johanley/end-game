@@ -56,7 +56,6 @@ public final class RunSimulation implements Runnable {
   public static void main(String... args) throws ParseException, IOException {
     //this way just hard-codes the file location:
     //RunSimulation runner = new RunSimulation("C:\\myworkspace\\end-game\\scenario\\01.1\\01.1-no-savings-CPP-0.ini");
-    Log.log("user.dir: " + System.getProperty("user.dir"));
     //this way uses arguments passed on the command line:
     RunSimulation runner = new RunSimulation(args[0]);
     //runner.parseOnly();
@@ -126,12 +125,12 @@ public final class RunSimulation implements Runnable {
       
       endAllProcessing(beginTime, scenario);
      
+      Log.forceConsole("Done.");
       Log.flushLogBufferFor(scenario, new File(configFile));
     }
     catch(Throwable ex) {
       Log.error(ex.toString(), ex);
     }
-    Log.forceConsole("Done.");
   }
 
   // PRIVATE

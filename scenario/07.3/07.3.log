@@ -1,4 +1,3 @@
-Done.
 Scenario: C:\johanley\ProjectsPhoton\end-game\scenario\07.3\07.3-goc-pension-130k-salary-CPP-avg.ini
 Running the scenario...
 Reading the input scenario file: C:\johanley\ProjectsPhoton\end-game\scenario\07.3\07.3-goc-pension-130k-salary-CPP-avg.ini
@@ -1539,5 +1538,6 @@ Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\07.3\07.3-cash-an
 Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\07.3\07.3-cash-flows.csv
 Scenario description: 07.3: GOC large pension 5483/month, no other savings, house unsold, retires at 65. Average CPP 673/month, OAS/GIS. PE. Deterministic.
 Start-date: 2028-01-01 end-date: 2042-12-31
-Execution time: 0.822019s
+Execution time: 1.1037427s
+Done.
 Writing to log file C:\johanley\ProjectsPhoton\end-game\scenario\07.3\07.3.log
