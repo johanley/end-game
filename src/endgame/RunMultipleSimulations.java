@@ -26,11 +26,11 @@ public final class RunMultipleSimulations implements Runnable {
   */
   public static void main(String... args) throws ParseException, IOException {
     /*
-    If you prefer, you can also run this by simply hard-coding the location of the scenario file:
-    RunMultipleSimulations runMultipleSims = new RunMultipleSimulations(C:\\blah\\");
+    If you prefer, you can also run this by simply hard-coding the folder location
+    String folder = "C:\\myworkspace\\end-game\\scenario";
      */
-    String root = args[0];
-    RunMultipleSimulations runMultipleSims = new RunMultipleSimulations(root);
+    String folder = args[0];
+    RunMultipleSimulations runMultipleSims = new RunMultipleSimulations(folder);
     runMultipleSims.run();
   }
   

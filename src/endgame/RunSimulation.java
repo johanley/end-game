@@ -51,22 +51,25 @@ public final class RunSimulation implements Runnable {
   /** 
    Run the simulation.
    The location of the configuration file (scenario.ini) can be passed as the first (and only) 
-   command-line argument. (You can also hard code it.)
+   command-line argument. (You can also hard code it. See below.)
   */
   public static void main(String... args) throws ParseException, IOException {
-    //There are two ways to point to the scenario file.
+    //There are two styles for pointing to the scenario file.
     //You have to pick one or the other.
-    //Use comments '//' to control which one is active, and which one is not.
+    //Use comments '//' to make one style active, and the other style inactive.
     //Then save your change using the menu, File->Save.
     
     //Style #1. This way just hard-codes the file location.
     //Note the doubling of the separators in the file name location!
-    RunSimulation runner = new RunSimulation("C:\\myworkspace\\end-game\\scenario\\01.1\\01.1-no-savings-CPP-0.ini");
+    String scenario = "C:\\myworkspace\\end-game\\scenario\\01.1\\01.1-no-savings-CPP-0.ini";
     
-    //Style #2. This alternate way uses arguments passed on the command line:
-    //RunSimulation runner = new RunSimulation(args[0]);
-    //runner.parseOnly();
+    //Style #2. This alternate way uses arguments passed on the command line.
+    //For beginners, this is a bit harder to use.
+    //String scenario = args[0];
+    
+    RunSimulation runner = new RunSimulation(scenario);
     runner.run();
+    //runner.parseOnly();
   }
   
   /**

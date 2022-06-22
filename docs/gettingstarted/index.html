@@ -18,6 +18,8 @@
 <h2>Getting Started</h2>
 This is a guide for running the code in the Eclipse tool.
 
+
+
 <h3>Step 1 - Folders and Source Code</h3>
 <br>First, create a <b>workspace</b> folder on your machine.
 
@@ -58,6 +60,8 @@ C:\myworkspace\            [the workspace folder]
  <li>your folders should now follow the pattern shown above!
 </ul>
 
+
+
 <h3>Step 2 - Install and Run Eclipse</h3>
 Install and run Eclipse, following these steps: 
 <P><a href='https://www.eclipse.org/downloads/'>Download</a> the Eclipse installer.
@@ -78,6 +82,7 @@ Install and run Eclipse, following these steps:
 <P><img src='install-05.png'>
 
 
+
 <h3>Step 3 - Import the end-game Project into Eclipse</h3>
 Now that you have Eclipse running, it's time to point it to the <em>end-game</em> project and its source code.
 
@@ -93,43 +98,50 @@ Now that you have Eclipse running, it's time to point it to the <em>end-game</em
 <P><img src='install-08.png'> 
 
 
+
 <h3>Step 4 - Run an Example Scenario</h3>
 On the left, open the <em>src</em> folder, and then the <em>endgame</em> folder.
-Double click on the <em>RunSimulation</em> file (this is called a class in Java): 
+Double click on the <em>RunSimulation</em> file (this is called a <em>class</em> in Java).
+This is the main class that launches the tool. The task is to point it to a given scenario file.
+To get started, we'll point it to an existing scenario file that comes with the source code. 
 <P><img src='install-09.png'>
  
-<P>Before you run it, you need to ensure that RunSimulation is pointed to the desired scenario file.
-Look for this line:
-<pre>RunSimulation runner = new RunSimulation("C:\\myworkspace\\end-game\\scenario\\01.1\\01.1-no-savings-CPP-0.ini");</pre>
+<P>There are two ways of pointing to the scenario file.
+The easiest way is <em>Style #1</em>. 
+If your workspace is different from <em>C:\workspace\</em>, then you will need to change one line to point to your actual 
+workspace, and then save the change using the menu, File -> Save.
 
-<P>In Java code, comments are preceded by // characters. When you place // at the start of a line of code, that means
-you, in effect, turn it off and prevent it from executing.
+<P>Finally, to run the scenario and generate its output, in the menu select <em>Run -> Run As... -> Java application</em>.
+That will generate logging output to something called the Console window.
+It will also generate new .csv files that summarize the results.
+The log file and .csv files are saved to the same directory as the scenario itself.
 
-<P>In the menu, select <em>Run -> Run As... -> Java application</em>.
+<P>The <em>RunMultipleSimulations</em> class works in a similar, but it is passed a folder that contains multiple scenarios files. 
+ 
+
+
 
 <h3>Step 5 - Create your own Scenario</h3>
 Now you are ready to experiment with your own scenarios.
-<ul>
- <li>create your own scenario file. You can place the scenario anywhere you want. 
- Many will find it convenient to follow the existing pattern under the <em>scenario</em> folder in the project.
- You'll likely want to explore multiple scenarios, so you might create multiple folders under <em>scenario</em>, one folder 
- for each new scenario. 
- <li>set the project-root location in the scenario file
- <li>execute the <em>RunSimulation</em> class. 
- You need to tell it the file location of your scenario file.
- The simplest way is to hard-code it in the <em>RunSimulation</em> class itself. 
-</ul>
+You can place the scenario file anywhere you want. 
+But most will find it convenient to follow the existing structure established with the example scenarios, all located under the <em>scenario</em> folder in the project.
+The idea is simple: you just create a new folder for each scenario.
+
+<P>Of course, in order to run your new scenario, you will need to point the <em>RunSimulation</em> class to the scenario file, using 
+the method described above.
+
 
 
 <h3>Step 6 (Optional) - Install the JavaCC plugin</h3>
-You can skip this if you wish. The JavaCC tool lets you change the syntax of the scenario file.
+You can skip this if you wish. 
+The <em>JavaCC</em> tool lets you change the syntax of the scenario file.
 You won't likely need to do that. 
 
-<P>To install the JavaCC plugin into Eclipse
+<P>To install the <em>JavaCC</em> plugin into Eclipse:
 <ul>
- <li>from the menu, select Help -> Eclipse Marketplace
- <li>in the Find box, enter "javacc" and hit Enter
- <li>click the <em>Install</em> button for the JavaCC plugin
+ <li>from the menu, select <em>Help -> Eclipse Marketplace</em>
+ <li>in the Find box, enter <em>javacc</em> and hit Enter
+ <li>click the <em>Install</em> button for the <em>JavaCC</em> plugin
 </ul>
 
 
