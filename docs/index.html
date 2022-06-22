@@ -247,6 +247,8 @@ In this case, the ":" character is used:
 
 <p><pre>syntax-version = v1.0.0</pre>
 States that this scenario file was created with a given version of the syntax for scenario files (which may change over time).
+The idea is to ensure that code processing a scenario file knows the exact syntax of the file it's supposed to process.
+The code is not smart enough to be backwards-compatible with "old" versions of the syntax.
 
 <P><pre>description = "101.6: Fixed 3% growth in stock prices..."</pre>
 A free-form, high-level description of important aspects of the scenario. 
@@ -255,6 +257,7 @@ A free-form, high-level description of important aspects of the scenario.
 Usually 1. You change it to more than 1 when you want to repeat the scenario, from start to finish, multiple times.
 This only makes sense if the various iterations have different results.
 For example, when stock prices are generated using randomness, running multiple iterations makes logical sense, to see the general spread in the resulting outputs.
+When greater than 1, the generated .csv files are completely different.
 
 <P><pre>update-stock-prices {
   on *-11-25 # when stock prices are to be updated
@@ -272,7 +275,7 @@ The <em>range</em> example above means that the percentage price increase is ran
 simulation-end-date = 2042-12-31</pre>
 The start and end dates for running the simulation. 
 If multiple iterations are run, then each iteration starts with the start date.
-There can also, optionally, be a test to see if the person has died at the end of the year.
+Optionally, there can also be a test to see if the person has died at the end of the year.
 If that is activated, then the simulation will often terminate before the end date is reached. 
 (See below.)
 
@@ -286,6 +289,30 @@ test is performed by the system, to see if the person will survive into the next
 and the simulation/iteration is terminated.
 This feature uses <a href='https://www150.statcan.gc.ca/n1/pub/84-537-x/84-537-x2021001-eng.htm'>life-tables from Statistics Canada</a>, and those tables are different between males and females.  
  
+<p><pre>year-zero-amounts {
+  net-income-before-adjustments = 15180.00  # line 23400
+  net-income = 15180.00 # line 23600
+  oas-income = 0.00
+  employment-income = 0.00  
+}</pre>
+The simulation starts in the middle of life, and some items in the tax return need to refer to the previous year.
+For the first year in the simulation, there is no previous year, so this data fills that gap. 
+
+<P><pre>oas {
+  monthly-amount-at-65 = 648.67 # as of 2022-06
+  # payments are actually first received on the month AFTER the start-month 
+  start-month = 2027-03 # the month I turn 65
+  payment-day = 28 # day of the month; never more than 28, otherwise you'll have no payment in February!
+  clawback-threshold = 81761.00 # as of 2022; versus line 23400 of last year's tax return
+  clawback-percent = 15%
+  monthly-reward = 0.7% # for every month oas is delayed past 65
+  boost-age = 75 # the age at which OAS is boosted by 10%
+  boost-percent = 10%
+  start-window-begin = 65 
+  start-window-end = 70
+  gis-employment-exemption = 5000.00
+}</pre>
+The data used to calculate the OAS (Old Age Security) benefit.
 
 
 <!-- 
