@@ -23,6 +23,7 @@
  <li><a href="#lessons">Lessons Learned</a>
  <li><a href="#running">Running The Code In Eclipse</a>
  <li><a href="#syntax">Syntax of the Scenario File</a>
+ <li><a href="#examplesnippets">Example Snippets for the Scenario File</a>
 </ul> 
 
 <h2 id='overview'>Overview</h2>
@@ -285,8 +286,8 @@ annual-test-for-survival
 sex = male</pre>
 The person's date of birth is used for various calculations.
 If <em>annual-test-for-survival</em> is included, then at the end of each simulated year, a statistical 
-test is performed by the system, to see if the person will survive into the next year. If not, then they die in the simulation, 
-and the simulation/iteration is terminated.
+test is performed by the system, to see if the person will survive into the next year. 
+If they fail to survive the test, then they die, and the simulation/iteration is terminated.
 This feature uses <a href='https://www150.statcan.gc.ca/n1/pub/84-537-x/84-537-x2021001-eng.htm'>life-tables from Statistics Canada</a>, and those tables are different between males and females.  
  
 <p><pre>year-zero-amounts {
@@ -296,7 +297,7 @@ This feature uses <a href='https://www150.statcan.gc.ca/n1/pub/84-537-x/84-537-x
   employment-income = 0.00  
 }</pre>
 The simulation starts in the middle of life, and some items in the tax return need to refer to the previous year.
-For the first year in the simulation, there is no previous year, so this data fills that gap. 
+For the first year in the simulation, there is no data for the previous year, so this data fills that gap. 
 
 <P><pre>oas {
   monthly-amount-at-65 = 648.67 # as of 2022-06
@@ -313,6 +314,200 @@ For the first year in the simulation, there is no previous year, so this data fi
   gis-employment-exemption = 5000.00
 }</pre>
 The data used to calculate the OAS (Old Age Security) benefit.
+The <em>start-month</em> is especially important.
+
+<P><pre>cpp { 
+  # can be used for QPP as well, since they have nearly the same core logic
+  nominal-monthly-amount = 857.00 # if you start at age 65
+  start-month = 2022-03           # the month I choose to start cpp payments
+  payment-day = 28   # not more than 28, otherwise you'll have no payment in most months of February!
+  # payments are actually first received on the month AFTER the start-month
+  monthly-reward = 0.7%   # for every month cpp is delayed past age 65
+  monthly-penalty = 0.6%  # for every month cpp is started before age 65
+  start-window-begin = 60 
+  start-nominal = 65
+  start-window-end = 70
+}</pre>
+The data used to calculate your CPP benefit.
+The <em>nominal-monthly-amount</em> and the <em>start-month</em> are especially important.
+
+<P><pre>rif-minimum-withdrawals {
+ # Applied to the market value of the RIF at the start of each year.
+ # The left-hand side is your age on Jan 1. For ages outside this range, a formula applies
+ # Ref: https://www.budget.gc.ca/2015/docs/plan/anx5-1-eng.html
+ 71 = 5.28%
+ 72 = 5.40%
+ ...
+ 93 = 16.34%
+ 94 = 18.79%
+}</pre>
+RIF accounts always have a minimum annual withdrawal.
+For some ages, a formula applies; for others, this table is used.
+
+<P><pre>federal-tax {
+  # Tax return settings.
+  # These numbers are for 2021. Update them each year.
+  initial-year = 2022 # must agree with simulation-start-date! 
+  personal-amount = 12241.00  # Worksheet for line 30000
+  personal-amount-additional = 1387.00
+  personal-amount-threshold = 151978.00_216511.00
+  age-amount = 7713.00 # Worksheet line 30100
+  age-amount-threshold = 38893.00
+  pension-income-max = 2000.00 # line 31400
+  tax-brackets {
+    15.00% : 49020.00    
+    20.50% : 98040.00    
+    26.00% : 151978.00   
+    29.00% : 216511.00   
+    33.00% : 100000000.00
+  }
+  rif-withholding-tax-brackets {
+    # these amounts are above the rif's minimum withdrawal for that year
+    10.00% : 5000.00    
+    20.00% : 15000.00    
+    30.00% : 100000000.00
+  }
+  standard-retirement-age = 65
+  taxable-capital-gain-fraction = 0.5D
+  dividend-tax-credit-numer = 6 
+  dividend-tax-credit-denom = 11 
+}</pre>
+The federal part of a tax return. 
+The numbers need to be updated yearly.
+The <em>initial-year</em> must agree with the <em>start-date</em> entered above, near the start of the scenario file.
+
+<P><pre>provincial-tax {
+  # Usually there are significant differences between jurisdictions!
+  # Each jurisdiction has its own set of fields.
+  # Ref: https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package.html
+  # Numbers from 2021 
+  jurisdiction = PE 
+  tax-brackets {
+    9.8% : 31984.00    
+    13.8% : 63969.00    
+    16.7% : 100000000.00
+  }
+  personal-amount = 10500.00 # line 58040
+  age-amount = 3764.00 # line 58080
+  age-amount-threshold = 28019.00
+  pension-income-max = 1000.00 # line 58360
+  dividend-gross-up-mult = 10.5% # line 61520 worksheet
+  low-income-basic = 350.00 # line 63370 
+  low-income-age = 250.00 # line 63380
+  low-income-threshold = 19000.00 # line 85
+  low-income-rate = 5.00%
+}</pre>
+An example of a provincial tax return (for PEI).
+The numbers have to be reviewed each year. 
+See the <a href='https://github.com/johanley/end-game/tree/master/input/provincial-tax'>input\provincial-tax</a> directory for snippets appropriate to each province.
+
+<P><pre>stocks {
+  # Initial data on stocks; not related to an account.
+  # All stocks must be defined here, even those you don't initially own.
+  "ABC" {   
+    price = 56.00
+    dividend {
+      on *-03-01,*-06-01,*-09-01,*-12-01
+      amount = 0.86
+      growth = 4.0%
+    }
+  }
+  "XYZ" {
+    price = 140.00
+    dividend {
+     on *-01-28,*-04-28,*-07-28,*-10-28
+     amount = 1.61
+     growth = 4.0%
+    }
+  }
+}</pre>
+Data for all stocks that will be part of the simulation.
+The ticker symbol is used to identify the stock.
+The annual growth in the dividend is always modeled here simply as a fixed percentage.
+In the above examples, the dividends pay quarterly, on the given month-day combinations.
+
+<p><pre>
+stock-commission = fixed-percent 1.0%     # percent of the gross amount 
+# stock-commission = fixed-amount 10.50   # some discount brokers have a flat rate
+# stock-commission = custom-schedule      # requires custom coding</pre>
+How to calculate the commission paid to your investment dealer when trading stocks.
+The <em>custom-schedule</em> is to let you reflect you investment dealer's actual commission schedule.
+It requires that you do some coding, by implementing the <a href='https://github.com/johanley/end-game/blob/master/src/endgame/security/stock/commission/CustomCommish.java'>CustomCommish</a> class.
+
+<p><pre>tfsa-room {
+  initial-room = 19877.98  
+  yearly-limit = 6000.00
+}</pre>
+Used to calculate the room in your TFSA account (if you have one).
+The <em>initial-room</em> is your TFSA room as of the <em>start-date</em> of the simulation.
+
+<p><pre>accounts { 
+  # Initial account holdings.
+  # In this simulation, you can have only up to 1 account of each account-type.
+  # Only the bank account is required. The others are optional.
+  bank {
+    cash = 10000.00
+    small-balance-limit = 4000.00
+  }
+  rif {
+    convert-rsp-to-rif = 2018-05-01
+    cash = 0.00
+    stock-positions {
+      1910 "ABC"
+      813 "XYZ"
+      952 "XEG"
+    }
+  }
+  tfsa {
+    cash = 0.00
+    stock-positions {
+      1150 "ABC"
+      207 "XYZ"
+    }
+  }
+  nra {
+    cash = 283.90
+    stock-positions {
+      340 "ABC"
+      290 "XYZ"
+    }
+    stock-book-values {
+      33362.34 "XYZ"
+      14978.87 "ABC"
+    }
+  }
+}</pre>
+The initial positions of your investment accounts and bank account.
+If your bank balance falls below the <em> small-balance-limit</em>, then you are charged fees.
+The <em>stock-book-values</em> applies only to the <em>nra</em> account (the non-registered account).
+The <em>convert-rsp-to-rif</em> date deserves special mention. 
+Before this date, the RIF account simply has no minimum annual withdrawal. 
+Other than that, it acts the same. 
+That means no contributions to the RSP can be made before the conversion date in this simulation.
+
+
+<P><pre>sequential-liquidation {
+  avoid-downturn-years = 2 
+  account-sequence = rif,nra,tfsa
+  stock-sequence = "xeg,cm,enb"
+  sell 6.0% on *-11-26 | 2027-01-01..2034-12-31 
+  sell 3.0% on *-11-26 | 2035-01-01.. 
+}</pre>
+Describes how to liquidate stock positions, in order to generate cash flow.
+The <em>avoid-downturn-years</em> is a way of avoiding liquidations when the price of the stocks are lower.
+In the example above, the meaning is <em>if the current price is lower than the prices of the past 2 years, then don't sell</em>.
+The two <em>-sequence</em> define the order in which to sell stock, from which account, and then which stock in that account.
+The above example sells 6% of the investments on Nov 26, from 2027 to 2034. Later, from 2035 on, 3% is sold.
+
+
+<P><pre>annual-tfsa-top-up {
+  account-sequence = rif,nra
+  stock-sequence = "enb,cm"
+  on *-01-03                
+}</pre>
+
+
+
 
 
 <!-- 
