@@ -22,6 +22,7 @@
  <li><a href="#scenarios">Example Scenarios</a>
  <li><a href="#lessons">Lessons Learned</a>
  <li><a href="#running">Running The Code In Eclipse</a>
+ <li><a href="#syntax">Syntax of the Scenario File</a>
 </ul> 
 
 <h2 id='overview'>Overview</h2>
@@ -249,11 +250,17 @@ Now you are ready to experiment with your own scenarios.
  Many will find it convenient to follow the existing pattern under the <em>scenario</em> folder in the project.
  You'll likely want to explore multiple scenarios, so you might create multiple folders under <em>scenario</em>, one folder 
  for each new scenario. 
+ <li>set the project-root location in the scenario file
  <li>execute the <em>RunSimulation</em> class. 
  You need to tell it the file location of your scenario file.
  The simplest way is to hard-code it in the <em>RunSimulation</em> class itself. 
 </ul>
 
+
+<h2 id='syntax'>Syntax of the Scenario File</h2>
+The scenario file has a specific syntax.
+That is, the text in the scenario file has to <em>make sense</em> to the code.
+You have to follow those rules, or the scenario will not execute properly.
 
 <h2>Web Site Versus Stand-alone</h2>
 When deploying this code under a web site:

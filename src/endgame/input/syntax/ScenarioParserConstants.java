@@ -150,7 +150,6 @@ public interface ScenarioParserConstants {
     "\"syntax-version\"",
     "\"v1.0.0\"",
     "\"description\"",
-    "\"project-root\"",
     "\"number-of-iterations\"",
     "\"date-of-birth\"",
     "\"annual-test-for-survival\"",

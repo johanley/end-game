@@ -2239,5 +2239,5 @@ Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\02.4\02.4-cash-an
 Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\02.4\02.4-cash-flows.csv
 Scenario description: 02.4: Only a NRA with 100k in blue-chip dividends. Half the average CPP. 3% dividend growth, 3% stock price growth.
 Start-date: 2027-01-01 end-date: 2047-12-31
-Execution time: 2.2219441s
+Execution time: 1.8836257s
 Writing to log file C:\johanley\ProjectsPhoton\end-game\scenario\02.4\02.4.log

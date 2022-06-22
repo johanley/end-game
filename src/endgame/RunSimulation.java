@@ -50,14 +50,14 @@ public final class RunSimulation implements Runnable {
 
   /** 
    Run the simulation.
-   The location of the configuration file (scenario.ini) must be passed as the first (and only) 
-   command-line argument. 
+   The location of the configuration file (scenario.ini) can be passed as the first (and only) 
+   command-line argument. (You can also hard code it.)
   */
   public static void main(String... args) throws ParseException, IOException {
-    /*
-    If you prefer, you can also run this by simply hard-coding the location of the scenario file:
-    RunSimulation runner = new RunSimulation("C:\\blah\\scenario.ini");
-     */
+    //this way just hard-codes the file location:
+    //RunSimulation runner = new RunSimulation("C:\\myworkspace\\end-game\\scenario\\01.1\\01.1-no-savings-CPP-0.ini");
+    Log.log("user.dir: " + System.getProperty("user.dir"));
+    //this way uses arguments passed on the command line:
     RunSimulation runner = new RunSimulation(args[0]);
     //runner.parseOnly();
     runner.run();

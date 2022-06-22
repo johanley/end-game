@@ -1539,5 +1539,5 @@ Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\07.3\07.3-cash-an
 Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\07.3\07.3-cash-flows.csv
 Scenario description: 07.3: GOC large pension 5483/month, no other savings, house unsold, retires at 65. Average CPP 673/month, OAS/GIS. PE. Deterministic.
 Start-date: 2028-01-01 end-date: 2042-12-31
-Execution time: 0.8279584s
+Execution time: 0.822019s
 Writing to log file C:\johanley\ProjectsPhoton\end-game\scenario\07.3\07.3.log

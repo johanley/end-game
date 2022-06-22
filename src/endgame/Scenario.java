@@ -2,6 +2,7 @@ package endgame;
 
 import static endgame.util.Consts.NL;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -52,12 +53,6 @@ public final class Scenario {
   
   /** Succinct description of the scenario as a whole. */
   public String description = "";
-  
-  /** 
-   The directory containing the code for this project.
-   Used to access the support data files used by some parts of this program (GIS brackets, life tables).  
-  */
-  public String projectRoot = "";
   
   /** 
    The number of times no run the scenario. 
@@ -195,8 +190,9 @@ public final class Scenario {
   /** Read in data files, and do miscellaneous checks on the data, that aren't otherwise validated. */
   public void populateAndValidate() {
     if (rif != null) rif.validateTheRspConversionDate(dateOfBirth);
-    GisAmount.lookupGisBrackets(projectRoot); 
-    Survival.populateTables(projectRoot);
+    String projRoot = System.getProperty("user.dir") + File.separator;
+    GisAmount.lookupGisBrackets(projRoot); 
+    Survival.populateTables(projRoot);
     checkStartAndEndDates();
     checkFedTaxReturnInitialYear();
   }

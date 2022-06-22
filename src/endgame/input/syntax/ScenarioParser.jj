@@ -191,7 +191,6 @@ TOKEN : {
 void all() : { } {
   version()
   description()
-  projectRoot()
   numIterations()
   (stockPricePolicy())?
   simulationStartDate()
@@ -233,10 +232,6 @@ void version() : { } {
 void description() : {} {
   "description" <EQUALS> <QUOTED_TEXT> { scenario.description = noQuotes(token.image.trim()); } 
 }
-
-void projectRoot() : { } { 
-  "project-root" <EQUALS> <QUOTED_TEXT> { scenario.projectRoot = noQuotes(token.image.trim()); }
-}  
 
 void numIterations() : {} {
   "number-of-iterations" < EQUALS > < NUM > {
