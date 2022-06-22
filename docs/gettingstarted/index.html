@@ -16,15 +16,16 @@
 <P>The source code is <a href='https://github.com/johanley/end-game'>here</a>.
 
 <h2>Getting Started</h2>
-
-<h2 id='running'>Running The Code In Eclipse</h2>
+This is a guide for running the code in the Eclipse tool.
 
 <h3>Step 1 - Folders and Source Code</h3>
-<br><b>First, create a <em>workspace</em> folder on your machine.</b>
-When you launch Eclipse, you need to point to a workspace folder.
-A workspace folder contains project folders, each containing the source code for a project.
+<br>First, create a <b>workspace</b> folder on your machine.
 
-<P>These instructions will use a workspace named 
+<P>When you launch Eclipse, you need to point to a workspace folder.
+A workspace folder contains project folders.
+Each project folder contains the source code for a project.
+
+<P>These instructions will use a workspace named: 
 <pre>C:\myworkspace\</pre>  
 
 <P>An example setup:
@@ -51,45 +52,60 @@ C:\myworkspace\            [the workspace folder]
  <li>go to the <a href='https://github.com/johanley/end-game'>github repository</a> 
  <li>click on the <em>Code</em> button
  <li>click on <em>Download ZIP</em>
- <li>copy the end-game-master.zip file to your workspace folder
+ <li>copy the <em>end-game-master.zip</em> file to your workspace folder
  <li>unzip the file
  <li>change the name of the new folder from <em>end-game-master</em> to <em>end-game</em>
- <li>your folders should follow the pattern shown above!
+ <li>your folders should now follow the pattern shown above!
 </ul>
 
 <h3>Step 2 - Install and Run Eclipse</h3>
 Install and run Eclipse, following these steps: 
-<P><a href='https://www.eclipse.org/downloads/'>download</a> the Eclipse installer.
+<P><a href='https://www.eclipse.org/downloads/'>Download</a> the Eclipse installer.
  
-<P>Run the installer, and select <em>Eclipse IDE for Java Developers</em>. 
+<P>Run the installer, and select <em>Eclipse IDE for Java Developers</em>: 
 <P><img src='install-01.png'>
 
-<P>Put Eclipse in a convenient location on your computer.
+<P>Install Eclipse to a convenient location on your computer:
 <P><img src='install-02.png'>
 
-<P>Launch Eclipse, and point it to the workspace directory you created earlier.
+<P>Launch Eclipse, and point it to the workspace directory you created earlier:
 <P><img src='install-03.png'>
 
-<p>The first time you launch Eclipse, it will show you a welcome screen. Close the welcome screen.
+<p>The first time you launch Eclipse, it will show you a welcome screen. Close the welcome screen:
 <P><img src='install-04.png'>
  
-<P>Now you will see the main Eclipse window.
+<P>Now you will see the main Eclipse window:
 <P><img src='install-05.png'>
 
 
 <h3>Step 3 - Import the end-game Project into Eclipse</h3>
-<ul>
- <li>click on Import Projects. Or, from the menu, select File -> Import...
- <li>choose General -> Existing Projects into Workspace - <a href='install-06.png'>like this</a> 
- <li>point to the end-game project folder - <a href='install-07.png'>like this</a> 
- <li>the result should look <a href='install-08.png'>like this</a> 
-</ul>
+Now that you have Eclipse running, it's time to point it to the <em>end-game</em> project and its source code.
+
+<P>Click on <em>Import Projects</em>. Or, from the menu, select <em>File -> Import...</em>
+
+<P>Choose <em>General -> Existing Projects into Workspace</em>:
+<P><img src='install-06.png'>
+ 
+<P>Point to the end-game project folder:
+<P><img src='install-07.png'>
+
+<P>The result should look like this: 
+<P><img src='install-08.png'> 
 
 
-<h3>Step 4 - Run a Provided Scenario</h3>
-<ul>
- <li>to-do
-</ul>
+<h3>Step 4 - Run an Example Scenario</h3>
+On the left, open the <em>src</em> folder, and then the <em>endgame</em> folder.
+Double click on the <em>RunSimulation</em> file (this is called a class in Java): 
+<P><img src='install-09.png'>
+ 
+<P>Before you run it, you need to ensure that RunSimulation is pointed to the desired scenario file.
+Look for this line:
+<pre>RunSimulation runner = new RunSimulation("C:\\myworkspace\\end-game\\scenario\\01.1\\01.1-no-savings-CPP-0.ini");</pre>
+
+<P>In Java code, comments are preceded by // characters. When you place // at the start of a line of code, that means
+you, in effect, turn it off and prevent it from executing.
+
+<P>In the menu, select <em>Run -> Run As... -> Java application</em>.
 
 <h3>Step 5 - Create your own Scenario</h3>
 Now you are ready to experiment with your own scenarios.

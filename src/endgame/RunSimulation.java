@@ -54,10 +54,17 @@ public final class RunSimulation implements Runnable {
    command-line argument. (You can also hard code it.)
   */
   public static void main(String... args) throws ParseException, IOException {
-    //this way just hard-codes the file location:
-    //RunSimulation runner = new RunSimulation("C:\\myworkspace\\end-game\\scenario\\01.1\\01.1-no-savings-CPP-0.ini");
-    //this way uses arguments passed on the command line:
-    RunSimulation runner = new RunSimulation(args[0]);
+    //There are two ways to point to the scenario file.
+    //You have to pick one or the other.
+    //Use comments '//' to control which one is active, and which one is not.
+    //Then save your change using the menu, File->Save.
+    
+    //Style #1. This way just hard-codes the file location.
+    //Note the doubling of the separators in the file name location!
+    RunSimulation runner = new RunSimulation("C:\\myworkspace\\end-game\\scenario\\01.1\\01.1-no-savings-CPP-0.ini");
+    
+    //Style #2. This alternate way uses arguments passed on the command line:
+    //RunSimulation runner = new RunSimulation(args[0]);
     //runner.parseOnly();
     runner.run();
   }
