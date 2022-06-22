@@ -219,27 +219,26 @@ You have to follow those rules, or an error will result, and the code will stop 
 Examples:
 
 <pre>bank-debit-credit 925.00 on *-01</pre>
-<br>This means your bank is debited 925.00 on the first of every single month. 
+This means your bank is debited 925.00 on the first of every single month. 
  
 <pre>on *-11-25</pre>
-<br>This means on every November 25th.
+This means on every November 25th.
 
 <pre>on *-11-25</pre>
-<br>This means on every November 25th. 
+This means on every November 25th. 
 
 <pre>on *-03-01,*-06-01,*-09-01,*-12-01</pre>
-<br>This means on every March 1, June 1, September 1, and December 1 (quarterly dividend payments).
+This means on every March 1, June 1, September 1, and December 1 (quarterly dividend payments).
 
 <pre>sell 6.0% on *-11-26 | 2027-01-01..2034-12-31</pre>
-<br>Executed every November 26, in the years 2027 to 2034. When the "|" appears, it adds start-date, end-date, or both.
+Executed every November 26, in the years 2027 to 2034. When the "|" appears, it adds start-date, end-date, or both.
 There are 3 variations 
 <pre>
-sell 6.0% on *-11-26 | 2027-01-01..2034-12-31   # start-date and end-date
-sell 6.0% on *-11-26 | 2027-01-01..             # only start-date
-sell 6.0% on *-11-26 | ..2034-12-31</pre>       # only end-date
-
-<P>An exception to the above is the purchase of a GIC, which always uses a specific date.
-In this case, the ":" character is used.
+sell 6.0% on *-11-26 | 2027-01-01..2034-12-31  # start-date and end-date
+sell 6.0% on *-11-26 | 2027-01-01..            # only start-date
+sell 6.0% on *-11-26 | ..2034-12-31            # only end-date</pre>
+An exception to the above is the purchase of a GIC, which always uses a specific date.
+In this case, the ":" character is used: 
 <pre>buy-gic rif "Cda Trust" 5700.00 2.5% 1-year : 2024-06-21</pre>
 
 
@@ -247,12 +246,12 @@ In this case, the ":" character is used.
 <h2 id='examplesnippets'>Example Snippets for the Scenario File</h2>
 
 <p><pre>syntax-version = v1.0.0</pre>
-This version id states that this scenario file was created with a given version of the syntax (which may change over time).
+States that this scenario file was created with a given version of the syntax for scenario files (which may change over time).
 
 <P><pre>description = "101.6: Fixed 3% growth in stock prices..."</pre>
-<P>A free-form, high-level description of important aspects of the scenario. 
+A free-form, high-level description of important aspects of the scenario. 
 
-<P><pre>number-of-iterations = 1</pre><br>
+<P><pre>number-of-iterations = 1</pre>
 Usually 1. You change it to more than 1 when you want to repeat the scenario, from start to finish, multiple times.
 This only makes sense if the various iterations have different results.
 For example, when stock prices are generated using randomness, running multiple iterations makes logical sense, to see the general spread in the resulting outputs.
@@ -263,14 +262,14 @@ For example, when stock prices are generated using randomness, running multiple 
   # range = -5%_10%
   fixed = 3% # no randomness here
   # explicit-list = 5%,5%,5%,5%,5%,-7% # in order of year; recycles if end is reached
-}</pre><br>
+}</pre>
 Controls how stock prices change over time.
 In this example, the prices are updated only on November 25 of each year.
 The <em>gaussian</em> style means that price increases follow a <a href='https://en.wikipedia.org/wiki/Normal_distribution'>Gaussian distribution</a>.
 The <em>range</em> example above means that the percentage price increase is randomly selected between -5% and +10%.
 
 <P><pre>simulation-start-date = 2022-01-01
-simulation-end-date = 2042-12-31</pre><br>
+simulation-end-date = 2042-12-31</pre>
 The start and end dates for running the simulation. 
 If multiple iterations are run, then each iteration starts with the start date.
 There can also, optionally, be a test to see if the person has died at the end of the year.
@@ -280,7 +279,7 @@ If that is activated, then the simulation will often terminate before the end da
 
 <P><pre>date-of-birth = 1962-03-01
 annual-test-for-survival
-sex = male</pre><br>
+sex = male</pre>
 The person's date of birth is used for various calculations.
 If <em>annual-test-for-survival</em> is included, then at the end of each simulated year, a statistical 
 test is performed by the system, to see if the person will survive into the next year. If not, then they die in the simulation, 
