@@ -243,7 +243,7 @@ In this case, the ":" character is used.
 <pre>buy-gic rif "Cda Trust" 5700.00 2.5% 1-year : 2024-06-21</pre>
 
 <p><pre>syntax-version = v1.0.0</pre>
-<b>The syntax may change over time. 
+<br>The syntax may change over time. 
 This version id states that this scenario file was created with a given version of the syntax (which may change over time).
 
 <P><pre>description = "101.6: Fixed 3% growth in stock prices..."</pre>
@@ -266,6 +266,24 @@ In this example, the prices are updated only on November 25 of each year.
 The <em>gaussian</em> style means that price increases follow a <a href='https://en.wikipedia.org/wiki/Normal_distribution'>Gaussian distribution</a>.
 The <em>range</em> example above means that the percentage price increase is randomly selected between -5% and +10%.
 
+<P><pre>simulation-start-date = 2022-01-01
+simulation-end-date = 2042-12-31</pre>
+<br>The start and end dates for running the simulation. 
+If multiple iterations are run, then each iteration starts with the start date.
+There can also, optionally, be a test to see if the person has died at the end of the year.
+If that is activated, then the simulation will often terminate before the end date is reached. 
+(See below.)
+
+
+<P><pre>date-of-birth = 1962-03-01
+annual-test-for-survival
+sex = male</pre>
+<br>The person's date of birth is used for various calculations.
+If <em>annual-test-for-survival</em> is included, then at the end of each simulated year, a statistical 
+test is performed by the system, to see if the person will survive into the next year. If not, then they die in the simulation, 
+and the simulation/iteration is terminated.
+This feature uses <a href='https://www150.statcan.gc.ca/n1/pub/84-537-x/84-537-x2021001-eng.htm'>life-tables from Statistics Canada</a>, and those tables are different between males and females.  
+ 
 
 
 <!-- 
