@@ -4,7 +4,7 @@ Running the scenario...
 Reading the input scenario file: C:\johanley\ProjectsPhoton\end-game\scenario\07.3\07.3-goc-pension-130k-salary-CPP-avg.ini
 Checking the syntax-version of the file. It should be v1.0.0, otherwise the scenario file can't be read properly.
 Parsing file: C:\johanley\ProjectsPhoton\end-game\scenario\07.3\07.3-goc-pension-130k-salary-CPP-avg.ini
-07.3: GOC large pension 5483/month, no other savings, house unsold, retires at 65. Average CPP 673/month, OAS/GIS, and maybe GIS. PE. Deterministic.
+07.3: GOC large pension 5483/month, no other savings, house unsold, retires at 65. Average CPP 673/month, OAS/GIS. PE. Deterministic.
 Reading file C:\johanley\ProjectsPhoton\end-game\input\gis\gis-brackets.utf8
 Reading file C:\johanley\ProjectsPhoton\end-game\input\probability-of-survival\male-lx.utf8
 Reading file C:\johanley\ProjectsPhoton\end-game\input\probability-of-survival\female-lx.utf8
@@ -1537,7 +1537,7 @@ Tax return
 Saving reports. Number of histories: 1.
 Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\07.3\07.3-cash-and-tax-summary.csv
 Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\07.3\07.3-cash-flows.csv
-Scenario description: 07.3: GOC large pension 5483/month, no other savings, house unsold, retires at 65. Average CPP 673/month, OAS/GIS, and maybe GIS. PE. Deterministic.
+Scenario description: 07.3: GOC large pension 5483/month, no other savings, house unsold, retires at 65. Average CPP 673/month, OAS/GIS. PE. Deterministic.
 Start-date: 2028-01-01 end-date: 2042-12-31
-Execution time: 0.8505555s
+Execution time: 0.8279584s
 Writing to log file C:\johanley\ProjectsPhoton\end-game\scenario\07.3\07.3.log
