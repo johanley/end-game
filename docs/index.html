@@ -263,6 +263,40 @@ The scenario file has a specific syntax.
 That is, the text in the scenario file has to <em>make sense</em> to the code.
 You have to follow those rules, or the scenario will not execute properly.
 
+<P>It's usually best to start with an example scenario file that is closest to your situation.
+
+<P>Note that a leading # character means that text is a comment.
+
+<P>There's a special <em>on</em> syntax for controlling when transactions are applied.
+Examples:
+
+<pre>bank-debit-credit 925.00 on *-01</pre>
+<br>This means your bank is debited 925.00 on the first of every single month. 
+ 
+<pre>on *-11-25</pre>
+<br>This means on every November 25th.
+
+<pre>on *-11-25</pre>
+<br>This means on every November 25th. 
+
+<pre>on *-03-01,*-06-01,*-09-01,*-12-01</pre>
+<br>This means on every March 1, June 1, September 1, and December 1 (quarterly dividend payments).
+
+<pre>sell 6.0% on *-11-26 | 2027-01-01..2034-12-31</pre>
+<br>Executed every November 26, in the years 2027 to 2034. When the "|" appears, it adds start-date, end-date, or both.
+There are 3 variations 
+<pre>
+sell 6.0% on *-11-26 | 2027-01-01..2034-12-31   # start-date and end-date
+sell 6.0% on *-11-26 | 2027-01-01..             # only start-date
+sell 6.0% on *-11-26 | ..2034-12-31</pre>       # only end-date
+
+<P>An exception to the above is the purchase of a GIC, which always uses a specific date.
+In this case, the ":" character is used.
+<pre>buy-gic rif "Cda Trust" 5700.00 2.5% 1-year : 2024-06-21</pre>
+
+
+ 
+
 <h2>Web Site Versus Stand-alone</h2>
 When deploying this code under a web site:
 <ul>
