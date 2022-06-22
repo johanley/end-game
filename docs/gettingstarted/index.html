@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta name="keywords" content="retirement, Canada, Canadian, simulator, calculator, planner">
+ <meta name="description" content="Personal finance simulator for retired Canadians.">
+ <meta name="viewport" content="width=device-width"> 
+ <link rel="stylesheet" type="text/css" href="stylesheet.css?v=1" media="all"> 
+ <title>End Game: Personal finance simulator for retired Canadians</title>
+</head>
+
+<body>
+
+<h2>End Game - personal finance simulator for retired Canadians</h2>
+
+<P>The source code is <a href='https://github.com/johanley/end-game'>here</a>.
+
+<h2>Getting Started</h2>
+
+<h2 id='running'>Running The Code In Eclipse</h2>
+
+<h3>Step 1 - Folders and Source Code</h3>
+<br><b>First, create a <em>workspace</em> folder on your machine.</b>
+When you launch Eclipse, you need to point to a workspace folder.
+A workspace folder contains project folders, each containing the source code for a project.
+
+<P>These instructions will use a workspace named <pre>C:\myworkspace\</pre>.  
+
+<P>An example setup:
+<pre>
+C:\myworkspace\            [the workspace folder]
+  C:\myworkspace\end-game  [the project folder for end-game]
+    ./settings
+    docs            
+    input             
+    lib               [the various files and folders in the end-game project]
+    scenario
+    src
+    .classpath
+    .gitignore
+    .project
+    LICENSE.txt
+    README.md
+</pre>
+
+<P>Your setup will be similar, except you can replace <em>C:\myworkspace\</em> with something else, if you wish.
+
+<P>Next, you need to put the source code into the above folder structure:
+<ul> 
+ <li>go to the <a href='https://github.com/johanley/end-game'>github repository</a> 
+ <li>click on the <em>Code</em> button
+ <li>click on <em>Download ZIP</em>
+ <li>copy the end-game-master.zip file to your workspace folder
+ <li>unzip the file
+ <li>change the name of the new folder from <em>end-game-master</em> to <em>end-game</em>
+ <li>your folders should follow the pattern shown above!
+</ul>
+
+<h3>Step 2 - Install and Run Eclipse</h3>
+Install and run Eclipse, following these steps: 
+<ul>
+ <li><a href='https://www.eclipse.org/downloads/'>download</a> the Eclipse installer 
+ <li>run the installer, and select <em>Eclipse IDE for Java Developers</em> - <a href='install-01.jpg'>like this</a>
+ <li>put Eclipse in a convenient location on your computer - <a href='install-02.jpg'>like this</a>
+ <li>launch Eclipse, and point it to the workspace directory you created earlier - <a href='install-03.jpg'>like this</a>
+ <li>the first time you launch Eclipse, it will show you a welcome screen. Close it - <a href='install-04.jpg'>like this</a> 
+ Now you will see the main Eclipse window - <a href='install-05.jpg'>like this</a>
+ <li>add the <em>JavaCC Eclipse plugin</em>. JavaCC is the tool that parses the input scenario file. 
+ Eclipse menu: Help -> Eclipse Marketplace -> Find: <em>javacc</em>, and install the plugin.
+</ul>
+
+<h3>Step 3 - Import the end-game Project into Eclipse</h3>
+<ul>
+ <li>click on Import Projects. Or, from the menu, select File -> Import...
+ <li>choose General -> Existing Projects into Workspace - <a href='install-06.jpg'>like this</a> 
+ <li>point to the end-game project folder - <a href='install-07.jpg'>like this</a> 
+ <li>the result should look <a href='install-08.jpg'>like this</a> 
+</ul>
+
+
+<h3>Step 4 - Run a Provided Scenario</h3>
+<ul>
+ <li>to-do
+</ul>
+
+<h3>Step 5 - Create your own Scenario</h3>
+Now you are ready to experiment with your own scenarios.
+<ul>
+ <li>create your own scenario file. You can place the scenario anywhere you want. 
+ Many will find it convenient to follow the existing pattern under the <em>scenario</em> folder in the project.
+ You'll likely want to explore multiple scenarios, so you might create multiple folders under <em>scenario</em>, one folder 
+ for each new scenario. 
+ <li>set the project-root location in the scenario file
+ <li>execute the <em>RunSimulation</em> class. 
+ You need to tell it the file location of your scenario file.
+ The simplest way is to hard-code it in the <em>RunSimulation</em> class itself. 
+</ul>
+
+
+<h3>Step 6 (Optional) - Install the JavaCC plugin</h3>
+You can skip this if you wish. The JavaCC tool lets you change the syntax of the scenario file.
+You won't likely need to do that. 
+
+<P>To install the JavaCC plugin into Eclipse
+<ul>
+ <li>from the menu, select Help -> Eclipse Marketplace
+ <li>in the Find box, enter "javacc" and hit Enter
+ <li>click the <em>Install</em> button for the JavaCC plugin
+</ul>
+
+
+
+</body>
+</html>
