@@ -157,11 +157,11 @@ If you leave out the net cash, and only focus on the tax saving, then you aren't
 
 <P><b>Spending generally decreases significantly in old age.</b>
 Many people think in terms of having a flat cash flow, the same from retirement until death.
-But, in reality, that's not usually what happens. 
+But, in reality, your spending usually decreases in old age. 
 It's a challenge to generate a cash flow curve that starts out higher and ends up lower, 
 because the natural tendency for cash flow is to grow over time.
-For those on a government pension (with no other savings), the cash flow is basically flat over time, and there's not much you 
-can do about it.
+For those on a government pension (and with no other savings), the cash flow is basically flat over time, 
+so there may not be much you can do about it.
 
 <P><b>Many people die too rich</b>.
 The psychology of the saver is different from the psychology of the spender.
@@ -174,12 +174,12 @@ Oversaving can be as bad as overspending; perhaps it's best to avoid extremes.
 Some investors are enthusiastic about dividend stocks, and attempt to generate cash flow only from the dividends, 
 without selling any of the principal invested in the stocks.
 During retirement, there's no need to be so conservative.
-Periodically selling a small portion of your principal can generate a lot more cash flow, 
+Occasionally selling a small portion of your principal can generate a lot more cash flow, 
 and is almost always better than relying solely on the dividends.   
 
-<P><b>Selling stocks when the market is up, as opposed to when you want the cash, or a fixed schedule, is very beneficial.</b>
+<P><b>Selling stocks when the market is up, as opposed to when you want the cash, or according to a fixed schedule, is very beneficial.</b>
 Given the large possible swings in stock prices, it makes sense to do <em>profit-taking</em> when the price is up.
-You then save the cash for you future needs in 1-2 years (perhaps by purchasing a GIC).
+You then save the cash for your future needs in 1-2 years (perhaps by purchasing a GIC).
 You should avoid being compelled to sell stocks at a particular time.
 The typical recession lasts about 1.5 years. 
 
@@ -202,7 +202,7 @@ To run the code, this project recommends the <em>Eclipse</em> tool, a
 tool that programmers use to run and edit code. 
 Here, you just want to run the code, not change it.
 
-<P>Here are the <a href='gettingstarted/index.html'>detailed instructions</a>. It takes 10-15 minutes to get set up.
+<P>Here are the <a href='gettingstarted/index.html'>detailed instructions</a>. It takes 10-15 minutes to set up.
 
 
 <h2 id='syntax'>Syntax of the Scenario File</h2>
@@ -212,7 +212,15 @@ You have to follow those rules, or an error will result, and the code will stop 
 
 <P>It's usually best to start with an example scenario file that is closest to your situation.
 
-<P>Note that a leading # character means that text is a comment.
+<P>Note that:
+<ul>
+ <li>a leading # character means that following text is a comment
+ <li>usually, the order of items in the file is fixed
+ <li>an exception is the <em>transactions</em> block at the end. 
+ Separate transactions in the <em>transactions</em> block can appear in any order.
+</ul>
+
+<P>
 
 <h3 id='whencontrol'>The <em>on</em> statement</h3>
 
@@ -496,7 +504,7 @@ That means no contributions to the RSP can be made before the conversion date in
 Describes how to liquidate stock positions, in order to generate cash flow.
 The <em>avoid-downturn-years</em> is a way of avoiding liquidations when the price of the stocks are lower.
 In the example above, the meaning is <em>if the current price is lower than the prices of the past 2 years, then don't sell</em>.
-The two <em>-sequence</em> define the order in which to sell stock, from which account, and then which stock in that account.
+The two <em>-sequence</em> items define the order in which to sell stock, from which account, and then which stock in that account.
 The above example sells 6% of the investments on Nov 26, from 2027 to 2034. Later, from 2035 on, 3% is sold.
 
 
@@ -505,6 +513,16 @@ The above example sells 6% of the investments on Nov 26, from 2027 to 2034. Late
   stock-sequence = "enb,cm"
   on *-01-03                
 }</pre>
+Topping up your TFSA account by transferring in-kind from other accounts.
+This is done every January 3, in the above example.
+The two <em>-sequence</em> items define the order in which to transfer stock, from which account, and then which stock in that account.
+
+<p><pre>transactions {
+  # Transactions in your accounts, not yet defined implicitly.
+  ...
+}</pre>
+Transactions against your accounts that aren't otherwise specified.
+The order of appearance of items in the <em>transactions</em> block is actually arbitrary - they can appear in any order.
 
 
 
