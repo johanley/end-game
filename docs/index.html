@@ -33,6 +33,19 @@
  <li><a href="#examplesnippets">Example Snippets for the Scenario File</a>
   <ul>
    <li><a href='#syntax-version'><em>syntax-version</em></a>
+   <li><a href='#description'><em>description</em></a>
+   <li><a href='#number-of-iterations'><em>number-of-iterations</em></a>
+   <li><a href='#update-stock-prices'><em>update-stock-prices</em></a>
+   <li><a href='#simulation-start-date'><em>simulation-start-date</em></a>
+   <li><a href='#simulation-end-date'><em>simulation-end-date</em></a>
+   <li><a href='#date-of-birth'><em>date-of-birth</em></a>
+   <li><a href='#date-of-birth'><em>annual-test-for-survival</em></a>
+   <li><a href='#date-of-birth'><em>sex</em></a>
+   <li><a href='#year-zero-amounts'><em>year-zero-amounts</em></a>
+   <li><a href='#oas'><em>oas</em></a>
+   <li><a href='#cpp'><em>cpp</em></a>
+   
+   
   </ul>
 </ul> 
 
@@ -273,16 +286,16 @@ States that this scenario file was created with a given version of the syntax fo
 The idea is to ensure that code processing a scenario file knows the exact syntax of the file it's supposed to process.
 The code is not smart enough to be backwards-compatible with "old" versions of the syntax.
 
-<P><pre>description = "101.6: Fixed 3% growth in stock prices..."</pre>
+<P id='description'><pre>description = "101.6: Fixed 3% growth in stock prices..."</pre>
 A free-form, high-level description of important aspects of the scenario. 
 
-<P><pre>number-of-iterations = 1</pre>
+<P id='number-of-iterations'><pre>number-of-iterations = 1</pre>
 Usually 1. You change it to more than 1 when you want to repeat the scenario, from start to finish, multiple times.
 This only makes sense if the various iterations have different results.
 For example, when stock prices are generated using randomness, running multiple iterations makes logical sense, to see the general spread in the resulting outputs.
 When greater than 1, the generated .csv files are completely different.
 
-<P><pre>update-stock-prices {
+<P id='update-stock-prices'><pre>update-stock-prices {
   on *-11-25 # when stock prices are to be updated
   # gaussian mean = 5.0%  std-dev = 5.0% 
   # range = -5%_10%
@@ -294,7 +307,7 @@ In this example, the prices are updated only on November 25 of each year.
 The <em>gaussian</em> style means that price increases follow a <a href='https://en.wikipedia.org/wiki/Normal_distribution'>Gaussian distribution</a>.
 The <em>range</em> example above means that the percentage price increase is randomly selected between -5% and +10%.
 
-<P><pre>simulation-start-date = 2022-01-01
+<P  id='simulation-start-date'><pre>simulation-start-date = 2022-01-01
 simulation-end-date = 2042-12-31</pre>
 The start and end dates for running the simulation. 
 If multiple iterations are run, then each iteration starts with the start date.
@@ -303,7 +316,7 @@ If that is activated, then the simulation will often terminate before the end da
 (See below.)
 
 
-<P><pre>date-of-birth = 1962-03-01
+<P  id='date-of-birth'><pre>date-of-birth = 1962-03-01
 annual-test-for-survival
 sex = male</pre>
 The person's date of birth is used for various calculations.
@@ -312,7 +325,7 @@ test is performed by the system, to see if the person will survive into the next
 If they fail to survive the test, then they die, and the simulation/iteration is terminated.
 This feature uses <a href='https://www150.statcan.gc.ca/n1/pub/84-537-x/84-537-x2021001-eng.htm'>life-tables from Statistics Canada</a>, and those tables are different between males and females.  
  
-<p><pre>year-zero-amounts {
+<p id='year-zero-amounts'><pre>year-zero-amounts {
   net-income-before-adjustments = 15180.00  # line 23400
   net-income = 15180.00 # line 23600
   oas-income = 0.00
@@ -321,7 +334,7 @@ This feature uses <a href='https://www150.statcan.gc.ca/n1/pub/84-537-x/84-537-x
 The simulation starts in the middle of life, and some items in the tax return need to refer to the previous year.
 For the first year in the simulation, there is no data for the previous year, so this data fills that gap. 
 
-<P><pre>oas {
+<P id='oas'><pre>oas {
   monthly-amount-at-65 = 648.67 # as of 2022-06
   # payments are actually first received on the month AFTER the start-month 
   start-month = 2027-03 # the month I turn 65
@@ -338,7 +351,7 @@ For the first year in the simulation, there is no data for the previous year, so
 The data used to calculate the OAS (Old Age Security) benefit.
 The <em>start-month</em> is especially important.
 
-<P><pre>cpp { 
+<P id='cpp'><pre>cpp { 
   # can be used for QPP as well, since they have nearly the same core logic
   nominal-monthly-amount = 857.00 # if you start at age 65
   start-month = 2022-03           # the month I choose to start cpp payments
