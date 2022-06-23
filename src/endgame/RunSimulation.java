@@ -61,11 +61,11 @@ public final class RunSimulation implements Runnable {
     
     //Style #1. This way just hard-codes the file location.
     //Note the doubling of the separators in the file name location!
-    String scenario = "C:\\myworkspace\\end-game\\scenario\\01.1\\01.1-no-savings-CPP-0.ini";
+    //String scenario = "C:\\myworkspace\\end-game\\scenario\\01.1\\01.1-no-savings-CPP-0.ini";
     
     //Style #2. This alternate way uses arguments passed on the command line.
     //For beginners, this is a bit harder to use.
-    //String scenario = args[0];
+    String scenario = args[0];
     
     RunSimulation runner = new RunSimulation(scenario);
     runner.run();

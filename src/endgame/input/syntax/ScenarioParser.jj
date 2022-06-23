@@ -210,7 +210,7 @@ void all() : { } {
   accounts()
   (sequentialLiquidation())?
   (annualTfsaTopUp())?
-  (smallEmployment())*
+  (smallPaycheck())*
   transactions()
   < EOF > 
 }
@@ -750,17 +750,13 @@ void moveStock() : {
  There's no actual limit on the amount, but this is intended for low gross monthly incomes,
  for retired people making a bit of cash to supplement their income.
 */
-void smallEmployment(): {
-   String startDate=""; String endDate=""; String gross=""; String paidOn=""; 
+void smallPaycheck(): {
+   String grossAmount=""; String when=""; 
 } {
-  "small-employment" <BLOCK_START> 
-    "start-date" <EQUALS> <YYYY_MM_DD> {startDate=token.image;}
-    "stop-date" <EQUALS> <YYYY_MM_DD> {endDate=token.image;}
-    "gross-monthly-income" <EQUALS> <MONEY> {gross=token.image;}
-    "paid-on" <EQUALS> <NUM> {paidOn=token.image;}
-  <BLOCK_END>
-  { scenario.transactionals.add(new EmploymentPayday(startDate, endDate, gross, paidOn)); }
+  "small-paycheck"  <MONEY> {grossAmount=token.image;} <WHEN_CONTROL> { when=token.image;}
+  { scenario.transactionals.add(SmallPaycheck.valueOf(grossAmount, when)); }
 }
+
 
 void annuityPayment(): {
   String amount=""; String when="";

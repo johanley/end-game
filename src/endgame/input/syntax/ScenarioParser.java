@@ -189,7 +189,7 @@ public class ScenarioParser implements ScenarioParserConstants {
         jj_la1[9] = jj_gen;
         break label_1;
       }
-      smallEmployment();
+      smallPaycheck();
     }
     transactions();
     jj_consume_token(0);
@@ -1291,8 +1291,8 @@ public class ScenarioParser implements ScenarioParserConstants {
       case 160:
       case 161:
       case 162:
-      case 170:
-      case 171:
+      case 166:
+      case 167:
         ;
         break;
       default:
@@ -1323,10 +1323,10 @@ public class ScenarioParser implements ScenarioParserConstants {
       case 162:
         moveStock();
         break;
-      case 170:
+      case 166:
         annuityPayment();
         break;
-      case 171:
+      case 167:
         stockSplit();
         break;
       default:
@@ -1668,33 +1668,19 @@ public class ScenarioParser implements ScenarioParserConstants {
  There's no actual limit on the amount, but this is intended for low gross monthly incomes,
  for retired people making a bit of cash to supplement their income.
 */
-  final public void smallEmployment() throws ParseException {
-   String startDate=""; String endDate=""; String gross=""; String paidOn="";
+  final public void smallPaycheck() throws ParseException {
+   String grossAmount=""; String when="";
     jj_consume_token(165);
-    jj_consume_token(BLOCK_START);
-    jj_consume_token(166);
-    jj_consume_token(EQUALS);
-    jj_consume_token(YYYY_MM_DD);
-                                        startDate=token.image;
-    jj_consume_token(167);
-    jj_consume_token(EQUALS);
-    jj_consume_token(YYYY_MM_DD);
-                                       endDate=token.image;
-    jj_consume_token(168);
-    jj_consume_token(EQUALS);
     jj_consume_token(MONEY);
-                                             gross=token.image;
-    jj_consume_token(169);
-    jj_consume_token(EQUALS);
-    jj_consume_token(NUM);
-                              paidOn=token.image;
-    jj_consume_token(BLOCK_END);
-    scenario.transactionals.add(new EmploymentPayday(startDate, endDate, gross, paidOn));
+                             grossAmount=token.image;
+    jj_consume_token(WHEN_CONTROL);
+                                                                        when=token.image;
+    scenario.transactionals.add(SmallPaycheck.valueOf(grossAmount, when));
   }
 
   final public void annuityPayment() throws ParseException {
   String amount=""; String when="";
-    jj_consume_token(170);
+    jj_consume_token(166);
     jj_consume_token(MONEY);
                               amount=token.image;
     jj_consume_token(WHEN_CONTROL);
@@ -1704,10 +1690,10 @@ public class ScenarioParser implements ScenarioParserConstants {
 
   final public void stockSplit() throws ParseException {
   String when=""; String factor=""; Set<String> tickers = new LinkedHashSet<String>();
-    jj_consume_token(171);
+    jj_consume_token(167);
     jj_consume_token(NUM);
           factor=token.image;
-    jj_consume_token(172);
+    jj_consume_token(168);
     jj_consume_token(QUOTED_TEXT);
      for(String ticker : Util.chopList(noQuotes(token.image))) {
         tickers.add(ticker);
@@ -1757,7 +1743,7 @@ public class ScenarioParser implements ScenarioParserConstants {
       jj_la1_4 = new int[] {0x0,0x0,0x400000,0x0,0x0,0x0,0x0,0x0,0x2,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x1,0x0,0x0,0x0,0xb0000018,0xb0000018,0x0,0x4000000,0x30000000,0x0,0x0,0x0,};
    }
    private static void jj_la1_init_5() {
-      jj_la1_5 = new int[] {0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x20,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xc07,0xc07,0x0,0x0,0x0,0x3,0x0,0x0,};
+      jj_la1_5 = new int[] {0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x20,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xc7,0xc7,0x0,0x0,0x0,0x3,0x0,0x0,};
    }
 
   /** Constructor with InputStream. */
@@ -1874,7 +1860,7 @@ public class ScenarioParser implements ScenarioParserConstants {
   /** Generate ParseException. */
   public ParseException generateParseException() {
     jj_expentries.clear();
-    boolean[] la1tokens = new boolean[173];
+    boolean[] la1tokens = new boolean[169];
     if (jj_kind >= 0) {
       la1tokens[jj_kind] = true;
       jj_kind = -1;
@@ -1903,7 +1889,7 @@ public class ScenarioParser implements ScenarioParserConstants {
         }
       }
     }
-    for (int i = 0; i < 173; i++) {
+    for (int i = 0; i < 169; i++) {
       if (la1tokens[i]) {
         jj_expentry = new int[1];
         jj_expentry[0] = i;

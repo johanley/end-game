@@ -517,6 +517,14 @@ Topping up your TFSA account by transferring in-kind from other accounts.
 This is done every January 3, in the above example.
 The two <em>-sequence</em> items define the order in which to transfer stock, from which account, and then which stock in that account.
 
+<P><pre>small-paycheck 50.00 on *-15 | 2024-01-01..2026-12-31
+small-paycheck 150.00 on *-15 | 2026-01-01..2027-12-31</pre>
+Employment earnings. 
+The expectation is that these earnings are modest, since you are retired.
+However, that isn't enforced explicitly.
+In the above example, the person gets a raise in 2026 from 50.00 to 150.00.
+
+
 <p><pre>transactions {
   # Transactions in your accounts, not yet defined implicitly.
   ...
@@ -524,31 +532,61 @@ The two <em>-sequence</em> items define the order in which to transfer stock, fr
 Transactions against your accounts that aren't otherwise specified.
 The order of appearance of items in the <em>transactions</em> block is actually arbitrary - they can appear in any order.
 
+<P><pre>bank-debit-credit 925.00 on *-01 # rent on the first of the month</pre>
+A debit or credit to your bank account. Spending means debit, more money means credit.
+This line usually represents regular spending.
+If the amount is a credit, it's a negative amount on this line instead of a positive amount.
 
+<P><pre>sweep-cash-from nra on *-01
+sweep-cash-from rif  on *-03-01,*-06-01,*-09-01,*-12-01
+</pre>
+Move the cash from an investment account account to your bank account.
+'nra' stands for non-registered account.
+The first example executes on the first of every month.
+The second example executes quarterly.
 
+<p><pre>spend-bank-balance-above 5000.00 on *-02-15,*-05-15,*-08-15,*-11-15</pre>
+A generic way of spending the cash in your bank account.
+Only the amount above the given base amount is spent.
+When the money is spent, it simply disappears from the bank account.
 
+<P><pre>sell-stock rif 952 shares "ABC" on 2022-06-20
+buy-stock rif 952 shares "ABC" on 2022-06-20</pre>
+Sell or buy shares in an investment account.
+In the example, the ticker symbol is ABC.  
 
-<!-- 
-<h2>Web Site Versus Stand-alone</h2>
-When deploying this code under a web site:
-<ul>
- <li>pro: the user doesn't need to install any software
- <li>pro: it's easier to run a scenario, at least when getting started
- <li>con: web sites come and go, and usually die with the person who created them
- <li>con: the user exposes their personal financial information to a third party, and that may not be secure
- <li>con: some scenarios take a while to execute, and waiting for a web site to respond can be frustrating
-</ul>
+<p><pre>buy-gic rif "Home Trust" 7500.00 2.5% 1-year : 2022-06-21</pre>
+Purchase a GIC. 
+There's no corresponding sell.
+In this simulation, the GIC is always held to maturity in the account that purchased it.
+Note that the <em>on</em> syntax for the date of execution is not used here. 
+Instead, the ":" symbol is used, and you can only specify the date as yyyy-mm-dd.
+The purchase of a GIC will, in the background, also trigger two other kinds of transactions: the 
+redemption of the GIC, and, for multi-year GICs, the accrual of interest for your tax return. 
 
-Advantages of running this code locally on your computer:
-<ul>
- <li>con: for non-programmers, learning how to run the code takes some effort (but it's not that hard, I swear!)
- <li>pro: scenarios that take a while to execute can provide feedback as they run 
- <li>pro: the user is not dependent on a web site
- <li>pro: the user can alter the code directly, if need be
- <li>pro: not limited by time or disk space
- <li>pro: it executes faster than a web site
-</ul> 
- -->
+<p><pre>transfer-stock-in tfsa 100 shares "ABC" on 2027-05-15 
+transfer-stock-out rif 1500.00 "ABC" on 2027-05-15</pre>
+Transfer stock into or out of an account.
+You can specify either the number of shares, or a principal amount.
+
+<P><pre>move-stock from rif to tfsa 100 shares "ABC" on 2027-05-15
+move-stock from rif to tfsa 7500.00 "ABC" on 2027-05-15</pre>
+Move stock in kind from one account to another. 
+You can specify either the number of shares, or a principal amount.
+
+<P><pre>annuity-payment 2000.00 on *-25 | 2027-05-25..</pre>
+An annuity regularly pays money into your bank account.
+The above example pays on the 25th of every month, starting on 2027-05-25 and paying until the end of the simulation.
+
+<P><pre>stock-split 2-to-1 "ABC" on 2027-05-12</pre>
+Perform a stock split. 
+Can be 2-to-1, 3-to-1, 4-to-1, and so on.
+The price of the stock is reduced accordingly, and stock positions are increased accordingly.
+Any historical stock data is also adjusted.
+Performing an occasional stock split can help in the precision of the simulation. 
+Often, you will be liquidating a certain percentage.
+That translates eventually into a number of shares.
+If the share price has grown large over time, there's less granularity in the calculated amounts. 
 
 
 </body>
