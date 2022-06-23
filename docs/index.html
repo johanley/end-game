@@ -22,8 +22,18 @@
  <li><a href="#scenarios">Example Scenarios</a>
  <li><a href="#lessons">Lessons Learned</a>
  <li><a href="#running">Running The Code In Eclipse</a>
- <li><a href="#syntax">Syntax of the Scenario File</a>
+</ul>
+
+<P>Scenario File
+<ul>
+ <li><a href="#syntax">General Syntax of the Scenario File</a>
+  <ul>
+   <li><a href='#whencontrol'>The <em>on</em> statement</a>
+  </ul>
  <li><a href="#examplesnippets">Example Snippets for the Scenario File</a>
+  <ul>
+   <li><a href='#syntax-version'><em>syntax-version</em></a>
+  </ul>
 </ul> 
 
 <h2 id='overview'>Overview</h2>
@@ -205,12 +215,13 @@ Here, you just want to run the code, not change it.
 <P>Here are the <a href='gettingstarted/index.html'>detailed instructions</a>. It takes 10-15 minutes to set up.
 
 
-<h2 id='syntax'>Syntax of the Scenario File</h2>
+<h2 id='syntax'>General Syntax of the Scenario File</h2>
 The scenario file has a specific syntax.
 That is, the text in the scenario file has to <em>make sense</em> to the code.
 You have to follow those rules, or an error will result, and the code will stop executing.
+If you have a syntax error, then an error message will tell you the exact location (line number) in the scenario file.
 
-<P>It's usually best to start with an example scenario file that is closest to your situation.
+<P>It's almost always best to start with an example scenario file that is closest to your situation.
 
 <P>Note that:
 <ul>
@@ -253,8 +264,11 @@ In this case, the ":" character is used:
 
 
 <h2 id='examplesnippets'>Example Snippets for the Scenario File</h2>
+The following are examples of the various parts that can be found in a scenario file.
+They appear in the order that they can appear in the file.
+For items in the <em>transactions</em> block, they can appear in any order.
 
-<p><pre>syntax-version = v1.0.0</pre>
+<p id='syntax-version'><pre>syntax-version = v1.0.0</pre>
 States that this scenario file was created with a given version of the syntax for scenario files (which may change over time).
 The idea is to ensure that code processing a scenario file knows the exact syntax of the file it's supposed to process.
 The code is not smart enough to be backwards-compatible with "old" versions of the syntax.
@@ -529,7 +543,7 @@ In the above example, the person gets a raise in 2026 from 50.00 to 150.00.
   # Transactions in your accounts, not yet defined implicitly.
   ...
 }</pre>
-Transactions against your accounts that aren't otherwise specified.
+Transactions against your accounts that aren't specified elsewhere.
 The order of appearance of items in the <em>transactions</em> block is actually arbitrary - they can appear in any order.
 
 <P><pre>bank-debit-credit 925.00 on *-01 # rent on the first of the month</pre>
