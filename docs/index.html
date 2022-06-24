@@ -82,8 +82,8 @@ The main purpose of this project is:
 <p><b>The main steps in using this tool:</b>
 <ul>
  <li>you first create a <em>scenario</em> file, which describes your assets, accounts, date of retirement, and so on. 
- The syntax of the scenario file follows certain rules defined by this tool (see below).
- <li>you run this tool using the scenario file as input, to generate output files.
+ The scenario file is a text file, whose syntax follows certain rules defined by this tool (see below).
+ <li>using the scenario file as input, you run this tool to generate output files.
  <li>the output files are all text files, and are placed in the same folder as the input scenario file.
  <li>the output consists of .csv files containing summary data, and a log file. The log file shows the activity in your accounts, yearly tax returns, and so on.
  <li>usually, you'll want to import the .csv files into a spreadsheet tool (MS Excel, Google Sheets, Open Office) and make some charts.
@@ -121,7 +121,8 @@ This tool has a limited scope:
 <ul>
  <li>there's no spousal logic.
  <li>the set of supported securities is very limited at present: only cash, stocks, and GICs. 
- <li>it supports RSP/RIF, TFSA, non-registered accounts, and simple bank accounts, but no other types of accounts. 
+ <li>the set of supported account types is : RIF, TFSA, non-registered accounts, and simple bank accounts. 
+ RSPs are supported in a limited way (no contributions allowed).
  <li>there's no logic specific to insurance, debt, real estate, charitable donations, and so on.
  <li>multiple currencies aren't supported (all amounts are assumed to be in Canadian dollars)  
 </ul>
@@ -147,7 +148,7 @@ Features include:
  <li>some scenarios have randomness, and some don't 
  <li>the randomness only comes from variation in the market price of securities
  <li>basic tax returns are calculated, both federal and provincial (territories not included at present)
- <li>the output is in .csv (comma-separated) files, which are easily imported into spreadsheet tools
+ <li>the output is in .csv (comma-separated values) files, which are easily imported into spreadsheet tools
  such as Google Sheets or Open Office (and thereby charted)
  <li>log output shows transactions, yearly summaries, and tax returns
  <li>you can repeat a scenario multiple times, to reflect the spread in outcomes caused by randomness (Monte Carlo simulation)
@@ -214,10 +215,6 @@ Someone who has made 30K a year for their entire life, and has no savings, will 
 they retire at 65, from OAS, GIS, and CPP. The same can be said if you made 100K a year, but spent it all and have no savings when 
 you are 65. 
 
-<P><b>It's the net cash flow that's most important.</b> That's where the focus should be. 
-An example I saw had two scenarios, A vs B: A had 14k less tax than B, but only 2.9k more net cash than B.
-If you leave out the net cash, and only focus on the tax saving, then you aren't fully informed.
-
 <P><b>Spending generally decreases significantly in old age.</b>
 Many people think in terms of having a flat cash flow, the same from retirement until death.
 But, in reality, your spending usually decreases in old age. 
@@ -228,10 +225,14 @@ so there may not be much you can do about it.
 
 <P><b>Many people die too rich</b>.
 The psychology of the saver is different from the psychology of the spender.
-Some spend many years as a saver, and later fail to change into a spender.
+Some people spend many years as a saver, and later fail to change into a spender.
 They keep growing their net worth until the end.
 That isn't necessarily the wrong thing to do, but for many it's likely not the best outcome.
 Oversaving can be as bad as overspending; perhaps it's best to avoid extremes.
+
+<P><b>It's the net cash flow that's most important.</b> That's where the focus should be. 
+An example I saw had two scenarios, A vs B: A had 14k less tax than B, but only 2.9k more net cash than B.
+If you leave out the net cash, and only focus on the tax saving, then you aren't fully informed.
 
 <P><b>Living only off of dividends is almost always an error.</b>
 Some investors are enthusiastic about dividend stocks, and attempt to generate cash flow only from the dividends, 
@@ -662,14 +663,14 @@ An annuity regularly pays money into your bank account.
 The above example pays on the 25th of every month, starting on 2027-05-25 and paying until the end of the simulation.
 
 <P id='stock-split'><pre>stock-split 2-to-1 "ABC" on 2027-05-12</pre>
-<span  style='padding-bottom:75em'>Perform a stock split. 
+Perform a stock split. 
 Can be 2-to-1, 3-to-1, 4-to-1, and so on.
 The price of the stock is reduced accordingly, and stock positions are increased accordingly.
 Any historical stock data is also adjusted.
 Performing an occasional stock split can help in the precision of the simulation. 
 Often, you will be liquidating a certain percentage.
 That translates eventually into a number of shares.
-If the share price has grown large over time, there's less granularity in the calculated amounts.</span> 
+If the share price has grown large over time, there's less granularity in the calculated amounts. 
 
 
 </body>
