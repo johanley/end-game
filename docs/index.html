@@ -79,8 +79,17 @@ The main purpose of this project is:
  <li>to help you find a better financial plan for your retirement
 </ul>
 
-<P><b>This tool is focused almost entirely on the retirement phase of life (spending), not on the 
-working phase of life (saving)</b>.
+<p>The main steps in using this tool:
+<ul>
+ <li>first create a <em>scenario</em> file, which describes your assets, accounts, date of retirement, and so on. 
+ The syntax of the scenario file follows certain rules defined by this tool (see below).
+ <li>you run this tool using the scenario file as input, to generate output files.
+ <li>the output files are all text files.
+ <li>the output consists of .csv files containing summary data, and a log file showing all the activity in your accounts, yearly tax returns, and so on.
+ <li>usually, you'll want to import the .csv files into a spreadsheet tool (MS Excel, Google Sheets, Open Office) and make some charts.
+</ul>
+ 
+<P><b>This tool is focused almost entirely on the retirement phase of life (spending), not on the working phase of life (saving)</b>.
 
 <P>The level of detail in this tool is higher than usual.
 Whereas most tools focus on a high-level rate of return, this tool actually goes through every single day of your retirement, 
@@ -111,12 +120,13 @@ rules usually have exceptions.</b>
 This tool has a limited scope:
 <ul>
  <li>there's no spousal logic.
- <li>the set of supported securities is only cash, stocks, and GICs. 
+ <li>the set of supported securities is very limited at present: only cash, stocks, and GICs. 
  <li>it supports RSP/RIF, TFSA, non-registered accounts, and simple bank accounts, but no other types of accounts. 
  <li>there's no logic specific to insurance, debt, real estate, charitable donations, and so on.
+ <li>multiple currencies aren't supported (all amounts are assumed to be in Canadian dollars)  
 </ul>
 
-In spite of these limitations, you may find it useful to examine the example scenario outputs.
+In spite of these limitations, you may still find it useful.
 
 <P>There are <b>two important issues which I hope to address soon</b>:
 <ul>
@@ -144,7 +154,7 @@ Features include:
  <li>the tool can run multiple scenarios in sequence 
  <li>the code is implemented in Java, and can be run on any computer
  <li>changes to the market prices of stock are applied once a year
- <li>all amounts are in real dollars (you don't input an inflation rate anywhere) 
+ <li>all amounts are in real dollars (you don't input an inflation rate anywhere)
 </ul>
 
 <P>Some items that aren't modeled explicitly can still be effectively modeled by the system. 
