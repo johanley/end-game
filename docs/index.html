@@ -26,11 +26,11 @@
 
 <P>Scenario File
 <ul>
- <li><a href="#syntax">General Syntax of the Scenario File</a>
+ <li><a href="#syntax">General Syntax</a>
   <ul>
    <li><a href='#whencontrol'>The <em>on</em> statement</a>
   </ul>
- <li><a href="#examplesnippets">Example Snippets for the Scenario File</a>
+ <li><a href="#examplesnippets">Example Snippets</a>
   <ul>
    <li><a href='#syntax-version'><em>syntax-version</em></a>
    <li><a href='#description'><em>description</em></a>
@@ -249,13 +249,13 @@ Here, you just want to run the code, not change it.
 <P>Here are the <a href='gettingstarted/index.html'>detailed instructions</a>. It takes 10-15 minutes to set up.
 
 
-<h2 id='syntax'>General Syntax of the Scenario File</h2>
+<h2 id='syntax'>General Syntax</h2>
 The scenario file has a specific syntax.
 That is, the text in the scenario file has to <em>make sense</em> to the code.
-You have to follow those rules, or an error will result, and the code will stop executing.
+You have to follow its rules, or an error will result, and the code will stop executing.
 If you have a syntax error, then an error message will tell you the exact location (line number) in the scenario file.
 
-<P>It's almost always best to start with an example scenario file that is closest to your situation.
+<P><b>It's almost always best to start with an example scenario file that is closest to your situation. Then you gradually modify it, one piece at a time.</b>
 
 <P>Note that:
 <ul>
@@ -275,14 +275,14 @@ Examples:
 <pre>bank-debit-credit 925.00 on *-01</pre>
 This means your bank is debited 925.00 on the first of every single month. 
  
-<pre>on *-11-25</pre>
-This means on every November 25th.
+<pre>on 2027-11-25</pre>
+This means on that specific day, and no other.
 
 <pre>on *-11-25</pre>
 This means on every November 25th. 
 
 <pre>on *-03-01,*-06-01,*-09-01,*-12-01</pre>
-This means on every March 1, June 1, September 1, and December 1 (quarterly dividend payments).
+This means on every March 1, June 1, September 1, and December 1 (quarterly dividend payments, for example).
 
 <pre>sell 6.0% on *-11-26 | 2027-01-01..2034-12-31</pre>
 Executed every November 26, in the years 2027 to 2034. When the "|" appears, it adds start-date, end-date, or both.
@@ -292,16 +292,20 @@ sell 6.0% on *-11-26 | 2027-01-01..2034-12-31  # start-date and end-date
 sell 6.0% on *-11-26 | 2027-01-01..            # only start-date
 sell 6.0% on *-11-26 | ..2034-12-31            # only end-date</pre>
 An exception to the above is the purchase of a GIC, which always uses a specific date.
-In this case, the ":" character is used: 
+In this case, the ":" character is used instead of the <em>on</em> statement:
 <pre>buy-gic rif "Cda Trust" 5700.00 2.5% 1-year : 2024-06-21</pre>
 
 
 
-<h2 id='examplesnippets'>Example Snippets for the Scenario File</h2>
+<h2 id='examplesnippets'>Example Snippets</h2>
 The following are examples of the various parts that can be found in a scenario file.
 They appear here in the order that they are allowed to appear in the file.
 
-<P>Outside of the <em>transactions</em>, items are usually required.
+<P>Some examples have various alternatives. 
+One of the alternatives will be the active one, while the others are all <em>commented out</em> because the line starts with a '#' sign.
+This lets you quickly change alternatives, by commenting out everything except the one you really want.
+
+<P>Outside of the <em>transactions</em> block, items are usually required.
 Any optional items are indicated as such below.
 
 <P>Items in the <em>transactions</em> block are different:
@@ -550,6 +554,8 @@ The <em>convert-rsp-to-rif</em> date deserves special mention.
 Before this date, the RIF account simply has no minimum annual withdrawal. 
 Other than that, it acts the same. 
 That means no contributions to the RSP can be made before the conversion date in this simulation.
+In other words, RSPs are modeled here in a limited way.
+<b>Note the names of the accounts used here: rif, tfsa, and nra (non-registered account).</b> 
 
 
 <P id='sequential-liquidation'><pre>sequential-liquidation {
@@ -562,7 +568,7 @@ That means no contributions to the RSP can be made before the conversion date in
 Optional. Describes how to liquidate stock positions, in order to generate cash flow.
 The <em>avoid-downturn-years</em> is a way of avoiding liquidations when the price of the stocks are lower.
 In the example above, the meaning is <em>if the current price is lower than the prices of the past 2 years, then don't sell</em>.
-The two <em>-sequence</em> items define the order in which to sell stock, from which account, and then which stock in that account.
+The two <em>sequence</em> items define the order in which to sell stock, from which account, and then which stock in that account.
 The above example sells 6% of the investments on Nov 26, from 2027 to 2034. Later, from 2035 on, 3% is sold.
 
 
@@ -573,7 +579,7 @@ The above example sells 6% of the investments on Nov 26, from 2027 to 2034. Late
 }</pre>
 Optional. Topping up your TFSA account by transferring in-kind from other accounts.
 This is done every January 3, in the above example.
-The two <em>-sequence</em> items define the order in which to transfer stock, from which account, and then which stock in that account.
+The two <em>sequence</em> items define the order in which to transfer stock, from which account, and then which stock in that account.
 
 <P id='small-paycheck'><pre>small-paycheck 50.00 on *-15 | 2024-01-01..2026-12-31
 small-paycheck 150.00 on *-15 | 2026-01-01..2027-12-31</pre>
@@ -581,19 +587,28 @@ Optional. Can appear multiple times. Employment earnings.
 The expectation is that these earnings are modest, since you are retired.
 However, that isn't enforced explicitly.
 In the above example, the person gets a raise in 2026 from 50.00 to 150.00.
+Your paycheck is modeled simplistically, without CPP contributions or EI deductions. 
+There's simply a gross amount that is deposited to your bank account, and that is added to the employment income line on your tax return.
 
+<h2 id='examplesnippetstransactions'>Example Snippets - Transactions Block</h2>
 
 <p id='transactions'><pre>transactions {
   # Transactions in your accounts, not yet defined implicitly.
   ...
 }</pre>
 Transactions against your accounts that aren't specified elsewhere.
-The order of appearance of items in the <em>transactions</em> block is actually arbitrary - they can appear in any order.
+Items in the <em>transactions</em> block are different:
+<ul>
+ <li>they can appear in any order
+ <li>they are all optional
+ <li>they can appear 0, 1, or N times
+</ul>
+ 
 
 <P id='bank-debit-credit'><pre>bank-debit-credit 925.00 on *-01 # rent on the first of the month</pre>
-A debit or credit to your bank account. Spending means debit, more money means credit.
+A debit or credit to your bank account. Spending means debit, a deposit means credit.
 This line usually represents regular spending.
-If the amount is a credit, it's a negative amount on this line instead of a positive amount.
+The convention used here is that if the amount is a credit, it's a negative amount on this line instead of a positive amount.
 
 <P id='sweep-cash-from'><pre>sweep-cash-from nra on *-01
 sweep-cash-from rif  on *-03-01,*-06-01,*-09-01,*-12-01
