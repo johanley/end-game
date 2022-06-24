@@ -192,7 +192,6 @@ void all() : { } {
   version()
   description()
   numIterations()
-  (stockPricePolicy())?
   simulationStartDate()
   simulationEndDate()
   dateOfBirth()
@@ -206,6 +205,7 @@ void all() : { } {
   provincialTax()
   (stocks())?
   (commission())?
+  (stockPricePolicy())?
   (tfsaRoom())?
   accounts()
   (sequentialLiquidation())?
@@ -377,7 +377,7 @@ Dividend dividend() : { String amount = ""; String when = ""; String growth = ""
 
 
 void stockPricePolicy() : { String when = ""; } {
-  "update-stock-prices" <BLOCK_START>
+  "stock-price-policy" <BLOCK_START>
     <WHEN_CONTROL> { when = token.image; }
     (fixedGrowthRate() | rangedGrowthRate() | gaussianGrowthRate()|explicitGrowthList())
   <BLOCK_END>

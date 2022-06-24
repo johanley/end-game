@@ -18,7 +18,7 @@
 <h2>Getting Started</h2>
 This is a guide for running the code using the <em>Eclipse</em> tool.
 You only have to do these steps once.
-It takes about 15 minutes.
+It takes about 20 minutes.
 
 
 <h3>Step 1 - Folders and Source Code</h3>
@@ -118,7 +118,7 @@ It will also generate new .csv files that summarize the results.
 The log file and .csv files are saved to the same directory as the scenario itself.
 
 <P>The <em>RunMultipleSimulations</em> class works in a similar way. 
-The only difference is that it is passed a top-level folder that contains multiple scenarios folders.
+The only difference is that it is passed a top-level folder that contains multiple scenario folders.
  
 
 
@@ -136,8 +136,10 @@ the method described above.
 
 <h3>Step 6 (Optional) - Install the JavaCC plugin</h3>
 You can skip this if you wish. 
-The <em>JavaCC</em> tool lets you change the syntax of the scenario file.
-You won't likely need to do that. 
+It's for advanced users.
+The <em>JavaCC</em> tool lets you change <em>ScenarioParser.jj</em>, which defines the syntax of the scenario file.
+When you save changes to that file, <em>JavaCC</em> will automatically generate a number of Java classes. 
+Those classes do the actual parsing of the scenario file. 
 
 <P>To install the <em>JavaCC</em> plugin into Eclipse:
 <ul>

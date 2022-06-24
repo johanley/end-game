@@ -35,7 +35,6 @@
    <li><a href='#syntax-version'><em>syntax-version</em></a>
    <li><a href='#description'><em>description</em></a>
    <li><a href='#number-of-iterations'><em>number-of-iterations</em></a>
-   <li><a href='#update-stock-prices'><em>update-stock-prices</em></a>
    <li><a href='#simulation-start-date'><em>simulation-start-date</em></a>
    <li><a href='#simulation-start-date'><em>simulation-end-date</em></a>
    <li><a href='#date-of-birth'><em>date-of-birth</em></a>
@@ -49,6 +48,7 @@
    <li><a href='#provincial-tax'><em>provincial-tax</em></a>
    <li><a href='#stocks'><em>stocks</em></a>
    <li><a href='#stock-commission'><em>stock-commission</em></a>
+   <li><a href='#stock-price-policy'><em>stock-price-policy</em></a>
    <li><a href='#tfsa-room'><em>tfsa-room</em></a>
    <li><a href='#accounts'><em>accounts</em></a>
    <li><a href='#sequential-liquidation'><em>sequential-liquidation</em></a>
@@ -144,6 +144,7 @@ Features include:
  <li>the tool can run multiple scenarios in sequence 
  <li>the code is implemented in Java, and can be run on any computer
  <li>changes to the market prices of stock are applied once a year
+ <li>all amounts are in real dollars (you don't input an inflation rate anywhere) 
 </ul>
 
 <P>Some items that aren't modeled explicitly can still be effectively modeled by the system. 
@@ -165,8 +166,8 @@ Features include:
 </ul>
 
 <h2 id='scenarios'>Example Scenarios</h2>
-These example scenarios are included in the source code. 
-They are listed in rough order of increasing complexity.
+Example scenarios are included in the source code. 
+They are listed here in rough order of increasing complexity.
 
 <P>Note that the <em>.ini</em> file is the scenario file, and the remaining files in the directory are outputs that 
 result from executing the scenario. The provincial tax return is for PE, Prince Edward Island, simply because 
@@ -246,7 +247,7 @@ The output spreadsheet files of this project usually incorporate this stat as a 
 The scenario file has a specific syntax.
 That is, the text in the scenario file has to <em>make sense</em> to the code.
 You have to follow its rules, or an error will result, and the code will stop executing.
-If you have a syntax error, then an error message will tell you the exact location (line number) in the scenario file.
+If you have a syntax error, then an error message will tell you the exact location of the error in the scenario file (using a line number).
 
 <P><b>It's almost always best to start with an example scenario file that is closest to your situation. Then you gradually modify it, one piece at a time.</b>
 
@@ -301,7 +302,7 @@ This lets you quickly change alternatives, by commenting out everything except t
 <P>Outside of the <em>transactions</em> block, items are usually required.
 Any optional items are indicated as such below.
 
-<P>Items in the <em>transactions</em> block are different:
+<P><b>Items in the <em>transactions</em> block are different:</b>
 <ul>
  <li>they can appear in any order
  <li>they are all optional
@@ -321,18 +322,6 @@ Usually 1. You change it to more than 1 when you want to repeat the scenario, fr
 This only makes sense if the various iterations have different results.
 For example, when stock prices are generated using randomness, running multiple iterations makes logical sense, to see the general spread in the resulting outputs.
 When greater than 1, the generated .csv files are completely different.
-
-<P id='update-stock-prices'><pre>update-stock-prices {
-  on *-11-25 # when stock prices are to be updated
-  # gaussian mean = 5.0%  std-dev = 5.0% 
-  # range = -5%_10%
-  fixed = 3% # no randomness here
-  # explicit-list = 5%,5%,5%,5%,5%,-7% # in order of year; recycles if end is reached
-}</pre>
-Optional. Controls how stock prices change over time.
-In this example, the prices are updated only on November 25 of each year.
-The <em>gaussian</em> style means that price increases follow a <a href='https://en.wikipedia.org/wiki/Normal_distribution'>Gaussian distribution</a>.
-The <em>range</em> example above means that the percentage price increase is randomly selected between -5% and +10%.
 
 <P  id='simulation-start-date'><pre>simulation-start-date = 2022-01-01
 simulation-end-date = 2042-12-31</pre>
@@ -496,6 +485,18 @@ In the above examples, the dividends pay quarterly, on the given month-day combi
 Optional. How to calculate the commission paid to your investment dealer when trading stocks.
 The <em>custom-schedule</em> is to let you reflect you investment dealer's actual commission schedule.
 It requires that you do some coding, by implementing the <a href='https://github.com/johanley/end-game/blob/master/src/endgame/security/stock/commission/CustomCommish.java'>CustomCommish</a> class.
+
+<P id='stock-price-policy'><pre>stock-price-policy {
+  on *-11-25 # when stock prices are to be updated
+  # gaussian mean = 5.0%  std-dev = 5.0% 
+  # range = -5%_10%
+  fixed = 3% # no randomness here
+  # explicit-list = 5%,5%,5%,5%,5%,-7% # in order of year; recycles if end is reached
+}</pre>
+Optional. Controls how stock prices change over time.
+In this example, the prices are updated only on November 25 of each year.
+The <em>gaussian</em> style means that price increases follow a <a href='https://en.wikipedia.org/wiki/Normal_distribution'>Gaussian distribution</a>.
+The <em>range</em> example above means that the percentage price increase is randomly selected between -5% and +10%.
 
 <p id='tfsa-room'><pre>tfsa-room {
   initial-room = 19877.98  

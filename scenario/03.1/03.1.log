@@ -1694,6 +1694,6 @@ Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\03.1\03.1-cash-an
 Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\03.1\03.1-cash-flows.csv
 Scenario description: Dividends only, never sell stocks. 3% dividend growth, 3% stock price growth.
 Start-date: 2022-01-01 end-date: 2032-12-31
-Execution time: 1.1027422s
+Execution time: 1.200688s
 Done.
 Writing to log file C:\johanley\ProjectsPhoton\end-game\scenario\03.1\03.1.log

@@ -200,7 +200,7 @@ public interface ScenarioParserConstants {
     "\"dividend\"",
     "\"amount\"",
     "\"growth\"",
-    "\"update-stock-prices\"",
+    "\"stock-price-policy\"",
     "\"fixed\"",
     "\"range\"",
     "\"gaussian\"",

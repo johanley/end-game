@@ -1460,6 +1460,6 @@ Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\01.2\01.2-cash-an
 Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\01.2\01.2-cash-flows.csv
 Scenario description: 01.2: Worker with no savings, retires at 65. CPP 300/month, OAS/GIS. PE. Deterministic.
 Start-date: 2028-01-01 end-date: 2042-12-31
-Execution time: 1.1816053s
+Execution time: 1.598404s
 Done.
 Writing to log file C:\johanley\ProjectsPhoton\end-game\scenario\01.2\01.2.log
