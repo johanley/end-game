@@ -299,8 +299,17 @@ In this case, the ":" character is used:
 
 <h2 id='examplesnippets'>Example Snippets for the Scenario File</h2>
 The following are examples of the various parts that can be found in a scenario file.
-They appear here in the order that they can appear in the file.
-For items in the <em>transactions</em> block, they can appear in any order.
+They appear here in the order that they are allowed to appear in the file.
+
+<P>Outside of the <em>transactions</em>, items are usually required.
+Any optional items are indicated as such below.
+
+<P>Items in the <em>transactions</em> block are different:
+<ul>
+ <li>they can appear in any order
+ <li>they are all optional
+ <li>they can appear 0, 1, or N times in the <em>transactions</em>
+</ul>
 
 <p id='syntax-version'><pre>syntax-version = v1.0.0</pre>
 States that this scenario file was created with a given version of the syntax for scenario files (which may change over time).
@@ -323,7 +332,7 @@ When greater than 1, the generated .csv files are completely different.
   fixed = 3% # no randomness here
   # explicit-list = 5%,5%,5%,5%,5%,-7% # in order of year; recycles if end is reached
 }</pre>
-Controls how stock prices change over time.
+Optional. Controls how stock prices change over time.
 In this example, the prices are updated only on November 25 of each year.
 The <em>gaussian</em> style means that price increases follow a <a href='https://en.wikipedia.org/wiki/Normal_distribution'>Gaussian distribution</a>.
 The <em>range</em> example above means that the percentage price increase is randomly selected between -5% and +10%.
@@ -341,6 +350,7 @@ If that is activated, then the simulation will often terminate before the end da
 annual-test-for-survival
 sex = male</pre>
 The person's date of birth is used for various calculations.
+The <em>annual-test-for-survival</em> is optional.
 If <em>annual-test-for-survival</em> is included, then at the end of each simulated year, a statistical 
 test is performed by the system, to see if the person will survive into the next year. 
 If they fail to survive the test, then they die, and the simulation/iteration is terminated.
@@ -397,8 +407,9 @@ The <em>nominal-monthly-amount</em> and the <em>start-month</em> are especially 
  93 = 16.34%
  94 = 18.79%
 }</pre>
-RIF accounts always have a minimum annual withdrawal.
+Optional. RIF accounts always have a minimum annual withdrawal.
 For some ages, a formula applies; for others, this table is used.
+
 
 <P id='federal-tax'><pre>federal-tax {
   # Tax return settings.
@@ -477,7 +488,7 @@ See the <a href='https://github.com/johanley/end-game/tree/master/input/provinci
     }
   }
 }</pre>
-Data for all stocks that will be part of the simulation.
+Optional. Data for all stocks that will be part of the simulation.
 The ticker symbol is used to identify the stock.
 The annual growth in the dividend is always modeled here simply as a fixed percentage.
 In the above examples, the dividends pay quarterly, on the given month-day combinations.
@@ -485,7 +496,7 @@ In the above examples, the dividends pay quarterly, on the given month-day combi
 <p id='stock-commission'><pre>stock-commission = fixed-percent 1.0%     # percent of the gross amount 
 # stock-commission = fixed-amount 10.50   # some discount brokers have a flat rate
 # stock-commission = custom-schedule      # requires custom coding</pre>
-How to calculate the commission paid to your investment dealer when trading stocks.
+Optional. How to calculate the commission paid to your investment dealer when trading stocks.
 The <em>custom-schedule</em> is to let you reflect you investment dealer's actual commission schedule.
 It requires that you do some coding, by implementing the <a href='https://github.com/johanley/end-game/blob/master/src/endgame/security/stock/commission/CustomCommish.java'>CustomCommish</a> class.
 
@@ -493,7 +504,7 @@ It requires that you do some coding, by implementing the <a href='https://github
   initial-room = 19877.98  
   yearly-limit = 6000.00
 }</pre>
-Used to calculate the room in your TFSA account (if you have one).
+Optional. Used to calculate the room in your TFSA account (if you have one).
 The <em>initial-room</em> is your TFSA room as of the <em>start-date</em> of the simulation.
 
 <p id='accounts'><pre>accounts { 
@@ -548,7 +559,7 @@ That means no contributions to the RSP can be made before the conversion date in
   sell 6.0% on *-11-26 | 2027-01-01..2034-12-31 
   sell 3.0% on *-11-26 | 2035-01-01.. 
 }</pre>
-Describes how to liquidate stock positions, in order to generate cash flow.
+Optional. Describes how to liquidate stock positions, in order to generate cash flow.
 The <em>avoid-downturn-years</em> is a way of avoiding liquidations when the price of the stocks are lower.
 In the example above, the meaning is <em>if the current price is lower than the prices of the past 2 years, then don't sell</em>.
 The two <em>-sequence</em> items define the order in which to sell stock, from which account, and then which stock in that account.
@@ -560,13 +571,13 @@ The above example sells 6% of the investments on Nov 26, from 2027 to 2034. Late
   stock-sequence = "enb,cm"
   on *-01-03                
 }</pre>
-Topping up your TFSA account by transferring in-kind from other accounts.
+Optional. Topping up your TFSA account by transferring in-kind from other accounts.
 This is done every January 3, in the above example.
 The two <em>-sequence</em> items define the order in which to transfer stock, from which account, and then which stock in that account.
 
 <P id='small-paycheck'><pre>small-paycheck 50.00 on *-15 | 2024-01-01..2026-12-31
 small-paycheck 150.00 on *-15 | 2026-01-01..2027-12-31</pre>
-Employment earnings. 
+Optional. Can appear multiple times. Employment earnings. 
 The expectation is that these earnings are modest, since you are retired.
 However, that isn't enforced explicitly.
 In the above example, the person gets a raise in 2026 from 50.00 to 150.00.
