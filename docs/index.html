@@ -79,13 +79,13 @@ The main purpose of this project is:
  <li>to help you find a better financial plan for your retirement
 </ul>
 
-<p>The main steps in using this tool:
+<p><b>The main steps in using this tool:</b>
 <ul>
- <li>first create a <em>scenario</em> file, which describes your assets, accounts, date of retirement, and so on. 
+ <li>you first create a <em>scenario</em> file, which describes your assets, accounts, date of retirement, and so on. 
  The syntax of the scenario file follows certain rules defined by this tool (see below).
  <li>you run this tool using the scenario file as input, to generate output files.
- <li>the output files are all text files.
- <li>the output consists of .csv files containing summary data, and a log file showing all the activity in your accounts, yearly tax returns, and so on.
+ <li>the output files are all text files, and are placed in the same folder as the input scenario file.
+ <li>the output consists of .csv files containing summary data, and a log file. The log file shows the activity in your accounts, yearly tax returns, and so on.
  <li>usually, you'll want to import the .csv files into a spreadsheet tool (MS Excel, Google Sheets, Open Office) and make some charts.
 </ul>
  
@@ -178,6 +178,12 @@ Features include:
 <h2 id='scenarios'>Example Scenarios</h2>
 Example scenarios are included in the source code. 
 They are listed here in rough order of increasing complexity.
+
+<P><b>When creating your own scenario, it's always best to start with a working example.</b>
+Then you gradually change the scenario, step by step, to get closer to your own case.
+As you make a small edit, you save your changes and test them by running the tool, to see if everything still works.
+You keep repeating this until you get to your desired final scenario.
+This is the safest way of proceeding.
 
 <P>Note that the <em>.ini</em> file is the scenario file, and the remaining files in the directory are outputs that 
 result from executing the scenario. The provincial tax return is for PE, Prince Edward Island, simply because 
