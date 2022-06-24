@@ -11,7 +11,7 @@
 
 <body>
 
-<h2>End Game - personal finance simulator for retired Canadians</h2>
+<h2>End Game - Personal Finance Simulator for Retired Canadians</h2>
 
 <P>The source code is <a href='https://github.com/johanley/end-game'>here</a>.
 
@@ -21,7 +21,7 @@
  <li><a href="#features">Features</a>
  <li><a href="#scenarios">Example Scenarios</a>
  <li><a href="#lessons">Lessons Learned</a>
- <li><a href="#running">Running The Code In Eclipse</a>
+ <li><a href="gettingstarted/index.html">Getting Started</a>
 </ul>
 
 <P>Scenario File
@@ -55,7 +55,7 @@
    <li><a href='#annual-tfsa-top-up'><em>annual-tfsa-top-up</em></a>
    <li><a href='#small-paycheck'><em>small-paycheck</em></a>
   </ul> 
- <li><a href="#examplesnippetstransactions">Example Snippets - Transactions</a>
+ <li><a href="#examplesnippetstransactions">Example Snippets - Transactions Block</a>
   <ul>
    <li><a href='#transactions'><em>transactions</em></a>
    <li><a href='#bank-debit-credit'><em>bank-debit-credit</em></a>
@@ -240,15 +240,6 @@ It's useful to be reminded that you might, by chance, die sooner rather than lat
 The basic statistic from Statcan in this regard is interesting: the idea is that you start with a cohort of 
 100,000 people at birth, and you then simply list the number of people that are still alive at each year of age.
 The output spreadsheet files of this project usually incorporate this stat as a reminder of its importance.
-
- 
-<h2 id='running'>Running The Code In Eclipse</h2>
-
-To run the code, this project recommends the <em>Eclipse</em> tool, a  
-tool that programmers use to run and edit code. 
-Here, you just want to run the code, not change it.
-
-<P>Here are the <a href='gettingstarted/index.html'>detailed instructions</a>. It takes 10-15 minutes to set up.
 
 
 <h2 id='syntax'>General Syntax</h2>
@@ -610,7 +601,7 @@ Items in the <em>transactions</em> block are different:
 <P id='bank-debit-credit'><pre>bank-debit-credit 925.00 on *-01 # rent on the first of the month</pre>
 A debit or credit to your bank account. Spending means debit, a deposit means credit.
 This line usually represents regular spending.
-The convention used here is that if the amount is a credit, it's a negative amount on this line instead of a positive amount.
+The convention used here is positive amounts for spending (more common), and negative amounts for deposits (less common).
 
 <P id='sweep-cash-from'><pre>sweep-cash-from nra on *-01
 sweep-cash-from rif  on *-03-01,*-06-01,*-09-01,*-12-01
