@@ -2,7 +2,9 @@ package endgame.bank;
 
 import java.math.BigDecimal;
 
+import endgame.account.Cashable;
 import endgame.model.Money;
+import endgame.util.Consts;
 import endgame.util.Log;
 import hirondelle.date4j.DateTime;
 
@@ -10,14 +12,14 @@ import hirondelle.date4j.DateTime;
  Bank accounts have only two kinds of transaction: deposit cash and withdraw cash.
  They don't hold assets other than cash. 
 */
-public final class BankAccount {
+public final class BankAccount implements Cashable {
   
   public static BankAccount valueOf(String cash, String smallBalanceLimit) {
     return new BankAccount(cash, smallBalanceLimit);
   }
 
   /** Adds the given amount to the balance. */
-  public void depositCash(Money amount, DateTime when) {
+  @Override public void depositCash(Money amount, DateTime when) {
     cash = cash.plus(amount);
   }
   
@@ -25,7 +27,7 @@ public final class BankAccount {
    Subtracts the given amount from the balance. Doesn't allow overdrafts. 
    Detects if the balance has fallen below a certain level, and logs the fact.
   */
-  public void withdrawCash(Money amount, DateTime when) {
+  @Override public Money withdrawCash(Money amount, DateTime when) {
     if (cash.lt(amount)){
       throw new RuntimeException("Can't withdraw more money than you have.");
     }
@@ -33,10 +35,11 @@ public final class BankAccount {
     if (cash.lt(smallBalanceLimit)) {
       Log.log("  Bank balance: " + cash  + " is under the small-balance limit of " + smallBalanceLimit);
     }
+    return Consts.ZERO;
   }
 
   /** The account balance. */
-  public Money value() { return cash; }
+  @Override public Money cash() { return cash; }
   public Money getSmallBalanceLimit() {return smallBalanceLimit; }
 
   @Override public String toString() {

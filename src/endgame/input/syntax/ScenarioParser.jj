@@ -576,12 +576,12 @@ void transactions() : { } {
   "transactions {"
     (
      bankDebitCredit() |
-     sweepCash() |
      spendBankBalanceAbove() |
      buySellStock() |
      buyGic() |
      transferStock() |
      moveStock() |
+     moveCash() |
      annuityPayment() |
      stockSplit()
     )*
@@ -595,12 +595,9 @@ Account nonBankAccount() : { Account account = null; } {
   (< TFSA > { account = scenario.tfsa; }| < RIF> { account = scenario.rif; }| < NRA> { account = scenario.nra; }) 
   { return account; }
 }
-void sweepCash() : { Account account = null; String when = "";} {
-  "sweep-cash-from" (account = nonBankAccount()) <WHEN_CONTROL> { when = token.image; }  
-  {
-    SweepCashFrom sweep = new SweepCashFrom(account, when);
-    scenario.transactionals.add(sweep); 
-  }
+Cashable account() : { Cashable cashable = null; } {
+  (< TFSA > {cashable=scenario.tfsa;}| < RIF> {cashable=scenario.rif;}| < NRA> {cashable=scenario.nra;} | <BANK> {cashable=scenario.bank;}) 
+  { return cashable; }
 }
 void bankDebitCredit(): { String amount = ""; String when = "";} {
   "bank-debit-credit" < MONEY > {amount = token.image;} <WHEN_CONTROL> { when = token.image; }
@@ -745,6 +742,26 @@ void moveStock() : {
     }
   } 
 }
+
+void moveCash() : {
+  Cashable from=null; Cashable to=null; String when=""; String amount=null;
+} {
+  "move-cash" "from"
+  (from = account())
+  "to"
+  (to = account())
+  (<MONEY> {amount=token.image;} )?
+  <WHEN_CONTROL> {when=token.image;}  
+  {
+    if (amount == null) { 
+      scenario.transactionals.add(MoveCash.fullBalance(from, to, when));
+    }
+    else {
+      scenario.transactionals.add(MoveCash.specificAmount(from, to, amount, when));
+    }
+  } 
+}
+
 
 /*
  There's no actual limit on the amount, but this is intended for low gross monthly incomes,

@@ -33,7 +33,7 @@ import hirondelle.date4j.DateTime;
  In those cases, the params are simply ignored. 
  This was chosen because it is simpler to ignore unneeded data, than to pass items around.
 */
-public class Account {
+public class Account implements Cashable {
   
   public Account(String cash, Set<StockPosition> stockPositions, Set<GtdInvestmentCert> gics) {
     this.cash = new Money(new BigDecimal(cash));
@@ -55,17 +55,17 @@ public class Account {
     return result;
   }
   
-  public Money cash() {  return cash; }
+  @Override public Money cash() {  return cash; }
   /** The stocks held by the account. */
   public Set<StockPosition> stockPositions() { return Collections.unmodifiableSet(stockPositions); }
   /** The GICs held by the account. */
   public Set<GtdInvestmentCert> gics(){ return Collections.unmodifiableSet(gics);}
   
-  public void depositCash(Money amount, DateTime when) {
+  @Override public void depositCash(Money amount, DateTime when) {
     cash = cash.plus(amount);
   }
   /** Returns the withholding tax (if any). */
-  public Money withdrawCash(Money amount, DateTime when) {
+  @Override public Money withdrawCash(Money amount, DateTime when) {
     if (cash.lt(amount)){
       throw new RuntimeException("Can't withdraw more money than you have.");
     }

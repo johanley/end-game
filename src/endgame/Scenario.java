@@ -148,7 +148,7 @@ public final class Scenario {
   /** Net worth of all investment accounts, plus the bank account. */
   public Money netWorth() {
     Money result = investmentsWorth();
-    result = result.plus(bank.value());
+    result = result.plus(bank.cash());
     return result;  
   }
   

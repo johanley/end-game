@@ -26,7 +26,7 @@ public final class SplurgeSpending extends Transactional {
 
   /** Withdraw from your bank account all of the money over a certain minimum. */
   @Override protected void execute(DateTime when, Scenario sim) {
-    Money currentBal = sim.bank.value();
+    Money currentBal = sim.bank.cash();
     if (currentBal.gt(minBalance)) {
       Money amount = currentBal.minus(minBalance);
       sim.bank.withdrawCash(amount, when);

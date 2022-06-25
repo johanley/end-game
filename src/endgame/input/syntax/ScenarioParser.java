@@ -113,7 +113,7 @@ public class ScenarioParser implements ScenarioParserConstants {
     yearZeroAmounts();
     oas();
     switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
-    case 150:
+    case 149:
       cpp();
       break;
     default:
@@ -1284,13 +1284,13 @@ public class ScenarioParser implements ScenarioParserConstants {
       switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
       case SPEND_BANK_BALANCE_ABOVE:
       case 131:
-      case 132:
+      case 155:
       case 156:
-      case 157:
+      case 158:
       case 159:
       case 160:
       case 161:
-      case 162:
+      case 164:
       case 166:
       case 167:
         ;
@@ -1300,28 +1300,28 @@ public class ScenarioParser implements ScenarioParserConstants {
         break label_13;
       }
       switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
-      case 132:
-        bankDebitCredit();
-        break;
       case 131:
-        sweepCash();
+        bankDebitCredit();
         break;
       case SPEND_BANK_BALANCE_ABOVE:
         spendBankBalanceAbove();
         break;
+      case 155:
       case 156:
-      case 157:
         buySellStock();
         break;
-      case 159:
+      case 158:
         buyGic();
         break;
+      case 159:
       case 160:
-      case 161:
         transferStock();
         break;
-      case 162:
+      case 161:
         moveStock();
+        break;
+      case 164:
+        moveCash();
         break;
       case 166:
         annuityPayment();
@@ -1364,19 +1364,37 @@ public class ScenarioParser implements ScenarioParserConstants {
     throw new Error("Missing return statement in function");
   }
 
-  final public void sweepCash() throws ParseException {
-                     Account account = null; String when = "";
-    jj_consume_token(131);
-    account = nonBankAccount();
-    jj_consume_token(WHEN_CONTROL);
-                                                                  when = token.image;
-    SweepCashFrom sweep = new SweepCashFrom(account, when);
-    scenario.transactionals.add(sweep);
+  final public Cashable account() throws ParseException {
+                       Cashable cashable = null;
+    switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+    case TFSA:
+      jj_consume_token(TFSA);
+             cashable=scenario.tfsa;
+      break;
+    case RIF:
+      jj_consume_token(RIF);
+                                               cashable=scenario.rif;
+      break;
+    case NRA:
+      jj_consume_token(NRA);
+                                                                                cashable=scenario.nra;
+      break;
+    case BANK:
+      jj_consume_token(BANK);
+                                                                                                                  cashable=scenario.bank;
+      break;
+    default:
+      jj_la1[63] = jj_gen;
+      jj_consume_token(-1);
+      throw new ParseException();
+    }
+    {if (true) return cashable;}
+    throw new Error("Missing return statement in function");
   }
 
   final public void bankDebitCredit() throws ParseException {
                           String amount = ""; String when = "";
-    jj_consume_token(132);
+    jj_consume_token(131);
     jj_consume_token(MONEY);
                                  amount = token.image;
     jj_consume_token(WHEN_CONTROL);
@@ -1398,21 +1416,21 @@ public class ScenarioParser implements ScenarioParserConstants {
 
   final public void yearZeroAmounts() throws ParseException {
                           String netIncBefAdj=""; String netInc=""; String oasInc=""; String empInc=""; String tfsaRoom="";
-    jj_consume_token(133);
+    jj_consume_token(132);
     jj_consume_token(BLOCK_START);
-    jj_consume_token(134);
+    jj_consume_token(133);
     jj_consume_token(EQUALS);
     jj_consume_token(MONEY);
                                                        netIncBefAdj=token.image;
-    jj_consume_token(135);
+    jj_consume_token(134);
     jj_consume_token(EQUALS);
     jj_consume_token(MONEY);
                                     netInc=token.image;
-    jj_consume_token(136);
+    jj_consume_token(135);
     jj_consume_token(EQUALS);
     jj_consume_token(MONEY);
                                     oasInc=token.image;
-    jj_consume_token(137);
+    jj_consume_token(136);
     jj_consume_token(EQUALS);
     jj_consume_token(MONEY);
                                            empInc=token.image;
@@ -1424,49 +1442,49 @@ public class ScenarioParser implements ScenarioParserConstants {
   String amt = ""; String start = ""; String paymentDay = "";
   String monthlyRew=""; String boostAge=""; String boostPercent=""; String clawThres=""; String clawPercent="";
   String exempt = ""; String startWinBegin=""; String startWinEnd="";
-    jj_consume_token(138);
+    jj_consume_token(137);
     jj_consume_token(BLOCK_START);
-    jj_consume_token(139);
+    jj_consume_token(138);
     jj_consume_token(EQUALS);
     jj_consume_token(MONEY);
                                                   amt = token.image;
-    jj_consume_token(140);
+    jj_consume_token(139);
     jj_consume_token(EQUALS);
     jj_consume_token(YYYY_MM);
                                            start = token.image;
-    jj_consume_token(141);
+    jj_consume_token(140);
     jj_consume_token(EQUALS);
     jj_consume_token(NUM);
                                         paymentDay = token.image;
-    jj_consume_token(142);
+    jj_consume_token(141);
     jj_consume_token(EQUALS);
     jj_consume_token(MONEY);
                                              clawThres=token.image;
-    jj_consume_token(143);
+    jj_consume_token(142);
     jj_consume_token(EQUALS);
     jj_consume_token(PERCENT);
                                             clawPercent=token.image;
-    jj_consume_token(144);
+    jj_consume_token(143);
     jj_consume_token(EQUALS);
     jj_consume_token(PERCENT);
                                           monthlyRew=token.image;
-    jj_consume_token(145);
+    jj_consume_token(144);
     jj_consume_token(EQUALS);
     jj_consume_token(NUM);
                                  boostAge=token.image;
-    jj_consume_token(146);
+    jj_consume_token(145);
     jj_consume_token(EQUALS);
     jj_consume_token(PERCENT);
                                           boostPercent=token.image;
-    jj_consume_token(147);
+    jj_consume_token(146);
     jj_consume_token(EQUALS);
     jj_consume_token(NUM);
                                           startWinBegin=token.image;
-    jj_consume_token(148);
+    jj_consume_token(147);
     jj_consume_token(EQUALS);
     jj_consume_token(NUM);
                                         startWinEnd=token.image;
-    jj_consume_token(149);
+    jj_consume_token(148);
     jj_consume_token(EQUALS);
     jj_consume_token(MONEY);
                                                  exempt=token.image;
@@ -1482,53 +1500,53 @@ public class ScenarioParser implements ScenarioParserConstants {
   String nominalAmt = ""; String start = ""; String paymentDay = "";
   String monReward=""; String monPenalty=""; String nominalStart=""; String startWinBeg=""; String startWinEnd="";
   String survivorAmt=""; String survivorDate="";
-    jj_consume_token(150);
+    jj_consume_token(149);
     jj_consume_token(BLOCK_START);
-    jj_consume_token(151);
+    jj_consume_token(150);
     jj_consume_token(EQUALS);
     jj_consume_token(MONEY);
                                                     nominalAmt = token.image;
-    jj_consume_token(140);
+    jj_consume_token(139);
     jj_consume_token(EQUALS);
     jj_consume_token(YYYY_MM);
                                            start = token.image;
-    jj_consume_token(141);
+    jj_consume_token(140);
     jj_consume_token(EQUALS);
     jj_consume_token(NUM);
                                         paymentDay = token.image;
-    jj_consume_token(144);
+    jj_consume_token(143);
     jj_consume_token(EQUALS);
     jj_consume_token(PERCENT);
                                           monReward=token.image;
-    jj_consume_token(152);
+    jj_consume_token(151);
     jj_consume_token(EQUALS);
     jj_consume_token(PERCENT);
                                            monPenalty=token.image;
-    jj_consume_token(147);
+    jj_consume_token(146);
     jj_consume_token(EQUALS);
     jj_consume_token(NUM);
                                           startWinBeg=token.image;
-    jj_consume_token(153);
+    jj_consume_token(152);
     jj_consume_token(EQUALS);
     jj_consume_token(NUM);
                                      nominalStart=token.image;
-    jj_consume_token(148);
+    jj_consume_token(147);
     jj_consume_token(EQUALS);
     jj_consume_token(NUM);
                                         startWinEnd=token.image;
     switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
-    case 154:
-      jj_consume_token(154);
+    case 153:
+      jj_consume_token(153);
       jj_consume_token(EQUALS);
       jj_consume_token(MONEY);
                                                   survivorAmt=token.image;
-      jj_consume_token(155);
+      jj_consume_token(154);
       jj_consume_token(EQUALS);
       jj_consume_token(YYYY_MM_DD);
                                                       survivorDate=token.image;
       break;
     default:
-      jj_la1[63] = jj_gen;
+      jj_la1[64] = jj_gen;
       ;
     }
     jj_consume_token(BLOCK_END);
@@ -1542,14 +1560,14 @@ public class ScenarioParser implements ScenarioParserConstants {
   final public void buySellStock() throws ParseException {
   Account account = null; String action=""; String numShares=""; String symbol=""; String when="";
     switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+    case 155:
+      jj_consume_token(155);
+      break;
     case 156:
       jj_consume_token(156);
       break;
-    case 157:
-      jj_consume_token(157);
-      break;
     default:
-      jj_la1[64] = jj_gen;
+      jj_la1[65] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -1557,7 +1575,7 @@ public class ScenarioParser implements ScenarioParserConstants {
     account = nonBankAccount();
     jj_consume_token(NUM);
            numShares=token.image;
-    jj_consume_token(158);
+    jj_consume_token(157);
     jj_consume_token(QUOTED_TEXT);
                  symbol=noQuotes(token.image);
     jj_consume_token(WHEN_CONTROL);
@@ -1569,7 +1587,7 @@ public class ScenarioParser implements ScenarioParserConstants {
   final public void buyGic() throws ParseException {
   Account account=null; String soldBy=""; String principal=""; String interestRate="";
   String term=""; String date="";
-    jj_consume_token(159);
+    jj_consume_token(158);
     account = nonBankAccount();
     jj_consume_token(QUOTED_TEXT);
                  soldBy = noQuotes(token.image);
@@ -1589,14 +1607,14 @@ public class ScenarioParser implements ScenarioParserConstants {
   final public void transferStock() throws ParseException {
   Account account = null; String action=""; String numShares=""; String symbol=""; String when=""; String amount=null;
     switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+    case 159:
+      jj_consume_token(159);
+      break;
     case 160:
       jj_consume_token(160);
       break;
-    case 161:
-      jj_consume_token(161);
-      break;
     default:
-      jj_la1[65] = jj_gen;
+      jj_la1[66] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -1606,14 +1624,14 @@ public class ScenarioParser implements ScenarioParserConstants {
     case NUM:
       jj_consume_token(NUM);
             numShares=token.image;
-      jj_consume_token(158);
+      jj_consume_token(157);
       break;
     case MONEY:
       jj_consume_token(MONEY);
                                                         amount=token.image;
       break;
     default:
-      jj_la1[66] = jj_gen;
+      jj_la1[67] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -1632,23 +1650,23 @@ public class ScenarioParser implements ScenarioParserConstants {
   final public void moveStock() throws ParseException {
   Account from=null; Account to=null; String numShares=""; String symbol="";
   String when=""; String amount=null;
+    jj_consume_token(161);
     jj_consume_token(162);
-    jj_consume_token(163);
     from = nonBankAccount();
-    jj_consume_token(164);
+    jj_consume_token(163);
     to = nonBankAccount();
     switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
     case NUM:
       jj_consume_token(NUM);
            numShares=token.image;
-      jj_consume_token(158);
+      jj_consume_token(157);
       break;
     case MONEY:
       jj_consume_token(MONEY);
                                                        amount=token.image;
       break;
     default:
-      jj_la1[67] = jj_gen;
+      jj_la1[68] = jj_gen;
       jj_consume_token(-1);
       throw new ParseException();
     }
@@ -1661,6 +1679,32 @@ public class ScenarioParser implements ScenarioParserConstants {
     }
     else {
       scenario.transactionals.add(MoveStock.byMarketValue(from, to, amount, symbol, when));
+    }
+  }
+
+  final public void moveCash() throws ParseException {
+  Cashable from=null; Cashable to=null; String when=""; String amount=null;
+    jj_consume_token(164);
+    jj_consume_token(162);
+    from = account();
+    jj_consume_token(163);
+    to = account();
+    switch ((jj_ntk==-1)?jj_ntk():jj_ntk) {
+    case MONEY:
+      jj_consume_token(MONEY);
+            amount=token.image;
+      break;
+    default:
+      jj_la1[69] = jj_gen;
+      ;
+    }
+    jj_consume_token(WHEN_CONTROL);
+                  when=token.image;
+    if (amount == null) {
+      scenario.transactionals.add(MoveCash.fullBalance(from, to, when));
+    }
+    else {
+      scenario.transactionals.add(MoveCash.specificAmount(from, to, amount, when));
     }
   }
 
@@ -1712,7 +1756,7 @@ public class ScenarioParser implements ScenarioParserConstants {
   public Token jj_nt;
   private int jj_ntk;
   private int jj_gen;
-  final private int[] jj_la1 = new int[68];
+  final private int[] jj_la1 = new int[70];
   static private int[] jj_la1_0;
   static private int[] jj_la1_1;
   static private int[] jj_la1_2;
@@ -1728,22 +1772,22 @@ public class ScenarioParser implements ScenarioParserConstants {
       jj_la1_init_5();
    }
    private static void jj_la1_init_0() {
-      jj_la1_0 = new int[] {0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x80000000,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x80000000,0x0,0x0,0x0,0x100,0x0,0x0,0x0,0x0,0x100,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x80000000,0x80000000,};
+      jj_la1_0 = new int[] {0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x80000000,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x80000000,0x0,0x0,0x0,0x100,0x0,0x0,0x0,0x0,0x100,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x80000000,0x80000000,0x0,};
    }
    private static void jj_la1_init_1() {
-      jj_la1_1 = new int[] {0x100000,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x3000000,0x2,0x2,0x0,0x40000000,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x2,0x100,0x0,0x0,0x0,0x400,0x800,0x1000,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x8,0x100,0x1c00,0x0,0x1c00,0xa,0x0,0x1400,0x0,0x1400,0x4000,0x4000,0x1c00,0x0,0x0,0x0,0x8,0x8,};
+      jj_la1_1 = new int[] {0x100000,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x3000000,0x2,0x2,0x0,0x40000000,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x2,0x100,0x0,0x0,0x0,0x400,0x800,0x1000,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x8,0x100,0x1c00,0x0,0x1c00,0xa,0x0,0x1400,0x0,0x1400,0x4000,0x4000,0x1c00,0x1e00,0x0,0x0,0x0,0x8,0x8,0x8,};
    }
    private static void jj_la1_init_2() {
-      jj_la1_2 = new int[] {0x0,0x0,0x0,0x80000000,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x400,0x0,0x800,0x1,0x1000,0x2000,0x4000,0x10000,0x20000,0x40000,0x80000,0x100000,0x200000,0x400000,0x800000,0x1000000,0x2000000,0x4000000,0x8000000,0x10000000,0x20000000,0x40000000,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,};
+      jj_la1_2 = new int[] {0x0,0x0,0x0,0x80000000,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x400,0x0,0x800,0x1,0x1000,0x2000,0x4000,0x10000,0x20000,0x40000,0x80000,0x100000,0x200000,0x400000,0x800000,0x1000000,0x2000000,0x4000000,0x8000000,0x10000000,0x20000000,0x40000000,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,};
    }
    private static void jj_la1_init_3() {
-      jj_la1_3 = new int[] {0x0,0x0,0x40000,0x0,0x800,0x10,0x8000,0x10000000,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x4e0,0x7000,0x0,0x0,0x0,0x0,0x800000,0x2000000,0x800000,0x2000000,0x800000,0x2000000,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,};
+      jj_la1_3 = new int[] {0x0,0x0,0x40000,0x0,0x800,0x10,0x8000,0x10000000,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x4e0,0x7000,0x0,0x0,0x0,0x0,0x800000,0x2000000,0x800000,0x2000000,0x800000,0x2000000,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,};
    }
    private static void jj_la1_init_4() {
-      jj_la1_4 = new int[] {0x0,0x400000,0x0,0x0,0x0,0x0,0x0,0x0,0x2,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x1,0x0,0x0,0x0,0xb0000018,0xb0000018,0x0,0x4000000,0x30000000,0x0,0x0,0x0,};
+      jj_la1_4 = new int[] {0x0,0x200000,0x0,0x0,0x0,0x0,0x0,0x0,0x2,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x1,0x0,0x0,0x0,0xd8000008,0xd8000008,0x0,0x0,0x2000000,0x18000000,0x80000000,0x0,0x0,0x0,};
    }
    private static void jj_la1_init_5() {
-      jj_la1_5 = new int[] {0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x20,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xc7,0xc7,0x0,0x0,0x0,0x3,0x0,0x0,};
+      jj_la1_5 = new int[] {0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x20,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0xd3,0xd3,0x0,0x0,0x0,0x0,0x1,0x0,0x0,0x0,};
    }
 
   /** Constructor with InputStream. */
@@ -1757,7 +1801,7 @@ public class ScenarioParser implements ScenarioParserConstants {
     token = new Token();
     jj_ntk = -1;
     jj_gen = 0;
-    for (int i = 0; i < 68; i++) jj_la1[i] = -1;
+    for (int i = 0; i < 70; i++) jj_la1[i] = -1;
   }
 
   /** Reinitialise. */
@@ -1771,7 +1815,7 @@ public class ScenarioParser implements ScenarioParserConstants {
     token = new Token();
     jj_ntk = -1;
     jj_gen = 0;
-    for (int i = 0; i < 68; i++) jj_la1[i] = -1;
+    for (int i = 0; i < 70; i++) jj_la1[i] = -1;
   }
 
   /** Constructor. */
@@ -1781,7 +1825,7 @@ public class ScenarioParser implements ScenarioParserConstants {
     token = new Token();
     jj_ntk = -1;
     jj_gen = 0;
-    for (int i = 0; i < 68; i++) jj_la1[i] = -1;
+    for (int i = 0; i < 70; i++) jj_la1[i] = -1;
   }
 
   /** Reinitialise. */
@@ -1791,7 +1835,7 @@ public class ScenarioParser implements ScenarioParserConstants {
     token = new Token();
     jj_ntk = -1;
     jj_gen = 0;
-    for (int i = 0; i < 68; i++) jj_la1[i] = -1;
+    for (int i = 0; i < 70; i++) jj_la1[i] = -1;
   }
 
   /** Constructor with generated Token Manager. */
@@ -1800,7 +1844,7 @@ public class ScenarioParser implements ScenarioParserConstants {
     token = new Token();
     jj_ntk = -1;
     jj_gen = 0;
-    for (int i = 0; i < 68; i++) jj_la1[i] = -1;
+    for (int i = 0; i < 70; i++) jj_la1[i] = -1;
   }
 
   /** Reinitialise. */
@@ -1809,7 +1853,7 @@ public class ScenarioParser implements ScenarioParserConstants {
     token = new Token();
     jj_ntk = -1;
     jj_gen = 0;
-    for (int i = 0; i < 68; i++) jj_la1[i] = -1;
+    for (int i = 0; i < 70; i++) jj_la1[i] = -1;
   }
 
   private Token jj_consume_token(int kind) throws ParseException {
@@ -1865,7 +1909,7 @@ public class ScenarioParser implements ScenarioParserConstants {
       la1tokens[jj_kind] = true;
       jj_kind = -1;
     }
-    for (int i = 0; i < 68; i++) {
+    for (int i = 0; i < 70; i++) {
       if (jj_la1[i] == jj_gen) {
         for (int j = 0; j < 32; j++) {
           if ((jj_la1_0[i] & (1<<j)) != 0) {

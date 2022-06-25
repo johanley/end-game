@@ -10,7 +10,7 @@ Reading file C:\johanley\ProjectsPhoton\end-game\input\probability-of-survival\f
 History #1
 Incrementing one day at a time, starting with 2022-01-01
 2022-01-01:BANK SPEND:  925.00
-2022-01-01:SWEEP cash from Nra 283.90
+2022-01-01:MOVE CASH from Nra to BankAccount 283.90
 2022-01-03:TOP-UP TFSA:  TFSA room for 2022 20000.00
 2022-01-03:TOP-UP TFSA:   Transfer from Rif 19992.00 (357 shares) of ABC. Room remaining 8.00
 2022-01-06:DIVIDEND: CLU Rif 1000@0.06 = 60.00
@@ -19,7 +19,7 @@ Incrementing one day at a time, starting with 2022-01-01
 2022-01-28:DIVIDEND: XYZ Tfsa 200@1.61 = 322.00
 2022-01-28:DIVIDEND: XYZ Nra 300@1.61 = 483.00
 2022-02-01:BANK SPEND:  925.00
-2022-02-01:SWEEP cash from Nra 483.00
+2022-02-01:MOVE CASH from Nra to BankAccount 483.00
 2022-02-15:SPLURGE SPENDING:  2991.90
 2022-02-23:BANK SPEND:  925.00
 2022-03-01:DIVIDEND: ABC Rif 1643@0.86 = 1412.98
@@ -27,9 +27,9 @@ Incrementing one day at a time, starting with 2022-01-01
 2022-03-01:DIVIDEND: ABC Nra 350@0.86 = 301.00
 2022-03-01:BANK SPEND:  925.00
   Bank balance: 3150.00 is under the small-balance limit of 4000.00
-2022-03-01:SWEEP cash from Nra 301.00
-2022-03-01:SWEEP cash from Rif 3082.98 withheld 616.60
-2022-03-01:SWEEP cash from Tfsa 1489.02
+2022-03-01:MOVE CASH from Nra to BankAccount 301.00
+2022-03-01:MOVE CASH from Rif to BankAccount net 2466.38 plus 616.60 withheld.
+2022-03-01:MOVE CASH from Tfsa to BankAccount 1489.02
 2022-03-23:BANK SPEND:  925.00
 2022-03-31:DIVIDEND: CLU Rif 1000@0.06 = 60.00
 2022-04-01:BANK SPEND:  925.00
@@ -38,91 +38,93 @@ Incrementing one day at a time, starting with 2022-01-01
 2022-04-28:DIVIDEND: XYZ Tfsa 200@1.61 = 322.00
 2022-04-28:DIVIDEND: XYZ Nra 300@1.61 = 483.00
 2022-05-01:BANK SPEND:  925.00
-2022-05-01:SWEEP cash from Nra 483.00
+  Bank balance: 3706.40 is under the small-balance limit of 4000.00
+2022-05-01:MOVE CASH from Nra to BankAccount 483.00
 2022-05-23:BANK SPEND:  925.00
-  Bank balance: 3881.00 is under the small-balance limit of 4000.00
+  Bank balance: 3264.40 is under the small-balance limit of 4000.00
 2022-06-01:DIVIDEND: ABC Rif 1643@0.86 = 1412.98
 2022-06-01:DIVIDEND: ABC Tfsa 1357@0.86 = 1167.02
 2022-06-01:DIVIDEND: ABC Nra 350@0.86 = 301.00
 2022-06-01:BANK SPEND:  925.00
-  Bank balance: 2956.00 is under the small-balance limit of 4000.00
-2022-06-01:SWEEP cash from Nra 301.00
-2022-06-01:SWEEP cash from Rif 3082.98 withheld 842.39
-2022-06-01:SWEEP cash from Tfsa 1489.02
+  Bank balance: 2339.40 is under the small-balance limit of 4000.00
+2022-06-01:MOVE CASH from Nra to BankAccount 301.00
+2022-06-01:MOVE CASH from Rif to BankAccount net 2240.59 plus 842.39 withheld.
+2022-06-01:MOVE CASH from Tfsa to BankAccount 1489.02
 2022-06-20:SELL: CLU Rif 952@15.00 commish:142.80 14137.20
 2022-06-21:BUY GIC Home Trust 1-year GIC, 7500.00 @ 2.5% matures 2023-06-21, purchased on 2022-06-21 in Rif 
 2022-06-23:BANK SPEND:  925.00
-2022-06-28:CPP payment:  549.10
+2022-06-28:CPP payment:  544.00
 2022-06-30:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2022-07-01:BANK SPEND:  925.00
 2022-07-23:BANK SPEND:  925.00
-2022-07-28:CPP payment:  549.10
+2022-07-28:CPP payment:  544.00
 2022-07-28:DIVIDEND: XYZ Rif 1000@1.61 = 1610.00
 2022-07-28:DIVIDEND: XYZ Tfsa 200@1.61 = 322.00
 2022-07-28:DIVIDEND: XYZ Nra 300@1.61 = 483.00
 2022-08-01:BANK SPEND:  925.00
-2022-08-01:SWEEP cash from Nra 483.00
-2022-08-15:SPLURGE SPENDING:  710.20
+  Bank balance: 3758.01 is under the small-balance limit of 4000.00
+2022-08-01:MOVE CASH from Nra to BankAccount 483.00
 2022-08-23:BANK SPEND:  925.00
-2022-08-28:CPP payment:  549.10
+  Bank balance: 3316.01 is under the small-balance limit of 4000.00
+2022-08-28:CPP payment:  544.00
 2022-09-01:DIVIDEND: ABC Rif 1643@0.86 = 1412.98
 2022-09-01:DIVIDEND: ABC Tfsa 1357@0.86 = 1167.02
 2022-09-01:DIVIDEND: ABC Nra 350@0.86 = 301.00
 2022-09-01:BANK SPEND:  925.00
-  Bank balance: 3699.10 is under the small-balance limit of 4000.00
-2022-09-01:SWEEP cash from Nra 301.00
-2022-09-01:SWEEP cash from Rif 9663.06 withheld 2898.92
-2022-09-01:SWEEP cash from Tfsa 1489.02
+  Bank balance: 2935.01 is under the small-balance limit of 4000.00
+2022-09-01:MOVE CASH from Nra to BankAccount 301.00
+2022-09-01:MOVE CASH from Rif to BankAccount net 6764.14 plus 2898.92 withheld.
+2022-09-01:MOVE CASH from Tfsa to BankAccount 1489.02
 2022-09-23:BANK SPEND:  925.00
-2022-09-28:CPP payment:  549.10
+2022-09-28:CPP payment:  544.00
 2022-09-30:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2022-10-01:BANK SPEND:  925.00
 2022-10-23:BANK SPEND:  925.00
-2022-10-28:CPP payment:  549.10
+2022-10-28:CPP payment:  544.00
 2022-10-28:DIVIDEND: XYZ Rif 1000@1.61 = 1610.00
 2022-10-28:DIVIDEND: XYZ Tfsa 200@1.61 = 322.00
 2022-10-28:DIVIDEND: XYZ Nra 300@1.61 = 483.00
 2022-11-01:BANK SPEND:  925.00
-2022-11-01:SWEEP cash from Nra 483.00
-2022-11-15:SPLURGE SPENDING:  8033.38
+2022-11-01:MOVE CASH from Nra to BankAccount 483.00
+2022-11-15:SPLURGE SPENDING:  4360.17
 2022-11-23:BANK SPEND:  925.00
 2022-11-25:STOCK-PRICE-UPDATE:  ABC 57.68 [3.0%]
 2022-11-25:STOCK-PRICE-UPDATE:  XYZ 144.20 [3.0%]
 2022-11-25:STOCK-PRICE-UPDATE:  CLU 15.45 [3.0%]
-2022-11-28:CPP payment:  549.10
+2022-11-28:CPP payment:  544.00
 2022-12-01:DIVIDEND: ABC Rif 1643@0.86 = 1412.98
 2022-12-01:DIVIDEND: ABC Tfsa 1357@0.86 = 1167.02
 2022-12-01:DIVIDEND: ABC Nra 350@0.86 = 301.00
 2022-12-01:BANK SPEND:  925.00
-  Bank balance: 3699.10 is under the small-balance limit of 4000.00
-2022-12-01:SWEEP cash from Nra 301.00
-2022-12-01:SWEEP cash from Rif 3025.86 withheld 907.75
-2022-12-01:SWEEP cash from Tfsa 1489.02
+  Bank balance: 3694.00 is under the small-balance limit of 4000.00
+2022-12-01:MOVE CASH from Nra to BankAccount 301.00
+2022-12-01:MOVE CASH from Rif to BankAccount net 2118.11 plus 907.75 withheld.
+2022-12-01:MOVE CASH from Tfsa to BankAccount 1489.02
 2022-12-23:BANK SPEND:  925.00
-2022-12-28:CPP payment:  549.10
-2022-12-31:PAY TAXES:  1100.22
+2022-12-28:CPP payment:  544.00
+2022-12-31:PAY TAXES:  1089.93
 2022 year-end.
 Cash generated
-     3,843.70 CPP
+     3,808.00 CPP
          0.00 OAS
          0.00 GIS
          0.00 Pension
     21,309.76 Dividends
      6,637.20 Net liquidation (sell-buy)
          0.00 Interest
-    28,230.86 Total cash swept from tfsa-rif-nra to bank
-    31,790.66 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    31,754.96 Total cash generated
 
 Tax return 2022
-    47,018.26 Taxable income
-     4,358.53 Federal tax
-     3,725.75 Provincial tax
-     8,084.28 Tax Payable
+    46,982.56 Taxable income
+     4,353.17 Federal tax
+     3,720.82 Provincial tax
+     8,073.99 Tax Payable
        650.01 Dividend tax credits
      6,984.06 Installments
-     1,100.22 Balance owing
-    47,018.26 Net income
-    47,018.26 Net income before adj
+     1,089.93 Balance owing
+    46,982.56 Net income
+    46,982.56 Net income before adj
          0.00 OAS income
          0.00 Employment income
     38,846.88 RIF withdrawals
@@ -145,10 +147,10 @@ Accounts
     43,260.00 XYZ 300sh @ 144.20
          0.00 Cash
 
-     7,038.86 -BANKACCOUNT-
-     7,038.86 Cash
+     6,131.20 -BANKACCOUNT-
+     6,131.20 Cash
 
-   424,808.46 Net worth
+   423,900.80 Net worth
    417,769.60 Investments worth
 
      8,524.48 RIF minimum for 2023
@@ -158,118 +160,119 @@ Accounts
 2023-01-03:TOP-UP TFSA:   Transfer from Rif 11939.76 (207 shares) of ABC. Room remaining 24.32
 2023-01-06:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2023-01-23:BANK SPEND:  925.00
-2023-01-28:CPP payment:  549.10
+2023-01-28:CPP payment:  544.00
 2023-01-28:DIVIDEND: XYZ Rif 1000@1.67 = 1670.00
 2023-01-28:DIVIDEND: XYZ Tfsa 200@1.67 = 334.00
 2023-01-28:DIVIDEND: XYZ Nra 300@1.67 = 501.00
 2023-02-01:BANK SPEND:  925.00
-2023-02-01:SWEEP cash from Nra 501.00
-2023-02-15:SPLURGE SPENDING:  313.96
+  Bank balance: 3900.20 is under the small-balance limit of 4000.00
+2023-02-01:MOVE CASH from Nra to BankAccount 501.00
 2023-02-23:BANK SPEND:  925.00
-2023-02-28:CPP payment:  549.10
+  Bank balance: 3476.20 is under the small-balance limit of 4000.00
+2023-02-28:CPP payment:  544.00
 2023-03-01:DIVIDEND: ABC Rif 1436@0.89 = 1278.04
 2023-03-01:DIVIDEND: ABC Tfsa 1564@0.89 = 1391.96
 2023-03-01:DIVIDEND: ABC Nra 350@0.89 = 311.50
 2023-03-01:BANK SPEND:  925.00
-  Bank balance: 3699.10 is under the small-balance limit of 4000.00
-2023-03-01:SWEEP cash from Nra 311.50
-2023-03-01:SWEEP cash from Rif 2950.92 withheld 431.71
-2023-03-01:SWEEP cash from Tfsa 1725.96
+  Bank balance: 3095.20 is under the small-balance limit of 4000.00
+2023-03-01:MOVE CASH from Nra to BankAccount 311.50
+2023-03-01:MOVE CASH from Rif to BankAccount net 2519.21 plus 431.71 withheld.
+2023-03-01:MOVE CASH from Tfsa to BankAccount 1725.96
 2023-03-23:BANK SPEND:  925.00
-2023-03-28:CPP payment:  549.10
+2023-03-28:CPP payment:  544.00
 2023-03-31:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2023-04-01:BANK SPEND:  925.00
 2023-04-23:BANK SPEND:  925.00
-2023-04-28:CPP payment:  549.10
+2023-04-28:CPP payment:  544.00
 2023-04-28:DIVIDEND: XYZ Rif 1000@1.67 = 1670.00
 2023-04-28:DIVIDEND: XYZ Tfsa 200@1.67 = 334.00
 2023-04-28:DIVIDEND: XYZ Nra 300@1.67 = 501.00
 2023-05-01:BANK SPEND:  925.00
-2023-05-01:SWEEP cash from Nra 501.00
-2023-05-15:SPLURGE SPENDING:  1586.68
+2023-05-01:MOVE CASH from Nra to BankAccount 501.00
+2023-05-15:SPLURGE SPENDING:  540.87
 2023-05-23:BANK SPEND:  925.00
-2023-05-28:CPP payment:  549.10
+2023-05-28:CPP payment:  544.00
 2023-06-01:DIVIDEND: ABC Rif 1436@0.89 = 1278.04
 2023-06-01:DIVIDEND: ABC Tfsa 1564@0.89 = 1391.96
 2023-06-01:DIVIDEND: ABC Nra 350@0.89 = 311.50
 2023-06-01:BANK SPEND:  925.00
-  Bank balance: 3699.10 is under the small-balance limit of 4000.00
-2023-06-01:SWEEP cash from Nra 311.50
-2023-06-01:SWEEP cash from Rif 2950.92 withheld 590.18
-2023-06-01:SWEEP cash from Tfsa 1725.96
+  Bank balance: 3694.00 is under the small-balance limit of 4000.00
+2023-06-01:MOVE CASH from Nra to BankAccount 311.50
+2023-06-01:MOVE CASH from Rif to BankAccount net 2360.74 plus 590.18 withheld.
+2023-06-01:MOVE CASH from Tfsa to BankAccount 1725.96
 2023-06-21:REDEEM GIC Home Trust 1-year GIC, 7500.00 @ 2.5% matures 2023-06-21, purchased on 2022-06-21 in Rif 7687.50
 2023-06-23:BANK SPEND:  925.00
-2023-06-28:CPP payment:  549.10
+2023-06-28:CPP payment:  544.00
 2023-06-30:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2023-07-01:BANK SPEND:  925.00
 2023-07-23:BANK SPEND:  925.00
-2023-07-28:CPP payment:  549.10
+2023-07-28:CPP payment:  544.00
 2023-07-28:DIVIDEND: XYZ Rif 1000@1.67 = 1670.00
 2023-07-28:DIVIDEND: XYZ Tfsa 200@1.67 = 334.00
 2023-07-28:DIVIDEND: XYZ Nra 300@1.67 = 501.00
 2023-08-01:BANK SPEND:  925.00
-2023-08-01:SWEEP cash from Nra 501.00
-2023-08-15:SPLURGE SPENDING:  1586.68
+2023-08-01:MOVE CASH from Nra to BankAccount 501.00
+2023-08-15:SPLURGE SPENDING:  981.20
 2023-08-23:BANK SPEND:  925.00
-2023-08-28:CPP payment:  549.10
+2023-08-28:CPP payment:  544.00
 2023-09-01:DIVIDEND: ABC Rif 1436@0.89 = 1278.04
 2023-09-01:DIVIDEND: ABC Tfsa 1564@0.89 = 1391.96
 2023-09-01:DIVIDEND: ABC Nra 350@0.89 = 311.50
 2023-09-01:BANK SPEND:  925.00
-  Bank balance: 3699.10 is under the small-balance limit of 4000.00
-2023-09-01:SWEEP cash from Nra 311.50
-2023-09-01:SWEEP cash from Rif 10638.42 withheld 2623.24
-2023-09-01:SWEEP cash from Tfsa 1725.96
+  Bank balance: 3694.00 is under the small-balance limit of 4000.00
+2023-09-01:MOVE CASH from Nra to BankAccount 311.50
+2023-09-01:MOVE CASH from Rif to BankAccount net 8015.18 plus 2623.24 withheld.
+2023-09-01:MOVE CASH from Tfsa to BankAccount 1725.96
 2023-09-23:BANK SPEND:  925.00
-2023-09-28:CPP payment:  549.10
+2023-09-28:CPP payment:  544.00
 2023-09-30:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2023-10-01:BANK SPEND:  925.00
 2023-10-23:BANK SPEND:  925.00
-2023-10-28:CPP payment:  549.10
+2023-10-28:CPP payment:  544.00
 2023-10-28:DIVIDEND: XYZ Rif 1000@1.67 = 1670.00
 2023-10-28:DIVIDEND: XYZ Tfsa 200@1.67 = 334.00
 2023-10-28:DIVIDEND: XYZ Nra 300@1.67 = 501.00
 2023-11-01:BANK SPEND:  925.00
-2023-11-01:SWEEP cash from Nra 501.00
-2023-11-15:SPLURGE SPENDING:  9274.18
+2023-11-01:MOVE CASH from Nra to BankAccount 501.00
+2023-11-15:SPLURGE SPENDING:  6635.64
 2023-11-23:BANK SPEND:  925.00
 2023-11-25:STOCK-PRICE-UPDATE:  ABC 59.41 [3.0%]
 2023-11-25:STOCK-PRICE-UPDATE:  XYZ 148.53 [3.0%]
 2023-11-25:STOCK-PRICE-UPDATE:  CLU 15.91 [2.98%]
-2023-11-28:CPP payment:  549.10
+2023-11-28:CPP payment:  544.00
 2023-12-01:DIVIDEND: ABC Rif 1436@0.89 = 1278.04
 2023-12-01:DIVIDEND: ABC Tfsa 1564@0.89 = 1391.96
 2023-12-01:DIVIDEND: ABC Nra 350@0.89 = 311.50
 2023-12-01:BANK SPEND:  925.00
-  Bank balance: 3699.10 is under the small-balance limit of 4000.00
-2023-12-01:SWEEP cash from Nra 311.50
-2023-12-01:SWEEP cash from Rif 2950.92 withheld 885.28
-2023-12-01:SWEEP cash from Tfsa 1725.96
+  Bank balance: 3694.00 is under the small-balance limit of 4000.00
+2023-12-01:MOVE CASH from Nra to BankAccount 311.50
+2023-12-01:MOVE CASH from Rif to BankAccount net 2065.64 plus 885.28 withheld.
+2023-12-01:MOVE CASH from Tfsa to BankAccount 1725.96
 2023-12-23:BANK SPEND:  925.00
-2023-12-28:CPP payment:  549.10
-2023-12-31:PAY TAXES:  1872.42
+2023-12-28:CPP payment:  544.00
+2023-12-31:PAY TAXES:  1854.79
 2023 year-end.
 Cash generated
-     6,589.20 CPP
+     6,528.00 CPP
          0.00 OAS
          0.00 GIS
          0.00 Pension
     21,957.52 Dividends
      7,687.50 Net liquidation (sell-buy)
        187.50 Interest
-    29,645.02 Total cash swept from tfsa-rif-nra to bank
-    36,421.72 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    36,360.52 Total cash generated
 
 Tax return 2023
-    42,505.14 Taxable income
-     3,657.93 Federal tax
-     3,086.43 Provincial tax
-     6,744.36 Tax Payable
+    42,443.94 Taxable income
+     3,648.75 Federal tax
+     3,077.98 Provincial tax
+     6,726.73 Tax Payable
        673.64 Dividend tax credits
      4,871.94 Installments
-     1,872.42 Balance owing
-    42,505.14 Net income
-    42,505.14 Net income before adj
+     1,854.79 Balance owing
+    42,443.94 Net income
+    42,443.94 Net income before adj
          0.00 OAS income
          0.00 Employment income
     31,430.94 RIF withdrawals
@@ -291,10 +294,10 @@ Accounts
     44,559.00 XYZ 300sh @ 148.53
          0.00 Cash
 
-     6,439.16 -BANKACCOUNT-
-     6,439.16 Cash
+     5,561.31 -BANKACCOUNT-
+     5,561.31 Cash
 
-   429,021.34 Net worth
+   428,143.49 Net worth
    422,582.18 Investments worth
 
      8,378.80 RIF minimum for 2024
@@ -304,119 +307,121 @@ Accounts
 2024-01-03:TOP-UP TFSA:   Transfer from Rif 12891.97 (217 shares) of ABC. Room remaining 36.19
 2024-01-06:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2024-01-23:BANK SPEND:  925.00
-2024-01-28:CPP payment:  549.10
+  Bank balance: 3711.31 is under the small-balance limit of 4000.00
+2024-01-28:CPP payment:  544.00
 2024-01-28:DIVIDEND: XYZ Rif 1000@1.74 = 1740.00
 2024-01-28:DIVIDEND: XYZ Tfsa 200@1.74 = 348.00
 2024-01-28:DIVIDEND: XYZ Nra 300@1.74 = 522.00
 2024-02-01:BANK SPEND:  925.00
-2024-02-01:SWEEP cash from Nra 522.00
+  Bank balance: 3330.31 is under the small-balance limit of 4000.00
+2024-02-01:MOVE CASH from Nra to BankAccount 522.00
 2024-02-23:BANK SPEND:  925.00
-  Bank balance: 3810.26 is under the small-balance limit of 4000.00
-2024-02-28:CPP payment:  549.10
+  Bank balance: 2927.31 is under the small-balance limit of 4000.00
+2024-02-28:CPP payment:  544.00
 2024-03-01:DIVIDEND: ABC Rif 1219@0.93 = 1133.67
 2024-03-01:DIVIDEND: ABC Tfsa 1781@0.93 = 1656.33
 2024-03-01:DIVIDEND: ABC Nra 350@0.93 = 325.50
 2024-03-01:BANK SPEND:  925.00
-  Bank balance: 3434.36 is under the small-balance limit of 4000.00
-2024-03-01:SWEEP cash from Nra 325.50
-2024-03-01:SWEEP cash from Rif 2876.55 withheld 526.62
-2024-03-01:SWEEP cash from Tfsa 2004.33
+  Bank balance: 2546.31 is under the small-balance limit of 4000.00
+2024-03-01:MOVE CASH from Nra to BankAccount 325.50
+2024-03-01:MOVE CASH from Rif to BankAccount net 2349.93 plus 526.62 withheld.
+2024-03-01:MOVE CASH from Tfsa to BankAccount 2004.33
 2024-03-23:BANK SPEND:  925.00
-2024-03-28:CPP payment:  549.10
+2024-03-28:CPP payment:  544.00
 2024-03-31:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2024-04-01:BANK SPEND:  925.00
 2024-04-23:BANK SPEND:  925.00
-2024-04-28:CPP payment:  549.10
+2024-04-28:CPP payment:  544.00
 2024-04-28:DIVIDEND: XYZ Rif 1000@1.74 = 1740.00
 2024-04-28:DIVIDEND: XYZ Tfsa 200@1.74 = 348.00
 2024-04-28:DIVIDEND: XYZ Nra 300@1.74 = 522.00
 2024-05-01:BANK SPEND:  925.00
-2024-05-01:SWEEP cash from Nra 522.00
-2024-05-15:SPLURGE SPENDING:  1560.94
+2024-05-01:MOVE CASH from Nra to BankAccount 522.00
+2024-05-15:SPLURGE SPENDING:  136.07
 2024-05-23:BANK SPEND:  925.00
-2024-05-28:CPP payment:  549.10
+2024-05-28:CPP payment:  544.00
 2024-06-01:DIVIDEND: ABC Rif 1219@0.93 = 1133.67
 2024-06-01:DIVIDEND: ABC Tfsa 1781@0.93 = 1656.33
 2024-06-01:DIVIDEND: ABC Nra 350@0.93 = 325.50
 2024-06-01:BANK SPEND:  925.00
-  Bank balance: 3699.10 is under the small-balance limit of 4000.00
-2024-06-01:SWEEP cash from Nra 325.50
-2024-06-01:SWEEP cash from Rif 2876.55 withheld 575.31
-2024-06-01:SWEEP cash from Tfsa 2004.33
+  Bank balance: 3694.00 is under the small-balance limit of 4000.00
+2024-06-01:MOVE CASH from Nra to BankAccount 325.50
+2024-06-01:MOVE CASH from Rif to BankAccount net 2301.24 plus 575.31 withheld.
+2024-06-01:MOVE CASH from Tfsa to BankAccount 2004.33
 2024-06-20:SELL: XYZ Rif 73@148.53 commish:108.43 10734.26
 2024-06-21:BUY GIC Cda Trust 1-year GIC, 5700.00 @ 2.5% matures 2025-06-21, purchased on 2024-06-21 in Rif 
 2024-06-23:BANK SPEND:  925.00
-2024-06-28:CPP payment:  549.10
+2024-06-28:CPP payment:  544.00
 2024-06-30:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2024-07-01:BANK SPEND:  925.00
 2024-07-23:BANK SPEND:  925.00
-2024-07-28:CPP payment:  549.10
+2024-07-28:CPP payment:  544.00
 2024-07-28:DIVIDEND: XYZ Rif 927@1.74 = 1612.98
 2024-07-28:DIVIDEND: XYZ Tfsa 200@1.74 = 348.00
 2024-07-28:DIVIDEND: XYZ Nra 300@1.74 = 522.00
 2024-08-01:BANK SPEND:  925.00
-2024-08-01:SWEEP cash from Nra 522.00
-2024-08-15:SPLURGE SPENDING:  1825.68
+2024-08-01:MOVE CASH from Nra to BankAccount 522.00
+2024-08-15:SPLURGE SPENDING:  1235.07
 2024-08-23:BANK SPEND:  925.00
-2024-08-28:CPP payment:  549.10
+2024-08-28:CPP payment:  544.00
 2024-09-01:DIVIDEND: ABC Rif 1219@0.93 = 1133.67
 2024-09-01:DIVIDEND: ABC Tfsa 1781@0.93 = 1656.33
 2024-09-01:DIVIDEND: ABC Nra 350@0.93 = 325.50
 2024-09-01:BANK SPEND:  925.00
-  Bank balance: 3699.10 is under the small-balance limit of 4000.00
-2024-09-01:SWEEP cash from Nra 325.50
-2024-09-01:SWEEP cash from Rif 7783.79 withheld 1861.77
-2024-09-01:SWEEP cash from Tfsa 2004.33
+  Bank balance: 3694.00 is under the small-balance limit of 4000.00
+2024-09-01:MOVE CASH from Nra to BankAccount 325.50
+2024-09-01:MOVE CASH from Rif to BankAccount net 5922.02 plus 1861.77 withheld.
+2024-09-01:MOVE CASH from Tfsa to BankAccount 2004.33
 2024-09-23:BANK SPEND:  925.00
-2024-09-28:CPP payment:  549.10
+2024-09-28:CPP payment:  544.00
 2024-09-30:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2024-10-01:BANK SPEND:  925.00
 2024-10-23:BANK SPEND:  925.00
-2024-10-28:CPP payment:  549.10
+2024-10-28:CPP payment:  544.00
 2024-10-28:DIVIDEND: XYZ Rif 927@1.74 = 1612.98
 2024-10-28:DIVIDEND: XYZ Tfsa 200@1.74 = 348.00
 2024-10-28:DIVIDEND: XYZ Nra 300@1.74 = 522.00
 2024-11-01:BANK SPEND:  925.00
-2024-11-01:SWEEP cash from Nra 522.00
-2024-11-15:SPLURGE SPENDING:  6732.92
+2024-11-01:MOVE CASH from Nra to BankAccount 522.00
+2024-11-15:SPLURGE SPENDING:  4855.85
 2024-11-23:BANK SPEND:  925.00
 2024-11-25:STOCK-PRICE-UPDATE:  ABC 61.19 [3.0%]
 2024-11-25:STOCK-PRICE-UPDATE:  XYZ 152.99 [3.0%]
 2024-11-25:STOCK-PRICE-UPDATE:  CLU 16.39 [3.02%]
-2024-11-28:CPP payment:  549.10
+2024-11-28:CPP payment:  544.00
 2024-12-01:DIVIDEND: ABC Rif 1219@0.93 = 1133.67
 2024-12-01:DIVIDEND: ABC Tfsa 1781@0.93 = 1656.33
 2024-12-01:DIVIDEND: ABC Nra 350@0.93 = 325.50
 2024-12-01:BANK SPEND:  925.00
-  Bank balance: 3699.10 is under the small-balance limit of 4000.00
-2024-12-01:SWEEP cash from Nra 325.50
-2024-12-01:SWEEP cash from Rif 2749.53 withheld 824.86
-2024-12-01:SWEEP cash from Tfsa 2004.33
+  Bank balance: 3694.00 is under the small-balance limit of 4000.00
+2024-12-01:MOVE CASH from Nra to BankAccount 325.50
+2024-12-01:MOVE CASH from Rif to BankAccount net 1924.67 plus 824.86 withheld.
+2024-12-01:MOVE CASH from Tfsa to BankAccount 2004.33
 2024-12-23:BANK SPEND:  925.00
-2024-12-28:CPP payment:  549.10
-2024-12-31:PAY TAXES:  1862.09
+2024-12-28:CPP payment:  544.00
+2024-12-31:PAY TAXES:  1844.46
 2024 year-end.
 Cash generated
-     6,589.20 CPP
+     6,528.00 CPP
          0.00 OAS
          0.00 GIS
          0.00 Pension
     22,659.48 Dividends
      5,034.26 Net liquidation (sell-buy)
          0.00 Interest
-    27,693.74 Total cash swept from tfsa-rif-nra to bank
-    34,282.94 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    34,221.74 Total cash generated
 
 Tax return 2024
-    40,445.79 Taxable income
-     3,320.02 Federal tax
-     2,781.95 Provincial tax
-     6,101.97 Tax Payable
+    40,384.59 Taxable income
+     3,310.84 Federal tax
+     2,773.50 Provincial tax
+     6,084.34 Tax Payable
        702.65 Dividend tax credits
      4,239.88 Installments
-     1,862.09 Balance owing
-    40,445.79 Net income
-    40,445.79 Net income before adj
+     1,844.46 Balance owing
+    40,384.59 Net income
+    40,384.59 Net income before adj
          0.00 OAS income
          0.00 Employment income
     29,178.39 RIF withdrawals
@@ -439,10 +444,10 @@ Accounts
     45,897.00 XYZ 300sh @ 152.99
          0.00 Cash
 
-     6,540.47 -BANKACCOUNT-
-     6,540.47 Cash
+     5,723.04 -BANKACCOUNT-
+     5,723.04 Cash
 
-   436,330.42 Net worth
+   435,512.99 Net worth
    429,789.95 Investments worth
 
      8,255.52 RIF minimum for 2025
@@ -452,118 +457,120 @@ Accounts
 2025-01-03:TOP-UP TFSA:   Transfer from Rif 14012.51 (229 shares) of ABC. Room remaining 41.00
 2025-01-06:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2025-01-23:BANK SPEND:  925.00
-2025-01-28:CPP payment:  549.10
+  Bank balance: 3873.04 is under the small-balance limit of 4000.00
+2025-01-28:CPP payment:  544.00
 2025-01-28:DIVIDEND: XYZ Rif 927@1.81 = 1677.87
 2025-01-28:DIVIDEND: XYZ Tfsa 200@1.81 = 362.00
 2025-01-28:DIVIDEND: XYZ Nra 300@1.81 = 543.00
 2025-02-01:BANK SPEND:  925.00
-2025-02-01:SWEEP cash from Nra 543.00
+  Bank balance: 3492.04 is under the small-balance limit of 4000.00
+2025-02-01:MOVE CASH from Nra to BankAccount 543.00
 2025-02-23:BANK SPEND:  925.00
-  Bank balance: 3932.57 is under the small-balance limit of 4000.00
-2025-02-28:CPP payment:  549.10
+  Bank balance: 3110.04 is under the small-balance limit of 4000.00
+2025-02-28:CPP payment:  544.00
 2025-03-01:DIVIDEND: ABC Rif 990@0.97 = 960.30
 2025-03-01:DIVIDEND: ABC Tfsa 2010@0.97 = 1949.70
 2025-03-01:DIVIDEND: ABC Nra 350@0.97 = 339.50
 2025-03-01:BANK SPEND:  925.00
-  Bank balance: 3556.67 is under the small-balance limit of 4000.00
-2025-03-01:SWEEP cash from Nra 339.50
-2025-03-01:SWEEP cash from Rif 2641.05 withheld 528.21
-2025-03-01:SWEEP cash from Tfsa 2311.70
+  Bank balance: 2729.04 is under the small-balance limit of 4000.00
+2025-03-01:MOVE CASH from Nra to BankAccount 339.50
+2025-03-01:MOVE CASH from Rif to BankAccount net 2112.84 plus 528.21 withheld.
+2025-03-01:MOVE CASH from Tfsa to BankAccount 2311.70
 2025-03-23:BANK SPEND:  925.00
-2025-03-28:CPP payment:  549.10
+2025-03-28:CPP payment:  544.00
 2025-03-31:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2025-04-01:BANK SPEND:  925.00
 2025-04-23:BANK SPEND:  925.00
-2025-04-28:CPP payment:  549.10
+2025-04-28:CPP payment:  544.00
 2025-04-28:DIVIDEND: XYZ Rif 927@1.81 = 1677.87
 2025-04-28:DIVIDEND: XYZ Tfsa 200@1.81 = 362.00
 2025-04-28:DIVIDEND: XYZ Nra 300@1.81 = 543.00
 2025-05-01:BANK SPEND:  925.00
-2025-05-01:SWEEP cash from Nra 543.00
-2025-05-15:SPLURGE SPENDING:  1790.12
+2025-05-01:MOVE CASH from Nra to BankAccount 543.00
+2025-05-15:SPLURGE SPENDING:  424.08
 2025-05-23:BANK SPEND:  925.00
-2025-05-28:CPP payment:  549.10
+2025-05-28:CPP payment:  544.00
 2025-06-01:DIVIDEND: ABC Rif 990@0.97 = 960.30
 2025-06-01:DIVIDEND: ABC Tfsa 2010@0.97 = 1949.70
 2025-06-01:DIVIDEND: ABC Nra 350@0.97 = 339.50
 2025-06-01:BANK SPEND:  925.00
-  Bank balance: 3699.10 is under the small-balance limit of 4000.00
-2025-06-01:SWEEP cash from Nra 339.50
-2025-06-01:SWEEP cash from Rif 2641.05 withheld 528.21
-2025-06-01:SWEEP cash from Tfsa 2311.70
+  Bank balance: 3694.00 is under the small-balance limit of 4000.00
+2025-06-01:MOVE CASH from Nra to BankAccount 339.50
+2025-06-01:MOVE CASH from Rif to BankAccount net 2112.84 plus 528.21 withheld.
+2025-06-01:MOVE CASH from Tfsa to BankAccount 2311.70
 2025-06-21:REDEEM GIC Cda Trust 1-year GIC, 5700.00 @ 2.5% matures 2025-06-21, purchased on 2024-06-21 in Rif 5842.50
 2025-06-23:BANK SPEND:  925.00
-2025-06-28:CPP payment:  549.10
+2025-06-28:CPP payment:  544.00
 2025-06-30:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2025-07-01:BANK SPEND:  925.00
 2025-07-23:BANK SPEND:  925.00
-2025-07-28:CPP payment:  549.10
+2025-07-28:CPP payment:  544.00
 2025-07-28:DIVIDEND: XYZ Rif 927@1.81 = 1677.87
 2025-07-28:DIVIDEND: XYZ Tfsa 200@1.81 = 362.00
 2025-07-28:DIVIDEND: XYZ Nra 300@1.81 = 543.00
 2025-08-01:BANK SPEND:  925.00
-2025-08-01:SWEEP cash from Nra 543.00
-2025-08-15:SPLURGE SPENDING:  1932.55
+2025-08-01:MOVE CASH from Nra to BankAccount 543.00
+2025-08-15:SPLURGE SPENDING:  1389.04
 2025-08-23:BANK SPEND:  925.00
-2025-08-28:CPP payment:  549.10
+2025-08-28:CPP payment:  544.00
 2025-09-01:DIVIDEND: ABC Rif 990@0.97 = 960.30
 2025-09-01:DIVIDEND: ABC Tfsa 2010@0.97 = 1949.70
 2025-09-01:DIVIDEND: ABC Nra 350@0.97 = 339.50
 2025-09-01:BANK SPEND:  925.00
-  Bank balance: 3699.10 is under the small-balance limit of 4000.00
-2025-09-01:SWEEP cash from Nra 339.50
-2025-09-01:SWEEP cash from Rif 8483.55 withheld 2148.97
-2025-09-01:SWEEP cash from Tfsa 2311.70
+  Bank balance: 3694.00 is under the small-balance limit of 4000.00
+2025-09-01:MOVE CASH from Nra to BankAccount 339.50
+2025-09-01:MOVE CASH from Rif to BankAccount net 6334.58 plus 2148.97 withheld.
+2025-09-01:MOVE CASH from Tfsa to BankAccount 2311.70
 2025-09-23:BANK SPEND:  925.00
-2025-09-28:CPP payment:  549.10
+2025-09-28:CPP payment:  544.00
 2025-09-30:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2025-10-01:BANK SPEND:  925.00
 2025-10-23:BANK SPEND:  925.00
-2025-10-28:CPP payment:  549.10
+2025-10-28:CPP payment:  544.00
 2025-10-28:DIVIDEND: XYZ Rif 927@1.81 = 1677.87
 2025-10-28:DIVIDEND: XYZ Tfsa 200@1.81 = 362.00
 2025-10-28:DIVIDEND: XYZ Nra 300@1.81 = 543.00
 2025-11-01:BANK SPEND:  925.00
-2025-11-01:SWEEP cash from Nra 543.00
-2025-11-15:SPLURGE SPENDING:  7775.05
+2025-11-01:MOVE CASH from Nra to BankAccount 543.00
+2025-11-15:SPLURGE SPENDING:  5610.78
 2025-11-23:BANK SPEND:  925.00
 2025-11-25:STOCK-PRICE-UPDATE:  ABC 63.03 [3.01%]
 2025-11-25:STOCK-PRICE-UPDATE:  XYZ 157.58 [3.0%]
 2025-11-25:STOCK-PRICE-UPDATE:  CLU 16.88 [2.99%]
-2025-11-28:CPP payment:  549.10
+2025-11-28:CPP payment:  544.00
 2025-12-01:DIVIDEND: ABC Rif 990@0.97 = 960.30
 2025-12-01:DIVIDEND: ABC Tfsa 2010@0.97 = 1949.70
 2025-12-01:DIVIDEND: ABC Nra 350@0.97 = 339.50
 2025-12-01:BANK SPEND:  925.00
-  Bank balance: 3699.10 is under the small-balance limit of 4000.00
-2025-12-01:SWEEP cash from Nra 339.50
-2025-12-01:SWEEP cash from Rif 2641.05 withheld 792.32
-2025-12-01:SWEEP cash from Tfsa 2311.70
+  Bank balance: 3694.00 is under the small-balance limit of 4000.00
+2025-12-01:MOVE CASH from Nra to BankAccount 339.50
+2025-12-01:MOVE CASH from Rif to BankAccount net 1848.73 plus 792.32 withheld.
+2025-12-01:MOVE CASH from Tfsa to BankAccount 2311.70
 2025-12-23:BANK SPEND:  925.00
-2025-12-28:CPP payment:  549.10
-2025-12-31:PAY TAXES:  1816.54
+2025-12-28:CPP payment:  544.00
+2025-12-31:PAY TAXES:  1798.92
 2025 year-end.
 Cash generated
-     6,589.20 CPP
+     6,528.00 CPP
          0.00 OAS
          0.00 GIS
          0.00 Pension
     23,341.00 Dividends
      5,842.50 Net liquidation (sell-buy)
        142.50 Interest
-    29,183.50 Total cash swept from tfsa-rif-nra to bank
-    35,915.20 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    35,854.00 Total cash generated
 
 Tax return 2025
-    41,879.81 Taxable income
-     3,506.10 Federal tax
-     2,959.55 Provincial tax
-     6,465.65 Tax Payable
+    41,818.61 Taxable income
+     3,496.92 Federal tax
+     2,951.11 Provincial tax
+     6,448.03 Tax Payable
        731.67 Dividend tax credits
      4,649.11 Installments
-     1,816.54 Balance owing
-    41,879.81 Net income
-    41,879.81 Net income before adj
+     1,798.92 Balance owing
+    41,818.61 Net income
+    41,818.61 Net income before adj
          0.00 OAS income
          0.00 Employment income
     30,419.21 RIF withdrawals
@@ -585,10 +592,10 @@ Accounts
     47,274.00 XYZ 300sh @ 157.58
          0.00 Cash
 
-     6,798.91 -BANKACCOUNT-
-     6,798.91 Cash
+     6,014.01 -BANKACCOUNT-
+     6,014.01 Cash
 
-   443,626.31 Net worth
+   442,841.41 Net worth
    436,827.40 Investments worth
 
      8,049.48 RIF minimum for 2026
@@ -598,119 +605,120 @@ Accounts
 2026-01-03:TOP-UP TFSA:   Transfer from Rif 15253.26 (242 shares) of ABC. Room remaining 34.54
 2026-01-06:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2026-01-23:BANK SPEND:  925.00
-2026-01-28:CPP payment:  549.10
+2026-01-28:CPP payment:  544.00
 2026-01-28:DIVIDEND: XYZ Rif 927@1.88 = 1742.76
 2026-01-28:DIVIDEND: XYZ Tfsa 200@1.88 = 376.00
 2026-01-28:DIVIDEND: XYZ Nra 300@1.88 = 564.00
 2026-02-01:BANK SPEND:  925.00
-2026-02-01:SWEEP cash from Nra 564.00
-2026-02-15:SPLURGE SPENDING:  137.01
+  Bank balance: 3783.01 is under the small-balance limit of 4000.00
+2026-02-01:MOVE CASH from Nra to BankAccount 564.00
 2026-02-23:BANK SPEND:  925.00
-2026-02-28:CPP payment:  549.10
+  Bank balance: 3422.01 is under the small-balance limit of 4000.00
+2026-02-28:CPP payment:  544.00
 2026-03-01:DIVIDEND: ABC Rif 748@1.01 = 755.48
 2026-03-01:DIVIDEND: ABC Tfsa 2252@1.01 = 2274.52
 2026-03-01:DIVIDEND: ABC Nra 350@1.01 = 353.50
 2026-03-01:BANK SPEND:  925.00
-  Bank balance: 3699.10 is under the small-balance limit of 4000.00
-2026-03-01:SWEEP cash from Nra 353.50
-2026-03-01:SWEEP cash from Rif 2501.12 withheld 500.22
-2026-03-01:SWEEP cash from Tfsa 2650.52
+  Bank balance: 3041.01 is under the small-balance limit of 4000.00
+2026-03-01:MOVE CASH from Nra to BankAccount 353.50
+2026-03-01:MOVE CASH from Rif to BankAccount net 2000.90 plus 500.22 withheld.
+2026-03-01:MOVE CASH from Tfsa to BankAccount 2650.52
 2026-03-23:BANK SPEND:  925.00
-2026-03-28:CPP payment:  549.10
+2026-03-28:CPP payment:  544.00
 2026-03-31:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2026-04-01:BANK SPEND:  925.00
 2026-04-23:BANK SPEND:  925.00
-2026-04-28:CPP payment:  549.10
+2026-04-28:CPP payment:  544.00
 2026-04-28:DIVIDEND: XYZ Rif 927@1.88 = 1742.76
 2026-04-28:DIVIDEND: XYZ Tfsa 200@1.88 = 376.00
 2026-04-28:DIVIDEND: XYZ Nra 300@1.88 = 564.00
 2026-05-01:BANK SPEND:  925.00
-2026-05-01:SWEEP cash from Nra 564.00
-2026-05-15:SPLURGE SPENDING:  2166.44
+2026-05-01:MOVE CASH from Nra to BankAccount 564.00
+2026-05-15:SPLURGE SPENDING:  997.93
 2026-05-23:BANK SPEND:  925.00
-2026-05-28:CPP payment:  549.10
+2026-05-28:CPP payment:  544.00
 2026-06-01:DIVIDEND: ABC Rif 748@1.01 = 755.48
 2026-06-01:DIVIDEND: ABC Tfsa 2252@1.01 = 2274.52
 2026-06-01:DIVIDEND: ABC Nra 350@1.01 = 353.50
 2026-06-01:BANK SPEND:  925.00
-  Bank balance: 3699.10 is under the small-balance limit of 4000.00
-2026-06-01:SWEEP cash from Nra 353.50
-2026-06-01:SWEEP cash from Rif 2501.12 withheld 500.22
-2026-06-01:SWEEP cash from Tfsa 2650.52
+  Bank balance: 3694.00 is under the small-balance limit of 4000.00
+2026-06-01:MOVE CASH from Nra to BankAccount 353.50
+2026-06-01:MOVE CASH from Rif to BankAccount net 2000.90 plus 500.22 withheld.
+2026-06-01:MOVE CASH from Tfsa to BankAccount 2650.52
 2026-06-20:SELL: ABC Rif 150@63.03 commish:94.54 9359.96
 2026-06-21:BUY GIC Home Trust 1-year GIC, 4100.00 @ 2.5% matures 2027-06-21, purchased on 2026-06-21 in Rif 
 2026-06-23:BANK SPEND:  925.00
-2026-06-28:CPP payment:  549.10
+2026-06-28:CPP payment:  544.00
 2026-06-30:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2026-07-01:BANK SPEND:  925.00
 2026-07-23:BANK SPEND:  925.00
-2026-07-28:CPP payment:  549.10
+2026-07-28:CPP payment:  544.00
 2026-07-28:DIVIDEND: XYZ Rif 927@1.88 = 1742.76
 2026-07-28:DIVIDEND: XYZ Tfsa 200@1.88 = 376.00
 2026-07-28:DIVIDEND: XYZ Nra 300@1.88 = 564.00
 2026-08-01:BANK SPEND:  925.00
-2026-08-01:SWEEP cash from Nra 564.00
-2026-08-15:SPLURGE SPENDING:  2166.44
+2026-08-01:MOVE CASH from Nra to BankAccount 564.00
+2026-08-15:SPLURGE SPENDING:  1650.92
 2026-08-23:BANK SPEND:  925.00
-2026-08-28:CPP payment:  549.10
+2026-08-28:CPP payment:  544.00
 2026-09-01:DIVIDEND: ABC Rif 598@1.01 = 603.98
 2026-09-01:DIVIDEND: ABC Tfsa 2252@1.01 = 2274.52
 2026-09-01:DIVIDEND: ABC Nra 350@1.01 = 353.50
 2026-09-01:BANK SPEND:  925.00
-  Bank balance: 3699.10 is under the small-balance limit of 4000.00
-2026-09-01:SWEEP cash from Nra 353.50
-2026-09-01:SWEEP cash from Rif 7609.58 withheld 2003.48
-2026-09-01:SWEEP cash from Tfsa 2650.52
+  Bank balance: 3694.00 is under the small-balance limit of 4000.00
+2026-09-01:MOVE CASH from Nra to BankAccount 353.50
+2026-09-01:MOVE CASH from Rif to BankAccount net 5606.10 plus 2003.48 withheld.
+2026-09-01:MOVE CASH from Tfsa to BankAccount 2650.52
 2026-09-23:BANK SPEND:  925.00
-2026-09-28:CPP payment:  549.10
+2026-09-28:CPP payment:  544.00
 2026-09-30:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2026-10-01:BANK SPEND:  925.00
 2026-10-23:BANK SPEND:  925.00
-2026-10-28:CPP payment:  549.10
+2026-10-28:CPP payment:  544.00
 2026-10-28:DIVIDEND: XYZ Rif 927@1.88 = 1742.76
 2026-10-28:DIVIDEND: XYZ Tfsa 200@1.88 = 376.00
 2026-10-28:DIVIDEND: XYZ Nra 300@1.88 = 564.00
 2026-11-01:BANK SPEND:  925.00
-2026-11-01:SWEEP cash from Nra 564.00
-2026-11-15:SPLURGE SPENDING:  7274.90
+2026-11-01:MOVE CASH from Nra to BankAccount 564.00
+2026-11-15:SPLURGE SPENDING:  5256.12
 2026-11-23:BANK SPEND:  925.00
 2026-11-25:STOCK-PRICE-UPDATE:  ABC 64.92 [3.0%]
 2026-11-25:STOCK-PRICE-UPDATE:  XYZ 162.31 [3.0%]
 2026-11-25:STOCK-PRICE-UPDATE:  CLU 17.39 [3.02%]
-2026-11-28:CPP payment:  549.10
+2026-11-28:CPP payment:  544.00
 2026-12-01:DIVIDEND: ABC Rif 598@1.01 = 603.98
 2026-12-01:DIVIDEND: ABC Tfsa 2252@1.01 = 2274.52
 2026-12-01:DIVIDEND: ABC Nra 350@1.01 = 353.50
 2026-12-01:BANK SPEND:  925.00
-  Bank balance: 3699.10 is under the small-balance limit of 4000.00
-2026-12-01:SWEEP cash from Nra 353.50
-2026-12-01:SWEEP cash from Rif 2349.62 withheld 704.89
-2026-12-01:SWEEP cash from Tfsa 2650.52
+  Bank balance: 3694.00 is under the small-balance limit of 4000.00
+2026-12-01:MOVE CASH from Nra to BankAccount 353.50
+2026-12-01:MOVE CASH from Rif to BankAccount net 1644.73 plus 704.89 withheld.
+2026-12-01:MOVE CASH from Tfsa to BankAccount 2650.52
 2026-12-23:BANK SPEND:  925.00
-2026-12-28:CPP payment:  549.10
-2026-12-31:PAY TAXES:  1763.53
+2026-12-28:CPP payment:  544.00
+2026-12-31:PAY TAXES:  1745.91
 2026 year-end.
 Cash generated
-     6,589.20 CPP
+     6,528.00 CPP
          0.00 OAS
          0.00 GIS
          0.00 Pension
     23,973.56 Dividends
      5,259.96 Net liquidation (sell-buy)
          0.00 Interest
-    29,233.52 Total cash swept from tfsa-rif-nra to bank
-    35,822.72 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    35,761.52 Total cash generated
 
 Tax return 2026
-    41,868.50 Taxable income
-     3,475.39 Federal tax
-     2,937.71 Provincial tax
-     6,413.10 Tax Payable
+    41,807.30 Taxable income
+     3,466.21 Federal tax
+     2,929.27 Provincial tax
+     6,395.48 Tax Payable
        760.69 Dividend tax credits
      4,649.57 Installments
-     1,763.53 Balance owing
-    41,868.50 Net income
-    41,868.50 Net income before adj
+     1,745.91 Balance owing
+    41,807.30 Net income
+    41,807.30 Net income before adj
          0.00 OAS income
          0.00 Employment income
     30,214.70 RIF withdrawals
@@ -733,10 +741,10 @@ Accounts
     48,693.00 XYZ 300sh @ 162.31
          0.00 Cash
 
-     6,913.31 -BANKACCOUNT-
-     6,913.31 Cash
+     6,215.84 -BANKACCOUNT-
+     6,215.84 Cash
 
-   451,208.40 Net worth
+   450,510.93 Net worth
    444,295.09 Investments worth
 
      7,768.73 RIF minimum for 2027
@@ -746,125 +754,126 @@ Accounts
 2027-01-03:TOP-UP TFSA:   Transfer from Rif 16619.52 (256 shares) of ABC. Room remaining 17.10
 2027-01-06:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2027-01-23:BANK SPEND:  925.00
-2027-01-28:CPP payment:  549.10
+2027-01-28:CPP payment:  544.00
 2027-01-28:DIVIDEND: XYZ Rif 927@1.96 = 1816.92
 2027-01-28:DIVIDEND: XYZ Tfsa 200@1.96 = 392.00
 2027-01-28:DIVIDEND: XYZ Nra 300@1.96 = 588.00
 2027-02-01:BANK SPEND:  925.00
-2027-02-01:SWEEP cash from Nra 588.00
-2027-02-15:SPLURGE SPENDING:  275.41
+  Bank balance: 3984.84 is under the small-balance limit of 4000.00
+2027-02-01:MOVE CASH from Nra to BankAccount 588.00
 2027-02-23:BANK SPEND:  925.00
-2027-02-28:CPP payment:  549.10
+  Bank balance: 3647.84 is under the small-balance limit of 4000.00
+2027-02-28:CPP payment:  544.00
 2027-03-01:DIVIDEND: ABC Rif 342@1.05 = 359.10
 2027-03-01:DIVIDEND: ABC Tfsa 2508@1.05 = 2633.40
 2027-03-01:DIVIDEND: ABC Nra 350@1.05 = 367.50
 2027-03-01:BANK SPEND:  925.00
-  Bank balance: 3699.10 is under the small-balance limit of 4000.00
-2027-03-01:SWEEP cash from Nra 367.50
-2027-03-01:SWEEP cash from Rif 2178.90 withheld 435.78
-2027-03-01:SWEEP cash from Tfsa 3025.40
+  Bank balance: 3266.84 is under the small-balance limit of 4000.00
+2027-03-01:MOVE CASH from Nra to BankAccount 367.50
+2027-03-01:MOVE CASH from Rif to BankAccount net 1743.12 plus 435.78 withheld.
+2027-03-01:MOVE CASH from Tfsa to BankAccount 3025.40
 2027-03-23:BANK SPEND:  925.00
-2027-03-28:CPP payment:  549.10
+2027-03-28:CPP payment:  544.00
 2027-03-31:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2027-04-01:BANK SPEND:  925.00
 2027-04-23:BANK SPEND:  925.00
-2027-04-28:CPP payment:  549.10
+2027-04-28:CPP payment:  544.00
 2027-04-28:DIVIDEND: XYZ Rif 927@1.96 = 1816.92
 2027-04-28:DIVIDEND: XYZ Tfsa 200@1.96 = 392.00
 2027-04-28:DIVIDEND: XYZ Nra 300@1.96 = 588.00
 2027-05-01:BANK SPEND:  925.00
-2027-05-01:SWEEP cash from Nra 588.00
-2027-05-15:SPLURGE SPENDING:  2257.10
+2027-05-01:MOVE CASH from Nra to BankAccount 588.00
+2027-05-15:SPLURGE SPENDING:  1378.86
 2027-05-23:BANK SPEND:  925.00
-2027-05-28:CPP payment:  549.10
+2027-05-28:CPP payment:  544.00
 2027-06-01:DIVIDEND: ABC Rif 342@1.05 = 359.10
 2027-06-01:DIVIDEND: ABC Tfsa 2508@1.05 = 2633.40
 2027-06-01:DIVIDEND: ABC Nra 350@1.05 = 367.50
 2027-06-01:BANK SPEND:  925.00
-  Bank balance: 3699.10 is under the small-balance limit of 4000.00
-2027-06-01:SWEEP cash from Nra 367.50
-2027-06-01:SWEEP cash from Rif 2178.90 withheld 435.78
-2027-06-01:SWEEP cash from Tfsa 3025.40
+  Bank balance: 3694.00 is under the small-balance limit of 4000.00
+2027-06-01:MOVE CASH from Nra to BankAccount 367.50
+2027-06-01:MOVE CASH from Rif to BankAccount net 1743.12 plus 435.78 withheld.
+2027-06-01:MOVE CASH from Tfsa to BankAccount 3025.40
 2027-06-21:REDEEM GIC Home Trust 1-year GIC, 4100.00 @ 2.5% matures 2027-06-21, purchased on 2026-06-21 in Rif 4202.50
 2027-06-23:BANK SPEND:  925.00
-2027-06-28:OAS/GIS payment: 654.55
-2027-06-28:CPP payment:  549.10
+2027-06-28:OAS/GIS payment: 650.00
+2027-06-28:CPP payment:  544.00
 2027-06-30:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2027-07-01:BANK SPEND:  925.00
 2027-07-23:BANK SPEND:  925.00
-2027-07-28:OAS/GIS payment: 654.55
-2027-07-28:CPP payment:  549.10
+2027-07-28:OAS/GIS payment: 650.00
+2027-07-28:CPP payment:  544.00
 2027-07-28:DIVIDEND: XYZ Rif 927@1.96 = 1816.92
 2027-07-28:DIVIDEND: XYZ Tfsa 200@1.96 = 392.00
 2027-07-28:DIVIDEND: XYZ Nra 300@1.96 = 588.00
 2027-08-01:BANK SPEND:  925.00
-2027-08-01:SWEEP cash from Nra 588.00
-2027-08-15:SPLURGE SPENDING:  3566.20
+2027-08-01:MOVE CASH from Nra to BankAccount 588.00
+2027-08-15:SPLURGE SPENDING:  3106.02
 2027-08-23:BANK SPEND:  925.00
-2027-08-28:OAS/GIS payment: 654.55
-2027-08-28:CPP payment:  549.10
+2027-08-28:OAS/GIS payment: 650.00
+2027-08-28:CPP payment:  544.00
 2027-09-01:DIVIDEND: ABC Rif 342@1.05 = 359.10
 2027-09-01:DIVIDEND: ABC Tfsa 2508@1.05 = 2633.40
 2027-09-01:DIVIDEND: ABC Nra 350@1.05 = 367.50
 2027-09-01:BANK SPEND:  925.00
-2027-09-01:SWEEP cash from Nra 367.50
-2027-09-01:SWEEP cash from Rif 6381.40 withheld 1735.28
-2027-09-01:SWEEP cash from Tfsa 3025.40
+2027-09-01:MOVE CASH from Nra to BankAccount 367.50
+2027-09-01:MOVE CASH from Rif to BankAccount net 4646.12 plus 1735.28 withheld.
+2027-09-01:MOVE CASH from Tfsa to BankAccount 3025.40
 2027-09-23:BANK SPEND:  925.00
-2027-09-28:OAS/GIS payment: 654.55
-2027-09-28:CPP payment:  549.10
+2027-09-28:OAS/GIS payment: 650.00
+2027-09-28:CPP payment:  544.00
 2027-09-30:DIVIDEND: CLU Rif 48@0.06 = 2.88
 2027-10-01:BANK SPEND:  925.00
 2027-10-23:BANK SPEND:  925.00
-2027-10-28:OAS/GIS payment: 654.55
-2027-10-28:CPP payment:  549.10
+2027-10-28:OAS/GIS payment: 650.00
+2027-10-28:CPP payment:  544.00
 2027-10-28:DIVIDEND: XYZ Rif 927@1.96 = 1816.92
 2027-10-28:DIVIDEND: XYZ Tfsa 200@1.96 = 392.00
 2027-10-28:DIVIDEND: XYZ Nra 300@1.96 = 588.00
 2027-11-01:BANK SPEND:  925.00
-2027-11-01:SWEEP cash from Nra 588.00
-2027-11-15:SPLURGE SPENDING:  8423.25
+2027-11-01:MOVE CASH from Nra to BankAccount 588.00
+2027-11-15:SPLURGE SPENDING:  6659.02
 2027-11-23:BANK SPEND:  925.00
 2027-11-25:STOCK-PRICE-UPDATE:  ABC 66.87 [3.0%]
 2027-11-25:STOCK-PRICE-UPDATE:  XYZ 167.18 [3.0%]
 2027-11-25:STOCK-PRICE-UPDATE:  CLU 17.91 [2.99%]
 2027-11-26:LIQUIDATE:  [Rif sold 48 CLU net:851.08, Rif sold 158 XYZ net:26150.30]
-2027-11-28:OAS/GIS payment: 654.55
-2027-11-28:CPP payment:  549.10
+2027-11-28:OAS/GIS payment: 650.00
+2027-11-28:CPP payment:  544.00
 2027-12-01:DIVIDEND: ABC Rif 342@1.05 = 359.10
 2027-12-01:DIVIDEND: ABC Tfsa 2508@1.05 = 2633.40
 2027-12-01:DIVIDEND: ABC Nra 350@1.05 = 367.50
 2027-12-01:BANK SPEND:  925.00
-2027-12-01:SWEEP cash from Nra 367.50
-2027-12-01:SWEEP cash from Rif 29180.28 withheld 8754.08
-2027-12-01:SWEEP cash from Tfsa 3025.40
+2027-12-01:MOVE CASH from Nra to BankAccount 367.50
+2027-12-01:MOVE CASH from Rif to BankAccount net 20426.20 plus 8754.08 withheld.
+2027-12-01:MOVE CASH from Tfsa to BankAccount 3025.40
 2027-12-23:BANK SPEND:  925.00
-2027-12-28:OAS/GIS payment: 654.55
-2027-12-28:CPP payment:  549.10
-2027-12-31:PAY TAXES:  3481.45
+2027-12-28:OAS/GIS payment: 650.00
+2027-12-28:CPP payment:  544.00
+2027-12-31:PAY TAXES:  3444.74
 2027 year-end.
 Cash generated
-     6,589.20 CPP
-     4,581.85 OAS
+     6,528.00 CPP
+     4,550.00 OAS
          0.00 GIS
          0.00 Pension
     24,639.20 Dividends
     31,203.88 Net liquidation (sell-buy)
        102.50 Interest
-    55,843.08 Total cash swept from tfsa-rif-nra to bank
-    67,116.63 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    67,023.58 Total cash generated
 
 Tax return 2027
-    72,984.41 Taxable income
-     8,739.41 Federal tax
-     7,373.12 Provincial tax
-    16,112.53 Tax Payable
+    72,891.36 Taxable income
+     8,718.24 Federal tax
+     7,357.58 Provincial tax
+    16,075.82 Tax Payable
        792.20 Dividend tax credits
     12,631.08 Installments
-     3,481.45 Balance owing
-    72,984.41 Net income
-    72,984.41 Net income before adj
-     4,581.85 OAS income
+     3,444.74 Balance owing
+    72,891.36 Net income
+    72,891.36 Net income before adj
+     4,550.00 OAS income
          0.00 Employment income
     56,539.00 RIF withdrawals
 
@@ -884,10 +893,10 @@ Accounts
     50,154.00 XYZ 300sh @ 167.18
          0.00 Cash
 
-    33,724.03 -BANKACCOUNT-
-    33,724.03 Cash
+    24,987.36 -BANKACCOUNT-
+    24,987.36 Cash
 
-   459,859.45 Net worth
+   451,122.78 Net worth
    426,135.42 Investments worth
 
      6,309.62 RIF minimum for 2028
@@ -896,124 +905,124 @@ Accounts
 2028-01-03:TOP-UP TFSA:  TFSA room for 2028 18118.70
 2028-01-03:TOP-UP TFSA:   Transfer from Rif 18054.90 (270 shares) of ABC. Room remaining 63.80
 2028-01-23:BANK SPEND:  925.00
-2028-01-28:OAS/GIS payment: 654.55
-2028-01-28:CPP payment:  549.10
+2028-01-28:OAS/GIS payment: 650.00
+2028-01-28:CPP payment:  544.00
 2028-01-28:DIVIDEND: XYZ Rif 769@2.04 = 1568.76
 2028-01-28:DIVIDEND: XYZ Tfsa 200@2.04 = 408.00
 2028-01-28:DIVIDEND: XYZ Nra 300@2.04 = 612.00
 2028-02-01:BANK SPEND:  925.00
-2028-02-01:SWEEP cash from Nra 612.00
-2028-02-15:SPLURGE SPENDING:  27764.68
+2028-02-01:MOVE CASH from Nra to BankAccount 612.00
+2028-02-15:SPLURGE SPENDING:  19018.36
 2028-02-23:BANK SPEND:  925.00
-2028-02-28:OAS/GIS payment: 654.55
-2028-02-28:CPP payment:  549.10
+2028-02-28:OAS/GIS payment: 650.00
+2028-02-28:CPP payment:  544.00
 2028-03-01:DIVIDEND: ABC Rif 72@1.09 = 78.48
 2028-03-01:DIVIDEND: ABC Tfsa 2778@1.09 = 3028.02
 2028-03-01:DIVIDEND: ABC Nra 350@1.09 = 381.50
 2028-03-01:BANK SPEND:  925.00
-2028-03-01:SWEEP cash from Nra 381.50
-2028-03-01:SWEEP cash from Rif 1647.24 withheld 329.44
-2028-03-01:SWEEP cash from Tfsa 3436.02
+2028-03-01:MOVE CASH from Nra to BankAccount 381.50
+2028-03-01:MOVE CASH from Rif to BankAccount net 1317.80 plus 329.44 withheld.
+2028-03-01:MOVE CASH from Tfsa to BankAccount 3436.02
 2028-03-23:BANK SPEND:  925.00
-2028-03-28:OAS/GIS payment: 654.55
-2028-03-28:CPP payment:  549.10
+2028-03-28:OAS/GIS payment: 650.00
+2028-03-28:CPP payment:  544.00
 2028-04-01:BANK SPEND:  925.00
 2028-04-23:BANK SPEND:  925.00
-2028-04-28:OAS/GIS payment: 654.55
-2028-04-28:CPP payment:  549.10
+2028-04-28:OAS/GIS payment: 650.00
+2028-04-28:CPP payment:  544.00
 2028-04-28:DIVIDEND: XYZ Rif 769@2.04 = 1568.76
 2028-04-28:DIVIDEND: XYZ Tfsa 200@2.04 = 408.00
 2028-04-28:DIVIDEND: XYZ Nra 300@2.04 = 612.00
 2028-05-01:BANK SPEND:  925.00
-2028-05-01:SWEEP cash from Nra 612.00
-2028-05-15:SPLURGE SPENDING:  4137.71
+2028-05-01:MOVE CASH from Nra to BankAccount 612.00
+2028-05-15:SPLURGE SPENDING:  3779.32
 2028-05-23:BANK SPEND:  925.00
-2028-05-28:OAS/GIS payment: 654.55
-2028-05-28:CPP payment:  549.10
+2028-05-28:OAS/GIS payment: 650.00
+2028-05-28:CPP payment:  544.00
 2028-06-01:DIVIDEND: ABC Rif 72@1.09 = 78.48
 2028-06-01:DIVIDEND: ABC Tfsa 2778@1.09 = 3028.02
 2028-06-01:DIVIDEND: ABC Nra 350@1.09 = 381.50
 2028-06-01:BANK SPEND:  925.00
-2028-06-01:SWEEP cash from Nra 381.50
-2028-06-01:SWEEP cash from Rif 1647.24 withheld 333.43
-2028-06-01:SWEEP cash from Tfsa 3436.02
+2028-06-01:MOVE CASH from Nra to BankAccount 381.50
+2028-06-01:MOVE CASH from Rif to BankAccount net 1313.81 plus 333.43 withheld.
+2028-06-01:MOVE CASH from Tfsa to BankAccount 3436.02
 2028-06-23:BANK SPEND:  925.00
-2028-06-28:OAS/GIS payment: 654.55
-2028-06-28:CPP payment:  549.10
+2028-06-28:OAS/GIS payment: 650.00
+2028-06-28:CPP payment:  544.00
 2028-07-01:BANK SPEND:  925.00
 2028-07-23:BANK SPEND:  925.00
-2028-07-28:OAS/GIS payment: 654.55
-2028-07-28:CPP payment:  549.10
+2028-07-28:OAS/GIS payment: 650.00
+2028-07-28:CPP payment:  544.00
 2028-07-28:DIVIDEND: XYZ Rif 769@2.04 = 1568.76
 2028-07-28:DIVIDEND: XYZ Tfsa 200@2.04 = 408.00
 2028-07-28:DIVIDEND: XYZ Nra 300@2.04 = 612.00
 2028-08-01:BANK SPEND:  925.00
-2028-08-01:SWEEP cash from Nra 612.00
-2028-08-15:SPLURGE SPENDING:  4137.71
+2028-08-01:MOVE CASH from Nra to BankAccount 612.00
+2028-08-15:SPLURGE SPENDING:  3775.33
 2028-08-23:BANK SPEND:  925.00
-2028-08-28:OAS/GIS payment: 654.55
-2028-08-28:CPP payment:  549.10
+2028-08-28:OAS/GIS payment: 650.00
+2028-08-28:CPP payment:  544.00
 2028-09-01:DIVIDEND: ABC Rif 72@1.09 = 78.48
 2028-09-01:DIVIDEND: ABC Tfsa 2778@1.09 = 3028.02
 2028-09-01:DIVIDEND: ABC Nra 350@1.09 = 381.50
 2028-09-01:BANK SPEND:  925.00
-2028-09-01:SWEEP cash from Nra 381.50
-2028-09-01:SWEEP cash from Rif 1647.24 withheld 494.17
-2028-09-01:SWEEP cash from Tfsa 3436.02
+2028-09-01:MOVE CASH from Nra to BankAccount 381.50
+2028-09-01:MOVE CASH from Rif to BankAccount net 1153.07 plus 494.17 withheld.
+2028-09-01:MOVE CASH from Tfsa to BankAccount 3436.02
 2028-09-23:BANK SPEND:  925.00
-2028-09-28:OAS/GIS payment: 654.55
-2028-09-28:CPP payment:  549.10
+2028-09-28:OAS/GIS payment: 650.00
+2028-09-28:CPP payment:  544.00
 2028-10-01:BANK SPEND:  925.00
 2028-10-23:BANK SPEND:  925.00
-2028-10-28:OAS/GIS payment: 654.55
-2028-10-28:CPP payment:  549.10
+2028-10-28:OAS/GIS payment: 650.00
+2028-10-28:CPP payment:  544.00
 2028-10-28:DIVIDEND: XYZ Rif 769@2.04 = 1568.76
 2028-10-28:DIVIDEND: XYZ Tfsa 200@2.04 = 408.00
 2028-10-28:DIVIDEND: XYZ Nra 300@2.04 = 612.00
 2028-11-01:BANK SPEND:  925.00
-2028-11-01:SWEEP cash from Nra 612.00
-2028-11-15:SPLURGE SPENDING:  4137.71
+2028-11-01:MOVE CASH from Nra to BankAccount 612.00
+2028-11-15:SPLURGE SPENDING:  3614.59
 2028-11-23:BANK SPEND:  925.00
 2028-11-25:STOCK-PRICE-UPDATE:  ABC 68.88 [3.01%]
 2028-11-25:STOCK-PRICE-UPDATE:  XYZ 172.20 [3.0%]
 2028-11-25:STOCK-PRICE-UPDATE:  CLU 18.45 [3.02%]
 2028-11-26:LIQUIDATE:  [Rif sold 153 XYZ net:26083.13]
-2028-11-28:OAS/GIS payment: 654.55
-2028-11-28:CPP payment:  549.10
+2028-11-28:OAS/GIS payment: 650.00
+2028-11-28:CPP payment:  544.00
 2028-12-01:DIVIDEND: ABC Rif 72@1.09 = 78.48
 2028-12-01:DIVIDEND: ABC Tfsa 2778@1.09 = 3028.02
 2028-12-01:DIVIDEND: ABC Nra 350@1.09 = 381.50
 2028-12-01:BANK SPEND:  925.00
-2028-12-01:SWEEP cash from Nra 381.50
-2028-12-01:SWEEP cash from Rif 27730.37 withheld 8319.11
-2028-12-01:SWEEP cash from Tfsa 3436.02
+2028-12-01:MOVE CASH from Nra to BankAccount 381.50
+2028-12-01:MOVE CASH from Rif to BankAccount net 19411.26 plus 8319.11 withheld.
+2028-12-01:MOVE CASH from Tfsa to BankAccount 3436.02
 2028-12-23:BANK SPEND:  925.00
-2028-12-28:OAS/GIS payment: 654.55
-2028-12-28:CPP payment:  549.10
-2028-12-31:PAY TAXES:  3814.82
+2028-12-28:OAS/GIS payment: 650.00
+2028-12-28:CPP payment:  544.00
+2028-12-31:PAY TAXES:  3769.14
 2028 year-end.
 Cash generated
-     6,589.20 CPP
-     7,854.60 OAS
+     6,528.00 CPP
+     7,800.00 OAS
          0.00 GIS
          0.00 Pension
     24,307.04 Dividends
     26,083.13 Net liquidation (sell-buy)
          0.00 Interest
-    50,390.17 Total cash swept from tfsa-rif-nra to bank
-    64,833.97 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    64,718.17 Total cash generated
 
 Tax return 2028
-    70,654.91 Taxable income
-     8,177.95 Federal tax
-     6,962.08 Provincial tax
-    15,140.03 Tax Payable
+    70,539.11 Taxable income
+     8,151.61 Federal tax
+     6,942.74 Provincial tax
+    15,094.35 Tax Payable
        823.70 Dividend tax credits
     11,325.21 Installments
-     3,814.82 Balance owing
-    70,654.91 Net income
-    70,654.91 Net income before adj
-     7,854.60 OAS income
+     3,769.14 Balance owing
+    70,539.11 Net income
+    70,539.11 Net income before adj
+     7,800.00 OAS income
          0.00 Employment income
     50,726.99 RIF withdrawals
 
@@ -1033,10 +1042,10 @@ Accounts
     51,660.00 XYZ 300sh @ 172.20
          0.00 Cash
 
-    32,365.37 -BANKACCOUNT-
-    32,365.37 Cash
+    24,072.64 -BANKACCOUNT-
+    24,072.64 Cash
 
-   444,956.57 Net worth
+   436,663.84 Net worth
    412,591.20 Investments worth
 
      4,827.59 RIF minimum for 2029
@@ -1046,120 +1055,120 @@ Accounts
 2029-01-03:TOP-UP TFSA:   Transfer from Rif 4959.36 (72 shares) of ABC. Room remaining 14848.52
 2029-01-03:TOP-UP TFSA:   Transfer from Rif 14809.20 (86 shares) of XYZ. Room remaining 39.32
 2029-01-23:BANK SPEND:  925.00
-2029-01-28:OAS/GIS payment: 654.55
-2029-01-28:CPP payment:  549.10
+2029-01-28:OAS/GIS payment: 650.00
+2029-01-28:CPP payment:  544.00
 2029-01-28:DIVIDEND: XYZ Rif 530@2.12 = 1123.60
 2029-01-28:DIVIDEND: XYZ Tfsa 286@2.12 = 606.32
 2029-01-28:DIVIDEND: XYZ Nra 300@2.12 = 636.00
 2029-02-01:BANK SPEND:  925.00
-2029-02-01:SWEEP cash from Nra 636.00
-2029-02-15:SPLURGE SPENDING:  26430.02
+2029-02-01:MOVE CASH from Nra to BankAccount 636.00
+2029-02-15:SPLURGE SPENDING:  18127.64
 2029-02-23:BANK SPEND:  925.00
-2029-02-28:OAS/GIS payment: 654.55
-2029-02-28:CPP payment:  549.10
+2029-02-28:OAS/GIS payment: 650.00
+2029-02-28:CPP payment:  544.00
 2029-03-01:DIVIDEND: ABC Tfsa 2850@1.13 = 3220.50
 2029-03-01:DIVIDEND: ABC Nra 350@1.13 = 395.50
 2029-03-01:BANK SPEND:  925.00
-2029-03-01:SWEEP cash from Nra 395.50
-2029-03-01:SWEEP cash from Rif 1123.60 withheld 331.18
-2029-03-01:SWEEP cash from Tfsa 3826.82
+2029-03-01:MOVE CASH from Nra to BankAccount 395.50
+2029-03-01:MOVE CASH from Rif to BankAccount net 792.42 plus 331.18 withheld.
+2029-03-01:MOVE CASH from Tfsa to BankAccount 3826.82
 2029-03-23:BANK SPEND:  925.00
-2029-03-28:OAS/GIS payment: 654.55
-2029-03-28:CPP payment:  549.10
+2029-03-28:OAS/GIS payment: 650.00
+2029-03-28:CPP payment:  544.00
 2029-04-01:BANK SPEND:  925.00
 2029-04-23:BANK SPEND:  925.00
-2029-04-28:OAS/GIS payment: 654.55
-2029-04-28:CPP payment:  549.10
+2029-04-28:OAS/GIS payment: 650.00
+2029-04-28:CPP payment:  544.00
 2029-04-28:DIVIDEND: XYZ Rif 530@2.12 = 1123.60
 2029-04-28:DIVIDEND: XYZ Tfsa 286@2.12 = 606.32
 2029-04-28:DIVIDEND: XYZ Nra 300@2.12 = 636.00
 2029-05-01:BANK SPEND:  925.00
-2029-05-01:SWEEP cash from Nra 636.00
-2029-05-15:SPLURGE SPENDING:  4042.87
+2029-05-01:MOVE CASH from Nra to BankAccount 636.00
+2029-05-15:SPLURGE SPENDING:  3682.74
 2029-05-23:BANK SPEND:  925.00
-2029-05-28:OAS/GIS payment: 654.55
-2029-05-28:CPP payment:  549.10
+2029-05-28:OAS/GIS payment: 650.00
+2029-05-28:CPP payment:  544.00
 2029-06-01:DIVIDEND: ABC Tfsa 2850@1.13 = 3220.50
 2029-06-01:DIVIDEND: ABC Nra 350@1.13 = 395.50
 2029-06-01:BANK SPEND:  925.00
-2029-06-01:SWEEP cash from Nra 395.50
-2029-06-01:SWEEP cash from Rif 1123.60 withheld 337.08
-2029-06-01:SWEEP cash from Tfsa 3826.82
+2029-06-01:MOVE CASH from Nra to BankAccount 395.50
+2029-06-01:MOVE CASH from Rif to BankAccount net 786.52 plus 337.08 withheld.
+2029-06-01:MOVE CASH from Tfsa to BankAccount 3826.82
 2029-06-23:BANK SPEND:  925.00
-2029-06-28:OAS/GIS payment: 654.55
-2029-06-28:CPP payment:  549.10
+2029-06-28:OAS/GIS payment: 650.00
+2029-06-28:CPP payment:  544.00
 2029-07-01:BANK SPEND:  925.00
 2029-07-23:BANK SPEND:  925.00
-2029-07-28:OAS/GIS payment: 654.55
-2029-07-28:CPP payment:  549.10
+2029-07-28:OAS/GIS payment: 650.00
+2029-07-28:CPP payment:  544.00
 2029-07-28:DIVIDEND: XYZ Rif 530@2.12 = 1123.60
 2029-07-28:DIVIDEND: XYZ Tfsa 286@2.12 = 606.32
 2029-07-28:DIVIDEND: XYZ Nra 300@2.12 = 636.00
 2029-08-01:BANK SPEND:  925.00
-2029-08-01:SWEEP cash from Nra 636.00
-2029-08-15:SPLURGE SPENDING:  4042.87
+2029-08-01:MOVE CASH from Nra to BankAccount 636.00
+2029-08-15:SPLURGE SPENDING:  3676.84
 2029-08-23:BANK SPEND:  925.00
-2029-08-28:OAS/GIS payment: 654.55
-2029-08-28:CPP payment:  549.10
+2029-08-28:OAS/GIS payment: 650.00
+2029-08-28:CPP payment:  544.00
 2029-09-01:DIVIDEND: ABC Tfsa 2850@1.13 = 3220.50
 2029-09-01:DIVIDEND: ABC Nra 350@1.13 = 395.50
 2029-09-01:BANK SPEND:  925.00
-2029-09-01:SWEEP cash from Nra 395.50
-2029-09-01:SWEEP cash from Rif 1123.60 withheld 337.08
-2029-09-01:SWEEP cash from Tfsa 3826.82
+2029-09-01:MOVE CASH from Nra to BankAccount 395.50
+2029-09-01:MOVE CASH from Rif to BankAccount net 786.52 plus 337.08 withheld.
+2029-09-01:MOVE CASH from Tfsa to BankAccount 3826.82
 2029-09-23:BANK SPEND:  925.00
-2029-09-28:OAS/GIS payment: 654.55
-2029-09-28:CPP payment:  549.10
+2029-09-28:OAS/GIS payment: 650.00
+2029-09-28:CPP payment:  544.00
 2029-10-01:BANK SPEND:  925.00
 2029-10-23:BANK SPEND:  925.00
-2029-10-28:OAS/GIS payment: 654.55
-2029-10-28:CPP payment:  549.10
+2029-10-28:OAS/GIS payment: 650.00
+2029-10-28:CPP payment:  544.00
 2029-10-28:DIVIDEND: XYZ Rif 530@2.12 = 1123.60
 2029-10-28:DIVIDEND: XYZ Tfsa 286@2.12 = 606.32
 2029-10-28:DIVIDEND: XYZ Nra 300@2.12 = 636.00
 2029-11-01:BANK SPEND:  925.00
-2029-11-01:SWEEP cash from Nra 636.00
-2029-11-15:SPLURGE SPENDING:  4042.87
+2029-11-01:MOVE CASH from Nra to BankAccount 636.00
+2029-11-15:SPLURGE SPENDING:  3676.84
 2029-11-23:BANK SPEND:  925.00
 2029-11-25:STOCK-PRICE-UPDATE:  ABC 70.95 [3.01%]
 2029-11-25:STOCK-PRICE-UPDATE:  XYZ 177.37 [3.0%]
 2029-11-25:STOCK-PRICE-UPDATE:  CLU 19.00 [2.98%]
 2029-11-26:LIQUIDATE:  [Rif sold 144 XYZ net:25285.87]
-2029-11-28:OAS/GIS payment: 654.55
-2029-11-28:CPP payment:  549.10
+2029-11-28:OAS/GIS payment: 650.00
+2029-11-28:CPP payment:  544.00
 2029-12-01:DIVIDEND: ABC Tfsa 2850@1.13 = 3220.50
 2029-12-01:DIVIDEND: ABC Nra 350@1.13 = 395.50
 2029-12-01:BANK SPEND:  925.00
-2029-12-01:SWEEP cash from Nra 395.50
-2029-12-01:SWEEP cash from Rif 26409.47 withheld 7922.84
-2029-12-01:SWEEP cash from Tfsa 3826.82
+2029-12-01:MOVE CASH from Nra to BankAccount 395.50
+2029-12-01:MOVE CASH from Rif to BankAccount net 18486.63 plus 7922.84 withheld.
+2029-12-01:MOVE CASH from Tfsa to BankAccount 3826.82
 2029-12-23:BANK SPEND:  925.00
-2029-12-28:OAS/GIS payment: 654.55
-2029-12-28:CPP payment:  549.10
-2029-12-31:PAY TAXES:  3288.07
+2029-12-28:OAS/GIS payment: 650.00
+2029-12-28:CPP payment:  544.00
+2029-12-31:PAY TAXES:  3242.41
 2029 year-end.
 Cash generated
-     6,589.20 CPP
-     7,854.60 OAS
+     6,528.00 CPP
+     7,800.00 OAS
          0.00 GIS
          0.00 Pension
     23,927.68 Dividends
     25,285.87 Net liquidation (sell-buy)
          0.00 Interest
-    49,213.55 Total cash swept from tfsa-rif-nra to bank
-    63,657.35 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    63,541.55 Total cash generated
 
 Tax return 2029
-    69,686.51 Taxable income
-     7,926.12 Federal tax
-     6,778.32 Provincial tax
-    14,704.44 Tax Payable
+    69,570.71 Taxable income
+     7,899.79 Federal tax
+     6,758.99 Provincial tax
+    14,658.78 Tax Payable
        855.21 Dividend tax credits
     11,416.37 Installments
-     3,288.07 Balance owing
-    69,686.51 Net income
-    69,686.51 Net income before adj
-     7,854.60 OAS income
+     3,242.41 Balance owing
+    69,570.71 Net income
+    69,570.71 Net income before adj
+     7,800.00 OAS income
          0.00 Employment income
     49,548.83 RIF withdrawals
 
@@ -1178,10 +1187,10 @@ Accounts
     53,211.00 XYZ 300sh @ 177.37
          0.00 Cash
 
-    31,976.02 -BANKACCOUNT-
-    31,976.02 Cash
+    24,079.54 -BANKACCOUNT-
+    24,079.54 Cash
 
-   431,419.66 Net worth
+   423,523.18 Net worth
    399,443.64 Investments worth
 
      3,112.04 RIF minimum for 2030
@@ -1190,120 +1199,120 @@ Accounts
 2030-01-03:TOP-UP TFSA:  TFSA room for 2030 21346.60
 2030-01-03:TOP-UP TFSA:   Transfer from Rif 21284.40 (120 shares) of XYZ. Room remaining 62.20
 2030-01-23:BANK SPEND:  925.00
-2030-01-28:OAS/GIS payment: 654.55
-2030-01-28:CPP payment:  549.10
+2030-01-28:OAS/GIS payment: 650.00
+2030-01-28:CPP payment:  544.00
 2030-01-28:DIVIDEND: XYZ Rif 266@2.20 = 585.20
 2030-01-28:DIVIDEND: XYZ Tfsa 406@2.20 = 893.20
 2030-01-28:DIVIDEND: XYZ Nra 300@2.20 = 660.00
 2030-02-01:BANK SPEND:  925.00
-2030-02-01:SWEEP cash from Nra 660.00
-2030-02-15:SPLURGE SPENDING:  26064.67
+2030-02-01:MOVE CASH from Nra to BankAccount 660.00
+2030-02-15:SPLURGE SPENDING:  18158.54
 2030-02-23:BANK SPEND:  925.00
-2030-02-28:OAS/GIS payment: 654.55
-2030-02-28:CPP payment:  549.10
+2030-02-28:OAS/GIS payment: 650.00
+2030-02-28:CPP payment:  544.00
 2030-03-01:DIVIDEND: ABC Tfsa 2850@1.18 = 3363.00
 2030-03-01:DIVIDEND: ABC Nra 350@1.18 = 413.00
 2030-03-01:BANK SPEND:  925.00
-2030-03-01:SWEEP cash from Nra 413.00
-2030-03-01:SWEEP cash from Rif 585.20 withheld 175.56
-2030-03-01:SWEEP cash from Tfsa 4256.20
+2030-03-01:MOVE CASH from Nra to BankAccount 413.00
+2030-03-01:MOVE CASH from Rif to BankAccount net 409.64 plus 175.56 withheld.
+2030-03-01:MOVE CASH from Tfsa to BankAccount 4256.20
 2030-03-23:BANK SPEND:  925.00
-2030-03-28:OAS/GIS payment: 654.55
-2030-03-28:CPP payment:  549.10
+2030-03-28:OAS/GIS payment: 650.00
+2030-03-28:CPP payment:  544.00
 2030-04-01:BANK SPEND:  925.00
 2030-04-23:BANK SPEND:  925.00
-2030-04-28:OAS/GIS payment: 654.55
-2030-04-28:CPP payment:  549.10
+2030-04-28:OAS/GIS payment: 650.00
+2030-04-28:CPP payment:  544.00
 2030-04-28:DIVIDEND: XYZ Rif 266@2.20 = 585.20
 2030-04-28:DIVIDEND: XYZ Tfsa 406@2.20 = 893.20
 2030-04-28:DIVIDEND: XYZ Nra 300@2.20 = 660.00
 2030-05-01:BANK SPEND:  925.00
-2030-05-01:SWEEP cash from Nra 660.00
-2030-05-15:SPLURGE SPENDING:  3975.35
+2030-05-01:MOVE CASH from Nra to BankAccount 660.00
+2030-05-15:SPLURGE SPENDING:  3770.84
 2030-05-23:BANK SPEND:  925.00
-2030-05-28:OAS/GIS payment: 654.55
-2030-05-28:CPP payment:  549.10
+2030-05-28:OAS/GIS payment: 650.00
+2030-05-28:CPP payment:  544.00
 2030-06-01:DIVIDEND: ABC Tfsa 2850@1.18 = 3363.00
 2030-06-01:DIVIDEND: ABC Nra 350@1.18 = 413.00
 2030-06-01:BANK SPEND:  925.00
-2030-06-01:SWEEP cash from Nra 413.00
-2030-06-01:SWEEP cash from Rif 585.20 withheld 175.56
-2030-06-01:SWEEP cash from Tfsa 4256.20
+2030-06-01:MOVE CASH from Nra to BankAccount 413.00
+2030-06-01:MOVE CASH from Rif to BankAccount net 409.64 plus 175.56 withheld.
+2030-06-01:MOVE CASH from Tfsa to BankAccount 4256.20
 2030-06-23:BANK SPEND:  925.00
-2030-06-28:OAS/GIS payment: 654.55
-2030-06-28:CPP payment:  549.10
+2030-06-28:OAS/GIS payment: 650.00
+2030-06-28:CPP payment:  544.00
 2030-07-01:BANK SPEND:  925.00
 2030-07-23:BANK SPEND:  925.00
-2030-07-28:OAS/GIS payment: 654.55
-2030-07-28:CPP payment:  549.10
+2030-07-28:OAS/GIS payment: 650.00
+2030-07-28:CPP payment:  544.00
 2030-07-28:DIVIDEND: XYZ Rif 266@2.20 = 585.20
 2030-07-28:DIVIDEND: XYZ Tfsa 406@2.20 = 893.20
 2030-07-28:DIVIDEND: XYZ Nra 300@2.20 = 660.00
 2030-08-01:BANK SPEND:  925.00
-2030-08-01:SWEEP cash from Nra 660.00
-2030-08-15:SPLURGE SPENDING:  3975.35
+2030-08-01:MOVE CASH from Nra to BankAccount 660.00
+2030-08-15:SPLURGE SPENDING:  3770.84
 2030-08-23:BANK SPEND:  925.00
-2030-08-28:OAS/GIS payment: 654.55
-2030-08-28:CPP payment:  549.10
+2030-08-28:OAS/GIS payment: 650.00
+2030-08-28:CPP payment:  544.00
 2030-09-01:DIVIDEND: ABC Tfsa 2850@1.18 = 3363.00
 2030-09-01:DIVIDEND: ABC Nra 350@1.18 = 413.00
 2030-09-01:BANK SPEND:  925.00
-2030-09-01:SWEEP cash from Nra 413.00
-2030-09-01:SWEEP cash from Rif 585.20 withheld 175.56
-2030-09-01:SWEEP cash from Tfsa 4256.20
+2030-09-01:MOVE CASH from Nra to BankAccount 413.00
+2030-09-01:MOVE CASH from Rif to BankAccount net 409.64 plus 175.56 withheld.
+2030-09-01:MOVE CASH from Tfsa to BankAccount 4256.20
 2030-09-23:BANK SPEND:  925.00
-2030-09-28:OAS/GIS payment: 654.55
-2030-09-28:CPP payment:  549.10
+2030-09-28:OAS/GIS payment: 650.00
+2030-09-28:CPP payment:  544.00
 2030-10-01:BANK SPEND:  925.00
 2030-10-23:BANK SPEND:  925.00
-2030-10-28:OAS/GIS payment: 654.55
-2030-10-28:CPP payment:  549.10
+2030-10-28:OAS/GIS payment: 650.00
+2030-10-28:CPP payment:  544.00
 2030-10-28:DIVIDEND: XYZ Rif 266@2.20 = 585.20
 2030-10-28:DIVIDEND: XYZ Tfsa 406@2.20 = 893.20
 2030-10-28:DIVIDEND: XYZ Nra 300@2.20 = 660.00
 2030-11-01:BANK SPEND:  925.00
-2030-11-01:SWEEP cash from Nra 660.00
-2030-11-15:SPLURGE SPENDING:  3975.35
+2030-11-01:MOVE CASH from Nra to BankAccount 660.00
+2030-11-15:SPLURGE SPENDING:  3770.84
 2030-11-23:BANK SPEND:  925.00
 2030-11-25:STOCK-PRICE-UPDATE:  ABC 73.08 [3.0%]
 2030-11-25:STOCK-PRICE-UPDATE:  XYZ 182.69 [3.0%]
 2030-11-25:STOCK-PRICE-UPDATE:  CLU 19.57 [3.0%]
 2030-11-26:LIQUIDATE:  [Rif sold 135 XYZ net:24416.52]
-2030-11-28:OAS/GIS payment: 654.55
-2030-11-28:CPP payment:  549.10
+2030-11-28:OAS/GIS payment: 650.00
+2030-11-28:CPP payment:  544.00
 2030-12-01:DIVIDEND: ABC Tfsa 2850@1.18 = 3363.00
 2030-12-01:DIVIDEND: ABC Nra 350@1.18 = 413.00
 2030-12-01:BANK SPEND:  925.00
-2030-12-01:SWEEP cash from Nra 413.00
-2030-12-01:SWEEP cash from Rif 25001.72 withheld 7500.51
-2030-12-01:SWEEP cash from Tfsa 4256.20
+2030-12-01:MOVE CASH from Nra to BankAccount 413.00
+2030-12-01:MOVE CASH from Rif to BankAccount net 17501.21 plus 7500.51 withheld.
+2030-12-01:MOVE CASH from Tfsa to BankAccount 4256.20
 2030-12-23:BANK SPEND:  925.00
-2030-12-28:OAS/GIS payment: 654.55
-2030-12-28:CPP payment:  549.10
-2030-12-31:PAY TAXES:  2662.92
+2030-12-28:OAS/GIS payment: 650.00
+2030-12-28:CPP payment:  544.00
+2030-12-31:PAY TAXES:  2617.23
 2030 year-end.
 Cash generated
-     6,589.20 CPP
-     7,854.60 OAS
+     6,528.00 CPP
+     7,800.00 OAS
          0.00 GIS
          0.00 Pension
     23,657.60 Dividends
     24,416.52 Net liquidation (sell-buy)
          0.00 Interest
-    48,074.12 Total cash swept from tfsa-rif-nra to bank
-    62,517.92 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    62,402.12 Total cash generated
 
 Tax return 2030
-    68,408.48 Taxable income
-     7,600.98 Federal tax
-     6,540.84 Provincial tax
-    14,141.82 Tax Payable
+    68,292.68 Taxable income
+     7,574.63 Federal tax
+     6,521.50 Provincial tax
+    14,096.13 Tax Payable
        889.61 Dividend tax credits
     11,478.90 Installments
-     2,662.92 Balance owing
-    68,408.48 Net income
-    68,408.48 Net income before adj
-     7,854.60 OAS income
+     2,617.23 Balance owing
+    68,292.68 Net income
+    68,292.68 Net income before adj
+     7,800.00 OAS income
          0.00 Employment income
     48,041.72 RIF withdrawals
 
@@ -1322,10 +1331,10 @@ Accounts
     54,807.00 XYZ 300sh @ 182.69
          0.00 Cash
 
-    31,640.30 -BANKACCOUNT-
-    31,640.30 Cash
+    24,166.18 -BANKACCOUNT-
+    24,166.18 Cash
 
-   418,407.83 Net worth
+   410,933.71 Net worth
    386,767.53 Investments worth
 
      1,139.64 RIF minimum for 2031
@@ -1334,121 +1343,121 @@ Accounts
 2031-01-03:TOP-UP TFSA:  TFSA room for 2031 23087.00
 2031-01-03:TOP-UP TFSA:   Transfer from Rif 23018.94 (126 shares) of XYZ. Room remaining 68.06
 2031-01-23:BANK SPEND:  925.00
-2031-01-28:OAS/GIS payment: 654.55
-2031-01-28:CPP payment:  549.10
+2031-01-28:OAS/GIS payment: 650.00
+2031-01-28:CPP payment:  544.00
 2031-01-28:DIVIDEND: XYZ Rif 5@2.29 = 11.45
 2031-01-28:DIVIDEND: XYZ Tfsa 532@2.29 = 1218.28
 2031-01-28:DIVIDEND: XYZ Nra 300@2.29 = 687.00
 2031-02-01:BANK SPEND:  925.00
-2031-02-01:SWEEP cash from Nra 687.00
-2031-02-15:SPLURGE SPENDING:  25755.95
+2031-02-01:MOVE CASH from Nra to BankAccount 687.00
+2031-02-15:SPLURGE SPENDING:  18272.18
 2031-02-23:BANK SPEND:  925.00
-2031-02-28:OAS/GIS payment: 654.55
-2031-02-28:CPP payment:  549.10
+2031-02-28:OAS/GIS payment: 650.00
+2031-02-28:CPP payment:  544.00
 2031-03-01:DIVIDEND: ABC Tfsa 2850@1.22 = 3477.00
 2031-03-01:DIVIDEND: ABC Nra 350@1.22 = 427.00
 2031-03-01:BANK SPEND:  925.00
-2031-03-01:SWEEP cash from Nra 427.00
-2031-03-01:SWEEP cash from Rif 11.45 withheld 3.43
-2031-03-01:SWEEP cash from Tfsa 4695.28
+2031-03-01:MOVE CASH from Nra to BankAccount 427.00
+2031-03-01:MOVE CASH from Rif to BankAccount net 8.02 plus 3.43 withheld.
+2031-03-01:MOVE CASH from Tfsa to BankAccount 4695.28
 2031-03-23:BANK SPEND:  925.00
-2031-03-28:OAS/GIS payment: 654.55
-2031-03-28:CPP payment:  549.10
+2031-03-28:OAS/GIS payment: 650.00
+2031-03-28:CPP payment:  544.00
 2031-04-01:BANK SPEND:  925.00
 2031-04-23:BANK SPEND:  925.00
-2031-04-28:OAS/GIS payment: 654.55
-2031-04-28:CPP payment:  549.10
+2031-04-28:OAS/GIS payment: 650.00
+2031-04-28:CPP payment:  544.00
 2031-04-28:DIVIDEND: XYZ Rif 5@2.29 = 11.45
 2031-04-28:DIVIDEND: XYZ Tfsa 532@2.29 = 1218.28
 2031-04-28:DIVIDEND: XYZ Nra 300@2.29 = 687.00
 2031-05-01:BANK SPEND:  925.00
-2031-05-01:SWEEP cash from Nra 687.00
-2031-05-15:SPLURGE SPENDING:  3881.68
+2031-05-01:MOVE CASH from Nra to BankAccount 687.00
+2031-05-15:SPLURGE SPENDING:  3849.30
 2031-05-23:BANK SPEND:  925.00
-2031-05-28:OAS/GIS payment: 654.55
-2031-05-28:CPP payment:  549.10
+2031-05-28:OAS/GIS payment: 650.00
+2031-05-28:CPP payment:  544.00
 2031-06-01:DIVIDEND: ABC Tfsa 2850@1.22 = 3477.00
 2031-06-01:DIVIDEND: ABC Nra 350@1.22 = 427.00
 2031-06-01:BANK SPEND:  925.00
-2031-06-01:SWEEP cash from Nra 427.00
-2031-06-01:SWEEP cash from Rif 11.45 withheld 3.44
-2031-06-01:SWEEP cash from Tfsa 4695.28
+2031-06-01:MOVE CASH from Nra to BankAccount 427.00
+2031-06-01:MOVE CASH from Rif to BankAccount net 8.01 plus 3.44 withheld.
+2031-06-01:MOVE CASH from Tfsa to BankAccount 4695.28
 2031-06-23:BANK SPEND:  925.00
-2031-06-28:OAS/GIS payment: 654.55
-2031-06-28:CPP payment:  549.10
+2031-06-28:OAS/GIS payment: 650.00
+2031-06-28:CPP payment:  544.00
 2031-07-01:BANK SPEND:  925.00
 2031-07-23:BANK SPEND:  925.00
-2031-07-28:OAS/GIS payment: 654.55
-2031-07-28:CPP payment:  549.10
+2031-07-28:OAS/GIS payment: 650.00
+2031-07-28:CPP payment:  544.00
 2031-07-28:DIVIDEND: XYZ Rif 5@2.29 = 11.45
 2031-07-28:DIVIDEND: XYZ Tfsa 532@2.29 = 1218.28
 2031-07-28:DIVIDEND: XYZ Nra 300@2.29 = 687.00
 2031-08-01:BANK SPEND:  925.00
-2031-08-01:SWEEP cash from Nra 687.00
-2031-08-15:SPLURGE SPENDING:  3881.68
+2031-08-01:MOVE CASH from Nra to BankAccount 687.00
+2031-08-15:SPLURGE SPENDING:  3849.29
 2031-08-23:BANK SPEND:  925.00
-2031-08-28:OAS/GIS payment: 654.55
-2031-08-28:CPP payment:  549.10
+2031-08-28:OAS/GIS payment: 650.00
+2031-08-28:CPP payment:  544.00
 2031-09-01:DIVIDEND: ABC Tfsa 2850@1.22 = 3477.00
 2031-09-01:DIVIDEND: ABC Nra 350@1.22 = 427.00
 2031-09-01:BANK SPEND:  925.00
-2031-09-01:SWEEP cash from Nra 427.00
-2031-09-01:SWEEP cash from Rif 11.45 withheld 3.44
-2031-09-01:SWEEP cash from Tfsa 4695.28
+2031-09-01:MOVE CASH from Nra to BankAccount 427.00
+2031-09-01:MOVE CASH from Rif to BankAccount net 8.01 plus 3.44 withheld.
+2031-09-01:MOVE CASH from Tfsa to BankAccount 4695.28
 2031-09-23:BANK SPEND:  925.00
-2031-09-28:OAS/GIS payment: 654.55
-2031-09-28:CPP payment:  549.10
+2031-09-28:OAS/GIS payment: 650.00
+2031-09-28:CPP payment:  544.00
 2031-10-01:BANK SPEND:  925.00
 2031-10-23:BANK SPEND:  925.00
-2031-10-28:OAS/GIS payment: 654.55
-2031-10-28:CPP payment:  549.10
+2031-10-28:OAS/GIS payment: 650.00
+2031-10-28:CPP payment:  544.00
 2031-10-28:DIVIDEND: XYZ Rif 5@2.29 = 11.45
 2031-10-28:DIVIDEND: XYZ Tfsa 532@2.29 = 1218.28
 2031-10-28:DIVIDEND: XYZ Nra 300@2.29 = 687.00
 2031-11-01:BANK SPEND:  925.00
-2031-11-01:SWEEP cash from Nra 687.00
-2031-11-15:SPLURGE SPENDING:  3881.68
+2031-11-01:MOVE CASH from Nra to BankAccount 687.00
+2031-11-15:SPLURGE SPENDING:  3849.29
 2031-11-23:BANK SPEND:  925.00
 2031-11-25:STOCK-PRICE-UPDATE:  ABC 75.27 [3.0%]
 2031-11-25:STOCK-PRICE-UPDATE:  XYZ 188.17 [3.0%]
 2031-11-25:STOCK-PRICE-UPDATE:  CLU 20.16 [3.01%]
 Capital gain 9307.17 in 2031
 2031-11-26:LIQUIDATE:  [Rif sold 5 XYZ net:931.44, Nra sold 122 XYZ net:22727.17]
-2031-11-28:OAS/GIS payment: 654.55
-2031-11-28:CPP payment:  549.10
+2031-11-28:OAS/GIS payment: 650.00
+2031-11-28:CPP payment:  544.00
 2031-12-01:DIVIDEND: ABC Tfsa 2850@1.22 = 3477.00
 2031-12-01:DIVIDEND: ABC Nra 350@1.22 = 427.00
 2031-12-01:BANK SPEND:  925.00
-2031-12-01:SWEEP cash from Nra 23154.17
-2031-12-01:SWEEP cash from Rif 942.89 withheld 282.86
-2031-12-01:SWEEP cash from Tfsa 4695.28
+2031-12-01:MOVE CASH from Nra to BankAccount 23154.17
+2031-12-01:MOVE CASH from Rif to BankAccount net 660.03 plus 282.86 withheld.
+2031-12-01:MOVE CASH from Tfsa to BankAccount 4695.28
 2031-12-23:BANK SPEND:  925.00
-2031-12-28:OAS/GIS payment: 654.55
-2031-12-28:CPP payment:  549.10
-2031-12-31:PAY TAXES:  2036.43
+2031-12-28:OAS/GIS payment: 650.00
+2031-12-28:CPP payment:  544.00
+2031-12-31:PAY TAXES:  1992.41
 2031 year-end.
 Cash generated
-     6,589.20 CPP
-     7,854.60 OAS
+     6,528.00 CPP
+     7,800.00 OAS
          0.00 GIS
          0.00 Pension
     23,282.92 Dividends
     23,658.61 Net liquidation (sell-buy)
          0.00 Interest
-    46,941.53 Total cash swept from tfsa-rif-nra to bank
-    61,385.33 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    61,269.53 Total cash generated
 
 Tax return 2031
-    49,242.84 Taxable income
-     3,206.79 Federal tax
-     3,686.60 Provincial tax
-     6,893.39 Tax Payable
+    49,127.04 Taxable income
+     3,180.45 Federal tax
+     3,668.92 Provincial tax
+     6,849.37 Tax Payable
        923.61 Dividend tax credits
      4,856.96 Installments
-     2,036.43 Balance owing
-    49,242.84 Net income
-    49,242.84 Net income before adj
-     7,854.60 OAS income
+     1,992.41 Balance owing
+    49,127.04 Net income
+    49,127.04 Net income before adj
+     7,800.00 OAS income
          0.00 Employment income
     23,996.18 RIF withdrawals
 
@@ -1466,10 +1475,10 @@ Accounts
     33,494.26 XYZ 178sh @ 188.17
          0.00 Cash
 
-    31,388.21 -BANKACCOUNT-
-    31,388.21 Cash
+    31,130.07 -BANKACCOUNT-
+    31,130.07 Cash
 
-   405,852.91 Net worth
+   405,594.77 Net worth
    374,464.70 Investments worth
 
          0.00 No RIF minimum for 2032 (RSP converts on 2018-05-01).
@@ -1479,113 +1488,113 @@ Accounts
 Capital gain 10696.24 in 2032
 2032-01-03:TOP-UP TFSA:   Transfer from Nra 24839.10 (330 shares) of ABC. Room remaining 10.08
 2032-01-23:BANK SPEND:  925.00
-2032-01-28:OAS/GIS payment: 654.55
-2032-01-28:CPP payment:  549.10
+2032-01-28:OAS/GIS payment: 650.00
+2032-01-28:CPP payment:  544.00
 2032-01-28:DIVIDEND: XYZ Tfsa 532@2.38 = 1266.16
 2032-01-28:DIVIDEND: XYZ Nra 178@2.38 = 423.64
 2032-02-01:BANK SPEND:  925.00
-2032-02-01:SWEEP cash from Nra 423.64
-2032-02-15:SPLURGE SPENDING:  25240.50
+2032-02-01:MOVE CASH from Nra to BankAccount 423.64
+2032-02-15:SPLURGE SPENDING:  24972.71
 2032-02-23:BANK SPEND:  925.00
-2032-02-28:OAS/GIS payment: 654.55
-2032-02-28:CPP payment:  549.10
+2032-02-28:OAS/GIS payment: 650.00
+2032-02-28:CPP payment:  544.00
 2032-03-01:DIVIDEND: ABC Tfsa 3180@1.27 = 4038.60
 2032-03-01:DIVIDEND: ABC Nra 20@1.27 = 25.40
 2032-03-01:BANK SPEND:  925.00
-2032-03-01:SWEEP cash from Nra 25.40
-2032-03-01:SWEEP cash from Tfsa 5304.76
+2032-03-01:MOVE CASH from Nra to BankAccount 25.40
+2032-03-01:MOVE CASH from Tfsa to BankAccount 5304.76
 2032-03-23:BANK SPEND:  925.00
-2032-03-28:OAS/GIS payment: 654.55
-2032-03-28:CPP payment:  549.10
+2032-03-28:OAS/GIS payment: 650.00
+2032-03-28:CPP payment:  544.00
 2032-04-01:BANK SPEND:  925.00
 2032-04-23:BANK SPEND:  925.00
-2032-04-28:OAS/GIS payment: 654.55
-2032-04-28:CPP payment:  549.10
+2032-04-28:OAS/GIS payment: 650.00
+2032-04-28:CPP payment:  544.00
 2032-04-28:DIVIDEND: XYZ Tfsa 532@2.38 = 1266.16
 2032-04-28:DIVIDEND: XYZ Nra 178@2.38 = 423.64
 2032-05-01:BANK SPEND:  925.00
-2032-05-01:SWEEP cash from Nra 423.64
-2032-05-15:SPLURGE SPENDING:  3814.75
+2032-05-01:MOVE CASH from Nra to BankAccount 423.64
+2032-05-15:SPLURGE SPENDING:  3785.80
 2032-05-23:BANK SPEND:  925.00
-2032-05-28:OAS/GIS payment: 654.55
-2032-05-28:CPP payment:  549.10
+2032-05-28:OAS/GIS payment: 650.00
+2032-05-28:CPP payment:  544.00
 2032-06-01:DIVIDEND: ABC Tfsa 3180@1.27 = 4038.60
 2032-06-01:DIVIDEND: ABC Nra 20@1.27 = 25.40
 2032-06-01:BANK SPEND:  925.00
-2032-06-01:SWEEP cash from Nra 25.40
-2032-06-01:SWEEP cash from Tfsa 5304.76
+2032-06-01:MOVE CASH from Nra to BankAccount 25.40
+2032-06-01:MOVE CASH from Tfsa to BankAccount 5304.76
 2032-06-23:BANK SPEND:  925.00
-2032-06-28:OAS/GIS payment: 654.55
-2032-06-28:CPP payment:  549.10
+2032-06-28:OAS/GIS payment: 650.00
+2032-06-28:CPP payment:  544.00
 2032-07-01:BANK SPEND:  925.00
 2032-07-23:BANK SPEND:  925.00
-2032-07-28:OAS/GIS payment: 654.55
-2032-07-28:CPP payment:  549.10
+2032-07-28:OAS/GIS payment: 650.00
+2032-07-28:CPP payment:  544.00
 2032-07-28:DIVIDEND: XYZ Tfsa 532@2.38 = 1266.16
 2032-07-28:DIVIDEND: XYZ Nra 178@2.38 = 423.64
 2032-08-01:BANK SPEND:  925.00
-2032-08-01:SWEEP cash from Nra 423.64
-2032-08-15:SPLURGE SPENDING:  3814.75
+2032-08-01:MOVE CASH from Nra to BankAccount 423.64
+2032-08-15:SPLURGE SPENDING:  3785.80
 2032-08-23:BANK SPEND:  925.00
-2032-08-28:OAS/GIS payment: 654.55
-2032-08-28:CPP payment:  549.10
+2032-08-28:OAS/GIS payment: 650.00
+2032-08-28:CPP payment:  544.00
 2032-09-01:DIVIDEND: ABC Tfsa 3180@1.27 = 4038.60
 2032-09-01:DIVIDEND: ABC Nra 20@1.27 = 25.40
 2032-09-01:BANK SPEND:  925.00
-2032-09-01:SWEEP cash from Nra 25.40
-2032-09-01:SWEEP cash from Tfsa 5304.76
+2032-09-01:MOVE CASH from Nra to BankAccount 25.40
+2032-09-01:MOVE CASH from Tfsa to BankAccount 5304.76
 2032-09-23:BANK SPEND:  925.00
-2032-09-28:OAS/GIS payment: 654.55
-2032-09-28:CPP payment:  549.10
+2032-09-28:OAS/GIS payment: 650.00
+2032-09-28:CPP payment:  544.00
 2032-10-01:BANK SPEND:  925.00
 2032-10-23:BANK SPEND:  925.00
-2032-10-28:OAS/GIS payment: 654.55
-2032-10-28:CPP payment:  549.10
+2032-10-28:OAS/GIS payment: 650.00
+2032-10-28:CPP payment:  544.00
 2032-10-28:DIVIDEND: XYZ Tfsa 532@2.38 = 1266.16
 2032-10-28:DIVIDEND: XYZ Nra 178@2.38 = 423.64
 2032-11-01:BANK SPEND:  925.00
-2032-11-01:SWEEP cash from Nra 423.64
-2032-11-15:SPLURGE SPENDING:  3814.75
+2032-11-01:MOVE CASH from Nra to BankAccount 423.64
+2032-11-15:SPLURGE SPENDING:  3785.80
 2032-11-23:BANK SPEND:  925.00
 2032-11-25:STOCK-PRICE-UPDATE:  ABC 77.53 [3.0%]
 2032-11-25:STOCK-PRICE-UPDATE:  XYZ 193.82 [3.0%]
 2032-11-25:STOCK-PRICE-UPDATE:  CLU 20.76 [2.98%]
 Capital gain 9743.93 in 2032
 2032-11-26:LIQUIDATE:  [Nra sold 119 XYZ net:22833.93]
-2032-11-28:OAS/GIS payment: 654.55
-2032-11-28:CPP payment:  549.10
+2032-11-28:OAS/GIS payment: 650.00
+2032-11-28:CPP payment:  544.00
 2032-12-01:DIVIDEND: ABC Tfsa 3180@1.27 = 4038.60
 2032-12-01:DIVIDEND: ABC Nra 20@1.27 = 25.40
 2032-12-01:BANK SPEND:  925.00
-2032-12-01:SWEEP cash from Nra 22859.33
-2032-12-01:SWEEP cash from Tfsa 5304.76
+2032-12-01:MOVE CASH from Nra to BankAccount 22859.33
+2032-12-01:MOVE CASH from Tfsa to BankAccount 5304.76
 2032-12-23:BANK SPEND:  925.00
-2032-12-28:OAS/GIS payment: 654.55
-2032-12-28:CPP payment:  549.10
-2032-12-31:PAY TAXES:  2709.40
+2032-12-28:OAS/GIS payment: 650.00
+2032-12-28:CPP payment:  544.00
+2032-12-31:PAY TAXES:  2678.99
 2032 year-end.
 Cash generated
-     6,589.20 CPP
-     7,854.60 OAS
+     6,528.00 CPP
+     7,800.00 OAS
          0.00 GIS
          0.00 Pension
     23,015.20 Dividends
     22,833.93 Net liquidation (sell-buy)
          0.00 Interest
-    45,849.13 Total cash swept from tfsa-rif-nra to bank
-    60,292.93 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    60,177.13 Total cash generated
 
 Tax return 2032
-    31,796.17 Taxable income
-     1,195.99 Federal tax
-     1,513.41 Provincial tax
-     2,709.40 Tax Payable
+    31,680.37 Taxable income
+     1,178.62 Federal tax
+     1,500.37 Provincial tax
+     2,678.99 Tax Payable
        372.29 Dividend tax credits
          0.00 Installments
-     2,709.40 Balance owing
-    31,796.17 Net income
-    31,796.17 Net income before adj
-     7,854.60 OAS income
+     2,678.99 Balance owing
+    31,680.37 Net income
+    31,680.37 Net income before adj
+     7,800.00 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
@@ -1603,10 +1612,10 @@ Accounts
     11,435.38 XYZ 59sh @ 193.82
          0.00 Cash
 
-    30,086.99 -BANKACCOUNT-
-    30,086.99 Cash
+    30,098.10 -BANKACCOUNT-
+    30,098.10 Cash
 
-   392,730.61 Net worth
+   392,741.72 Net worth
    362,643.62 Investments worth
 
     27,229.12 TFSA room for 2033
@@ -1617,96 +1626,96 @@ Capital gain 693.46 in 2033
 Capital gain 4945.38 in 2033
 2033-01-03:TOP-UP TFSA:   Transfer from Nra 11435.38 (59 shares) of XYZ. Room remaining 14243.14
 2033-01-23:BANK SPEND:  925.00
-2033-01-28:OAS/GIS payment: 654.55
-2033-01-28:CPP payment:  549.10
+2033-01-28:OAS/GIS payment: 650.00
+2033-01-28:CPP payment:  544.00
 2033-01-28:DIVIDEND: XYZ Tfsa 591@2.48 = 1465.68
 2033-02-01:BANK SPEND:  925.00
-2033-02-15:SPLURGE SPENDING:  23515.64
+2033-02-15:SPLURGE SPENDING:  23517.10
 2033-02-23:BANK SPEND:  925.00
-2033-02-28:OAS/GIS payment: 654.55
-2033-02-28:CPP payment:  549.10
+2033-02-28:OAS/GIS payment: 650.00
+2033-02-28:CPP payment:  544.00
 2033-03-01:DIVIDEND: ABC Tfsa 3200@1.32 = 4224.00
 2033-03-01:BANK SPEND:  925.00
-2033-03-01:SWEEP cash from Tfsa 5689.68
+2033-03-01:MOVE CASH from Tfsa to BankAccount 5689.68
 2033-03-23:BANK SPEND:  925.00
-2033-03-28:OAS/GIS payment: 654.55
-2033-03-28:CPP payment:  549.10
+2033-03-28:OAS/GIS payment: 650.00
+2033-03-28:CPP payment:  544.00
 2033-04-01:BANK SPEND:  925.00
 2033-04-23:BANK SPEND:  925.00
-2033-04-28:OAS/GIS payment: 654.55
-2033-04-28:CPP payment:  549.10
+2033-04-28:OAS/GIS payment: 650.00
+2033-04-28:CPP payment:  544.00
 2033-04-28:DIVIDEND: XYZ Tfsa 591@2.48 = 1465.68
 2033-05-01:BANK SPEND:  925.00
-2033-05-15:SPLURGE SPENDING:  3750.63
+2033-05-15:SPLURGE SPENDING:  3721.68
 2033-05-23:BANK SPEND:  925.00
-2033-05-28:OAS/GIS payment: 654.55
-2033-05-28:CPP payment:  549.10
+2033-05-28:OAS/GIS payment: 650.00
+2033-05-28:CPP payment:  544.00
 2033-06-01:DIVIDEND: ABC Tfsa 3200@1.32 = 4224.00
 2033-06-01:BANK SPEND:  925.00
-2033-06-01:SWEEP cash from Tfsa 5689.68
+2033-06-01:MOVE CASH from Tfsa to BankAccount 5689.68
 2033-06-23:BANK SPEND:  925.00
-2033-06-28:OAS/GIS payment: 654.55
-2033-06-28:CPP payment:  549.10
+2033-06-28:OAS/GIS payment: 650.00
+2033-06-28:CPP payment:  544.00
 2033-07-01:BANK SPEND:  925.00
 2033-07-23:BANK SPEND:  925.00
-2033-07-28:OAS/GIS payment: 654.55
-2033-07-28:CPP payment:  549.10
+2033-07-28:OAS/GIS payment: 650.00
+2033-07-28:CPP payment:  544.00
 2033-07-28:DIVIDEND: XYZ Tfsa 591@2.48 = 1465.68
 2033-08-01:BANK SPEND:  925.00
-2033-08-15:SPLURGE SPENDING:  3750.63
+2033-08-15:SPLURGE SPENDING:  3721.68
 2033-08-23:BANK SPEND:  925.00
-2033-08-28:OAS/GIS payment: 654.55
-2033-08-28:CPP payment:  549.10
+2033-08-28:OAS/GIS payment: 650.00
+2033-08-28:CPP payment:  544.00
 2033-09-01:DIVIDEND: ABC Tfsa 3200@1.32 = 4224.00
 2033-09-01:BANK SPEND:  925.00
-2033-09-01:SWEEP cash from Tfsa 5689.68
+2033-09-01:MOVE CASH from Tfsa to BankAccount 5689.68
 2033-09-23:BANK SPEND:  925.00
-2033-09-28:OAS/GIS payment: 654.55
-2033-09-28:CPP payment:  549.10
+2033-09-28:OAS/GIS payment: 650.00
+2033-09-28:CPP payment:  544.00
 2033-10-01:BANK SPEND:  925.00
 2033-10-23:BANK SPEND:  925.00
-2033-10-28:OAS/GIS payment: 654.55
-2033-10-28:CPP payment:  549.10
+2033-10-28:OAS/GIS payment: 650.00
+2033-10-28:CPP payment:  544.00
 2033-10-28:DIVIDEND: XYZ Tfsa 591@2.48 = 1465.68
 2033-11-01:BANK SPEND:  925.00
-2033-11-15:SPLURGE SPENDING:  3750.63
+2033-11-15:SPLURGE SPENDING:  3721.68
 2033-11-23:BANK SPEND:  925.00
 2033-11-25:STOCK-PRICE-UPDATE:  ABC 79.86 [3.01%]
 2033-11-25:STOCK-PRICE-UPDATE:  XYZ 199.63 [3.0%]
 2033-11-25:STOCK-PRICE-UPDATE:  CLU 21.38 [2.99%]
 2033-11-26:LIQUIDATE:  [Tfsa sold 112 XYZ net:22134.97]
-2033-11-28:OAS/GIS payment: 654.55
-2033-11-28:CPP payment:  549.10
+2033-11-28:OAS/GIS payment: 650.00
+2033-11-28:CPP payment:  544.00
 2033-12-01:DIVIDEND: ABC Tfsa 3200@1.32 = 4224.00
 2033-12-01:BANK SPEND:  925.00
-2033-12-01:SWEEP cash from Tfsa 27824.65
+2033-12-01:MOVE CASH from Tfsa to BankAccount 27824.65
 2033-12-23:BANK SPEND:  925.00
-2033-12-28:OAS/GIS payment: 654.55
-2033-12-28:CPP payment:  549.10
-2033-12-31:PAY TAXES:  3437.57
+2033-12-28:OAS/GIS payment: 650.00
+2033-12-28:CPP payment:  544.00
+2033-12-31:PAY TAXES:  3402.52
 2033 year-end.
 Cash generated
-     6,589.20 CPP
-     7,854.60 OAS
+     6,528.00 CPP
+     7,800.00 OAS
          0.00 GIS
          0.00 Pension
     22,758.72 Dividends
     22,134.97 Net liquidation (sell-buy)
          0.00 Interest
-    44,893.69 Total cash swept from tfsa-rif-nra to bank
-    59,337.49 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    59,221.69 Total cash generated
 
 Tax return 2033
-    32,136.89 Taxable income
-     1,619.38 Federal tax
-     1,818.19 Provincial tax
-     3,437.57 Tax Payable
+    32,021.09 Taxable income
+     1,602.01 Federal tax
+     1,800.51 Provincial tax
+     3,402.52 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
-     3,437.57 Balance owing
-    32,136.89 Net income
-    32,136.89 Net income before adj
-     7,854.60 OAS income
+     3,402.52 Balance owing
+    32,021.09 Net income
+    32,021.09 Net income before adj
+     7,800.00 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
@@ -1722,106 +1731,106 @@ Accounts
          0.00 -NRA-
          0.00 Cash
 
-    29,019.38 -BANKACCOUNT-
-    29,019.38 Cash
+    29,035.13 -BANKACCOUNT-
+    29,035.13 Cash
 
-   380,194.15 Net worth
+   380,209.90 Net worth
    351,174.77 Investments worth
 
     65,136.83 TFSA room for 2034
 2034-01-01:BANK SPEND:  925.00
 2034-01-03:TOP-UP TFSA:  TFSA room for 2034 65136.83
 2034-01-23:BANK SPEND:  925.00
-2034-01-28:OAS/GIS payment: 654.55
-2034-01-28:CPP payment:  549.10
+2034-01-28:OAS/GIS payment: 650.00
+2034-01-28:CPP payment:  544.00
 2034-01-28:DIVIDEND: XYZ Tfsa 479@2.58 = 1235.82
 2034-02-01:BANK SPEND:  925.00
-2034-02-15:SPLURGE SPENDING:  22448.03
+2034-02-15:SPLURGE SPENDING:  22454.13
 2034-02-23:BANK SPEND:  925.00
-2034-02-28:OAS/GIS payment: 654.55
-2034-02-28:CPP payment:  549.10
+2034-02-28:OAS/GIS payment: 650.00
+2034-02-28:CPP payment:  544.00
 2034-03-01:DIVIDEND: ABC Tfsa 3200@1.38 = 4416.00
 2034-03-01:BANK SPEND:  925.00
-2034-03-01:SWEEP cash from Tfsa 5651.82
+2034-03-01:MOVE CASH from Tfsa to BankAccount 5651.82
 2034-03-23:BANK SPEND:  925.00
-2034-03-28:OAS/GIS payment: 654.55
-2034-03-28:CPP payment:  549.10
+2034-03-28:OAS/GIS payment: 650.00
+2034-03-28:CPP payment:  544.00
 2034-04-01:BANK SPEND:  925.00
 2034-04-23:BANK SPEND:  925.00
-2034-04-28:OAS/GIS payment: 654.55
-2034-04-28:CPP payment:  549.10
+2034-04-28:OAS/GIS payment: 650.00
+2034-04-28:CPP payment:  544.00
 2034-04-28:DIVIDEND: XYZ Tfsa 479@2.58 = 1235.82
 2034-05-01:BANK SPEND:  925.00
-2034-05-15:SPLURGE SPENDING:  3712.77
+2034-05-15:SPLURGE SPENDING:  3683.82
 2034-05-23:BANK SPEND:  925.00
-2034-05-28:OAS/GIS payment: 654.55
-2034-05-28:CPP payment:  549.10
+2034-05-28:OAS/GIS payment: 650.00
+2034-05-28:CPP payment:  544.00
 2034-06-01:DIVIDEND: ABC Tfsa 3200@1.38 = 4416.00
 2034-06-01:BANK SPEND:  925.00
-2034-06-01:SWEEP cash from Tfsa 5651.82
+2034-06-01:MOVE CASH from Tfsa to BankAccount 5651.82
 2034-06-23:BANK SPEND:  925.00
-2034-06-28:OAS/GIS payment: 654.55
-2034-06-28:CPP payment:  549.10
+2034-06-28:OAS/GIS payment: 650.00
+2034-06-28:CPP payment:  544.00
 2034-07-01:BANK SPEND:  925.00
 2034-07-23:BANK SPEND:  925.00
-2034-07-28:OAS/GIS payment: 654.55
-2034-07-28:CPP payment:  549.10
+2034-07-28:OAS/GIS payment: 650.00
+2034-07-28:CPP payment:  544.00
 2034-07-28:DIVIDEND: XYZ Tfsa 479@2.58 = 1235.82
 2034-08-01:BANK SPEND:  925.00
-2034-08-15:SPLURGE SPENDING:  3712.77
+2034-08-15:SPLURGE SPENDING:  3683.82
 2034-08-23:BANK SPEND:  925.00
-2034-08-28:OAS/GIS payment: 654.55
-2034-08-28:CPP payment:  549.10
+2034-08-28:OAS/GIS payment: 650.00
+2034-08-28:CPP payment:  544.00
 2034-09-01:DIVIDEND: ABC Tfsa 3200@1.38 = 4416.00
 2034-09-01:BANK SPEND:  925.00
-2034-09-01:SWEEP cash from Tfsa 5651.82
+2034-09-01:MOVE CASH from Tfsa to BankAccount 5651.82
 2034-09-23:BANK SPEND:  925.00
-2034-09-28:OAS/GIS payment: 654.55
-2034-09-28:CPP payment:  549.10
+2034-09-28:OAS/GIS payment: 650.00
+2034-09-28:CPP payment:  544.00
 2034-10-01:BANK SPEND:  925.00
 2034-10-23:BANK SPEND:  925.00
-2034-10-28:OAS/GIS payment: 654.55
-2034-10-28:CPP payment:  549.10
+2034-10-28:OAS/GIS payment: 650.00
+2034-10-28:CPP payment:  544.00
 2034-10-28:DIVIDEND: XYZ Tfsa 479@2.58 = 1235.82
 2034-11-01:BANK SPEND:  925.00
-2034-11-15:SPLURGE SPENDING:  3712.77
+2034-11-15:SPLURGE SPENDING:  3683.82
 2034-11-23:BANK SPEND:  925.00
 2034-11-25:STOCK-PRICE-UPDATE:  ABC 82.26 [3.01%]
 2034-11-25:STOCK-PRICE-UPDATE:  XYZ 205.62 [3.0%]
 2034-11-25:STOCK-PRICE-UPDATE:  CLU 22.02 [2.99%]
 2034-11-26:LIQUIDATE:  [Tfsa sold 105 XYZ net:21374.20]
-2034-11-28:OAS/GIS payment: 654.55
-2034-11-28:CPP payment:  549.10
+2034-11-28:OAS/GIS payment: 650.00
+2034-11-28:CPP payment:  544.00
 2034-12-01:DIVIDEND: ABC Tfsa 3200@1.38 = 4416.00
 2034-12-01:BANK SPEND:  925.00
-2034-12-01:SWEEP cash from Tfsa 27026.02
+2034-12-01:MOVE CASH from Tfsa to BankAccount 27026.02
 2034-12-23:BANK SPEND:  925.00
-2034-12-28:OAS/GIS payment: 654.55
-2034-12-28:CPP payment:  549.10
-2034-12-31:PAY TAXES:  2041.00
+2034-12-28:OAS/GIS payment: 650.00
+2034-12-28:CPP payment:  544.00
+2034-12-31:PAY TAXES:  2006.50
 2034 year-end.
 Cash generated
-     6,589.20 CPP
-     7,854.60 OAS
+     6,528.00 CPP
+     7,800.00 OAS
          0.00 GIS
          0.00 Pension
     22,607.28 Dividends
     21,374.20 Net liquidation (sell-buy)
          0.00 Interest
-    43,981.48 Total cash swept from tfsa-rif-nra to bank
-    58,425.28 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    58,309.48 Total cash generated
 
 Tax return 2034
-    27,483.30 Taxable income
-       921.35 Federal tax
-     1,119.65 Provincial tax
-     2,041.00 Tax Payable
+    27,367.50 Taxable income
+       903.97 Federal tax
+     1,102.53 Provincial tax
+     2,006.50 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
-     2,041.00 Balance owing
-    27,483.30 Net income
-    27,483.30 Net income before adj
-     7,854.60 OAS income
+     2,006.50 Balance owing
+    27,367.50 Net income
+    27,367.50 Net income before adj
+     7,800.00 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
@@ -1837,106 +1846,106 @@ Accounts
          0.00 -NRA-
          0.00 Cash
 
-    29,617.32 -BANKACCOUNT-
-    29,617.32 Cash
+    29,632.52 -BANKACCOUNT-
+    29,632.52 Cash
 
-   369,751.20 Net worth
+   369,766.40 Net worth
    340,133.88 Investments worth
 
    115,118.31 TFSA room for 2035
 2035-01-01:BANK SPEND:  925.00
 2035-01-03:TOP-UP TFSA:  TFSA room for 2035 115118.31
 2035-01-23:BANK SPEND:  925.00
-2035-01-28:OAS/GIS payment: 654.55
-2035-01-28:CPP payment:  549.10
+2035-01-28:OAS/GIS payment: 650.00
+2035-01-28:CPP payment:  544.00
 2035-01-28:DIVIDEND: XYZ Tfsa 374@2.68 = 1002.32
 2035-02-01:BANK SPEND:  925.00
-2035-02-15:SPLURGE SPENDING:  23045.97
+2035-02-15:SPLURGE SPENDING:  23051.52
 2035-02-23:BANK SPEND:  925.00
-2035-02-28:OAS/GIS payment: 654.55
-2035-02-28:CPP payment:  549.10
+2035-02-28:OAS/GIS payment: 650.00
+2035-02-28:CPP payment:  544.00
 2035-03-01:DIVIDEND: ABC Tfsa 3200@1.43 = 4576.00
 2035-03-01:BANK SPEND:  925.00
-2035-03-01:SWEEP cash from Tfsa 5578.32
+2035-03-01:MOVE CASH from Tfsa to BankAccount 5578.32
 2035-03-23:BANK SPEND:  925.00
-2035-03-28:OAS/GIS payment: 654.55
-2035-03-28:CPP payment:  549.10
+2035-03-28:OAS/GIS payment: 650.00
+2035-03-28:CPP payment:  544.00
 2035-04-01:BANK SPEND:  925.00
 2035-04-23:BANK SPEND:  925.00
-2035-04-28:OAS/GIS payment: 654.55
-2035-04-28:CPP payment:  549.10
+2035-04-28:OAS/GIS payment: 650.00
+2035-04-28:CPP payment:  544.00
 2035-04-28:DIVIDEND: XYZ Tfsa 374@2.68 = 1002.32
 2035-05-01:BANK SPEND:  925.00
-2035-05-15:SPLURGE SPENDING:  3639.27
+2035-05-15:SPLURGE SPENDING:  3610.32
 2035-05-23:BANK SPEND:  925.00
-2035-05-28:OAS/GIS payment: 654.55
-2035-05-28:CPP payment:  549.10
+2035-05-28:OAS/GIS payment: 650.00
+2035-05-28:CPP payment:  544.00
 2035-06-01:DIVIDEND: ABC Tfsa 3200@1.43 = 4576.00
 2035-06-01:BANK SPEND:  925.00
-2035-06-01:SWEEP cash from Tfsa 5578.32
+2035-06-01:MOVE CASH from Tfsa to BankAccount 5578.32
 2035-06-23:BANK SPEND:  925.00
-2035-06-28:OAS/GIS payment: 654.55
-2035-06-28:CPP payment:  549.10
+2035-06-28:OAS/GIS payment: 650.00
+2035-06-28:CPP payment:  544.00
 2035-07-01:BANK SPEND:  925.00
 2035-07-23:BANK SPEND:  925.00
-2035-07-28:OAS/GIS payment: 654.55
-2035-07-28:CPP payment:  549.10
+2035-07-28:OAS/GIS payment: 650.00
+2035-07-28:CPP payment:  544.00
 2035-07-28:DIVIDEND: XYZ Tfsa 374@2.68 = 1002.32
 2035-08-01:BANK SPEND:  925.00
-2035-08-15:SPLURGE SPENDING:  3639.27
+2035-08-15:SPLURGE SPENDING:  3610.32
 2035-08-23:BANK SPEND:  925.00
-2035-08-28:OAS/GIS payment: 654.55
-2035-08-28:CPP payment:  549.10
+2035-08-28:OAS/GIS payment: 650.00
+2035-08-28:CPP payment:  544.00
 2035-09-01:DIVIDEND: ABC Tfsa 3200@1.43 = 4576.00
 2035-09-01:BANK SPEND:  925.00
-2035-09-01:SWEEP cash from Tfsa 5578.32
+2035-09-01:MOVE CASH from Tfsa to BankAccount 5578.32
 2035-09-23:BANK SPEND:  925.00
-2035-09-28:OAS/GIS payment: 654.55
-2035-09-28:CPP payment:  549.10
+2035-09-28:OAS/GIS payment: 650.00
+2035-09-28:CPP payment:  544.00
 2035-10-01:BANK SPEND:  925.00
 2035-10-23:BANK SPEND:  925.00
-2035-10-28:OAS/GIS payment: 654.55
-2035-10-28:CPP payment:  549.10
+2035-10-28:OAS/GIS payment: 650.00
+2035-10-28:CPP payment:  544.00
 2035-10-28:DIVIDEND: XYZ Tfsa 374@2.68 = 1002.32
 2035-11-01:BANK SPEND:  925.00
-2035-11-15:SPLURGE SPENDING:  3639.27
+2035-11-15:SPLURGE SPENDING:  3610.32
 2035-11-23:BANK SPEND:  925.00
 2035-11-25:STOCK-PRICE-UPDATE:  ABC 84.73 [3.0%]
 2035-11-25:STOCK-PRICE-UPDATE:  XYZ 211.79 [3.0%]
 2035-11-25:STOCK-PRICE-UPDATE:  CLU 22.68 [3.0%]
 2035-11-26:LIQUIDATE:  [Tfsa sold 49 XYZ net:10273.93]
-2035-11-28:OAS/GIS payment: 654.55
-2035-11-28:CPP payment:  549.10
+2035-11-28:OAS/GIS payment: 650.00
+2035-11-28:CPP payment:  544.00
 2035-12-01:DIVIDEND: ABC Tfsa 3200@1.43 = 4576.00
 2035-12-01:BANK SPEND:  925.00
-2035-12-01:SWEEP cash from Tfsa 15852.25
+2035-12-01:MOVE CASH from Tfsa to BankAccount 15852.25
 2035-12-23:BANK SPEND:  925.00
-2035-12-28:OAS/GIS payment: 654.55
-2035-12-28:CPP payment:  549.10
+2035-12-28:OAS/GIS payment: 650.00
+2035-12-28:CPP payment:  544.00
 2035-12-31:PAY TAXES:  0.00
 2035 year-end.
 Cash generated
-     6,589.20 CPP
-     7,854.60 OAS
+     6,528.00 CPP
+     7,800.00 OAS
          0.00 GIS
          0.00 Pension
     22,313.28 Dividends
     10,273.93 Net liquidation (sell-buy)
          0.00 Interest
-    32,587.21 Total cash swept from tfsa-rif-nra to bank
-    47,031.01 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    46,915.21 Total cash generated
 
 Tax return 2035
-    17,263.22 Taxable income
+    17,147.42 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    17,263.22 Net income
-    17,263.22 Net income before adj
-     7,854.60 OAS income
+    17,147.42 Net income
+    17,147.42 Net income before adj
+     7,800.00 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
@@ -1952,106 +1961,106 @@ Accounts
          0.00 -NRA-
          0.00 Cash
 
-    20,484.55 -BANKACCOUNT-
-    20,484.55 Cash
+    20,465.25 -BANKACCOUNT-
+    20,465.25 Cash
 
-   360,452.30 Net worth
+   360,433.00 Net worth
    339,967.75 Investments worth
 
    153,705.52 TFSA room for 2036
 2036-01-01:BANK SPEND:  925.00
 2036-01-03:TOP-UP TFSA:  TFSA room for 2036 153705.52
 2036-01-23:BANK SPEND:  925.00
-2036-01-28:OAS/GIS payment: 1053.34
-2036-01-28:CPP payment:  549.10
+2036-01-28:OAS/GIS payment: 1051.79
+2036-01-28:CPP payment:  544.00
 2036-01-28:DIVIDEND: XYZ Tfsa 325@2.79 = 906.75
 2036-02-01:BANK SPEND:  925.00
-2036-02-15:SPLURGE SPENDING:  14311.99
+2036-02-15:SPLURGE SPENDING:  14286.04
 2036-02-23:BANK SPEND:  925.00
-2036-02-28:OAS/GIS payment: 1053.34
-2036-02-28:CPP payment:  549.10
+2036-02-28:OAS/GIS payment: 1051.79
+2036-02-28:CPP payment:  544.00
 2036-03-01:DIVIDEND: ABC Tfsa 3200@1.49 = 4768.00
 2036-03-01:BANK SPEND:  925.00
-2036-03-01:SWEEP cash from Tfsa 5674.75
+2036-03-01:MOVE CASH from Tfsa to BankAccount 5674.75
 2036-03-23:BANK SPEND:  925.00
-2036-03-28:OAS/GIS payment: 1053.34
-2036-03-28:CPP payment:  549.10
+2036-03-28:OAS/GIS payment: 1051.79
+2036-03-28:CPP payment:  544.00
 2036-04-01:BANK SPEND:  925.00
 2036-04-23:BANK SPEND:  925.00
-2036-04-28:OAS/GIS payment: 1053.34
-2036-04-28:CPP payment:  549.10
+2036-04-28:OAS/GIS payment: 1051.79
+2036-04-28:CPP payment:  544.00
 2036-04-28:DIVIDEND: XYZ Tfsa 325@2.79 = 906.75
 2036-05-01:BANK SPEND:  925.00
-2036-05-15:SPLURGE SPENDING:  4932.07
+2036-05-15:SPLURGE SPENDING:  4912.12
 2036-05-23:BANK SPEND:  925.00
-2036-05-28:OAS/GIS payment: 1053.34
-2036-05-28:CPP payment:  549.10
+2036-05-28:OAS/GIS payment: 1051.79
+2036-05-28:CPP payment:  544.00
 2036-06-01:DIVIDEND: ABC Tfsa 3200@1.49 = 4768.00
 2036-06-01:BANK SPEND:  925.00
-2036-06-01:SWEEP cash from Tfsa 5674.75
+2036-06-01:MOVE CASH from Tfsa to BankAccount 5674.75
 2036-06-23:BANK SPEND:  925.00
-2036-06-28:OAS/GIS payment: 1053.34
-2036-06-28:CPP payment:  549.10
+2036-06-28:OAS/GIS payment: 1051.79
+2036-06-28:CPP payment:  544.00
 2036-07-01:BANK SPEND:  925.00
 2036-07-23:BANK SPEND:  925.00
-2036-07-28:OAS/GIS payment: 1053.34
-2036-07-28:CPP payment:  549.10
+2036-07-28:OAS/GIS payment: 1051.79
+2036-07-28:CPP payment:  544.00
 2036-07-28:DIVIDEND: XYZ Tfsa 325@2.79 = 906.75
 2036-08-01:BANK SPEND:  925.00
-2036-08-15:SPLURGE SPENDING:  4932.07
+2036-08-15:SPLURGE SPENDING:  4912.12
 2036-08-23:BANK SPEND:  925.00
-2036-08-28:OAS/GIS payment: 1053.34
-2036-08-28:CPP payment:  549.10
+2036-08-28:OAS/GIS payment: 1051.79
+2036-08-28:CPP payment:  544.00
 2036-09-01:DIVIDEND: ABC Tfsa 3200@1.49 = 4768.00
 2036-09-01:BANK SPEND:  925.00
-2036-09-01:SWEEP cash from Tfsa 5674.75
+2036-09-01:MOVE CASH from Tfsa to BankAccount 5674.75
 2036-09-23:BANK SPEND:  925.00
-2036-09-28:OAS/GIS payment: 1053.34
-2036-09-28:CPP payment:  549.10
+2036-09-28:OAS/GIS payment: 1051.79
+2036-09-28:CPP payment:  544.00
 2036-10-01:BANK SPEND:  925.00
 2036-10-23:BANK SPEND:  925.00
-2036-10-28:OAS/GIS payment: 1053.34
-2036-10-28:CPP payment:  549.10
+2036-10-28:OAS/GIS payment: 1051.79
+2036-10-28:CPP payment:  544.00
 2036-10-28:DIVIDEND: XYZ Tfsa 325@2.79 = 906.75
 2036-11-01:BANK SPEND:  925.00
-2036-11-15:SPLURGE SPENDING:  4932.07
+2036-11-15:SPLURGE SPENDING:  4912.12
 2036-11-23:BANK SPEND:  925.00
 2036-11-25:STOCK-PRICE-UPDATE:  ABC 87.27 [3.0%]
 2036-11-25:STOCK-PRICE-UPDATE:  XYZ 218.14 [3.0%]
 2036-11-25:STOCK-PRICE-UPDATE:  CLU 23.36 [3.0%]
 2036-11-26:LIQUIDATE:  [Tfsa sold 48 XYZ net:10366.01]
-2036-11-28:OAS/GIS payment: 1053.34
-2036-11-28:CPP payment:  549.10
+2036-11-28:OAS/GIS payment: 1051.79
+2036-11-28:CPP payment:  544.00
 2036-12-01:DIVIDEND: ABC Tfsa 3200@1.49 = 4768.00
 2036-12-01:BANK SPEND:  925.00
-2036-12-01:SWEEP cash from Tfsa 16040.76
+2036-12-01:MOVE CASH from Tfsa to BankAccount 16040.76
 2036-12-23:BANK SPEND:  925.00
-2036-12-28:OAS/GIS payment: 1053.34
-2036-12-28:CPP payment:  549.10
+2036-12-28:OAS/GIS payment: 1051.79
+2036-12-28:CPP payment:  544.00
 2036-12-31:PAY TAXES:  0.00
 2036 year-end.
 Cash generated
-     6,589.20 CPP
-     7,854.60 OAS
-     4,785.48 GIS
+     6,528.00 CPP
+     7,800.00 OAS
+     4,821.48 GIS
          0.00 Pension
     22,699.00 Dividends
     10,366.01 Net liquidation (sell-buy)
          0.00 Interest
-    33,065.01 Total cash swept from tfsa-rif-nra to bank
-    52,294.29 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    52,214.49 Total cash generated
 
 Tax return 2036
-    14,443.80 Taxable income
+    14,328.00 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    14,443.80 Net income
-    14,443.80 Net income before adj
-     7,854.60 OAS income
+    14,328.00 Net income
+    14,328.00 Net income before adj
+     7,800.00 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
@@ -2067,106 +2076,106 @@ Accounts
          0.00 -NRA-
          0.00 Cash
 
-    21,470.64 -BANKACCOUNT-
-    21,470.64 Cash
+    21,457.34 -BANKACCOUNT-
+    21,457.34 Cash
 
-   361,159.42 Net worth
+   361,146.12 Net worth
    339,688.78 Investments worth
 
    192,770.53 TFSA room for 2037
 2037-01-01:BANK SPEND:  925.00
 2037-01-03:TOP-UP TFSA:  TFSA room for 2037 192770.53
 2037-01-23:BANK SPEND:  925.00
-2037-01-28:OAS/GIS payment: 1221.27
-2037-01-28:CPP payment:  549.10
+2037-01-28:OAS/GIS payment: 1219.72
+2037-01-28:CPP payment:  544.00
 2037-01-28:DIVIDEND: XYZ Tfsa 277@2.90 = 803.30
 2037-02-01:BANK SPEND:  925.00
-2037-02-15:SPLURGE SPENDING:  15466.01
+2037-02-15:SPLURGE SPENDING:  15446.06
 2037-02-23:BANK SPEND:  925.00
-2037-02-28:OAS/GIS payment: 1221.27
-2037-02-28:CPP payment:  549.10
+2037-02-28:OAS/GIS payment: 1219.72
+2037-02-28:CPP payment:  544.00
 2037-03-01:DIVIDEND: ABC Tfsa 3200@1.55 = 4960.00
 2037-03-01:BANK SPEND:  925.00
-2037-03-01:SWEEP cash from Tfsa 5763.30
+2037-03-01:MOVE CASH from Tfsa to BankAccount 5763.30
 2037-03-23:BANK SPEND:  925.00
-2037-03-28:OAS/GIS payment: 1221.27
-2037-03-28:CPP payment:  549.10
+2037-03-28:OAS/GIS payment: 1219.72
+2037-03-28:CPP payment:  544.00
 2037-04-01:BANK SPEND:  925.00
 2037-04-23:BANK SPEND:  925.00
-2037-04-28:OAS/GIS payment: 1221.27
-2037-04-28:CPP payment:  549.10
+2037-04-28:OAS/GIS payment: 1219.72
+2037-04-28:CPP payment:  544.00
 2037-04-28:DIVIDEND: XYZ Tfsa 277@2.90 = 803.30
 2037-05-01:BANK SPEND:  925.00
-2037-05-15:SPLURGE SPENDING:  5524.41
+2037-05-15:SPLURGE SPENDING:  5504.46
 2037-05-23:BANK SPEND:  925.00
-2037-05-28:OAS/GIS payment: 1286.72
-2037-05-28:CPP payment:  549.10
+2037-05-28:OAS/GIS payment: 1284.72
+2037-05-28:CPP payment:  544.00
 2037-06-01:DIVIDEND: ABC Tfsa 3200@1.55 = 4960.00
 2037-06-01:BANK SPEND:  925.00
-2037-06-01:SWEEP cash from Tfsa 5763.30
+2037-06-01:MOVE CASH from Tfsa to BankAccount 5763.30
 2037-06-23:BANK SPEND:  925.00
-2037-06-28:OAS/GIS payment: 1286.72
-2037-06-28:CPP payment:  549.10
+2037-06-28:OAS/GIS payment: 1284.72
+2037-06-28:CPP payment:  544.00
 2037-07-01:BANK SPEND:  925.00
 2037-07-23:BANK SPEND:  925.00
-2037-07-28:OAS/GIS payment: 1286.72
-2037-07-28:CPP payment:  549.10
+2037-07-28:OAS/GIS payment: 1284.72
+2037-07-28:CPP payment:  544.00
 2037-07-28:DIVIDEND: XYZ Tfsa 277@2.90 = 803.30
 2037-08-01:BANK SPEND:  925.00
-2037-08-15:SPLURGE SPENDING:  5720.76
+2037-08-15:SPLURGE SPENDING:  5699.46
 2037-08-23:BANK SPEND:  925.00
-2037-08-28:OAS/GIS payment: 1286.72
-2037-08-28:CPP payment:  549.10
+2037-08-28:OAS/GIS payment: 1284.72
+2037-08-28:CPP payment:  544.00
 2037-09-01:DIVIDEND: ABC Tfsa 3200@1.55 = 4960.00
 2037-09-01:BANK SPEND:  925.00
-2037-09-01:SWEEP cash from Tfsa 5763.30
+2037-09-01:MOVE CASH from Tfsa to BankAccount 5763.30
 2037-09-23:BANK SPEND:  925.00
-2037-09-28:OAS/GIS payment: 1286.72
-2037-09-28:CPP payment:  549.10
+2037-09-28:OAS/GIS payment: 1284.72
+2037-09-28:CPP payment:  544.00
 2037-10-01:BANK SPEND:  925.00
 2037-10-23:BANK SPEND:  925.00
-2037-10-28:OAS/GIS payment: 1286.72
-2037-10-28:CPP payment:  549.10
+2037-10-28:OAS/GIS payment: 1284.72
+2037-10-28:CPP payment:  544.00
 2037-10-28:DIVIDEND: XYZ Tfsa 277@2.90 = 803.30
 2037-11-01:BANK SPEND:  925.00
-2037-11-15:SPLURGE SPENDING:  5720.76
+2037-11-15:SPLURGE SPENDING:  5699.46
 2037-11-23:BANK SPEND:  925.00
 2037-11-25:STOCK-PRICE-UPDATE:  ABC 89.89 [3.0%]
 2037-11-25:STOCK-PRICE-UPDATE:  XYZ 224.68 [3.0%]
 2037-11-25:STOCK-PRICE-UPDATE:  CLU 24.06 [3.0%]
 2037-11-26:LIQUIDATE:  [Tfsa sold 46 XYZ net:10231.93]
-2037-11-28:OAS/GIS payment: 1286.72
-2037-11-28:CPP payment:  549.10
+2037-11-28:OAS/GIS payment: 1284.72
+2037-11-28:CPP payment:  544.00
 2037-12-01:DIVIDEND: ABC Tfsa 3200@1.55 = 4960.00
 2037-12-01:BANK SPEND:  925.00
-2037-12-01:SWEEP cash from Tfsa 15995.23
+2037-12-01:MOVE CASH from Tfsa to BankAccount 15995.23
 2037-12-23:BANK SPEND:  925.00
-2037-12-28:OAS/GIS payment: 1286.72
-2037-12-28:CPP payment:  549.10
+2037-12-28:OAS/GIS payment: 1284.72
+2037-12-28:CPP payment:  544.00
 2037-12-31:PAY TAXES:  0.00
 2037 year-end.
 Cash generated
-     6,589.20 CPP
-     8,378.20 OAS
-     6,800.64 GIS
+     6,528.00 CPP
+     8,320.00 OAS
+     6,836.64 GIS
          0.00 Pension
     23,053.20 Dividends
     10,231.93 Net liquidation (sell-buy)
          0.00 Interest
-    33,285.13 Total cash swept from tfsa-rif-nra to bank
-    55,053.17 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    54,969.77 Total cash generated
 
 Tax return 2037
-    14,967.40 Taxable income
+    14,848.00 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    14,967.40 Net income
-    14,967.40 Net income before adj
-     8,378.20 OAS income
+    14,848.00 Net income
+    14,848.00 Net income before adj
+     8,320.00 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
@@ -2182,106 +2191,106 @@ Accounts
          0.00 -NRA-
          0.00 Cash
 
-    21,891.87 -BANKACCOUNT-
-    21,891.87 Cash
+    21,877.67 -BANKACCOUNT-
+    21,877.67 Cash
 
-   361,440.95 Net worth
+   361,426.75 Net worth
    339,549.08 Investments worth
 
    232,055.66 TFSA room for 2038
 2038-01-01:BANK SPEND:  925.00
 2038-01-03:TOP-UP TFSA:  TFSA room for 2038 232055.66
 2038-01-23:BANK SPEND:  925.00
-2038-01-28:OAS/GIS payment: 1286.72
-2038-01-28:CPP payment:  549.10
+2038-01-28:OAS/GIS payment: 1284.72
+2038-01-28:CPP payment:  544.00
 2038-01-28:DIVIDEND: XYZ Tfsa 231@3.02 = 697.62
 2038-02-01:BANK SPEND:  925.00
-2038-02-15:SPLURGE SPENDING:  15952.69
+2038-02-15:SPLURGE SPENDING:  15931.39
 2038-02-23:BANK SPEND:  925.00
-2038-02-28:OAS/GIS payment: 1286.72
-2038-02-28:CPP payment:  549.10
+2038-02-28:OAS/GIS payment: 1284.72
+2038-02-28:CPP payment:  544.00
 2038-03-01:DIVIDEND: ABC Tfsa 3200@1.61 = 5152.00
 2038-03-01:BANK SPEND:  925.00
-2038-03-01:SWEEP cash from Tfsa 5849.62
+2038-03-01:MOVE CASH from Tfsa to BankAccount 5849.62
 2038-03-23:BANK SPEND:  925.00
-2038-03-28:OAS/GIS payment: 1286.72
-2038-03-28:CPP payment:  549.10
+2038-03-28:OAS/GIS payment: 1284.72
+2038-03-28:CPP payment:  544.00
 2038-04-01:BANK SPEND:  925.00
 2038-04-23:BANK SPEND:  925.00
-2038-04-28:OAS/GIS payment: 1286.72
-2038-04-28:CPP payment:  549.10
+2038-04-28:OAS/GIS payment: 1284.72
+2038-04-28:CPP payment:  544.00
 2038-04-28:DIVIDEND: XYZ Tfsa 231@3.02 = 697.62
 2038-05-01:BANK SPEND:  925.00
-2038-05-15:SPLURGE SPENDING:  5807.08
+2038-05-15:SPLURGE SPENDING:  5785.78
 2038-05-23:BANK SPEND:  925.00
-2038-05-28:OAS/GIS payment: 1286.72
-2038-05-28:CPP payment:  549.10
+2038-05-28:OAS/GIS payment: 1284.72
+2038-05-28:CPP payment:  544.00
 2038-06-01:DIVIDEND: ABC Tfsa 3200@1.61 = 5152.00
 2038-06-01:BANK SPEND:  925.00
-2038-06-01:SWEEP cash from Tfsa 5849.62
+2038-06-01:MOVE CASH from Tfsa to BankAccount 5849.62
 2038-06-23:BANK SPEND:  925.00
-2038-06-28:OAS/GIS payment: 1286.72
-2038-06-28:CPP payment:  549.10
+2038-06-28:OAS/GIS payment: 1284.72
+2038-06-28:CPP payment:  544.00
 2038-07-01:BANK SPEND:  925.00
 2038-07-23:BANK SPEND:  925.00
-2038-07-28:OAS/GIS payment: 1286.72
-2038-07-28:CPP payment:  549.10
+2038-07-28:OAS/GIS payment: 1284.72
+2038-07-28:CPP payment:  544.00
 2038-07-28:DIVIDEND: XYZ Tfsa 231@3.02 = 697.62
 2038-08-01:BANK SPEND:  925.00
-2038-08-15:SPLURGE SPENDING:  5807.08
+2038-08-15:SPLURGE SPENDING:  5785.78
 2038-08-23:BANK SPEND:  925.00
-2038-08-28:OAS/GIS payment: 1286.72
-2038-08-28:CPP payment:  549.10
+2038-08-28:OAS/GIS payment: 1284.72
+2038-08-28:CPP payment:  544.00
 2038-09-01:DIVIDEND: ABC Tfsa 3200@1.61 = 5152.00
 2038-09-01:BANK SPEND:  925.00
-2038-09-01:SWEEP cash from Tfsa 5849.62
+2038-09-01:MOVE CASH from Tfsa to BankAccount 5849.62
 2038-09-23:BANK SPEND:  925.00
-2038-09-28:OAS/GIS payment: 1286.72
-2038-09-28:CPP payment:  549.10
+2038-09-28:OAS/GIS payment: 1284.72
+2038-09-28:CPP payment:  544.00
 2038-10-01:BANK SPEND:  925.00
 2038-10-23:BANK SPEND:  925.00
-2038-10-28:OAS/GIS payment: 1286.72
-2038-10-28:CPP payment:  549.10
+2038-10-28:OAS/GIS payment: 1284.72
+2038-10-28:CPP payment:  544.00
 2038-10-28:DIVIDEND: XYZ Tfsa 231@3.02 = 697.62
 2038-11-01:BANK SPEND:  925.00
-2038-11-15:SPLURGE SPENDING:  5807.08
+2038-11-15:SPLURGE SPENDING:  5785.78
 2038-11-23:BANK SPEND:  925.00
 2038-11-25:STOCK-PRICE-UPDATE:  ABC 92.59 [3.0%]
 2038-11-25:STOCK-PRICE-UPDATE:  XYZ 231.42 [3.0%]
 2038-11-25:STOCK-PRICE-UPDATE:  CLU 24.78 [2.99%]
 2038-11-26:LIQUIDATE:  [Tfsa sold 45 XYZ net:10309.76]
-2038-11-28:OAS/GIS payment: 1286.72
-2038-11-28:CPP payment:  549.10
+2038-11-28:OAS/GIS payment: 1284.72
+2038-11-28:CPP payment:  544.00
 2038-12-01:DIVIDEND: ABC Tfsa 3200@1.61 = 5152.00
 2038-12-01:BANK SPEND:  925.00
-2038-12-01:SWEEP cash from Tfsa 16159.38
+2038-12-01:MOVE CASH from Tfsa to BankAccount 16159.38
 2038-12-23:BANK SPEND:  925.00
-2038-12-28:OAS/GIS payment: 1286.72
-2038-12-28:CPP payment:  549.10
+2038-12-28:OAS/GIS payment: 1284.72
+2038-12-28:CPP payment:  544.00
 2038-12-31:PAY TAXES:  0.00
 2038 year-end.
 Cash generated
-     6,589.20 CPP
-     8,640.00 OAS
-     6,800.64 GIS
+     6,528.00 CPP
+     8,580.00 OAS
+     6,836.64 GIS
          0.00 Pension
     23,398.48 Dividends
     10,309.76 Net liquidation (sell-buy)
          0.00 Interest
-    33,708.24 Total cash swept from tfsa-rif-nra to bank
-    55,738.08 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    55,652.88 Total cash generated
 
 Tax return 2038
-    15,229.20 Taxable income
+    15,108.00 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    15,229.20 Net income
-    15,229.20 Net income before adj
-     8,640.00 OAS income
+    15,108.00 Net income
+    15,108.00 Net income before adj
+     8,580.00 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
@@ -2297,106 +2306,106 @@ Accounts
          0.00 -NRA-
          0.00 Cash
 
-    22,056.02 -BANKACCOUNT-
-    22,056.02 Cash
+    22,041.82 -BANKACCOUNT-
+    22,041.82 Cash
 
-   361,388.14 Net worth
+   361,373.94 Net worth
    339,332.12 Investments worth
 
    271,763.90 TFSA room for 2039
 2039-01-01:BANK SPEND:  925.00
 2039-01-03:TOP-UP TFSA:  TFSA room for 2039 271763.90
 2039-01-23:BANK SPEND:  925.00
-2039-01-28:OAS/GIS payment: 1286.72
-2039-01-28:CPP payment:  549.10
+2039-01-28:OAS/GIS payment: 1284.72
+2039-01-28:CPP payment:  544.00
 2039-01-28:DIVIDEND: XYZ Tfsa 186@3.14 = 584.04
 2039-02-01:BANK SPEND:  925.00
-2039-02-15:SPLURGE SPENDING:  16116.84
+2039-02-15:SPLURGE SPENDING:  16095.54
 2039-02-23:BANK SPEND:  925.00
-2039-02-28:OAS/GIS payment: 1286.72
-2039-02-28:CPP payment:  549.10
+2039-02-28:OAS/GIS payment: 1284.72
+2039-02-28:CPP payment:  544.00
 2039-03-01:DIVIDEND: ABC Tfsa 3200@1.68 = 5376.00
 2039-03-01:BANK SPEND:  925.00
-2039-03-01:SWEEP cash from Tfsa 5960.04
+2039-03-01:MOVE CASH from Tfsa to BankAccount 5960.04
 2039-03-23:BANK SPEND:  925.00
-2039-03-28:OAS/GIS payment: 1286.72
-2039-03-28:CPP payment:  549.10
+2039-03-28:OAS/GIS payment: 1284.72
+2039-03-28:CPP payment:  544.00
 2039-04-01:BANK SPEND:  925.00
 2039-04-23:BANK SPEND:  925.00
-2039-04-28:OAS/GIS payment: 1286.72
-2039-04-28:CPP payment:  549.10
+2039-04-28:OAS/GIS payment: 1284.72
+2039-04-28:CPP payment:  544.00
 2039-04-28:DIVIDEND: XYZ Tfsa 186@3.14 = 584.04
 2039-05-01:BANK SPEND:  925.00
-2039-05-15:SPLURGE SPENDING:  5917.50
+2039-05-15:SPLURGE SPENDING:  5896.20
 2039-05-23:BANK SPEND:  925.00
-2039-05-28:OAS/GIS payment: 1286.72
-2039-05-28:CPP payment:  549.10
+2039-05-28:OAS/GIS payment: 1284.72
+2039-05-28:CPP payment:  544.00
 2039-06-01:DIVIDEND: ABC Tfsa 3200@1.68 = 5376.00
 2039-06-01:BANK SPEND:  925.00
-2039-06-01:SWEEP cash from Tfsa 5960.04
+2039-06-01:MOVE CASH from Tfsa to BankAccount 5960.04
 2039-06-23:BANK SPEND:  925.00
-2039-06-28:OAS/GIS payment: 1286.72
-2039-06-28:CPP payment:  549.10
+2039-06-28:OAS/GIS payment: 1284.72
+2039-06-28:CPP payment:  544.00
 2039-07-01:BANK SPEND:  925.00
 2039-07-23:BANK SPEND:  925.00
-2039-07-28:OAS/GIS payment: 1286.72
-2039-07-28:CPP payment:  549.10
+2039-07-28:OAS/GIS payment: 1284.72
+2039-07-28:CPP payment:  544.00
 2039-07-28:DIVIDEND: XYZ Tfsa 186@3.14 = 584.04
 2039-08-01:BANK SPEND:  925.00
-2039-08-15:SPLURGE SPENDING:  5917.50
+2039-08-15:SPLURGE SPENDING:  5896.20
 2039-08-23:BANK SPEND:  925.00
-2039-08-28:OAS/GIS payment: 1286.72
-2039-08-28:CPP payment:  549.10
+2039-08-28:OAS/GIS payment: 1284.72
+2039-08-28:CPP payment:  544.00
 2039-09-01:DIVIDEND: ABC Tfsa 3200@1.68 = 5376.00
 2039-09-01:BANK SPEND:  925.00
-2039-09-01:SWEEP cash from Tfsa 5960.04
+2039-09-01:MOVE CASH from Tfsa to BankAccount 5960.04
 2039-09-23:BANK SPEND:  925.00
-2039-09-28:OAS/GIS payment: 1286.72
-2039-09-28:CPP payment:  549.10
+2039-09-28:OAS/GIS payment: 1284.72
+2039-09-28:CPP payment:  544.00
 2039-10-01:BANK SPEND:  925.00
 2039-10-23:BANK SPEND:  925.00
-2039-10-28:OAS/GIS payment: 1286.72
-2039-10-28:CPP payment:  549.10
+2039-10-28:OAS/GIS payment: 1284.72
+2039-10-28:CPP payment:  544.00
 2039-10-28:DIVIDEND: XYZ Tfsa 186@3.14 = 584.04
 2039-11-01:BANK SPEND:  925.00
-2039-11-15:SPLURGE SPENDING:  5917.50
+2039-11-15:SPLURGE SPENDING:  5896.20
 2039-11-23:BANK SPEND:  925.00
 2039-11-25:STOCK-PRICE-UPDATE:  ABC 95.37 [3.0%]
 2039-11-25:STOCK-PRICE-UPDATE:  XYZ 238.36 [3.0%]
 2039-11-25:STOCK-PRICE-UPDATE:  CLU 25.52 [2.99%]
 2039-11-26:LIQUIDATE:  [Tfsa sold 44 XYZ net:10382.96]
-2039-11-28:OAS/GIS payment: 1286.72
-2039-11-28:CPP payment:  549.10
+2039-11-28:OAS/GIS payment: 1284.72
+2039-11-28:CPP payment:  544.00
 2039-12-01:DIVIDEND: ABC Tfsa 3200@1.68 = 5376.00
 2039-12-01:BANK SPEND:  925.00
-2039-12-01:SWEEP cash from Tfsa 16343.00
+2039-12-01:MOVE CASH from Tfsa to BankAccount 16343.00
 2039-12-23:BANK SPEND:  925.00
-2039-12-28:OAS/GIS payment: 1286.72
-2039-12-28:CPP payment:  549.10
+2039-12-28:OAS/GIS payment: 1284.72
+2039-12-28:CPP payment:  544.00
 2039-12-31:PAY TAXES:  0.00
 2039 year-end.
 Cash generated
-     6,589.20 CPP
-     8,640.00 OAS
-     6,800.64 GIS
+     6,528.00 CPP
+     8,580.00 OAS
+     6,836.64 GIS
          0.00 Pension
     23,840.16 Dividends
     10,382.96 Net liquidation (sell-buy)
          0.00 Interest
-    34,223.12 Total cash swept from tfsa-rif-nra to bank
-    56,252.96 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    56,167.76 Total cash generated
 
 Tax return 2039
-    15,229.20 Taxable income
+    15,108.00 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    15,229.20 Net income
-    15,229.20 Net income before adj
-     8,640.00 OAS income
+    15,108.00 Net income
+    15,108.00 Net income before adj
+     8,580.00 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
@@ -2412,106 +2421,106 @@ Accounts
          0.00 -NRA-
          0.00 Cash
 
-    22,239.64 -BANKACCOUNT-
-    22,239.64 Cash
+    22,225.44 -BANKACCOUNT-
+    22,225.44 Cash
 
-   361,270.76 Net worth
+   361,256.56 Net worth
    339,031.12 Investments worth
 
    311,987.02 TFSA room for 2040
 2040-01-01:BANK SPEND:  925.00
 2040-01-03:TOP-UP TFSA:  TFSA room for 2040 311987.02
 2040-01-23:BANK SPEND:  925.00
-2040-01-28:OAS/GIS payment: 1286.72
-2040-01-28:CPP payment:  549.10
+2040-01-28:OAS/GIS payment: 1284.72
+2040-01-28:CPP payment:  544.00
 2040-01-28:DIVIDEND: XYZ Tfsa 142@3.26 = 462.92
 2040-02-01:BANK SPEND:  925.00
-2040-02-15:SPLURGE SPENDING:  16300.46
+2040-02-15:SPLURGE SPENDING:  16279.16
 2040-02-23:BANK SPEND:  925.00
-2040-02-28:OAS/GIS payment: 1286.72
-2040-02-28:CPP payment:  549.10
+2040-02-28:OAS/GIS payment: 1284.72
+2040-02-28:CPP payment:  544.00
 2040-03-01:DIVIDEND: ABC Tfsa 3200@1.74 = 5568.00
 2040-03-01:BANK SPEND:  925.00
-2040-03-01:SWEEP cash from Tfsa 6030.92
+2040-03-01:MOVE CASH from Tfsa to BankAccount 6030.92
 2040-03-23:BANK SPEND:  925.00
-2040-03-28:OAS/GIS payment: 1286.72
-2040-03-28:CPP payment:  549.10
+2040-03-28:OAS/GIS payment: 1284.72
+2040-03-28:CPP payment:  544.00
 2040-04-01:BANK SPEND:  925.00
 2040-04-23:BANK SPEND:  925.00
-2040-04-28:OAS/GIS payment: 1286.72
-2040-04-28:CPP payment:  549.10
+2040-04-28:OAS/GIS payment: 1284.72
+2040-04-28:CPP payment:  544.00
 2040-04-28:DIVIDEND: XYZ Tfsa 142@3.26 = 462.92
 2040-05-01:BANK SPEND:  925.00
-2040-05-15:SPLURGE SPENDING:  5988.38
+2040-05-15:SPLURGE SPENDING:  5967.08
 2040-05-23:BANK SPEND:  925.00
-2040-05-28:OAS/GIS payment: 1286.72
-2040-05-28:CPP payment:  549.10
+2040-05-28:OAS/GIS payment: 1284.72
+2040-05-28:CPP payment:  544.00
 2040-06-01:DIVIDEND: ABC Tfsa 3200@1.74 = 5568.00
 2040-06-01:BANK SPEND:  925.00
-2040-06-01:SWEEP cash from Tfsa 6030.92
+2040-06-01:MOVE CASH from Tfsa to BankAccount 6030.92
 2040-06-23:BANK SPEND:  925.00
-2040-06-28:OAS/GIS payment: 1286.72
-2040-06-28:CPP payment:  549.10
+2040-06-28:OAS/GIS payment: 1284.72
+2040-06-28:CPP payment:  544.00
 2040-07-01:BANK SPEND:  925.00
 2040-07-23:BANK SPEND:  925.00
-2040-07-28:OAS/GIS payment: 1286.72
-2040-07-28:CPP payment:  549.10
+2040-07-28:OAS/GIS payment: 1284.72
+2040-07-28:CPP payment:  544.00
 2040-07-28:DIVIDEND: XYZ Tfsa 142@3.26 = 462.92
 2040-08-01:BANK SPEND:  925.00
-2040-08-15:SPLURGE SPENDING:  5988.38
+2040-08-15:SPLURGE SPENDING:  5967.08
 2040-08-23:BANK SPEND:  925.00
-2040-08-28:OAS/GIS payment: 1286.72
-2040-08-28:CPP payment:  549.10
+2040-08-28:OAS/GIS payment: 1284.72
+2040-08-28:CPP payment:  544.00
 2040-09-01:DIVIDEND: ABC Tfsa 3200@1.74 = 5568.00
 2040-09-01:BANK SPEND:  925.00
-2040-09-01:SWEEP cash from Tfsa 6030.92
+2040-09-01:MOVE CASH from Tfsa to BankAccount 6030.92
 2040-09-23:BANK SPEND:  925.00
-2040-09-28:OAS/GIS payment: 1286.72
-2040-09-28:CPP payment:  549.10
+2040-09-28:OAS/GIS payment: 1284.72
+2040-09-28:CPP payment:  544.00
 2040-10-01:BANK SPEND:  925.00
 2040-10-23:BANK SPEND:  925.00
-2040-10-28:OAS/GIS payment: 1286.72
-2040-10-28:CPP payment:  549.10
+2040-10-28:OAS/GIS payment: 1284.72
+2040-10-28:CPP payment:  544.00
 2040-10-28:DIVIDEND: XYZ Tfsa 142@3.26 = 462.92
 2040-11-01:BANK SPEND:  925.00
-2040-11-15:SPLURGE SPENDING:  5988.38
+2040-11-15:SPLURGE SPENDING:  5967.08
 2040-11-23:BANK SPEND:  925.00
 2040-11-25:STOCK-PRICE-UPDATE:  ABC 98.23 [3.0%]
 2040-11-25:STOCK-PRICE-UPDATE:  XYZ 245.51 [3.0%]
 2040-11-25:STOCK-PRICE-UPDATE:  CLU 26.29 [3.02%]
 2040-11-26:LIQUIDATE:  [Tfsa sold 42 XYZ net:10208.31]
-2040-11-28:OAS/GIS payment: 1286.72
-2040-11-28:CPP payment:  549.10
+2040-11-28:OAS/GIS payment: 1284.72
+2040-11-28:CPP payment:  544.00
 2040-12-01:DIVIDEND: ABC Tfsa 3200@1.74 = 5568.00
 2040-12-01:BANK SPEND:  925.00
-2040-12-01:SWEEP cash from Tfsa 16239.23
+2040-12-01:MOVE CASH from Tfsa to BankAccount 16239.23
 2040-12-23:BANK SPEND:  925.00
-2040-12-28:OAS/GIS payment: 1286.72
-2040-12-28:CPP payment:  549.10
+2040-12-28:OAS/GIS payment: 1284.72
+2040-12-28:CPP payment:  544.00
 2040-12-31:PAY TAXES:  0.00
 2040 year-end.
 Cash generated
-     6,589.20 CPP
-     8,640.00 OAS
-     6,800.64 GIS
+     6,528.00 CPP
+     8,580.00 OAS
+     6,836.64 GIS
          0.00 Pension
     24,123.68 Dividends
     10,208.31 Net liquidation (sell-buy)
          0.00 Interest
-    34,331.99 Total cash swept from tfsa-rif-nra to bank
-    56,361.83 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    56,276.63 Total cash generated
 
 Tax return 2040
-    15,229.20 Taxable income
+    15,108.00 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    15,229.20 Net income
-    15,229.20 Net income before adj
-     8,640.00 OAS income
+    15,108.00 Net income
+    15,108.00 Net income before adj
+     8,580.00 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
@@ -2527,106 +2536,106 @@ Accounts
          0.00 -NRA-
          0.00 Cash
 
-    22,135.87 -BANKACCOUNT-
-    22,135.87 Cash
+    22,121.67 -BANKACCOUNT-
+    22,121.67 Cash
 
-   361,022.87 Net worth
+   361,008.67 Net worth
    338,887.00 Investments worth
 
    352,319.01 TFSA room for 2041
 2041-01-01:BANK SPEND:  925.00
 2041-01-03:TOP-UP TFSA:  TFSA room for 2041 352319.01
 2041-01-23:BANK SPEND:  925.00
-2041-01-28:OAS/GIS payment: 1286.72
-2041-01-28:CPP payment:  549.10
+2041-01-28:OAS/GIS payment: 1284.72
+2041-01-28:CPP payment:  544.00
 2041-01-28:DIVIDEND: XYZ Tfsa 100@3.39 = 339.00
 2041-02-01:BANK SPEND:  925.00
-2041-02-15:SPLURGE SPENDING:  16196.69
+2041-02-15:SPLURGE SPENDING:  16175.39
 2041-02-23:BANK SPEND:  925.00
-2041-02-28:OAS/GIS payment: 1286.72
-2041-02-28:CPP payment:  549.10
+2041-02-28:OAS/GIS payment: 1284.72
+2041-02-28:CPP payment:  544.00
 2041-03-01:DIVIDEND: ABC Tfsa 3200@1.81 = 5792.00
 2041-03-01:BANK SPEND:  925.00
-2041-03-01:SWEEP cash from Tfsa 6131.00
+2041-03-01:MOVE CASH from Tfsa to BankAccount 6131.00
 2041-03-23:BANK SPEND:  925.00
-2041-03-28:OAS/GIS payment: 1286.72
-2041-03-28:CPP payment:  549.10
+2041-03-28:OAS/GIS payment: 1284.72
+2041-03-28:CPP payment:  544.00
 2041-04-01:BANK SPEND:  925.00
 2041-04-23:BANK SPEND:  925.00
-2041-04-28:OAS/GIS payment: 1286.72
-2041-04-28:CPP payment:  549.10
+2041-04-28:OAS/GIS payment: 1284.72
+2041-04-28:CPP payment:  544.00
 2041-04-28:DIVIDEND: XYZ Tfsa 100@3.39 = 339.00
 2041-05-01:BANK SPEND:  925.00
-2041-05-15:SPLURGE SPENDING:  6088.46
+2041-05-15:SPLURGE SPENDING:  6067.16
 2041-05-23:BANK SPEND:  925.00
-2041-05-28:OAS/GIS payment: 1286.72
-2041-05-28:CPP payment:  549.10
+2041-05-28:OAS/GIS payment: 1284.72
+2041-05-28:CPP payment:  544.00
 2041-06-01:DIVIDEND: ABC Tfsa 3200@1.81 = 5792.00
 2041-06-01:BANK SPEND:  925.00
-2041-06-01:SWEEP cash from Tfsa 6131.00
+2041-06-01:MOVE CASH from Tfsa to BankAccount 6131.00
 2041-06-23:BANK SPEND:  925.00
-2041-06-28:OAS/GIS payment: 1286.72
-2041-06-28:CPP payment:  549.10
+2041-06-28:OAS/GIS payment: 1284.72
+2041-06-28:CPP payment:  544.00
 2041-07-01:BANK SPEND:  925.00
 2041-07-23:BANK SPEND:  925.00
-2041-07-28:OAS/GIS payment: 1286.72
-2041-07-28:CPP payment:  549.10
+2041-07-28:OAS/GIS payment: 1284.72
+2041-07-28:CPP payment:  544.00
 2041-07-28:DIVIDEND: XYZ Tfsa 100@3.39 = 339.00
 2041-08-01:BANK SPEND:  925.00
-2041-08-15:SPLURGE SPENDING:  6088.46
+2041-08-15:SPLURGE SPENDING:  6067.16
 2041-08-23:BANK SPEND:  925.00
-2041-08-28:OAS/GIS payment: 1286.72
-2041-08-28:CPP payment:  549.10
+2041-08-28:OAS/GIS payment: 1284.72
+2041-08-28:CPP payment:  544.00
 2041-09-01:DIVIDEND: ABC Tfsa 3200@1.81 = 5792.00
 2041-09-01:BANK SPEND:  925.00
-2041-09-01:SWEEP cash from Tfsa 6131.00
+2041-09-01:MOVE CASH from Tfsa to BankAccount 6131.00
 2041-09-23:BANK SPEND:  925.00
-2041-09-28:OAS/GIS payment: 1286.72
-2041-09-28:CPP payment:  549.10
+2041-09-28:OAS/GIS payment: 1284.72
+2041-09-28:CPP payment:  544.00
 2041-10-01:BANK SPEND:  925.00
 2041-10-23:BANK SPEND:  925.00
-2041-10-28:OAS/GIS payment: 1286.72
-2041-10-28:CPP payment:  549.10
+2041-10-28:OAS/GIS payment: 1284.72
+2041-10-28:CPP payment:  544.00
 2041-10-28:DIVIDEND: XYZ Tfsa 100@3.39 = 339.00
 2041-11-01:BANK SPEND:  925.00
-2041-11-15:SPLURGE SPENDING:  6088.46
+2041-11-15:SPLURGE SPENDING:  6067.16
 2041-11-23:BANK SPEND:  925.00
 2041-11-25:STOCK-PRICE-UPDATE:  ABC 101.18 [3.0%]
 2041-11-25:STOCK-PRICE-UPDATE:  XYZ 252.88 [3.0%]
 2041-11-25:STOCK-PRICE-UPDATE:  CLU 27.08 [3.0%]
 2041-11-26:LIQUIDATE:  [Tfsa sold 41 XYZ net:10264.40]
-2041-11-28:OAS/GIS payment: 1286.72
-2041-11-28:CPP payment:  549.10
+2041-11-28:OAS/GIS payment: 1284.72
+2041-11-28:CPP payment:  544.00
 2041-12-01:DIVIDEND: ABC Tfsa 3200@1.81 = 5792.00
 2041-12-01:BANK SPEND:  925.00
-2041-12-01:SWEEP cash from Tfsa 16395.40
+2041-12-01:MOVE CASH from Tfsa to BankAccount 16395.40
 2041-12-23:BANK SPEND:  925.00
-2041-12-28:OAS/GIS payment: 1286.72
-2041-12-28:CPP payment:  549.10
+2041-12-28:OAS/GIS payment: 1284.72
+2041-12-28:CPP payment:  544.00
 2041-12-31:PAY TAXES:  0.00
 2041 year-end.
 Cash generated
-     6,589.20 CPP
-     8,640.00 OAS
-     6,800.64 GIS
+     6,528.00 CPP
+     8,580.00 OAS
+     6,836.64 GIS
          0.00 Pension
     24,524.00 Dividends
     10,264.40 Net liquidation (sell-buy)
          0.00 Interest
-    34,788.40 Total cash swept from tfsa-rif-nra to bank
-    56,818.24 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    56,733.04 Total cash generated
 
 Tax return 2041
-    15,229.20 Taxable income
+    15,108.00 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    15,229.20 Net income
-    15,229.20 Net income before adj
-     8,640.00 OAS income
+    15,108.00 Net income
+    15,108.00 Net income before adj
+     8,580.00 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
@@ -2642,106 +2651,106 @@ Accounts
          0.00 -NRA-
          0.00 Cash
 
-    22,292.04 -BANKACCOUNT-
-    22,292.04 Cash
+    22,277.84 -BANKACCOUNT-
+    22,277.84 Cash
 
-   360,987.96 Net worth
+   360,973.76 Net worth
    338,695.92 Investments worth
 
    393,107.41 TFSA room for 2042
 2042-01-01:BANK SPEND:  925.00
 2042-01-03:TOP-UP TFSA:  TFSA room for 2042 393107.41
 2042-01-23:BANK SPEND:  925.00
-2042-01-28:OAS/GIS payment: 1286.72
-2042-01-28:CPP payment:  549.10
+2042-01-28:OAS/GIS payment: 1284.72
+2042-01-28:CPP payment:  544.00
 2042-01-28:DIVIDEND: XYZ Tfsa 59@3.53 = 208.27
 2042-02-01:BANK SPEND:  925.00
-2042-02-15:SPLURGE SPENDING:  16352.86
+2042-02-15:SPLURGE SPENDING:  16331.56
 2042-02-23:BANK SPEND:  925.00
-2042-02-28:OAS/GIS payment: 1286.72
-2042-02-28:CPP payment:  549.10
+2042-02-28:OAS/GIS payment: 1284.72
+2042-02-28:CPP payment:  544.00
 2042-03-01:DIVIDEND: ABC Tfsa 3200@1.88 = 6016.00
 2042-03-01:BANK SPEND:  925.00
-2042-03-01:SWEEP cash from Tfsa 6224.27
+2042-03-01:MOVE CASH from Tfsa to BankAccount 6224.27
 2042-03-23:BANK SPEND:  925.00
-2042-03-28:OAS/GIS payment: 1286.72
-2042-03-28:CPP payment:  549.10
+2042-03-28:OAS/GIS payment: 1284.72
+2042-03-28:CPP payment:  544.00
 2042-04-01:BANK SPEND:  925.00
 2042-04-23:BANK SPEND:  925.00
-2042-04-28:OAS/GIS payment: 1286.72
-2042-04-28:CPP payment:  549.10
+2042-04-28:OAS/GIS payment: 1284.72
+2042-04-28:CPP payment:  544.00
 2042-04-28:DIVIDEND: XYZ Tfsa 59@3.53 = 208.27
 2042-05-01:BANK SPEND:  925.00
-2042-05-15:SPLURGE SPENDING:  6181.73
+2042-05-15:SPLURGE SPENDING:  6160.43
 2042-05-23:BANK SPEND:  925.00
-2042-05-28:OAS/GIS payment: 1286.72
-2042-05-28:CPP payment:  549.10
+2042-05-28:OAS/GIS payment: 1284.72
+2042-05-28:CPP payment:  544.00
 2042-06-01:DIVIDEND: ABC Tfsa 3200@1.88 = 6016.00
 2042-06-01:BANK SPEND:  925.00
-2042-06-01:SWEEP cash from Tfsa 6224.27
+2042-06-01:MOVE CASH from Tfsa to BankAccount 6224.27
 2042-06-23:BANK SPEND:  925.00
-2042-06-28:OAS/GIS payment: 1286.72
-2042-06-28:CPP payment:  549.10
+2042-06-28:OAS/GIS payment: 1284.72
+2042-06-28:CPP payment:  544.00
 2042-07-01:BANK SPEND:  925.00
 2042-07-23:BANK SPEND:  925.00
-2042-07-28:OAS/GIS payment: 1286.72
-2042-07-28:CPP payment:  549.10
+2042-07-28:OAS/GIS payment: 1284.72
+2042-07-28:CPP payment:  544.00
 2042-07-28:DIVIDEND: XYZ Tfsa 59@3.53 = 208.27
 2042-08-01:BANK SPEND:  925.00
-2042-08-15:SPLURGE SPENDING:  6181.73
+2042-08-15:SPLURGE SPENDING:  6160.43
 2042-08-23:BANK SPEND:  925.00
-2042-08-28:OAS/GIS payment: 1286.72
-2042-08-28:CPP payment:  549.10
+2042-08-28:OAS/GIS payment: 1284.72
+2042-08-28:CPP payment:  544.00
 2042-09-01:DIVIDEND: ABC Tfsa 3200@1.88 = 6016.00
 2042-09-01:BANK SPEND:  925.00
-2042-09-01:SWEEP cash from Tfsa 6224.27
+2042-09-01:MOVE CASH from Tfsa to BankAccount 6224.27
 2042-09-23:BANK SPEND:  925.00
-2042-09-28:OAS/GIS payment: 1286.72
-2042-09-28:CPP payment:  549.10
+2042-09-28:OAS/GIS payment: 1284.72
+2042-09-28:CPP payment:  544.00
 2042-10-01:BANK SPEND:  925.00
 2042-10-23:BANK SPEND:  925.00
-2042-10-28:OAS/GIS payment: 1286.72
-2042-10-28:CPP payment:  549.10
+2042-10-28:OAS/GIS payment: 1284.72
+2042-10-28:CPP payment:  544.00
 2042-10-28:DIVIDEND: XYZ Tfsa 59@3.53 = 208.27
 2042-11-01:BANK SPEND:  925.00
-2042-11-15:SPLURGE SPENDING:  6181.73
+2042-11-15:SPLURGE SPENDING:  6160.43
 2042-11-23:BANK SPEND:  925.00
 2042-11-25:STOCK-PRICE-UPDATE:  ABC 104.22 [3.0%]
 2042-11-25:STOCK-PRICE-UPDATE:  XYZ 260.47 [3.0%]
 2042-11-25:STOCK-PRICE-UPDATE:  CLU 27.89 [2.99%]
 2042-11-26:LIQUIDATE:  [Tfsa sold 40 XYZ net:10314.61]
-2042-11-28:OAS/GIS payment: 1286.72
-2042-11-28:CPP payment:  549.10
+2042-11-28:OAS/GIS payment: 1284.72
+2042-11-28:CPP payment:  544.00
 2042-12-01:DIVIDEND: ABC Tfsa 3200@1.88 = 6016.00
 2042-12-01:BANK SPEND:  925.00
-2042-12-01:SWEEP cash from Tfsa 16538.88
+2042-12-01:MOVE CASH from Tfsa to BankAccount 16538.88
 2042-12-23:BANK SPEND:  925.00
-2042-12-28:OAS/GIS payment: 1286.72
-2042-12-28:CPP payment:  549.10
+2042-12-28:OAS/GIS payment: 1284.72
+2042-12-28:CPP payment:  544.00
 2042-12-31:PAY TAXES:  0.00
 2042 year-end.
 Cash generated
-     6,589.20 CPP
-     8,640.00 OAS
-     6,800.64 GIS
+     6,528.00 CPP
+     8,580.00 OAS
+     6,836.64 GIS
          0.00 Pension
     24,897.08 Dividends
     10,314.61 Net liquidation (sell-buy)
          0.00 Interest
-    35,211.69 Total cash swept from tfsa-rif-nra to bank
-    57,241.53 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    57,156.33 Total cash generated
 
 Tax return 2042
-    15,229.20 Taxable income
+    15,108.00 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    15,229.20 Net income
-    15,229.20 Net income before adj
-     8,640.00 OAS income
+    15,108.00 Net income
+    15,108.00 Net income before adj
+     8,580.00 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
@@ -2757,92 +2766,92 @@ Accounts
          0.00 -NRA-
          0.00 Cash
 
-    22,435.52 -BANKACCOUNT-
-    22,435.52 Cash
+    22,421.32 -BANKACCOUNT-
+    22,421.32 Cash
 
-   360,888.45 Net worth
+   360,874.25 Net worth
    338,452.93 Investments worth
 
 Summations (nominal)
 Cash generated
-   135,627.70 CPP
-   126,851.45 OAS
-    45,589.32 GIS
+   134,368.00 CPP
+   125,970.00 OAS
+    45,841.32 GIS
          0.00 Pension
    490,285.84 Dividends
    309,804.44 Net liquidation (sell-buy)
        432.50 Interest
-   800,374.18 Total cash swept from tfsa-rif-nra to bank
- 1,108,591.25 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+ 1,106,702.10 Total cash generated
 
 Tax return 
-   758,931.43 Taxable income
-    57,705.94 Federal tax
-    51,283.60 Provincial tax
-   108,989.54 Tax Payable
+   756,790.28 Taxable income
+    57,485.21 Federal tax
+    51,105.82 Provincial tax
+   108,591.03 Tax Payable
      8,175.28 Dividend tax credits
     77,103.08 Installments
-    31,886.46 Balance owing
-   758,931.43 Net income
-   758,931.43 Net income before adj
-   758,931.43 OAS income
+    31,487.95 Balance owing
+   756,790.28 Net income
+   756,790.28 Net income before adj
+   756,790.28 OAS income
          0.00 Employment income
    388,942.84 RIF withdrawals
 
 Summations (per year)
 Cash generated
-     6,458.46 CPP
-     6,040.55 OAS
-     2,170.92 GIS
+     6,398.48 CPP
+     5,998.57 OAS
+     2,182.92 GIS
          0.00 Pension
     23,346.94 Dividends
     14,752.59 Net liquidation (sell-buy)
         20.60 Interest
-    38,113.06 Total cash swept from tfsa-rif-nra to bank
-    52,790.06 Total cash generated
+         0.00 Total cash swept from tfsa-rif-nra to bank
+    52,700.10 Total cash generated
 
 Tax return 
-    36,139.59 Taxable income
-     2,747.90 Federal tax
-     2,442.08 Provincial tax
-     5,189.98 Tax Payable
+    36,037.63 Taxable income
+     2,737.39 Federal tax
+     2,433.61 Provincial tax
+     5,171.00 Tax Payable
        389.30 Dividend tax credits
      3,671.58 Installments
-     1,518.40 Balance owing
-    36,139.59 Net income
-   758,931.43 Net income before adj
-    36,139.59 OAS income
+     1,499.43 Balance owing
+    36,037.63 Net income
+   756,790.28 Net income before adj
+    36,037.63 OAS income
          0.00 Employment income
     18,521.09 RIF withdrawals
 
 # Net, gross, tax paid:
-# 2022 net: 23706.38 = 31790.66 - 8084.28.  [Net worth:424808.46] (age 60)
-# 2023 net: 29677.36 = 36421.72 - 6744.36.  [Net worth:429021.34] (age 61)
-# 2024 net: 28180.97 = 34282.94 - 6101.97.  [Net worth:436330.42] (age 62)
-# 2025 net: 29449.55 = 35915.20 - 6465.65.  [Net worth:443626.31] (age 63)
-# 2026 net: 29409.62 = 35822.72 - 6413.10.  [Net worth:451208.40] (age 64)
-# 2027 net: 51004.10 = 67116.63 - 16112.53.  [Net worth:459859.45] (age 65)
-# 2028 net: 49693.94 = 64833.97 - 15140.03.  [Net worth:444956.57] (age 66)
-# 2029 net: 48952.91 = 63657.35 - 14704.44.  [Net worth:431419.66] (age 67)
-# 2030 net: 48376.10 = 62517.92 - 14141.82.  [Net worth:418407.83] (age 68)
-# 2031 net: 54491.94 = 61385.33 - 6893.39.  [Net worth:405852.91] (age 69)
-# 2032 net: 57583.53 = 60292.93 - 2709.40.  [Net worth:392730.61] (age 70)
-# 2033 net: 55899.92 = 59337.49 - 3437.57.  [Net worth:380194.15] (age 71)
-# 2034 net: 56384.28 = 58425.28 - 2041.00.  [Net worth:369751.20] (age 72)
-# 2035 net: 47031.01 = 47031.01 - 0.00.  [Net worth:360452.30] (age 73)
-# 2036 net: 52294.29 = 52294.29 - 0.00.  [Net worth:361159.42] (age 74)
-# 2037 net: 55053.17 = 55053.17 - 0.00.  [Net worth:361440.95] (age 75)
-# 2038 net: 55738.08 = 55738.08 - 0.00.  [Net worth:361388.14] (age 76)
-# 2039 net: 56252.96 = 56252.96 - 0.00.  [Net worth:361270.76] (age 77)
-# 2040 net: 56361.83 = 56361.83 - 0.00.  [Net worth:361022.87] (age 78)
-# 2041 net: 56818.24 = 56818.24 - 0.00.  [Net worth:360987.96] (age 79)
-# 2042 net: 57241.53 = 57241.53 - 0.00.  [Net worth:360888.45] (age 80)
-#   Total: 999601.71 = 1108591.25 - 108989.54   (Net Worth: 360888.45)
+# 2022 net: 23680.97 = 31754.96 - 8073.99.  [Net worth:423900.80] (age 60)
+# 2023 net: 29633.79 = 36360.52 - 6726.73.  [Net worth:428143.49] (age 61)
+# 2024 net: 28137.40 = 34221.74 - 6084.34.  [Net worth:435512.99] (age 62)
+# 2025 net: 29405.97 = 35854.00 - 6448.03.  [Net worth:442841.41] (age 63)
+# 2026 net: 29366.04 = 35761.52 - 6395.48.  [Net worth:450510.93] (age 64)
+# 2027 net: 50947.76 = 67023.58 - 16075.82.  [Net worth:451122.78] (age 65)
+# 2028 net: 49623.82 = 64718.17 - 15094.35.  [Net worth:436663.84] (age 66)
+# 2029 net: 48882.77 = 63541.55 - 14658.78.  [Net worth:423523.18] (age 67)
+# 2030 net: 48305.99 = 62402.12 - 14096.13.  [Net worth:410933.71] (age 68)
+# 2031 net: 54420.16 = 61269.53 - 6849.37.  [Net worth:405594.77] (age 69)
+# 2032 net: 57498.14 = 60177.13 - 2678.99.  [Net worth:392741.72] (age 70)
+# 2033 net: 55819.17 = 59221.69 - 3402.52.  [Net worth:380209.90] (age 71)
+# 2034 net: 56302.98 = 58309.48 - 2006.50.  [Net worth:369766.40] (age 72)
+# 2035 net: 46915.21 = 46915.21 - 0.00.  [Net worth:360433.00] (age 73)
+# 2036 net: 52214.49 = 52214.49 - 0.00.  [Net worth:361146.12] (age 74)
+# 2037 net: 54969.77 = 54969.77 - 0.00.  [Net worth:361426.75] (age 75)
+# 2038 net: 55652.88 = 55652.88 - 0.00.  [Net worth:361373.94] (age 76)
+# 2039 net: 56167.76 = 56167.76 - 0.00.  [Net worth:361256.56] (age 77)
+# 2040 net: 56276.63 = 56276.63 - 0.00.  [Net worth:361008.67] (age 78)
+# 2041 net: 56733.04 = 56733.04 - 0.00.  [Net worth:360973.76] (age 79)
+# 2042 net: 57156.33 = 57156.33 - 0.00.  [Net worth:360874.25] (age 80)
+#   Total: 998111.07 = 1106702.10 - 108591.03   (Net Worth: 360874.25)
 Saving reports. Number of histories: 1.
 Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\08.2\08.2-cash-and-tax-summary.csv
 Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\08.2\08.2-cash-flows.csv
 Scenario description: 08.1: Fixed 3% growth in stock prices. Liquidate rif-nra-tfsa 6-3% when 65+. Top up TFSA first with RIF, then NRA. PE.
 Start-date: 2022-01-01 end-date: 2042-12-31
-Execution time: 3.8483955s
+Execution time: 3.9041774s
 Done.
 Writing to log file C:\johanley\ProjectsPhoton\end-game\scenario\08.2\08.2.log

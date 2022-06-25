@@ -41,7 +41,7 @@ public final class History {
       AccountSnapshot snap = AccountSnapshot.forThe(investmentAcct.getClass().getSimpleName(), investmentAcct, marketValues);
       acctSet.add(snap);
     }
-    AccountSnapshot bankSnap = AccountSnapshot.forThe(bank.getClass().getSimpleName(), bank.value());
+    AccountSnapshot bankSnap = AccountSnapshot.forThe(bank.getClass().getSimpleName(), bank.cash());
     acctSet.add(bankSnap);
     accountSet.put(when.getYear(), acctSet);
   }

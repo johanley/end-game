@@ -11,1317 +11,1317 @@ History #1
 Incrementing one day at a time, starting with 2028-01-01
 2028-01-01:BANK SPEND:  700.00
 2028-01-23:BANK SPEND:  950.00
-2028-01-28:OAS/GIS payment: 812.00
-2028-01-28:CPP payment:  668.29
+2028-01-28:OAS/GIS payment: 807.46
+2028-01-28:CPP payment:  673.00
 2028-02-01:BANK SPEND:  700.00
-2028-02-15:SPLURGE SPENDING:  1630.29
+2028-02-15:SPLURGE SPENDING:  1630.46
 2028-02-23:BANK SPEND:  950.00
-2028-02-28:OAS/GIS payment: 812.00
-2028-02-28:CPP payment:  668.29
+2028-02-28:OAS/GIS payment: 807.46
+2028-02-28:CPP payment:  673.00
 2028-03-01:BANK SPEND:  700.00
 2028-03-23:BANK SPEND:  950.00
 2028-03-25:ANNUITY payment:  2234.00
-2028-03-28:OAS/GIS payment: 812.00
-2028-03-28:CPP payment:  668.29
+2028-03-28:OAS/GIS payment: 807.46
+2028-03-28:CPP payment:  673.00
 2028-04-01:BANK SPEND:  700.00
 2028-04-23:BANK SPEND:  950.00
-2028-04-28:OAS/GIS payment: 812.00
-2028-04-28:CPP payment:  668.29
+2028-04-28:OAS/GIS payment: 807.46
+2028-04-28:CPP payment:  673.00
 2028-05-01:BANK SPEND:  700.00
-2028-05-15:SPLURGE SPENDING:  1724.87
+2028-05-15:SPLURGE SPENDING:  1725.38
 2028-05-23:BANK SPEND:  950.00
-2028-05-28:OAS/GIS payment: 812.00
-2028-05-28:CPP payment:  668.29
+2028-05-28:OAS/GIS payment: 807.46
+2028-05-28:CPP payment:  673.00
 2028-06-01:BANK SPEND:  700.00
 2028-06-23:BANK SPEND:  950.00
-2028-06-28:OAS/GIS payment: 812.00
-2028-06-28:CPP payment:  668.29
+2028-06-28:OAS/GIS payment: 807.46
+2028-06-28:CPP payment:  673.00
 2028-07-01:BANK SPEND:  700.00
 2028-07-23:BANK SPEND:  950.00
-2028-07-28:OAS/GIS payment: 812.00
-2028-07-28:CPP payment:  668.29
+2028-07-28:OAS/GIS payment: 807.46
+2028-07-28:CPP payment:  673.00
 2028-08-01:BANK SPEND:  700.00
 2028-08-23:BANK SPEND:  950.00
-2028-08-28:OAS/GIS payment: 812.00
-2028-08-28:CPP payment:  668.29
+2028-08-28:OAS/GIS payment: 807.46
+2028-08-28:CPP payment:  673.00
 2028-09-01:BANK SPEND:  700.00
 2028-09-23:BANK SPEND:  950.00
-2028-09-28:OAS/GIS payment: 812.00
-2028-09-28:CPP payment:  668.29
+2028-09-28:OAS/GIS payment: 807.46
+2028-09-28:CPP payment:  673.00
 2028-10-01:BANK SPEND:  700.00
 2028-10-23:BANK SPEND:  950.00
-2028-10-28:OAS/GIS payment: 812.00
-2028-10-28:CPP payment:  668.29
+2028-10-28:OAS/GIS payment: 807.46
+2028-10-28:CPP payment:  673.00
 2028-11-01:BANK SPEND:  700.00
 2028-11-23:BANK SPEND:  950.00
-2028-11-28:OAS/GIS payment: 812.00
-2028-11-28:CPP payment:  668.29
+2028-11-28:OAS/GIS payment: 807.46
+2028-11-28:CPP payment:  673.00
 2028-12-01:BANK SPEND:  700.00
 2028-12-23:BANK SPEND:  950.00
-2028-12-28:OAS/GIS payment: 812.00
-2028-12-28:CPP payment:  668.29
+2028-12-28:OAS/GIS payment: 807.46
+2028-12-28:CPP payment:  673.00
 2028-12-31:PAY TAXES:  0.00
 2028 year-end.
 Cash generated
-     8,019.48 CPP
-     7,838.52 OAS
+     8,076.00 CPP
+     7,784.04 OAS
      1,905.48 GIS
      2,234.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    19,997.48 Total cash generated
+    19,999.52 Total cash generated
 
 Tax return 2028
-    18,092.00 Taxable income
+    18,094.04 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    18,092.00 Net income
-    18,092.00 Net income before adj
-     7,838.52 OAS income
+    18,094.04 Net income
+    18,094.04 Net income before adj
+     7,784.04 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
 Accounts
-     6,842.32 -BANKACCOUNT-
-     6,842.32 Cash
+     6,843.68 -BANKACCOUNT-
+     6,843.68 Cash
 
-     6,842.32 Net worth
+     6,843.68 Net worth
          0.00 Investments worth
 
 2029-01-01:BANK SPEND:  700.00
 2029-01-23:BANK SPEND:  950.00
-2029-01-28:OAS/GIS payment: 1017.00
-2029-01-28:CPP payment:  668.29
+2029-01-28:OAS/GIS payment: 1010.46
+2029-01-28:CPP payment:  673.00
 2029-02-01:BANK SPEND:  700.00
 2029-02-23:BANK SPEND:  950.00
-2029-02-28:OAS/GIS payment: 1017.00
-2029-02-28:CPP payment:  668.29
+2029-02-28:OAS/GIS payment: 1010.46
+2029-02-28:CPP payment:  673.00
 2029-03-01:BANK SPEND:  700.00
 2029-03-23:BANK SPEND:  950.00
 2029-03-25:ANNUITY payment:  2234.00
-2029-03-28:OAS/GIS payment: 1017.00
-2029-03-28:CPP payment:  668.29
+2029-03-28:OAS/GIS payment: 1010.46
+2029-03-28:CPP payment:  673.00
 2029-04-01:BANK SPEND:  700.00
 2029-04-23:BANK SPEND:  950.00
-2029-04-28:OAS/GIS payment: 1017.00
-2029-04-28:CPP payment:  668.29
+2029-04-28:OAS/GIS payment: 1010.46
+2029-04-28:CPP payment:  673.00
 2029-05-01:BANK SPEND:  700.00
-2029-05-15:SPLURGE SPENDING:  1017.48
+2029-05-15:SPLURGE SPENDING:  1011.52
 2029-05-23:BANK SPEND:  950.00
-2029-05-28:OAS/GIS payment: 1017.00
-2029-05-28:CPP payment:  668.29
+2029-05-28:OAS/GIS payment: 1010.46
+2029-05-28:CPP payment:  673.00
 2029-06-01:BANK SPEND:  700.00
 2029-06-23:BANK SPEND:  950.00
-2029-06-28:OAS/GIS payment: 1017.00
-2029-06-28:CPP payment:  668.29
+2029-06-28:OAS/GIS payment: 1010.46
+2029-06-28:CPP payment:  673.00
 2029-07-01:BANK SPEND:  700.00
 2029-07-23:BANK SPEND:  950.00
-2029-07-28:OAS/GIS payment: 1017.00
-2029-07-28:CPP payment:  668.29
+2029-07-28:OAS/GIS payment: 1010.46
+2029-07-28:CPP payment:  673.00
 2029-08-01:BANK SPEND:  700.00
-2029-08-15:SPLURGE SPENDING:  105.87
+2029-08-15:SPLURGE SPENDING:  100.38
 2029-08-23:BANK SPEND:  950.00
-2029-08-28:OAS/GIS payment: 1017.00
-2029-08-28:CPP payment:  668.29
+2029-08-28:OAS/GIS payment: 1010.46
+2029-08-28:CPP payment:  673.00
 2029-09-01:BANK SPEND:  700.00
 2029-09-23:BANK SPEND:  950.00
-2029-09-28:OAS/GIS payment: 1017.00
-2029-09-28:CPP payment:  668.29
+2029-09-28:OAS/GIS payment: 1010.46
+2029-09-28:CPP payment:  673.00
 2029-10-01:BANK SPEND:  700.00
 2029-10-23:BANK SPEND:  950.00
-2029-10-28:OAS/GIS payment: 1017.00
-2029-10-28:CPP payment:  668.29
+2029-10-28:OAS/GIS payment: 1010.46
+2029-10-28:CPP payment:  673.00
 2029-11-01:BANK SPEND:  700.00
-2029-11-15:SPLURGE SPENDING:  105.87
+2029-11-15:SPLURGE SPENDING:  100.38
 2029-11-23:BANK SPEND:  950.00
-2029-11-28:OAS/GIS payment: 1017.00
-2029-11-28:CPP payment:  668.29
+2029-11-28:OAS/GIS payment: 1010.46
+2029-11-28:CPP payment:  673.00
 2029-12-01:BANK SPEND:  700.00
 2029-12-23:BANK SPEND:  950.00
-2029-12-28:OAS/GIS payment: 1017.00
-2029-12-28:CPP payment:  668.29
+2029-12-28:OAS/GIS payment: 1010.46
+2029-12-28:CPP payment:  673.00
 2029-12-31:PAY TAXES:  0.00
 2029 year-end.
 Cash generated
-     8,019.48 CPP
-     7,838.52 OAS
-     4,365.48 GIS
+     8,076.00 CPP
+     7,784.04 OAS
+     4,341.48 GIS
      2,234.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    22,457.48 Total cash generated
+    22,435.52 Total cash generated
 
 Tax return 2029
-    18,092.00 Taxable income
+    18,094.04 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    18,092.00 Net income
-    18,092.00 Net income before adj
-     7,838.52 OAS income
+    18,094.04 Net income
+    18,094.04 Net income before adj
+     7,784.04 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
 Accounts
-     8,270.58 -BANKACCOUNT-
-     8,270.58 Cash
+     8,266.92 -BANKACCOUNT-
+     8,266.92 Cash
 
-     8,270.58 Net worth
+     8,266.92 Net worth
          0.00 Investments worth
 
 2030-01-01:BANK SPEND:  700.00
 2030-01-23:BANK SPEND:  950.00
-2030-01-28:OAS/GIS payment: 1017.00
-2030-01-28:CPP payment:  668.29
+2030-01-28:OAS/GIS payment: 1010.46
+2030-01-28:CPP payment:  673.00
 2030-02-01:BANK SPEND:  700.00
-2030-02-15:SPLURGE SPENDING:  105.87
+2030-02-15:SPLURGE SPENDING:  100.38
 2030-02-23:BANK SPEND:  950.00
-2030-02-28:OAS/GIS payment: 1017.00
-2030-02-28:CPP payment:  668.29
+2030-02-28:OAS/GIS payment: 1010.46
+2030-02-28:CPP payment:  673.00
 2030-03-01:BANK SPEND:  700.00
 2030-03-23:BANK SPEND:  950.00
 2030-03-25:ANNUITY payment:  2234.00
-2030-03-28:OAS/GIS payment: 1017.00
-2030-03-28:CPP payment:  668.29
+2030-03-28:OAS/GIS payment: 1010.46
+2030-03-28:CPP payment:  673.00
 2030-04-01:BANK SPEND:  700.00
 2030-04-23:BANK SPEND:  950.00
-2030-04-28:OAS/GIS payment: 1017.00
-2030-04-28:CPP payment:  668.29
+2030-04-28:OAS/GIS payment: 1010.46
+2030-04-28:CPP payment:  673.00
 2030-05-01:BANK SPEND:  700.00
-2030-05-15:SPLURGE SPENDING:  2339.87
+2030-05-15:SPLURGE SPENDING:  2334.38
 2030-05-23:BANK SPEND:  950.00
-2030-05-28:OAS/GIS payment: 1017.00
-2030-05-28:CPP payment:  668.29
+2030-05-28:OAS/GIS payment: 1010.46
+2030-05-28:CPP payment:  673.00
 2030-06-01:BANK SPEND:  700.00
 2030-06-23:BANK SPEND:  950.00
-2030-06-28:OAS/GIS payment: 1017.00
-2030-06-28:CPP payment:  668.29
+2030-06-28:OAS/GIS payment: 1010.46
+2030-06-28:CPP payment:  673.00
 2030-07-01:BANK SPEND:  700.00
 2030-07-23:BANK SPEND:  950.00
-2030-07-28:OAS/GIS payment: 1017.00
-2030-07-28:CPP payment:  668.29
+2030-07-28:OAS/GIS payment: 1010.46
+2030-07-28:CPP payment:  673.00
 2030-08-01:BANK SPEND:  700.00
-2030-08-15:SPLURGE SPENDING:  105.87
+2030-08-15:SPLURGE SPENDING:  100.38
 2030-08-23:BANK SPEND:  950.00
-2030-08-28:OAS/GIS payment: 1017.00
-2030-08-28:CPP payment:  668.29
+2030-08-28:OAS/GIS payment: 1010.46
+2030-08-28:CPP payment:  673.00
 2030-09-01:BANK SPEND:  700.00
 2030-09-23:BANK SPEND:  950.00
-2030-09-28:OAS/GIS payment: 1017.00
-2030-09-28:CPP payment:  668.29
+2030-09-28:OAS/GIS payment: 1010.46
+2030-09-28:CPP payment:  673.00
 2030-10-01:BANK SPEND:  700.00
 2030-10-23:BANK SPEND:  950.00
-2030-10-28:OAS/GIS payment: 1017.00
-2030-10-28:CPP payment:  668.29
+2030-10-28:OAS/GIS payment: 1010.46
+2030-10-28:CPP payment:  673.00
 2030-11-01:BANK SPEND:  700.00
-2030-11-15:SPLURGE SPENDING:  105.87
+2030-11-15:SPLURGE SPENDING:  100.38
 2030-11-23:BANK SPEND:  950.00
-2030-11-28:OAS/GIS payment: 1017.00
-2030-11-28:CPP payment:  668.29
+2030-11-28:OAS/GIS payment: 1010.46
+2030-11-28:CPP payment:  673.00
 2030-12-01:BANK SPEND:  700.00
 2030-12-23:BANK SPEND:  950.00
-2030-12-28:OAS/GIS payment: 1017.00
-2030-12-28:CPP payment:  668.29
+2030-12-28:OAS/GIS payment: 1010.46
+2030-12-28:CPP payment:  673.00
 2030-12-31:PAY TAXES:  0.00
 2030 year-end.
 Cash generated
-     8,019.48 CPP
-     7,838.52 OAS
-     4,365.48 GIS
+     8,076.00 CPP
+     7,784.04 OAS
+     4,341.48 GIS
      2,234.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    22,457.48 Total cash generated
+    22,435.52 Total cash generated
 
 Tax return 2030
-    18,092.00 Taxable income
+    18,094.04 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    18,092.00 Net income
-    18,092.00 Net income before adj
-     7,838.52 OAS income
+    18,094.04 Net income
+    18,094.04 Net income before adj
+     7,784.04 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
 Accounts
-     8,270.58 -BANKACCOUNT-
-     8,270.58 Cash
+     8,266.92 -BANKACCOUNT-
+     8,266.92 Cash
 
-     8,270.58 Net worth
+     8,266.92 Net worth
          0.00 Investments worth
 
 2031-01-01:BANK SPEND:  700.00
 2031-01-23:BANK SPEND:  950.00
-2031-01-28:OAS/GIS payment: 1017.00
-2031-01-28:CPP payment:  668.29
+2031-01-28:OAS/GIS payment: 1010.46
+2031-01-28:CPP payment:  673.00
 2031-02-01:BANK SPEND:  700.00
-2031-02-15:SPLURGE SPENDING:  105.87
+2031-02-15:SPLURGE SPENDING:  100.38
 2031-02-23:BANK SPEND:  950.00
-2031-02-28:OAS/GIS payment: 1017.00
-2031-02-28:CPP payment:  668.29
+2031-02-28:OAS/GIS payment: 1010.46
+2031-02-28:CPP payment:  673.00
 2031-03-01:BANK SPEND:  700.00
 2031-03-23:BANK SPEND:  950.00
 2031-03-25:ANNUITY payment:  2234.00
-2031-03-28:OAS/GIS payment: 1017.00
-2031-03-28:CPP payment:  668.29
+2031-03-28:OAS/GIS payment: 1010.46
+2031-03-28:CPP payment:  673.00
 2031-04-01:BANK SPEND:  700.00
 2031-04-23:BANK SPEND:  950.00
-2031-04-28:OAS/GIS payment: 1017.00
-2031-04-28:CPP payment:  668.29
+2031-04-28:OAS/GIS payment: 1010.46
+2031-04-28:CPP payment:  673.00
 2031-05-01:BANK SPEND:  700.00
-2031-05-15:SPLURGE SPENDING:  2339.87
+2031-05-15:SPLURGE SPENDING:  2334.38
 2031-05-23:BANK SPEND:  950.00
-2031-05-28:OAS/GIS payment: 1017.00
-2031-05-28:CPP payment:  668.29
+2031-05-28:OAS/GIS payment: 1010.46
+2031-05-28:CPP payment:  673.00
 2031-06-01:BANK SPEND:  700.00
 2031-06-23:BANK SPEND:  950.00
-2031-06-28:OAS/GIS payment: 1017.00
-2031-06-28:CPP payment:  668.29
+2031-06-28:OAS/GIS payment: 1010.46
+2031-06-28:CPP payment:  673.00
 2031-07-01:BANK SPEND:  700.00
 2031-07-23:BANK SPEND:  950.00
-2031-07-28:OAS/GIS payment: 1017.00
-2031-07-28:CPP payment:  668.29
+2031-07-28:OAS/GIS payment: 1010.46
+2031-07-28:CPP payment:  673.00
 2031-08-01:BANK SPEND:  700.00
-2031-08-15:SPLURGE SPENDING:  105.87
+2031-08-15:SPLURGE SPENDING:  100.38
 2031-08-23:BANK SPEND:  950.00
-2031-08-28:OAS/GIS payment: 1017.00
-2031-08-28:CPP payment:  668.29
+2031-08-28:OAS/GIS payment: 1010.46
+2031-08-28:CPP payment:  673.00
 2031-09-01:BANK SPEND:  700.00
 2031-09-23:BANK SPEND:  950.00
-2031-09-28:OAS/GIS payment: 1017.00
-2031-09-28:CPP payment:  668.29
+2031-09-28:OAS/GIS payment: 1010.46
+2031-09-28:CPP payment:  673.00
 2031-10-01:BANK SPEND:  700.00
 2031-10-23:BANK SPEND:  950.00
-2031-10-28:OAS/GIS payment: 1017.00
-2031-10-28:CPP payment:  668.29
+2031-10-28:OAS/GIS payment: 1010.46
+2031-10-28:CPP payment:  673.00
 2031-11-01:BANK SPEND:  700.00
-2031-11-15:SPLURGE SPENDING:  105.87
+2031-11-15:SPLURGE SPENDING:  100.38
 2031-11-23:BANK SPEND:  950.00
-2031-11-28:OAS/GIS payment: 1017.00
-2031-11-28:CPP payment:  668.29
+2031-11-28:OAS/GIS payment: 1010.46
+2031-11-28:CPP payment:  673.00
 2031-12-01:BANK SPEND:  700.00
 2031-12-23:BANK SPEND:  950.00
-2031-12-28:OAS/GIS payment: 1017.00
-2031-12-28:CPP payment:  668.29
+2031-12-28:OAS/GIS payment: 1010.46
+2031-12-28:CPP payment:  673.00
 2031-12-31:PAY TAXES:  0.00
 2031 year-end.
 Cash generated
-     8,019.48 CPP
-     7,838.52 OAS
-     4,365.48 GIS
+     8,076.00 CPP
+     7,784.04 OAS
+     4,341.48 GIS
      2,234.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    22,457.48 Total cash generated
+    22,435.52 Total cash generated
 
 Tax return 2031
-    18,092.00 Taxable income
+    18,094.04 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    18,092.00 Net income
-    18,092.00 Net income before adj
-     7,838.52 OAS income
+    18,094.04 Net income
+    18,094.04 Net income before adj
+     7,784.04 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
 Accounts
-     8,270.58 -BANKACCOUNT-
-     8,270.58 Cash
+     8,266.92 -BANKACCOUNT-
+     8,266.92 Cash
 
-     8,270.58 Net worth
+     8,266.92 Net worth
          0.00 Investments worth
 
 2032-01-01:BANK SPEND:  700.00
 2032-01-23:BANK SPEND:  950.00
-2032-01-28:OAS/GIS payment: 1017.00
-2032-01-28:CPP payment:  668.29
+2032-01-28:OAS/GIS payment: 1010.46
+2032-01-28:CPP payment:  673.00
 2032-02-01:BANK SPEND:  700.00
-2032-02-15:SPLURGE SPENDING:  105.87
+2032-02-15:SPLURGE SPENDING:  100.38
 2032-02-23:BANK SPEND:  950.00
-2032-02-28:OAS/GIS payment: 1017.00
-2032-02-28:CPP payment:  668.29
+2032-02-28:OAS/GIS payment: 1010.46
+2032-02-28:CPP payment:  673.00
 2032-03-01:BANK SPEND:  700.00
 2032-03-23:BANK SPEND:  950.00
 2032-03-25:ANNUITY payment:  2234.00
-2032-03-28:OAS/GIS payment: 1017.00
-2032-03-28:CPP payment:  668.29
+2032-03-28:OAS/GIS payment: 1010.46
+2032-03-28:CPP payment:  673.00
 2032-04-01:BANK SPEND:  700.00
 2032-04-23:BANK SPEND:  950.00
-2032-04-28:OAS/GIS payment: 1017.00
-2032-04-28:CPP payment:  668.29
+2032-04-28:OAS/GIS payment: 1010.46
+2032-04-28:CPP payment:  673.00
 2032-05-01:BANK SPEND:  700.00
-2032-05-15:SPLURGE SPENDING:  2339.87
+2032-05-15:SPLURGE SPENDING:  2334.38
 2032-05-23:BANK SPEND:  950.00
-2032-05-28:OAS/GIS payment: 1017.00
-2032-05-28:CPP payment:  668.29
+2032-05-28:OAS/GIS payment: 1010.46
+2032-05-28:CPP payment:  673.00
 2032-06-01:BANK SPEND:  700.00
 2032-06-23:BANK SPEND:  950.00
-2032-06-28:OAS/GIS payment: 1017.00
-2032-06-28:CPP payment:  668.29
+2032-06-28:OAS/GIS payment: 1010.46
+2032-06-28:CPP payment:  673.00
 2032-07-01:BANK SPEND:  700.00
 2032-07-23:BANK SPEND:  950.00
-2032-07-28:OAS/GIS payment: 1017.00
-2032-07-28:CPP payment:  668.29
+2032-07-28:OAS/GIS payment: 1010.46
+2032-07-28:CPP payment:  673.00
 2032-08-01:BANK SPEND:  700.00
-2032-08-15:SPLURGE SPENDING:  105.87
+2032-08-15:SPLURGE SPENDING:  100.38
 2032-08-23:BANK SPEND:  950.00
-2032-08-28:OAS/GIS payment: 1017.00
-2032-08-28:CPP payment:  668.29
+2032-08-28:OAS/GIS payment: 1010.46
+2032-08-28:CPP payment:  673.00
 2032-09-01:BANK SPEND:  700.00
 2032-09-23:BANK SPEND:  950.00
-2032-09-28:OAS/GIS payment: 1017.00
-2032-09-28:CPP payment:  668.29
+2032-09-28:OAS/GIS payment: 1010.46
+2032-09-28:CPP payment:  673.00
 2032-10-01:BANK SPEND:  700.00
 2032-10-23:BANK SPEND:  950.00
-2032-10-28:OAS/GIS payment: 1017.00
-2032-10-28:CPP payment:  668.29
+2032-10-28:OAS/GIS payment: 1010.46
+2032-10-28:CPP payment:  673.00
 2032-11-01:BANK SPEND:  700.00
-2032-11-15:SPLURGE SPENDING:  105.87
+2032-11-15:SPLURGE SPENDING:  100.38
 2032-11-23:BANK SPEND:  950.00
-2032-11-28:OAS/GIS payment: 1017.00
-2032-11-28:CPP payment:  668.29
+2032-11-28:OAS/GIS payment: 1010.46
+2032-11-28:CPP payment:  673.00
 2032-12-01:BANK SPEND:  700.00
 2032-12-23:BANK SPEND:  950.00
-2032-12-28:OAS/GIS payment: 1017.00
-2032-12-28:CPP payment:  668.29
+2032-12-28:OAS/GIS payment: 1010.46
+2032-12-28:CPP payment:  673.00
 2032-12-31:PAY TAXES:  0.00
 2032 year-end.
 Cash generated
-     8,019.48 CPP
-     7,838.52 OAS
-     4,365.48 GIS
+     8,076.00 CPP
+     7,784.04 OAS
+     4,341.48 GIS
      2,234.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    22,457.48 Total cash generated
+    22,435.52 Total cash generated
 
 Tax return 2032
-    18,092.00 Taxable income
+    18,094.04 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    18,092.00 Net income
-    18,092.00 Net income before adj
-     7,838.52 OAS income
+    18,094.04 Net income
+    18,094.04 Net income before adj
+     7,784.04 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
 Accounts
-     8,270.58 -BANKACCOUNT-
-     8,270.58 Cash
+     8,266.92 -BANKACCOUNT-
+     8,266.92 Cash
 
-     8,270.58 Net worth
+     8,266.92 Net worth
          0.00 Investments worth
 
 2033-01-01:BANK SPEND:  700.00
 2033-01-23:BANK SPEND:  950.00
-2033-01-28:OAS/GIS payment: 1017.00
-2033-01-28:CPP payment:  668.29
+2033-01-28:OAS/GIS payment: 1010.46
+2033-01-28:CPP payment:  673.00
 2033-02-01:BANK SPEND:  700.00
-2033-02-15:SPLURGE SPENDING:  105.87
+2033-02-15:SPLURGE SPENDING:  100.38
 2033-02-23:BANK SPEND:  950.00
-2033-02-28:OAS/GIS payment: 1017.00
-2033-02-28:CPP payment:  668.29
+2033-02-28:OAS/GIS payment: 1010.46
+2033-02-28:CPP payment:  673.00
 2033-03-01:BANK SPEND:  700.00
 2033-03-23:BANK SPEND:  950.00
 2033-03-25:ANNUITY payment:  2234.00
-2033-03-28:OAS/GIS payment: 1017.00
-2033-03-28:CPP payment:  668.29
+2033-03-28:OAS/GIS payment: 1010.46
+2033-03-28:CPP payment:  673.00
 2033-04-01:BANK SPEND:  700.00
 2033-04-23:BANK SPEND:  950.00
-2033-04-28:OAS/GIS payment: 1017.00
-2033-04-28:CPP payment:  668.29
+2033-04-28:OAS/GIS payment: 1010.46
+2033-04-28:CPP payment:  673.00
 2033-05-01:BANK SPEND:  700.00
-2033-05-15:SPLURGE SPENDING:  2339.87
+2033-05-15:SPLURGE SPENDING:  2334.38
 2033-05-23:BANK SPEND:  950.00
-2033-05-28:OAS/GIS payment: 1017.00
-2033-05-28:CPP payment:  668.29
+2033-05-28:OAS/GIS payment: 1010.46
+2033-05-28:CPP payment:  673.00
 2033-06-01:BANK SPEND:  700.00
 2033-06-23:BANK SPEND:  950.00
-2033-06-28:OAS/GIS payment: 1017.00
-2033-06-28:CPP payment:  668.29
+2033-06-28:OAS/GIS payment: 1010.46
+2033-06-28:CPP payment:  673.00
 2033-07-01:BANK SPEND:  700.00
 2033-07-23:BANK SPEND:  950.00
-2033-07-28:OAS/GIS payment: 1017.00
-2033-07-28:CPP payment:  668.29
+2033-07-28:OAS/GIS payment: 1010.46
+2033-07-28:CPP payment:  673.00
 2033-08-01:BANK SPEND:  700.00
-2033-08-15:SPLURGE SPENDING:  105.87
+2033-08-15:SPLURGE SPENDING:  100.38
 2033-08-23:BANK SPEND:  950.00
-2033-08-28:OAS/GIS payment: 1017.00
-2033-08-28:CPP payment:  668.29
+2033-08-28:OAS/GIS payment: 1010.46
+2033-08-28:CPP payment:  673.00
 2033-09-01:BANK SPEND:  700.00
 2033-09-23:BANK SPEND:  950.00
-2033-09-28:OAS/GIS payment: 1017.00
-2033-09-28:CPP payment:  668.29
+2033-09-28:OAS/GIS payment: 1010.46
+2033-09-28:CPP payment:  673.00
 2033-10-01:BANK SPEND:  700.00
 2033-10-23:BANK SPEND:  950.00
-2033-10-28:OAS/GIS payment: 1017.00
-2033-10-28:CPP payment:  668.29
+2033-10-28:OAS/GIS payment: 1010.46
+2033-10-28:CPP payment:  673.00
 2033-11-01:BANK SPEND:  700.00
-2033-11-15:SPLURGE SPENDING:  105.87
+2033-11-15:SPLURGE SPENDING:  100.38
 2033-11-23:BANK SPEND:  950.00
-2033-11-28:OAS/GIS payment: 1017.00
-2033-11-28:CPP payment:  668.29
+2033-11-28:OAS/GIS payment: 1010.46
+2033-11-28:CPP payment:  673.00
 2033-12-01:BANK SPEND:  700.00
 2033-12-23:BANK SPEND:  950.00
-2033-12-28:OAS/GIS payment: 1017.00
-2033-12-28:CPP payment:  668.29
+2033-12-28:OAS/GIS payment: 1010.46
+2033-12-28:CPP payment:  673.00
 2033-12-31:PAY TAXES:  0.00
 2033 year-end.
 Cash generated
-     8,019.48 CPP
-     7,838.52 OAS
-     4,365.48 GIS
+     8,076.00 CPP
+     7,784.04 OAS
+     4,341.48 GIS
      2,234.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    22,457.48 Total cash generated
+    22,435.52 Total cash generated
 
 Tax return 2033
-    18,092.00 Taxable income
+    18,094.04 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    18,092.00 Net income
-    18,092.00 Net income before adj
-     7,838.52 OAS income
+    18,094.04 Net income
+    18,094.04 Net income before adj
+     7,784.04 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
 Accounts
-     8,270.58 -BANKACCOUNT-
-     8,270.58 Cash
+     8,266.92 -BANKACCOUNT-
+     8,266.92 Cash
 
-     8,270.58 Net worth
+     8,266.92 Net worth
          0.00 Investments worth
 
 2034-01-01:BANK SPEND:  700.00
 2034-01-23:BANK SPEND:  950.00
-2034-01-28:OAS/GIS payment: 1017.00
-2034-01-28:CPP payment:  668.29
+2034-01-28:OAS/GIS payment: 1010.46
+2034-01-28:CPP payment:  673.00
 2034-02-01:BANK SPEND:  700.00
-2034-02-15:SPLURGE SPENDING:  105.87
+2034-02-15:SPLURGE SPENDING:  100.38
 2034-02-23:BANK SPEND:  950.00
-2034-02-28:OAS/GIS payment: 1017.00
-2034-02-28:CPP payment:  668.29
+2034-02-28:OAS/GIS payment: 1010.46
+2034-02-28:CPP payment:  673.00
 2034-03-01:BANK SPEND:  700.00
 2034-03-23:BANK SPEND:  950.00
 2034-03-25:ANNUITY payment:  2234.00
-2034-03-28:OAS/GIS payment: 1017.00
-2034-03-28:CPP payment:  668.29
+2034-03-28:OAS/GIS payment: 1010.46
+2034-03-28:CPP payment:  673.00
 2034-04-01:BANK SPEND:  700.00
 2034-04-23:BANK SPEND:  950.00
-2034-04-28:OAS/GIS payment: 1017.00
-2034-04-28:CPP payment:  668.29
+2034-04-28:OAS/GIS payment: 1010.46
+2034-04-28:CPP payment:  673.00
 2034-05-01:BANK SPEND:  700.00
-2034-05-15:SPLURGE SPENDING:  2339.87
+2034-05-15:SPLURGE SPENDING:  2334.38
 2034-05-23:BANK SPEND:  950.00
-2034-05-28:OAS/GIS payment: 1017.00
-2034-05-28:CPP payment:  668.29
+2034-05-28:OAS/GIS payment: 1010.46
+2034-05-28:CPP payment:  673.00
 2034-06-01:BANK SPEND:  700.00
 2034-06-23:BANK SPEND:  950.00
-2034-06-28:OAS/GIS payment: 1017.00
-2034-06-28:CPP payment:  668.29
+2034-06-28:OAS/GIS payment: 1010.46
+2034-06-28:CPP payment:  673.00
 2034-07-01:BANK SPEND:  700.00
 2034-07-23:BANK SPEND:  950.00
-2034-07-28:OAS/GIS payment: 1017.00
-2034-07-28:CPP payment:  668.29
+2034-07-28:OAS/GIS payment: 1010.46
+2034-07-28:CPP payment:  673.00
 2034-08-01:BANK SPEND:  700.00
-2034-08-15:SPLURGE SPENDING:  105.87
+2034-08-15:SPLURGE SPENDING:  100.38
 2034-08-23:BANK SPEND:  950.00
-2034-08-28:OAS/GIS payment: 1017.00
-2034-08-28:CPP payment:  668.29
+2034-08-28:OAS/GIS payment: 1010.46
+2034-08-28:CPP payment:  673.00
 2034-09-01:BANK SPEND:  700.00
 2034-09-23:BANK SPEND:  950.00
-2034-09-28:OAS/GIS payment: 1017.00
-2034-09-28:CPP payment:  668.29
+2034-09-28:OAS/GIS payment: 1010.46
+2034-09-28:CPP payment:  673.00
 2034-10-01:BANK SPEND:  700.00
 2034-10-23:BANK SPEND:  950.00
-2034-10-28:OAS/GIS payment: 1017.00
-2034-10-28:CPP payment:  668.29
+2034-10-28:OAS/GIS payment: 1010.46
+2034-10-28:CPP payment:  673.00
 2034-11-01:BANK SPEND:  700.00
-2034-11-15:SPLURGE SPENDING:  105.87
+2034-11-15:SPLURGE SPENDING:  100.38
 2034-11-23:BANK SPEND:  950.00
-2034-11-28:OAS/GIS payment: 1017.00
-2034-11-28:CPP payment:  668.29
+2034-11-28:OAS/GIS payment: 1010.46
+2034-11-28:CPP payment:  673.00
 2034-12-01:BANK SPEND:  700.00
 2034-12-23:BANK SPEND:  950.00
-2034-12-28:OAS/GIS payment: 1017.00
-2034-12-28:CPP payment:  668.29
+2034-12-28:OAS/GIS payment: 1010.46
+2034-12-28:CPP payment:  673.00
 2034-12-31:PAY TAXES:  0.00
 2034 year-end.
 Cash generated
-     8,019.48 CPP
-     7,838.52 OAS
-     4,365.48 GIS
+     8,076.00 CPP
+     7,784.04 OAS
+     4,341.48 GIS
      2,234.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    22,457.48 Total cash generated
+    22,435.52 Total cash generated
 
 Tax return 2034
-    18,092.00 Taxable income
+    18,094.04 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    18,092.00 Net income
-    18,092.00 Net income before adj
-     7,838.52 OAS income
+    18,094.04 Net income
+    18,094.04 Net income before adj
+     7,784.04 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
 Accounts
-     8,270.58 -BANKACCOUNT-
-     8,270.58 Cash
+     8,266.92 -BANKACCOUNT-
+     8,266.92 Cash
 
-     8,270.58 Net worth
+     8,266.92 Net worth
          0.00 Investments worth
 
 2035-01-01:BANK SPEND:  700.00
 2035-01-23:BANK SPEND:  950.00
-2035-01-28:OAS/GIS payment: 1017.00
-2035-01-28:CPP payment:  668.29
+2035-01-28:OAS/GIS payment: 1010.46
+2035-01-28:CPP payment:  673.00
 2035-02-01:BANK SPEND:  700.00
-2035-02-15:SPLURGE SPENDING:  105.87
+2035-02-15:SPLURGE SPENDING:  100.38
 2035-02-23:BANK SPEND:  950.00
-2035-02-28:OAS/GIS payment: 1017.00
-2035-02-28:CPP payment:  668.29
+2035-02-28:OAS/GIS payment: 1010.46
+2035-02-28:CPP payment:  673.00
 2035-03-01:BANK SPEND:  700.00
 2035-03-23:BANK SPEND:  950.00
 2035-03-25:ANNUITY payment:  2234.00
-2035-03-28:OAS/GIS payment: 1017.00
-2035-03-28:CPP payment:  668.29
+2035-03-28:OAS/GIS payment: 1010.46
+2035-03-28:CPP payment:  673.00
 2035-04-01:BANK SPEND:  700.00
 2035-04-23:BANK SPEND:  950.00
-2035-04-28:OAS/GIS payment: 1017.00
-2035-04-28:CPP payment:  668.29
+2035-04-28:OAS/GIS payment: 1010.46
+2035-04-28:CPP payment:  673.00
 2035-05-01:BANK SPEND:  700.00
-2035-05-15:SPLURGE SPENDING:  2339.87
+2035-05-15:SPLURGE SPENDING:  2334.38
 2035-05-23:BANK SPEND:  950.00
-2035-05-28:OAS/GIS payment: 1017.00
-2035-05-28:CPP payment:  668.29
+2035-05-28:OAS/GIS payment: 1010.46
+2035-05-28:CPP payment:  673.00
 2035-06-01:BANK SPEND:  700.00
 2035-06-23:BANK SPEND:  950.00
-2035-06-28:OAS/GIS payment: 1017.00
-2035-06-28:CPP payment:  668.29
+2035-06-28:OAS/GIS payment: 1010.46
+2035-06-28:CPP payment:  673.00
 2035-07-01:BANK SPEND:  700.00
 2035-07-23:BANK SPEND:  950.00
-2035-07-28:OAS/GIS payment: 1017.00
-2035-07-28:CPP payment:  668.29
+2035-07-28:OAS/GIS payment: 1010.46
+2035-07-28:CPP payment:  673.00
 2035-08-01:BANK SPEND:  700.00
-2035-08-15:SPLURGE SPENDING:  105.87
+2035-08-15:SPLURGE SPENDING:  100.38
 2035-08-23:BANK SPEND:  950.00
-2035-08-28:OAS/GIS payment: 1017.00
-2035-08-28:CPP payment:  668.29
+2035-08-28:OAS/GIS payment: 1010.46
+2035-08-28:CPP payment:  673.00
 2035-09-01:BANK SPEND:  700.00
 2035-09-23:BANK SPEND:  950.00
-2035-09-28:OAS/GIS payment: 1017.00
-2035-09-28:CPP payment:  668.29
+2035-09-28:OAS/GIS payment: 1010.46
+2035-09-28:CPP payment:  673.00
 2035-10-01:BANK SPEND:  700.00
 2035-10-23:BANK SPEND:  950.00
-2035-10-28:OAS/GIS payment: 1017.00
-2035-10-28:CPP payment:  668.29
+2035-10-28:OAS/GIS payment: 1010.46
+2035-10-28:CPP payment:  673.00
 2035-11-01:BANK SPEND:  700.00
-2035-11-15:SPLURGE SPENDING:  105.87
+2035-11-15:SPLURGE SPENDING:  100.38
 2035-11-23:BANK SPEND:  950.00
-2035-11-28:OAS/GIS payment: 1017.00
-2035-11-28:CPP payment:  668.29
+2035-11-28:OAS/GIS payment: 1010.46
+2035-11-28:CPP payment:  673.00
 2035-12-01:BANK SPEND:  700.00
 2035-12-23:BANK SPEND:  950.00
-2035-12-28:OAS/GIS payment: 1017.00
-2035-12-28:CPP payment:  668.29
+2035-12-28:OAS/GIS payment: 1010.46
+2035-12-28:CPP payment:  673.00
 2035-12-31:PAY TAXES:  0.00
 2035 year-end.
 Cash generated
-     8,019.48 CPP
-     7,838.52 OAS
-     4,365.48 GIS
+     8,076.00 CPP
+     7,784.04 OAS
+     4,341.48 GIS
      2,234.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    22,457.48 Total cash generated
+    22,435.52 Total cash generated
 
 Tax return 2035
-    18,092.00 Taxable income
+    18,094.04 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    18,092.00 Net income
-    18,092.00 Net income before adj
-     7,838.52 OAS income
+    18,094.04 Net income
+    18,094.04 Net income before adj
+     7,784.04 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
 Accounts
-     8,270.58 -BANKACCOUNT-
-     8,270.58 Cash
+     8,266.92 -BANKACCOUNT-
+     8,266.92 Cash
 
-     8,270.58 Net worth
+     8,266.92 Net worth
          0.00 Investments worth
 
 2036-01-01:BANK SPEND:  700.00
 2036-01-23:BANK SPEND:  950.00
-2036-01-28:OAS/GIS payment: 1017.00
-2036-01-28:CPP payment:  668.29
+2036-01-28:OAS/GIS payment: 1010.46
+2036-01-28:CPP payment:  673.00
 2036-02-01:BANK SPEND:  700.00
-2036-02-15:SPLURGE SPENDING:  105.87
+2036-02-15:SPLURGE SPENDING:  100.38
 2036-02-23:BANK SPEND:  950.00
-2036-02-28:OAS/GIS payment: 1017.00
-2036-02-28:CPP payment:  668.29
+2036-02-28:OAS/GIS payment: 1010.46
+2036-02-28:CPP payment:  673.00
 2036-03-01:BANK SPEND:  700.00
 2036-03-23:BANK SPEND:  950.00
 2036-03-25:ANNUITY payment:  2234.00
-2036-03-28:OAS/GIS payment: 1017.00
-2036-03-28:CPP payment:  668.29
+2036-03-28:OAS/GIS payment: 1010.46
+2036-03-28:CPP payment:  673.00
 2036-04-01:BANK SPEND:  700.00
 2036-04-23:BANK SPEND:  950.00
-2036-04-28:OAS/GIS payment: 1017.00
-2036-04-28:CPP payment:  668.29
+2036-04-28:OAS/GIS payment: 1010.46
+2036-04-28:CPP payment:  673.00
 2036-05-01:BANK SPEND:  700.00
-2036-05-15:SPLURGE SPENDING:  2339.87
+2036-05-15:SPLURGE SPENDING:  2334.38
 2036-05-23:BANK SPEND:  950.00
-2036-05-28:OAS/GIS payment: 1017.00
-2036-05-28:CPP payment:  668.29
+2036-05-28:OAS/GIS payment: 1010.46
+2036-05-28:CPP payment:  673.00
 2036-06-01:BANK SPEND:  700.00
 2036-06-23:BANK SPEND:  950.00
-2036-06-28:OAS/GIS payment: 1017.00
-2036-06-28:CPP payment:  668.29
+2036-06-28:OAS/GIS payment: 1010.46
+2036-06-28:CPP payment:  673.00
 2036-07-01:BANK SPEND:  700.00
 2036-07-23:BANK SPEND:  950.00
-2036-07-28:OAS/GIS payment: 1017.00
-2036-07-28:CPP payment:  668.29
+2036-07-28:OAS/GIS payment: 1010.46
+2036-07-28:CPP payment:  673.00
 2036-08-01:BANK SPEND:  700.00
-2036-08-15:SPLURGE SPENDING:  105.87
+2036-08-15:SPLURGE SPENDING:  100.38
 2036-08-23:BANK SPEND:  950.00
-2036-08-28:OAS/GIS payment: 1017.00
-2036-08-28:CPP payment:  668.29
+2036-08-28:OAS/GIS payment: 1010.46
+2036-08-28:CPP payment:  673.00
 2036-09-01:BANK SPEND:  700.00
 2036-09-23:BANK SPEND:  950.00
-2036-09-28:OAS/GIS payment: 1017.00
-2036-09-28:CPP payment:  668.29
+2036-09-28:OAS/GIS payment: 1010.46
+2036-09-28:CPP payment:  673.00
 2036-10-01:BANK SPEND:  700.00
 2036-10-23:BANK SPEND:  950.00
-2036-10-28:OAS/GIS payment: 1017.00
-2036-10-28:CPP payment:  668.29
+2036-10-28:OAS/GIS payment: 1010.46
+2036-10-28:CPP payment:  673.00
 2036-11-01:BANK SPEND:  700.00
-2036-11-15:SPLURGE SPENDING:  105.87
+2036-11-15:SPLURGE SPENDING:  100.38
 2036-11-23:BANK SPEND:  950.00
-2036-11-28:OAS/GIS payment: 1017.00
-2036-11-28:CPP payment:  668.29
+2036-11-28:OAS/GIS payment: 1010.46
+2036-11-28:CPP payment:  673.00
 2036-12-01:BANK SPEND:  700.00
 2036-12-23:BANK SPEND:  950.00
-2036-12-28:OAS/GIS payment: 1017.00
-2036-12-28:CPP payment:  668.29
+2036-12-28:OAS/GIS payment: 1010.46
+2036-12-28:CPP payment:  673.00
 2036-12-31:PAY TAXES:  0.00
 2036 year-end.
 Cash generated
-     8,019.48 CPP
-     7,838.52 OAS
-     4,365.48 GIS
+     8,076.00 CPP
+     7,784.04 OAS
+     4,341.48 GIS
      2,234.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    22,457.48 Total cash generated
+    22,435.52 Total cash generated
 
 Tax return 2036
-    18,092.00 Taxable income
+    18,094.04 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    18,092.00 Net income
-    18,092.00 Net income before adj
-     7,838.52 OAS income
+    18,094.04 Net income
+    18,094.04 Net income before adj
+     7,784.04 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
 Accounts
-     8,270.58 -BANKACCOUNT-
-     8,270.58 Cash
+     8,266.92 -BANKACCOUNT-
+     8,266.92 Cash
 
-     8,270.58 Net worth
+     8,266.92 Net worth
          0.00 Investments worth
 
 2037-01-01:BANK SPEND:  700.00
 2037-01-23:BANK SPEND:  950.00
-2037-01-28:OAS/GIS payment: 1017.00
-2037-01-28:CPP payment:  668.29
+2037-01-28:OAS/GIS payment: 1010.46
+2037-01-28:CPP payment:  673.00
 2037-02-01:BANK SPEND:  700.00
-2037-02-15:SPLURGE SPENDING:  105.87
+2037-02-15:SPLURGE SPENDING:  100.38
 2037-02-23:BANK SPEND:  950.00
-2037-02-28:OAS/GIS payment: 1017.00
-2037-02-28:CPP payment:  668.29
+2037-02-28:OAS/GIS payment: 1010.46
+2037-02-28:CPP payment:  673.00
 2037-03-01:BANK SPEND:  700.00
 2037-03-23:BANK SPEND:  950.00
 2037-03-25:ANNUITY payment:  2234.00
-2037-03-28:OAS/GIS payment: 1017.00
-2037-03-28:CPP payment:  668.29
+2037-03-28:OAS/GIS payment: 1010.46
+2037-03-28:CPP payment:  673.00
 2037-04-01:BANK SPEND:  700.00
 2037-04-23:BANK SPEND:  950.00
-2037-04-28:OAS/GIS payment: 1017.00
-2037-04-28:CPP payment:  668.29
+2037-04-28:OAS/GIS payment: 1010.46
+2037-04-28:CPP payment:  673.00
 2037-05-01:BANK SPEND:  700.00
-2037-05-15:SPLURGE SPENDING:  2339.87
+2037-05-15:SPLURGE SPENDING:  2334.38
 2037-05-23:BANK SPEND:  950.00
-2037-05-28:OAS/GIS payment: 1082.32
-2037-05-28:CPP payment:  668.29
+2037-05-28:OAS/GIS payment: 1075.33
+2037-05-28:CPP payment:  673.00
 2037-06-01:BANK SPEND:  700.00
 2037-06-23:BANK SPEND:  950.00
-2037-06-28:OAS/GIS payment: 1082.32
-2037-06-28:CPP payment:  668.29
+2037-06-28:OAS/GIS payment: 1075.33
+2037-06-28:CPP payment:  673.00
 2037-07-01:BANK SPEND:  700.00
 2037-07-23:BANK SPEND:  950.00
-2037-07-28:OAS/GIS payment: 1082.32
-2037-07-28:CPP payment:  668.29
+2037-07-28:OAS/GIS payment: 1075.33
+2037-07-28:CPP payment:  673.00
 2037-08-01:BANK SPEND:  700.00
-2037-08-15:SPLURGE SPENDING:  301.83
+2037-08-15:SPLURGE SPENDING:  294.99
 2037-08-23:BANK SPEND:  950.00
-2037-08-28:OAS/GIS payment: 1082.32
-2037-08-28:CPP payment:  668.29
+2037-08-28:OAS/GIS payment: 1075.33
+2037-08-28:CPP payment:  673.00
 2037-09-01:BANK SPEND:  700.00
 2037-09-23:BANK SPEND:  950.00
-2037-09-28:OAS/GIS payment: 1082.32
-2037-09-28:CPP payment:  668.29
+2037-09-28:OAS/GIS payment: 1075.33
+2037-09-28:CPP payment:  673.00
 2037-10-01:BANK SPEND:  700.00
 2037-10-23:BANK SPEND:  950.00
-2037-10-28:OAS/GIS payment: 1082.32
-2037-10-28:CPP payment:  668.29
+2037-10-28:OAS/GIS payment: 1075.33
+2037-10-28:CPP payment:  673.00
 2037-11-01:BANK SPEND:  700.00
-2037-11-15:SPLURGE SPENDING:  301.83
+2037-11-15:SPLURGE SPENDING:  294.99
 2037-11-23:BANK SPEND:  950.00
-2037-11-28:OAS/GIS payment: 1082.32
-2037-11-28:CPP payment:  668.29
+2037-11-28:OAS/GIS payment: 1075.33
+2037-11-28:CPP payment:  673.00
 2037-12-01:BANK SPEND:  700.00
 2037-12-23:BANK SPEND:  950.00
-2037-12-28:OAS/GIS payment: 1082.32
-2037-12-28:CPP payment:  668.29
+2037-12-28:OAS/GIS payment: 1075.33
+2037-12-28:CPP payment:  673.00
 2037-12-31:PAY TAXES:  0.00
 2037 year-end.
 Cash generated
-     8,019.48 CPP
-     8,361.08 OAS
-     4,365.48 GIS
+     8,076.00 CPP
+     8,303.00 OAS
+     4,341.48 GIS
      2,234.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    22,980.04 Total cash generated
+    22,954.48 Total cash generated
 
 Tax return 2037
-    18,614.56 Taxable income
+    18,613.00 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    18,614.56 Net income
-    18,614.56 Net income before adj
-     8,361.08 OAS income
+    18,613.00 Net income
+    18,613.00 Net income before adj
+     8,303.00 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
 Accounts
-     8,401.22 -BANKACCOUNT-
-     8,401.22 Cash
+     8,396.66 -BANKACCOUNT-
+     8,396.66 Cash
 
-     8,401.22 Net worth
+     8,396.66 Net worth
          0.00 Investments worth
 
 2038-01-01:BANK SPEND:  700.00
 2038-01-23:BANK SPEND:  950.00
-2038-01-28:OAS/GIS payment: 1082.32
-2038-01-28:CPP payment:  668.29
+2038-01-28:OAS/GIS payment: 1075.33
+2038-01-28:CPP payment:  673.00
 2038-02-01:BANK SPEND:  700.00
-2038-02-15:SPLURGE SPENDING:  301.83
+2038-02-15:SPLURGE SPENDING:  294.99
 2038-02-23:BANK SPEND:  950.00
-2038-02-28:OAS/GIS payment: 1082.32
-2038-02-28:CPP payment:  668.29
+2038-02-28:OAS/GIS payment: 1075.33
+2038-02-28:CPP payment:  673.00
 2038-03-01:BANK SPEND:  700.00
 2038-03-23:BANK SPEND:  950.00
 2038-03-25:ANNUITY payment:  2234.00
-2038-03-28:OAS/GIS payment: 1082.32
-2038-03-28:CPP payment:  668.29
+2038-03-28:OAS/GIS payment: 1075.33
+2038-03-28:CPP payment:  673.00
 2038-04-01:BANK SPEND:  700.00
 2038-04-23:BANK SPEND:  950.00
-2038-04-28:OAS/GIS payment: 1082.32
-2038-04-28:CPP payment:  668.29
+2038-04-28:OAS/GIS payment: 1075.33
+2038-04-28:CPP payment:  673.00
 2038-05-01:BANK SPEND:  700.00
-2038-05-15:SPLURGE SPENDING:  2535.83
+2038-05-15:SPLURGE SPENDING:  2528.99
 2038-05-23:BANK SPEND:  950.00
-2038-05-28:OAS/GIS payment: 1082.32
-2038-05-28:CPP payment:  668.29
+2038-05-28:OAS/GIS payment: 1075.33
+2038-05-28:CPP payment:  673.00
 2038-06-01:BANK SPEND:  700.00
 2038-06-23:BANK SPEND:  950.00
-2038-06-28:OAS/GIS payment: 1082.32
-2038-06-28:CPP payment:  668.29
+2038-06-28:OAS/GIS payment: 1075.33
+2038-06-28:CPP payment:  673.00
 2038-07-01:BANK SPEND:  700.00
 2038-07-23:BANK SPEND:  950.00
-2038-07-28:OAS/GIS payment: 1082.32
-2038-07-28:CPP payment:  668.29
+2038-07-28:OAS/GIS payment: 1075.33
+2038-07-28:CPP payment:  673.00
 2038-08-01:BANK SPEND:  700.00
-2038-08-15:SPLURGE SPENDING:  301.83
+2038-08-15:SPLURGE SPENDING:  294.99
 2038-08-23:BANK SPEND:  950.00
-2038-08-28:OAS/GIS payment: 1082.32
-2038-08-28:CPP payment:  668.29
+2038-08-28:OAS/GIS payment: 1075.33
+2038-08-28:CPP payment:  673.00
 2038-09-01:BANK SPEND:  700.00
 2038-09-23:BANK SPEND:  950.00
-2038-09-28:OAS/GIS payment: 1082.32
-2038-09-28:CPP payment:  668.29
+2038-09-28:OAS/GIS payment: 1075.33
+2038-09-28:CPP payment:  673.00
 2038-10-01:BANK SPEND:  700.00
 2038-10-23:BANK SPEND:  950.00
-2038-10-28:OAS/GIS payment: 1082.32
-2038-10-28:CPP payment:  668.29
+2038-10-28:OAS/GIS payment: 1075.33
+2038-10-28:CPP payment:  673.00
 2038-11-01:BANK SPEND:  700.00
-2038-11-15:SPLURGE SPENDING:  301.83
+2038-11-15:SPLURGE SPENDING:  294.99
 2038-11-23:BANK SPEND:  950.00
-2038-11-28:OAS/GIS payment: 1082.32
-2038-11-28:CPP payment:  668.29
+2038-11-28:OAS/GIS payment: 1075.33
+2038-11-28:CPP payment:  673.00
 2038-12-01:BANK SPEND:  700.00
 2038-12-23:BANK SPEND:  950.00
-2038-12-28:OAS/GIS payment: 1082.32
-2038-12-28:CPP payment:  668.29
+2038-12-28:OAS/GIS payment: 1075.33
+2038-12-28:CPP payment:  673.00
 2038-12-31:PAY TAXES:  0.00
 2038 year-end.
 Cash generated
-     8,019.48 CPP
-     8,622.36 OAS
-     4,365.48 GIS
+     8,076.00 CPP
+     8,562.48 OAS
+     4,341.48 GIS
      2,234.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    23,241.32 Total cash generated
+    23,213.96 Total cash generated
 
 Tax return 2038
-    18,875.84 Taxable income
+    18,872.48 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    18,875.84 Net income
-    18,875.84 Net income before adj
-     8,622.36 OAS income
+    18,872.48 Net income
+    18,872.48 Net income before adj
+     8,562.48 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
 Accounts
-     8,401.22 -BANKACCOUNT-
-     8,401.22 Cash
+     8,396.66 -BANKACCOUNT-
+     8,396.66 Cash
 
-     8,401.22 Net worth
+     8,396.66 Net worth
          0.00 Investments worth
 
 2039-01-01:BANK SPEND:  700.00
 2039-01-23:BANK SPEND:  950.00
-2039-01-28:OAS/GIS payment: 1082.32
-2039-01-28:CPP payment:  668.29
+2039-01-28:OAS/GIS payment: 1075.33
+2039-01-28:CPP payment:  673.00
 2039-02-01:BANK SPEND:  700.00
-2039-02-15:SPLURGE SPENDING:  301.83
+2039-02-15:SPLURGE SPENDING:  294.99
 2039-02-23:BANK SPEND:  950.00
-2039-02-28:OAS/GIS payment: 1082.32
-2039-02-28:CPP payment:  668.29
+2039-02-28:OAS/GIS payment: 1075.33
+2039-02-28:CPP payment:  673.00
 2039-03-01:BANK SPEND:  700.00
 2039-03-23:BANK SPEND:  950.00
 2039-03-25:ANNUITY payment:  2234.00
-2039-03-28:OAS/GIS payment: 1082.32
-2039-03-28:CPP payment:  668.29
+2039-03-28:OAS/GIS payment: 1075.33
+2039-03-28:CPP payment:  673.00
 2039-04-01:BANK SPEND:  700.00
 2039-04-23:BANK SPEND:  950.00
-2039-04-28:OAS/GIS payment: 1082.32
-2039-04-28:CPP payment:  668.29
+2039-04-28:OAS/GIS payment: 1075.33
+2039-04-28:CPP payment:  673.00
 2039-05-01:BANK SPEND:  700.00
-2039-05-15:SPLURGE SPENDING:  2535.83
+2039-05-15:SPLURGE SPENDING:  2528.99
 2039-05-23:BANK SPEND:  950.00
-2039-05-28:OAS/GIS payment: 1082.32
-2039-05-28:CPP payment:  668.29
+2039-05-28:OAS/GIS payment: 1075.33
+2039-05-28:CPP payment:  673.00
 2039-06-01:BANK SPEND:  700.00
 2039-06-23:BANK SPEND:  950.00
-2039-06-28:OAS/GIS payment: 1082.32
-2039-06-28:CPP payment:  668.29
+2039-06-28:OAS/GIS payment: 1075.33
+2039-06-28:CPP payment:  673.00
 2039-07-01:BANK SPEND:  700.00
 2039-07-23:BANK SPEND:  950.00
-2039-07-28:OAS/GIS payment: 1082.32
-2039-07-28:CPP payment:  668.29
+2039-07-28:OAS/GIS payment: 1075.33
+2039-07-28:CPP payment:  673.00
 2039-08-01:BANK SPEND:  700.00
-2039-08-15:SPLURGE SPENDING:  301.83
+2039-08-15:SPLURGE SPENDING:  294.99
 2039-08-23:BANK SPEND:  950.00
-2039-08-28:OAS/GIS payment: 1082.32
-2039-08-28:CPP payment:  668.29
+2039-08-28:OAS/GIS payment: 1075.33
+2039-08-28:CPP payment:  673.00
 2039-09-01:BANK SPEND:  700.00
 2039-09-23:BANK SPEND:  950.00
-2039-09-28:OAS/GIS payment: 1082.32
-2039-09-28:CPP payment:  668.29
+2039-09-28:OAS/GIS payment: 1075.33
+2039-09-28:CPP payment:  673.00
 2039-10-01:BANK SPEND:  700.00
 2039-10-23:BANK SPEND:  950.00
-2039-10-28:OAS/GIS payment: 1082.32
-2039-10-28:CPP payment:  668.29
+2039-10-28:OAS/GIS payment: 1075.33
+2039-10-28:CPP payment:  673.00
 2039-11-01:BANK SPEND:  700.00
-2039-11-15:SPLURGE SPENDING:  301.83
+2039-11-15:SPLURGE SPENDING:  294.99
 2039-11-23:BANK SPEND:  950.00
-2039-11-28:OAS/GIS payment: 1082.32
-2039-11-28:CPP payment:  668.29
+2039-11-28:OAS/GIS payment: 1075.33
+2039-11-28:CPP payment:  673.00
 2039-12-01:BANK SPEND:  700.00
 2039-12-23:BANK SPEND:  950.00
-2039-12-28:OAS/GIS payment: 1082.32
-2039-12-28:CPP payment:  668.29
+2039-12-28:OAS/GIS payment: 1075.33
+2039-12-28:CPP payment:  673.00
 2039-12-31:PAY TAXES:  0.00
 2039 year-end.
 Cash generated
-     8,019.48 CPP
-     8,622.36 OAS
-     4,365.48 GIS
+     8,076.00 CPP
+     8,562.48 OAS
+     4,341.48 GIS
      2,234.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    23,241.32 Total cash generated
+    23,213.96 Total cash generated
 
 Tax return 2039
-    18,875.84 Taxable income
+    18,872.48 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    18,875.84 Net income
-    18,875.84 Net income before adj
-     8,622.36 OAS income
+    18,872.48 Net income
+    18,872.48 Net income before adj
+     8,562.48 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
 Accounts
-     8,401.22 -BANKACCOUNT-
-     8,401.22 Cash
+     8,396.66 -BANKACCOUNT-
+     8,396.66 Cash
 
-     8,401.22 Net worth
+     8,396.66 Net worth
          0.00 Investments worth
 
 2040-01-01:BANK SPEND:  700.00
 2040-01-23:BANK SPEND:  950.00
-2040-01-28:OAS/GIS payment: 1082.32
-2040-01-28:CPP payment:  668.29
+2040-01-28:OAS/GIS payment: 1075.33
+2040-01-28:CPP payment:  673.00
 2040-02-01:BANK SPEND:  700.00
-2040-02-15:SPLURGE SPENDING:  301.83
+2040-02-15:SPLURGE SPENDING:  294.99
 2040-02-23:BANK SPEND:  950.00
-2040-02-28:OAS/GIS payment: 1082.32
-2040-02-28:CPP payment:  668.29
+2040-02-28:OAS/GIS payment: 1075.33
+2040-02-28:CPP payment:  673.00
 2040-03-01:BANK SPEND:  700.00
 2040-03-23:BANK SPEND:  950.00
 2040-03-25:ANNUITY payment:  2234.00
-2040-03-28:OAS/GIS payment: 1082.32
-2040-03-28:CPP payment:  668.29
+2040-03-28:OAS/GIS payment: 1075.33
+2040-03-28:CPP payment:  673.00
 2040-04-01:BANK SPEND:  700.00
 2040-04-23:BANK SPEND:  950.00
-2040-04-28:OAS/GIS payment: 1082.32
-2040-04-28:CPP payment:  668.29
+2040-04-28:OAS/GIS payment: 1075.33
+2040-04-28:CPP payment:  673.00
 2040-05-01:BANK SPEND:  700.00
-2040-05-15:SPLURGE SPENDING:  2535.83
+2040-05-15:SPLURGE SPENDING:  2528.99
 2040-05-23:BANK SPEND:  950.00
-2040-05-28:OAS/GIS payment: 1082.32
-2040-05-28:CPP payment:  668.29
+2040-05-28:OAS/GIS payment: 1075.33
+2040-05-28:CPP payment:  673.00
 2040-06-01:BANK SPEND:  700.00
 2040-06-23:BANK SPEND:  950.00
-2040-06-28:OAS/GIS payment: 1082.32
-2040-06-28:CPP payment:  668.29
+2040-06-28:OAS/GIS payment: 1075.33
+2040-06-28:CPP payment:  673.00
 2040-07-01:BANK SPEND:  700.00
 2040-07-23:BANK SPEND:  950.00
-2040-07-28:OAS/GIS payment: 1082.32
-2040-07-28:CPP payment:  668.29
+2040-07-28:OAS/GIS payment: 1075.33
+2040-07-28:CPP payment:  673.00
 2040-08-01:BANK SPEND:  700.00
-2040-08-15:SPLURGE SPENDING:  301.83
+2040-08-15:SPLURGE SPENDING:  294.99
 2040-08-23:BANK SPEND:  950.00
-2040-08-28:OAS/GIS payment: 1082.32
-2040-08-28:CPP payment:  668.29
+2040-08-28:OAS/GIS payment: 1075.33
+2040-08-28:CPP payment:  673.00
 2040-09-01:BANK SPEND:  700.00
 2040-09-23:BANK SPEND:  950.00
-2040-09-28:OAS/GIS payment: 1082.32
-2040-09-28:CPP payment:  668.29
+2040-09-28:OAS/GIS payment: 1075.33
+2040-09-28:CPP payment:  673.00
 2040-10-01:BANK SPEND:  700.00
 2040-10-23:BANK SPEND:  950.00
-2040-10-28:OAS/GIS payment: 1082.32
-2040-10-28:CPP payment:  668.29
+2040-10-28:OAS/GIS payment: 1075.33
+2040-10-28:CPP payment:  673.00
 2040-11-01:BANK SPEND:  700.00
-2040-11-15:SPLURGE SPENDING:  301.83
+2040-11-15:SPLURGE SPENDING:  294.99
 2040-11-23:BANK SPEND:  950.00
-2040-11-28:OAS/GIS payment: 1082.32
-2040-11-28:CPP payment:  668.29
+2040-11-28:OAS/GIS payment: 1075.33
+2040-11-28:CPP payment:  673.00
 2040-12-01:BANK SPEND:  700.00
 2040-12-23:BANK SPEND:  950.00
-2040-12-28:OAS/GIS payment: 1082.32
-2040-12-28:CPP payment:  668.29
+2040-12-28:OAS/GIS payment: 1075.33
+2040-12-28:CPP payment:  673.00
 2040-12-31:PAY TAXES:  0.00
 2040 year-end.
 Cash generated
-     8,019.48 CPP
-     8,622.36 OAS
-     4,365.48 GIS
+     8,076.00 CPP
+     8,562.48 OAS
+     4,341.48 GIS
      2,234.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    23,241.32 Total cash generated
+    23,213.96 Total cash generated
 
 Tax return 2040
-    18,875.84 Taxable income
+    18,872.48 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    18,875.84 Net income
-    18,875.84 Net income before adj
-     8,622.36 OAS income
+    18,872.48 Net income
+    18,872.48 Net income before adj
+     8,562.48 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
 Accounts
-     8,401.22 -BANKACCOUNT-
-     8,401.22 Cash
+     8,396.66 -BANKACCOUNT-
+     8,396.66 Cash
 
-     8,401.22 Net worth
+     8,396.66 Net worth
          0.00 Investments worth
 
 2041-01-01:BANK SPEND:  700.00
 2041-01-23:BANK SPEND:  950.00
-2041-01-28:OAS/GIS payment: 1082.32
-2041-01-28:CPP payment:  668.29
+2041-01-28:OAS/GIS payment: 1075.33
+2041-01-28:CPP payment:  673.00
 2041-02-01:BANK SPEND:  700.00
-2041-02-15:SPLURGE SPENDING:  301.83
+2041-02-15:SPLURGE SPENDING:  294.99
 2041-02-23:BANK SPEND:  950.00
-2041-02-28:OAS/GIS payment: 1082.32
-2041-02-28:CPP payment:  668.29
+2041-02-28:OAS/GIS payment: 1075.33
+2041-02-28:CPP payment:  673.00
 2041-03-01:BANK SPEND:  700.00
 2041-03-23:BANK SPEND:  950.00
 2041-03-25:ANNUITY payment:  2234.00
-2041-03-28:OAS/GIS payment: 1082.32
-2041-03-28:CPP payment:  668.29
+2041-03-28:OAS/GIS payment: 1075.33
+2041-03-28:CPP payment:  673.00
 2041-04-01:BANK SPEND:  700.00
 2041-04-23:BANK SPEND:  950.00
-2041-04-28:OAS/GIS payment: 1082.32
-2041-04-28:CPP payment:  668.29
+2041-04-28:OAS/GIS payment: 1075.33
+2041-04-28:CPP payment:  673.00
 2041-05-01:BANK SPEND:  700.00
-2041-05-15:SPLURGE SPENDING:  2535.83
+2041-05-15:SPLURGE SPENDING:  2528.99
 2041-05-23:BANK SPEND:  950.00
-2041-05-28:OAS/GIS payment: 1082.32
-2041-05-28:CPP payment:  668.29
+2041-05-28:OAS/GIS payment: 1075.33
+2041-05-28:CPP payment:  673.00
 2041-06-01:BANK SPEND:  700.00
 2041-06-23:BANK SPEND:  950.00
-2041-06-28:OAS/GIS payment: 1082.32
-2041-06-28:CPP payment:  668.29
+2041-06-28:OAS/GIS payment: 1075.33
+2041-06-28:CPP payment:  673.00
 2041-07-01:BANK SPEND:  700.00
 2041-07-23:BANK SPEND:  950.00
-2041-07-28:OAS/GIS payment: 1082.32
-2041-07-28:CPP payment:  668.29
+2041-07-28:OAS/GIS payment: 1075.33
+2041-07-28:CPP payment:  673.00
 2041-08-01:BANK SPEND:  700.00
-2041-08-15:SPLURGE SPENDING:  301.83
+2041-08-15:SPLURGE SPENDING:  294.99
 2041-08-23:BANK SPEND:  950.00
-2041-08-28:OAS/GIS payment: 1082.32
-2041-08-28:CPP payment:  668.29
+2041-08-28:OAS/GIS payment: 1075.33
+2041-08-28:CPP payment:  673.00
 2041-09-01:BANK SPEND:  700.00
 2041-09-23:BANK SPEND:  950.00
-2041-09-28:OAS/GIS payment: 1082.32
-2041-09-28:CPP payment:  668.29
+2041-09-28:OAS/GIS payment: 1075.33
+2041-09-28:CPP payment:  673.00
 2041-10-01:BANK SPEND:  700.00
 2041-10-23:BANK SPEND:  950.00
-2041-10-28:OAS/GIS payment: 1082.32
-2041-10-28:CPP payment:  668.29
+2041-10-28:OAS/GIS payment: 1075.33
+2041-10-28:CPP payment:  673.00
 2041-11-01:BANK SPEND:  700.00
-2041-11-15:SPLURGE SPENDING:  301.83
+2041-11-15:SPLURGE SPENDING:  294.99
 2041-11-23:BANK SPEND:  950.00
-2041-11-28:OAS/GIS payment: 1082.32
-2041-11-28:CPP payment:  668.29
+2041-11-28:OAS/GIS payment: 1075.33
+2041-11-28:CPP payment:  673.00
 2041-12-01:BANK SPEND:  700.00
 2041-12-23:BANK SPEND:  950.00
-2041-12-28:OAS/GIS payment: 1082.32
-2041-12-28:CPP payment:  668.29
+2041-12-28:OAS/GIS payment: 1075.33
+2041-12-28:CPP payment:  673.00
 2041-12-31:PAY TAXES:  0.00
 2041 year-end.
 Cash generated
-     8,019.48 CPP
-     8,622.36 OAS
-     4,365.48 GIS
+     8,076.00 CPP
+     8,562.48 OAS
+     4,341.48 GIS
      2,234.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    23,241.32 Total cash generated
+    23,213.96 Total cash generated
 
 Tax return 2041
-    18,875.84 Taxable income
+    18,872.48 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    18,875.84 Net income
-    18,875.84 Net income before adj
-     8,622.36 OAS income
+    18,872.48 Net income
+    18,872.48 Net income before adj
+     8,562.48 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
 Accounts
-     8,401.22 -BANKACCOUNT-
-     8,401.22 Cash
+     8,396.66 -BANKACCOUNT-
+     8,396.66 Cash
 
-     8,401.22 Net worth
+     8,396.66 Net worth
          0.00 Investments worth
 
 2042-01-01:BANK SPEND:  700.00
 2042-01-23:BANK SPEND:  950.00
-2042-01-28:OAS/GIS payment: 1082.32
-2042-01-28:CPP payment:  668.29
+2042-01-28:OAS/GIS payment: 1075.33
+2042-01-28:CPP payment:  673.00
 2042-02-01:BANK SPEND:  700.00
-2042-02-15:SPLURGE SPENDING:  301.83
+2042-02-15:SPLURGE SPENDING:  294.99
 2042-02-23:BANK SPEND:  950.00
-2042-02-28:OAS/GIS payment: 1082.32
-2042-02-28:CPP payment:  668.29
+2042-02-28:OAS/GIS payment: 1075.33
+2042-02-28:CPP payment:  673.00
 2042-03-01:BANK SPEND:  700.00
 2042-03-23:BANK SPEND:  950.00
 2042-03-25:ANNUITY payment:  2234.00
-2042-03-28:OAS/GIS payment: 1082.32
-2042-03-28:CPP payment:  668.29
+2042-03-28:OAS/GIS payment: 1075.33
+2042-03-28:CPP payment:  673.00
 2042-04-01:BANK SPEND:  700.00
 2042-04-23:BANK SPEND:  950.00
-2042-04-28:OAS/GIS payment: 1082.32
-2042-04-28:CPP payment:  668.29
+2042-04-28:OAS/GIS payment: 1075.33
+2042-04-28:CPP payment:  673.00
 2042-05-01:BANK SPEND:  700.00
-2042-05-15:SPLURGE SPENDING:  2535.83
+2042-05-15:SPLURGE SPENDING:  2528.99
 2042-05-23:BANK SPEND:  950.00
-2042-05-28:OAS/GIS payment: 1082.32
-2042-05-28:CPP payment:  668.29
+2042-05-28:OAS/GIS payment: 1075.33
+2042-05-28:CPP payment:  673.00
 2042-06-01:BANK SPEND:  700.00
 2042-06-23:BANK SPEND:  950.00
-2042-06-28:OAS/GIS payment: 1082.32
-2042-06-28:CPP payment:  668.29
+2042-06-28:OAS/GIS payment: 1075.33
+2042-06-28:CPP payment:  673.00
 2042-07-01:BANK SPEND:  700.00
 2042-07-23:BANK SPEND:  950.00
-2042-07-28:OAS/GIS payment: 1082.32
-2042-07-28:CPP payment:  668.29
+2042-07-28:OAS/GIS payment: 1075.33
+2042-07-28:CPP payment:  673.00
 2042-08-01:BANK SPEND:  700.00
-2042-08-15:SPLURGE SPENDING:  301.83
+2042-08-15:SPLURGE SPENDING:  294.99
 2042-08-23:BANK SPEND:  950.00
-2042-08-28:OAS/GIS payment: 1082.32
-2042-08-28:CPP payment:  668.29
+2042-08-28:OAS/GIS payment: 1075.33
+2042-08-28:CPP payment:  673.00
 2042-09-01:BANK SPEND:  700.00
 2042-09-23:BANK SPEND:  950.00
-2042-09-28:OAS/GIS payment: 1082.32
-2042-09-28:CPP payment:  668.29
+2042-09-28:OAS/GIS payment: 1075.33
+2042-09-28:CPP payment:  673.00
 2042-10-01:BANK SPEND:  700.00
 2042-10-23:BANK SPEND:  950.00
-2042-10-28:OAS/GIS payment: 1082.32
-2042-10-28:CPP payment:  668.29
+2042-10-28:OAS/GIS payment: 1075.33
+2042-10-28:CPP payment:  673.00
 2042-11-01:BANK SPEND:  700.00
-2042-11-15:SPLURGE SPENDING:  301.83
+2042-11-15:SPLURGE SPENDING:  294.99
 2042-11-23:BANK SPEND:  950.00
-2042-11-28:OAS/GIS payment: 1082.32
-2042-11-28:CPP payment:  668.29
+2042-11-28:OAS/GIS payment: 1075.33
+2042-11-28:CPP payment:  673.00
 2042-12-01:BANK SPEND:  700.00
 2042-12-23:BANK SPEND:  950.00
-2042-12-28:OAS/GIS payment: 1082.32
-2042-12-28:CPP payment:  668.29
+2042-12-28:OAS/GIS payment: 1075.33
+2042-12-28:CPP payment:  673.00
 2042-12-31:PAY TAXES:  0.00
 2042 year-end.
 Cash generated
-     8,019.48 CPP
-     8,622.36 OAS
-     4,365.48 GIS
+     8,076.00 CPP
+     8,562.48 OAS
+     4,341.48 GIS
      2,234.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    23,241.32 Total cash generated
+    23,213.96 Total cash generated
 
 Tax return 2042
-    18,875.84 Taxable income
+    18,872.48 Taxable income
          0.00 Federal tax
          0.00 Provincial tax
          0.00 Tax Payable
          0.00 Dividend tax credits
          0.00 Installments
          0.00 Balance owing
-    18,875.84 Net income
-    18,875.84 Net income before adj
-     8,622.36 OAS income
+    18,872.48 Net income
+    18,872.48 Net income before adj
+     8,562.48 OAS income
          0.00 Employment income
          0.00 RIF withdrawals
 
 Accounts
-     8,401.22 -BANKACCOUNT-
-     8,401.22 Cash
+     8,396.66 -BANKACCOUNT-
+     8,396.66 Cash
 
-     8,401.22 Net worth
+     8,396.66 Net worth
          0.00 Investments worth
 
 Summations (nominal)
 Cash generated
-   120,292.20 CPP
-   122,019.56 OAS
-    63,022.20 GIS
+   121,140.00 CPP
+   121,171.76 OAS
+    62,686.20 GIS
     33,510.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-   338,843.96 Total cash generated
+   338,507.96 Total cash generated
 
 Tax return 
    275,821.76 Taxable income
@@ -1339,15 +1339,15 @@ Tax return
 
 Summations (per year)
 Cash generated
-     8,019.48 CPP
-     8,134.64 OAS
-     4,201.48 GIS
+     8,076.00 CPP
+     8,078.12 OAS
+     4,179.08 GIS
      2,234.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    22,589.60 Total cash generated
+    22,567.20 Total cash generated
 
 Tax return 
     18,388.12 Taxable income
@@ -1364,27 +1364,27 @@ Tax return
          0.00 RIF withdrawals
 
 # Net, gross, tax paid:
-# 2028 net: 19997.48 = 19997.48 - 0.00.  [Net worth:6842.32] (age 66)
-# 2029 net: 22457.48 = 22457.48 - 0.00.  [Net worth:8270.58] (age 67)
-# 2030 net: 22457.48 = 22457.48 - 0.00.  [Net worth:8270.58] (age 68)
-# 2031 net: 22457.48 = 22457.48 - 0.00.  [Net worth:8270.58] (age 69)
-# 2032 net: 22457.48 = 22457.48 - 0.00.  [Net worth:8270.58] (age 70)
-# 2033 net: 22457.48 = 22457.48 - 0.00.  [Net worth:8270.58] (age 71)
-# 2034 net: 22457.48 = 22457.48 - 0.00.  [Net worth:8270.58] (age 72)
-# 2035 net: 22457.48 = 22457.48 - 0.00.  [Net worth:8270.58] (age 73)
-# 2036 net: 22457.48 = 22457.48 - 0.00.  [Net worth:8270.58] (age 74)
-# 2037 net: 22980.04 = 22980.04 - 0.00.  [Net worth:8401.22] (age 75)
-# 2038 net: 23241.32 = 23241.32 - 0.00.  [Net worth:8401.22] (age 76)
-# 2039 net: 23241.32 = 23241.32 - 0.00.  [Net worth:8401.22] (age 77)
-# 2040 net: 23241.32 = 23241.32 - 0.00.  [Net worth:8401.22] (age 78)
-# 2041 net: 23241.32 = 23241.32 - 0.00.  [Net worth:8401.22] (age 79)
-# 2042 net: 23241.32 = 23241.32 - 0.00.  [Net worth:8401.22] (age 80)
-#   Total: 338843.96 = 338843.96 - 0.00   (Net Worth: 8401.22)
+# 2028 net: 19999.52 = 19999.52 - 0.00.  [Net worth:6843.68] (age 66)
+# 2029 net: 22435.52 = 22435.52 - 0.00.  [Net worth:8266.92] (age 67)
+# 2030 net: 22435.52 = 22435.52 - 0.00.  [Net worth:8266.92] (age 68)
+# 2031 net: 22435.52 = 22435.52 - 0.00.  [Net worth:8266.92] (age 69)
+# 2032 net: 22435.52 = 22435.52 - 0.00.  [Net worth:8266.92] (age 70)
+# 2033 net: 22435.52 = 22435.52 - 0.00.  [Net worth:8266.92] (age 71)
+# 2034 net: 22435.52 = 22435.52 - 0.00.  [Net worth:8266.92] (age 72)
+# 2035 net: 22435.52 = 22435.52 - 0.00.  [Net worth:8266.92] (age 73)
+# 2036 net: 22435.52 = 22435.52 - 0.00.  [Net worth:8266.92] (age 74)
+# 2037 net: 22954.48 = 22954.48 - 0.00.  [Net worth:8396.66] (age 75)
+# 2038 net: 23213.96 = 23213.96 - 0.00.  [Net worth:8396.66] (age 76)
+# 2039 net: 23213.96 = 23213.96 - 0.00.  [Net worth:8396.66] (age 77)
+# 2040 net: 23213.96 = 23213.96 - 0.00.  [Net worth:8396.66] (age 78)
+# 2041 net: 23213.96 = 23213.96 - 0.00.  [Net worth:8396.66] (age 79)
+# 2042 net: 23213.96 = 23213.96 - 0.00.  [Net worth:8396.66] (age 80)
+#   Total: 338507.96 = 338507.96 - 0.00   (Net Worth: 8396.66)
 Saving reports. Number of histories: 1.
 Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\07.2\07.2-cash-and-tax-summary.csv
 Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\07.2\07.2-cash-flows.csv
 Scenario description: 07.2: Govt of Canada pension 2234.00/month, no other savings, house unsold, retires at 65. Average CPP 673/month, OAS/GIS. PE. Deterministic.
 Start-date: 2028-01-01 end-date: 2042-12-31
-Execution time: 0.8371547s
+Execution time: 0.8154805s
 Done.
 Writing to log file C:\johanley\ProjectsPhoton\end-game\scenario\07.2\07.2.log
