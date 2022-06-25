@@ -12,9 +12,14 @@ import hirondelle.date4j.DateTime;
 
 /** 
  CPP calculation and payment.
+ 
  The default start date is the month AFTER you turn 65.
  The earliest you can start is the month AFTER you turn 60.
- The latest you can start is the month AFTER you turn 70. 
+ The latest you can start is the month AFTER you turn 70.
+ 
+ <P>The start-date here is the first month you get paid.
+ It's important to note that the calculation of the amount of the payment is made for the month
+ BEFORE the start-date. 
 */
 public final class CppPayment extends Transactional {
   
@@ -125,7 +130,8 @@ public final class CppPayment extends Transactional {
   */
   private Money monthlyAmount() {
     Money result = nominalMonthlyAmount;
-    int numMonths = Util.numMonthsBetween(chosenStartMonth, monthTurn65());
+    //start-month is for payment; but the calc here is for the previous month, so + 1
+    int numMonths = Util.numMonthsBetween(chosenStartMonth, monthTurn65()) + 1; 
     if (numMonths != 0) {
       Money adjustment = ZERO;
       if (numMonths > 0) {

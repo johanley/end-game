@@ -135,7 +135,8 @@ public final class OasPayment extends Transactional {
   private Money monthlyAmountIncludingClawback(DateTime when, Scenario sim) {
     Money result = monthlyAmountAt65;
     
-    int numMonths = Util.numMonthsBetween(monthTurn65(), chosenStartMonth);
+    //-1 because the start month is the month of first payment, not the month for which the payment calc is made
+    int numMonths = Util.numMonthsBetween(monthTurn65(), chosenStartMonth) - 1;
     if (numMonths > 0) {
       Money adjustment = result.times(numMonths * monthlyReward);
       result = result.plus(adjustment);
