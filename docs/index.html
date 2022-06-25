@@ -258,7 +258,7 @@ But you have to know which is best for you, and act accordingly.
 <P><b>Retirement planning is different from other projects, because it involves your own death.</b>
 It's useful to be reminded that you might, by chance, die sooner rather than later.
 The basic statistic from Statcan in this regard is interesting: the idea is that you start with a cohort of 
-100,000 people at birth, and you then simply list the number of people that are still alive at each year of age.
+100,000 people at birth, and you then simply list the number of people that are still alive at each age.
 Here are some numbers for Canada as a whole, showing the number remaining at a given age, out of an initial cohort of 100,000 at birth:
 <P>
 <table class='report'>
@@ -272,7 +272,7 @@ Here are some numbers for Canada as a whole, showing the number remaining at a g
  <tr><td>90<td>38,681<td>25,542
 </table>
 
-The output spreadsheet files of this project usually incorporate this stat as a reminder of its importance.
+<P>The output spreadsheet files of this project usually incorporate this stat as a reminder of its importance.
 
 <h2 id='syntax'>General Syntax</h2>
 The scenario file has a specific syntax.
@@ -384,8 +384,9 @@ For the first year in the simulation, there is no data for the previous year, so
 
 <P id='oas'><pre>oas {
   monthly-amount-at-65 = 648.67 # as of 2022-06
-  start-month = 2027-06 
-  payment-day = 28 # day of the month; never more than 28, otherwise you'll have no payment in February!
+  start-month = 2027-06  # month of first payment 
+  payment-day = 28 # day of the month; never more than 28
+  
   clawback-threshold = 81761.00 # as of 2022; versus line 23400 of last year's tax return
   clawback-percent = 15%
   monthly-reward = 0.7% # for every month oas is delayed past 65
@@ -397,15 +398,16 @@ For the first year in the simulation, there is no data for the previous year, so
 }</pre>
 The data used to calculate the OAS (Old Age Security) benefit.
 The <em>start-month</em> is especially important.
-The earliest start-month is the month AFTER you turn 65.
-The latest start-month is the month AFTER you turn 70.
+The earliest <em>start-month</em> is the month AFTER you turn 65.
+The latest <em>start-month</em> is the month AFTER you turn 70.
 
 
 <P id='cpp'><pre>cpp { 
   # can be used for QPP as well, since they have nearly the same core logic
   nominal-monthly-amount = 850.00 # if the person starts at age 65
-  start-month = 2022-06           # the month chosen to start cpp payments 
-  payment-day = 28   # not more than 28, otherwise you'll have no payment in most months of February!
+  start-month = 2022-06           # the month of first payment 
+  payment-day = 28   # day of the month; not more than 28
+  
   monthly-reward = 0.7%   # for every month cpp is delayed past age 65
   monthly-penalty = 0.6%  # for every month cpp is started before age 65
   start-window-begin = 60 
@@ -416,10 +418,10 @@ The latest start-month is the month AFTER you turn 70.
 }</pre>
 The data used to calculate your CPP benefit.
 The <em>nominal-monthly-amount</em> and the <em>start-month</em> are especially important.
-The start date is often the month AFTER you turn 65.
-The earliest start-month is the month AFTER you turn 60.
-The latest start-month is the month AFTER you turn 70.
-The two survivor items are optional, and come as a pair.
+The <em>start-month</em> is often the month AFTER you turn 65.
+The earliest <em>start-month</em> is the month AFTER you turn 60.
+The latest <em>start-month</em> is the month AFTER you turn 70.
+The two <em>survivor</em> items are optional, and come as a pair.
 In this simplified implementation, an optional survivor benefit is paid only if you are already receiving regular CPP payments.
 In that case, your CPP payment can be increased by a survivor benefit. 
 
@@ -493,6 +495,7 @@ The <em>initial-year</em> must agree with the <em>start-date</em> entered above,
 An example of a provincial tax return (for PEI).
 The numbers have to be reviewed each year. 
 See the <a href='https://github.com/johanley/end-game/tree/master/input/provincial-tax'>input\provincial-tax</a> directory for snippets appropriate to each province.
+It's important to realize that different provinces have different data in this block.
 
 <P id='stocks'><pre>stocks {
   # Initial data on stocks; not related to an account.
