@@ -30,7 +30,7 @@
   <ul>
    <li><a href='#whencontrol'>The <em>on</em> statement</a>
   </ul>
- <li><a href="#examplesnippets">Example Snippets</a>
+ <li><a href="#descriptionsnippets">Description of Snippets</a>
   <ul>
    <li><a href='#syntax-version'><em>syntax-version</em></a>
    <li><a href='#description'><em>description</em></a>
@@ -55,7 +55,7 @@
    <li><a href='#annual-tfsa-top-up'><em>annual-tfsa-top-up</em></a>
    <li><a href='#small-paycheck'><em>small-paycheck</em></a>
   </ul> 
- <li><a href="#examplesnippetstransactions">Example Snippets - Transactions Block</a>
+ <li><a href="#descriptionsnippetstransactions">Description of Snippets - Transactions Block</a>
   <ul>
    <li><a href='#transactions'><em>transactions</em></a>
    <li><a href='#bank-debit-credit'><em>bank-debit-credit</em></a>
@@ -322,7 +322,7 @@ In this case, the ":" character is used instead of the <em>on</em> statement:
 
 
 
-<h2 id='examplesnippets'>Example Snippets</h2>
+<h2 id='descriptionsnippets'>Description of Snippets</h2>
 The following are examples of the various parts that can be found in a scenario file.
 They appear here in the order that they are allowed to appear in the file.
 
@@ -627,7 +627,7 @@ In the above example, the person gets a raise in 2026 from 50.00 to 150.00.
 Your paycheck is modeled simplistically, without CPP contributions or EI deductions. 
 There's simply a gross amount that is deposited to your bank account, and that is added to the employment income line on your tax return.
 
-<h2 id='examplesnippetstransactions'>Example Snippets - Transactions Block</h2>
+<h2 id='descriptionsnippetstransactions'>Description of Snippets - Transactions Block</h2>
 
 <p id='transactions'><pre>transactions {
   # Transactions in your accounts, not yet defined implicitly.
@@ -648,7 +648,7 @@ This line usually represents regular spending.
 The convention used here is positive amounts for spending (more common), and negative amounts for deposits (less common).
 
 <P id='move-cash'><pre>move-cash from nra to bank 1500.00 on *-01
-move-cash from rif to bank  on *-03-01,*-06-01,*-09-01,*-12-01
+move-cash from rif to bank on *-03-01,*-06-01,*-09-01,*-12-01
 </pre>
 Move cash from one account to another.
 If you don't specify an amount, then the entire cash balance of the source account is moved.
