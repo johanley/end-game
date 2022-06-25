@@ -1,19 +1,21 @@
 package endgame.entitlements;
 
+import static endgame.util.Consts.NUM_DAYS_IN_FEBRUARY;
 import static endgame.util.Consts.ZERO;
 
 import endgame.Scenario;
-
-import static endgame.util.Consts.NUM_DAYS_IN_FEBRUARY;
-
 import endgame.model.Money;
 import endgame.transaction.TransactionDates;
 import endgame.transaction.Transactional;
 import endgame.util.Util;
 import hirondelle.date4j.DateTime;
-import hirondelle.date4j.DateTime.DayOverflow;
 
-/** CPP calculation and payment. */
+/** 
+ CPP calculation and payment.
+ The default start date is the month AFTER you turn 65.
+ The earliest you can start is the month AFTER you turn 60.
+ The latest you can start is the month AFTER you turn 70. 
+*/
 public final class CppPayment extends Transactional {
   
   public static final CppPayment valueOf(
@@ -72,7 +74,6 @@ public final class CppPayment extends Transactional {
     }
 
     this.chosenStartMonth = chosenStartMonth;
-    this.monthOfFirstCheque = theMonthAfterThe(chosenStartMonth);
     this.nominalMonthlyAmount = nominalMonthlyAmount;
     this.monthOfBirth = dateOfBirth;
     this.startWindowBegin = startWinBeg;
@@ -80,10 +81,11 @@ public final class CppPayment extends Transactional {
     this.monthlyReward = monthlyReward;
     this.monthlyPenalty = monthlyPenalty;
     this.nominalStart = nominalStart;
-    if( ageOnChosenStartMonth() < this.startWindowBegin || this.startWindowEnd < ageOnChosenStartMonth()) {
-      throw new IllegalArgumentException(
-        "Start date for CPP " + chosenStartMonth +  " doesn't have age in range " + this.startWindowBegin + ".." + this.startWindowEnd
-       );
+    if (chosenStartMonth.lt(earliestStart(dateOfBirth))) {
+      throw new IllegalArgumentException("The earliest you can start OAS is " + earliestStart(dateOfBirth) +", but you are choosing " + chosenStartMonth);
+    }
+    if (chosenStartMonth.gt(latestStart(dateOfBirth))) {
+      throw new IllegalArgumentException("The latest you can start OAS is " + latestStart(dateOfBirth) +", but you are choosing " + chosenStartMonth);
     }
     this.monthlyAmount = monthlyAmount(); //core cpp, without survivor benefit.
     this.survivorAmt = survivorAmount;
@@ -92,19 +94,12 @@ public final class CppPayment extends Transactional {
   
   /** Coerce the day to the 1st. */
   private DateTime monthOfBirth;
-  
   /** Coerce the day to the 1st. */
   private DateTime chosenStartMonth;
-  
-  /** Coerce the day to the 1st. One month AFTER the chosen start month. */
-  private DateTime monthOfFirstCheque;
-  
   /** The 'standard' amount, if taken at the standard retirement age (65). */
   private Money nominalMonthlyAmount;
-  
   /** Adjusted from the nominal amount, according to chosen start-month. Core benefit, without the survivor benefit. */
   private Money monthlyAmount;
-  
   private Double monthlyPenalty;
   private Double monthlyReward;
   private Integer nominalStart;
@@ -115,10 +110,13 @@ public final class CppPayment extends Transactional {
   
   private static final Integer FIRST_DAY_OF_THE_MONTH = 1;
   private static final String FIRST_OF_THE_MONTH = "-01";
-  private static final int ONE_MONTH = 1;
 
-  private Integer ageOnChosenStartMonth() {
-    return Util.age(monthOfBirth, chosenStartMonth);
+  private DateTime earliestStart(DateTime dob) {
+    return Util.monthAfterYouTurn(startWindowBegin, dob);
+  }
+  
+  private DateTime latestStart(DateTime dob) {
+    return Util.monthAfterYouTurn(startWindowEnd, dob);
   }
   
   /**
@@ -142,25 +140,13 @@ public final class CppPayment extends Transactional {
     return result;
   }
 
-  /** 
-   You receive the payment on the month AFTER you select.
-   The government needs to process a complete month's transactions, then calc the result, and 
-   send you a cheque in the following month.
-   
-   <P>WARNING: this can change the year, if the given month is in December.
-  */
-  private DateTime theMonthAfterThe(DateTime givenMonth) {
-    return givenMonth.plus(0, ONE_MONTH, 0, 0, 0, 0, 0, DayOverflow.FirstDay);
-  }
-  
   /** Coerce to the first of the month. */
   private DateTime monthTurn65() {
     return DateTime.forDateOnly(monthOfBirth.getYear() + nominalStart, monthOfBirth.getMonth(), FIRST_DAY_OF_THE_MONTH);
   }
   
-  /** True only if the month is at least one month AFTER the chosen start month. */
   private boolean hasPaymentThisMonth(DateTime day) {
-    return !day.lt(monthOfFirstCheque);
+    return !day.lt(chosenStartMonth);
   }
 
   /** Adjusted from the nominal amount at 65, given the chosen start month. */

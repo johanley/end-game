@@ -8,10 +8,12 @@ import endgame.transaction.Transactional;
 import endgame.util.Consts;
 import endgame.util.Util;
 import hirondelle.date4j.DateTime;
-import hirondelle.date4j.DateTime.DayOverflow;
 
 /** 
  OAS calculation and payment. Includes GIS, if applicable.
+ 
+ <P>The earliest you can receive your first payment is the month AFTER you turn 65.
+ The latest you can receive your first payment is the month AFTER you turn 70.
  
  <P>OAS clawback is calculated, but the repayment logic is deeply simplified from how it really works.
  In the real world, the clawback logic involves 4 years, since the repayment is made over the following 2 
@@ -29,7 +31,7 @@ public final class OasPayment extends Transactional {
       String monthlyReward, String boostAge, String boostPercent, 
       String clawbackThreshold, String clawbackRate, String startWinBegin, String startWinEnd, String gisExempt      
    ) {
-    DateTime chosenStartMon = new DateTime(chosenStartMonth + FIRST_OF_THE_MONTH); //coerce to the start of the month
+    DateTime chosenStartMon = new DateTime(chosenStartMonth + FIRST_OF_THE_MONTH); //2027-04-01, coerce to the start of the month
     DateTime dob = new DateTime(dateOfBirth);
     DateTime monthOfBirth = DateTime.forDateOnly(dob.getYear(), dob.getMonth(), FIRST_DAY_OF_THE_MONTH);
     return new OasPayment(
@@ -43,7 +45,7 @@ public final class OasPayment extends Transactional {
   /** 
    Make a direct deposit to your bank account near the end of the month.
    Tracked by your tax return as OAS income (and GIS income, if present).
-   The first payment is near the end of the month AFTER you elect to start OAS. 
+   The first payment is usually the month AFTER you turn 65. 
   */
   @Override protected void execute(DateTime when, Scenario sim) {
     if (hasPaymentThisMonth(when)) {
@@ -75,25 +77,27 @@ public final class OasPayment extends Transactional {
     Money clawbackThreshold, Double clawbackRate, Integer startWinBegin, Integer startWinEnd, Money gisExempt
   ) {
     super(TransactionDates.fromStartDateAndDD(chosenStartMonth.toString(), paymentDay));
-    if (Integer.valueOf(paymentDay) > 28) {
+    if (Integer.valueOf(paymentDay) > Consts.NUM_DAYS_IN_FEBRUARY) {
       throw new IllegalArgumentException("Payment day cannot exceeed 28 (since you won't get paid in Feb).");
     }
-    this.chosenStartMonth = chosenStartMonth;
+    this.chosenStartMonth = chosenStartMonth; //2027-04-01
     this.monthlyAmountAt65 = monthlyAmountAt65;
     this.dateOfBirth = dateOfBirth;
     this.monthOfBirth = monthOfBirth;
-    this.monthOfFirstCheque = theMonthAfterThe(chosenStartMonth);
-    Integer ageAtStart = ageOnChosenStartMonth();
-    if( ageAtStart < startWinBegin || startWinEnd < ageAtStart) {
-      throw new IllegalArgumentException("At OAS start-date your age of " + ageAtStart + " is not in the range " + startWinBegin + ".." + startWinEnd);
-    }
     this.monthlyReward = monthlyReward;
     this.boostAge = boostAge;
     this.boostPercent = boostPercent;
     this.clawbackThreshold = clawbackThreshold;
     this.clawbackRate = clawbackRate;
     this.startWinBegin = startWinBegin;
+    this.startWinEnd = startWinEnd;
     this.gisExempt = gisExempt;
+    if (chosenStartMonth.lt(earliestStart(dateOfBirth))) {
+      throw new IllegalArgumentException("The earliest you can start OAS is " + earliestStart(dateOfBirth) +", but you are choosing " + chosenStartMonth);
+    }
+    if (chosenStartMonth.gt(latestStart(dateOfBirth))) {
+      throw new IllegalArgumentException("The latest you can start OAS is " + latestStart(dateOfBirth) +", but you are choosing " + chosenStartMonth);
+    }
   }
   
   /** Coerce the day to the 1st. */
@@ -102,8 +106,6 @@ public final class OasPayment extends Transactional {
   private DateTime dateOfBirth;
   /** Coerce the day to the 1st. */
   private DateTime monthOfBirth;
-  /** Coerce the day to the 1st. One month AFTER the chosen start month. */
-  private DateTime monthOfFirstCheque;
   
   private Double monthlyReward;
   private int boostAge;
@@ -111,15 +113,19 @@ public final class OasPayment extends Transactional {
   private Money clawbackThreshold;
   private Double clawbackRate;
   private Integer startWinBegin;
+  private Integer startWinEnd;
   private Money gisExempt;
   
   private static final Integer FIRST_DAY_OF_THE_MONTH = 1;
   private static final String FIRST_OF_THE_MONTH = "-01";
-  private static final int ONE_MONTH = 1;
   private static final int PER_MONTH = 12;
   
-  private Integer ageOnChosenStartMonth() {
-    return Util.age(dateOfBirth, chosenStartMonth);
+  private DateTime earliestStart(DateTime dob) {
+    return Util.monthAfterYouTurn(startWinBegin, dob);
+  }
+  
+  private DateTime latestStart(DateTime dob) {
+    return Util.monthAfterYouTurn(startWinEnd, dob);
   }
   
   private Integer age(DateTime when) {
@@ -165,25 +171,13 @@ public final class OasPayment extends Transactional {
     return result;
   }
 
-  /** 
-   You receive the payment on the month AFTER you select.
-   The government needs to process a complete month's transactions, then calc the result, and 
-   send you a cheque in the following month.
-   
-   <P>WARNING: this can change the year, if the given month is in December.
-  */
-  private DateTime theMonthAfterThe(DateTime givenMonth) {
-    return givenMonth.plus(0, ONE_MONTH, 0, 0, 0, 0, 0, DayOverflow.FirstDay);
-  }
-  
   /** Coerce to the first of the month. */
   private DateTime monthTurn65() {
     return DateTime.forDateOnly(monthOfBirth.getYear() + startWinBegin, monthOfBirth.getMonth(), FIRST_DAY_OF_THE_MONTH);
   }
   
-  /** True only if the month is at least one month AFTER the chosen start month. */
   private boolean hasPaymentThisMonth(DateTime when) {
-    return !when.lt(monthOfFirstCheque);
+    return !when.lt(chosenStartMonth);
   }
   
   private Money getMonthlyGisAmount(Scenario sim) {

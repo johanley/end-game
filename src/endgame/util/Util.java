@@ -70,6 +70,13 @@ public final class Util {
     }
     return result;
   }
+  
+  /** Return the start of the month, for the month AFTER you turn a certain age. */
+  public static DateTime monthAfterYouTurn(Integer age, DateTime dob) {
+    DateTime birthday = dob.plus(age, 0, 0, 0, 0, 0, 0, DateTime.DayOverflow.FirstDay);
+    DateTime oneMonthLater = birthday.plus(0, 1, 0, 0, 0, 0, 0, DateTime.DayOverflow.FirstDay);
+    return DateTime.forDateOnly(oneMonthLater.getYear(), oneMonthLater.getMonth(), 1); 
+  }
 
   private static List<String> chopInput(String input, String sep){
     List<String> result = new ArrayList<String>();

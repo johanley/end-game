@@ -257,8 +257,20 @@ But you have to know which is best for you, and act accordingly.
 It's useful to be reminded that you might, by chance, die sooner rather than later.
 The basic statistic from Statcan in this regard is interesting: the idea is that you start with a cohort of 
 100,000 people at birth, and you then simply list the number of people that are still alive at each year of age.
-The output spreadsheet files of this project usually incorporate this stat as a reminder of its importance.
+Here are some numbers for Canada as a whole, showing the number remaining at a given age, out of an initial cohort of 100,000 at birth:
+<P>
+<table class='report'>
+ <tr><th>Age<th>Female<th>Male
+ <tr><td>60<td>94,419<td>90,729
+ <tr><td>65<td>91,919<td>86,908
+ <tr><td>70<td>88,005<td>81,167
+ <tr><td>75<td>81,845<td>72,651
+ <tr><td>80<td>72,262<td>60,447
+ <tr><td>85<td>57,964<td>44,208
+ <tr><td>90<td>38,681<td>25,542
+</table>
 
+The output spreadsheet files of this project usually incorporate this stat as a reminder of its importance.
 
 <h2 id='syntax'>General Syntax</h2>
 The scenario file has a specific syntax.
@@ -349,7 +361,7 @@ If that is activated, then the simulation will often terminate before the end da
 (See below.)
 
 
-<P  id='date-of-birth'><pre>date-of-birth = 1962-03-01
+<P  id='date-of-birth'><pre>date-of-birth = 1962-05-21
 annual-test-for-survival
 sex = male</pre>
 The person's date of birth is used for various calculations.
@@ -370,8 +382,7 @@ For the first year in the simulation, there is no data for the previous year, so
 
 <P id='oas'><pre>oas {
   monthly-amount-at-65 = 648.67 # as of 2022-06
-  # payments are actually first received on the month AFTER the start-month 
-  start-month = 2027-03 # the month I turn 65
+  start-month = 2027-06 
   payment-day = 28 # day of the month; never more than 28, otherwise you'll have no payment in February!
   clawback-threshold = 81761.00 # as of 2022; versus line 23400 of last year's tax return
   clawback-percent = 15%
@@ -384,21 +395,31 @@ For the first year in the simulation, there is no data for the previous year, so
 }</pre>
 The data used to calculate the OAS (Old Age Security) benefit.
 The <em>start-month</em> is especially important.
+The earliest start-month is the month AFTER you turn 65.
+The latest start-month is the month AFTER you turn 70.
+
 
 <P id='cpp'><pre>cpp { 
   # can be used for QPP as well, since they have nearly the same core logic
-  nominal-monthly-amount = 857.00 # if you start at age 65
-  start-month = 2022-03           # the month I choose to start cpp payments
+  nominal-monthly-amount = 850.00 # if the person starts at age 65
+  start-month = 2022-06           # the month chosen to start cpp payments 
   payment-day = 28   # not more than 28, otherwise you'll have no payment in most months of February!
-  # payments are actually first received on the month AFTER the start-month
   monthly-reward = 0.7%   # for every month cpp is delayed past age 65
   monthly-penalty = 0.6%  # for every month cpp is started before age 65
   start-window-begin = 60 
   start-nominal = 65
   start-window-end = 70
+  survivor-benefit-amount = 1000.00    # optional
+  survivor-benefit-start = 2030-02-25  # optional
 }</pre>
 The data used to calculate your CPP benefit.
 The <em>nominal-monthly-amount</em> and the <em>start-month</em> are especially important.
+The start date is often the month AFTER you turn 65.
+The earliest start-month is the month AFTER you turn 60.
+The latest start-month is the month AFTER you turn 70.
+The two survivor items are optional, and come as a pair.
+In this simplified implementation, an optional survivor benefit is paid only if you are already receiving regular CPP payments.
+In that case, your CPP payment can be increased by a survivor benefit. 
 
 <P id='rif-minimum-withdrawals'><pre>rif-minimum-withdrawals {
  # Applied to the market value of the RIF at the start of each year.
@@ -516,7 +537,7 @@ The <em>gaussian</em> style means that price increases follow a <a href='https:/
 The <em>range</em> example above means that the percentage price increase is randomly selected between -5% and +10%.
 
 <p id='tfsa-room'><pre>tfsa-room {
-  initial-room = 19877.98  
+  initial-room = 18500.00  
   yearly-limit = 6000.00
 }</pre>
 Optional. Used to calculate the room in your TFSA account (if you have one).
@@ -534,16 +555,16 @@ The <em>initial-room</em> is your TFSA room as of the <em>start-date</em> of the
     convert-rsp-to-rif = 2018-05-01
     cash = 0.00
     stock-positions {
-      1910 "ABC"
-      813 "XYZ"
-      952 "XEG"
+      2000 "ABC"
+      800 "XYZ"
+      900 "CLU"
     }
   }
   tfsa {
     cash = 0.00
     stock-positions {
-      1150 "ABC"
-      207 "XYZ"
+      1000 "ABC"
+      200 "XYZ"
     }
   }
   nra {
@@ -553,8 +574,8 @@ The <em>initial-room</em> is your TFSA room as of the <em>start-date</em> of the
       290 "XYZ"
     }
     stock-book-values {
-      33362.34 "XYZ"
-      14978.87 "ABC"
+      33000.00 "XYZ"
+      15000.00 "ABC"
     }
   }
 }</pre>
