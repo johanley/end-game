@@ -29,7 +29,7 @@ public final class BankAccount implements Cashable {
   */
   @Override public Money withdrawCash(Money amount, DateTime when) {
     if (cash.lt(amount)){
-      throw new RuntimeException("Can't withdraw more money than you have.");
+      throw new RuntimeException("You're trying to withdraw " + amount + " but you only have " + cash + ".");
     }
     cash = cash.minus(amount);
     if (cash.lt(smallBalanceLimit)) {
