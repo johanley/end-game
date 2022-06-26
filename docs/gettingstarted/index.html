@@ -123,6 +123,38 @@ The log file and .csv files are saved to the same directory as the scenario itse
  <li>hit the two keys Ctrl and F11 at the same time
 </ul>
 
+<P>There are two common kinds of error you may see. 
+First, take the case of a syntax error in the scenario file, where you have typed
+<pre>ban-withdrawal 925.00 on *-02</pre>
+which should really be
+<pre>bank-withdrawal 925.00 on *-02</pre>
+When you try to run the code using that scenario file, you'll see an error message in the Console window,
+and it will tell you the exact location of the problem ()in this case, line 230 and column 6 of the scenario file):
+<pre>endgame.input.syntax.TokenMgrError: Lexical error at line 230, column 6.  Encountered: "-" (45), after : "ban"
+  at endgame.input.syntax.ScenarioParserTokenManager.getNextToken(ScenarioParserTokenManager.java:4529)
+  at endgame.input.syntax.ScenarioParser.jj_ntk(ScenarioParser.java:1910)
+  at endgame.input.syntax.ScenarioParser.transactions(ScenarioParser.java:1284)
+  at endgame.input.syntax.ScenarioParser.all(ScenarioParser.java:194)
+  at endgame.input.syntax.ScenarioParser.parseInput(ScenarioParser.java:70)
+  at endgame.input.syntax.ScenarioParser.parse(ScenarioParser.java:55)
+  at endgame.RunSimulation.readInputFile(RunSimulation.java:168)
+  at endgame.RunSimulation.run(RunSimulation.java:105)
+  at endgame.RunSimulation.main(RunSimulation.java:71)</pre>
+This is called a <em>stack trace</em>. 
+
+<P>A different sort of error can occur later, after the scenario file has been successfully read and parsed.
+An example is an operation that's not allow by the code.
+For instance, if you try to withdraw too much money from your bank account, you'll see this error message 
+in the Console window:
+<pre>java.lang.RuntimeException: You're trying to withdraw 85000.00 but you only have 7130.27.
+  at endgame.bank.BankAccount.withdrawCash(BankAccount.java:32)
+  at endgame.bank.BankDepositWithdrawal.execute(BankDepositWithdrawal.java:30)
+  at endgame.transaction.Transactional.executeOnDate(Transactional.java:34)
+  at endgame.RunSimulation.transactionsUpdateThe(RunSimulation.java:240)
+  at endgame.RunSimulation.run(RunSimulation.java:123)
+  at endgame.RunSimulation.main(RunSimulation.java:71)</pre>
+ 
+
 <P>The <em>RunMultipleSimulations</em> class works in a similar way. 
 The only difference is that it is passed a top-level folder that contains multiple scenario folders.
  
