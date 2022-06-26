@@ -58,7 +58,8 @@
  <li><a href="#descriptionsnippetstransactions">Description of Snippets - Transactions Block</a>
   <ul>
    <li><a href='#transactions'><em>transactions</em></a>
-   <li><a href='#bank-debit-credit'><em>bank-debit-credit</em></a>
+   <li><a href='#bank-deposit-withdrawal'><em>bank-deposit</em></a>
+   <li><a href='#bank-deposit-withdrawal'><em>bank-withdrawal</em></a>
    <li><a href='#move-cash'><em>move-cash</em></a>
    <li><a href='#spend-bank-balance-above'><em>spend-bank-balance-above</em></a>
    <li><a href='#sell-stock'><em>sell-stock</em></a>
@@ -642,10 +643,10 @@ Items in the <em>transactions</em> block are different:
 </ul>
  
 
-<P id='bank-debit-credit'><pre>bank-debit-credit 925.00 on *-01 # rent on the first of the month</pre>
-A debit or credit to your bank account. Spending means debit, a deposit means credit.
+<P id='bank-deposit-withdrawal'><pre>bank-deposit 925.00 on *-01 # rent on the first of the month
+bank-withdrawal 105.25 on 2027-05-01</pre>
+A deposit to or withdrawal from your bank account.
 This line usually represents regular spending.
-The convention used here is positive amounts for spending (more common), and negative amounts for deposits (less common).
 
 <P id='move-cash'><pre>move-cash from nra to bank 1500.00 on *-01
 move-cash from rif to bank on *-03-01,*-06-01,*-09-01,*-12-01

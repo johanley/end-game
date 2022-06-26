@@ -575,7 +575,7 @@ void annualTfsaTopUp() : {
 void transactions() : { } {
   "transactions {"
     (
-     bankDebitCredit() |
+     bankDepositWithdrawal() |
      spendBankBalanceAbove() |
      buySellStock() |
      buyGic() |
@@ -599,11 +599,12 @@ Cashable account() : { Cashable cashable = null; } {
   (< TFSA > {cashable=scenario.tfsa;}| < RIF> {cashable=scenario.rif;}| < NRA> {cashable=scenario.nra;} | <BANK> {cashable=scenario.bank;}) 
   { return cashable; }
 }
-void bankDebitCredit(): { String amount = ""; String when = "";} {
-  "bank-debit-credit" < MONEY > {amount = token.image;} <WHEN_CONTROL> { when = token.image; }
+void bankDepositWithdrawal(): { String deposit =""; String withdrawal=""; String when="";} {
+  ("bank-deposit" < MONEY > {deposit = token.image;} | "bank-withdrawal" < MONEY > {withdrawal = token.image;})
+  <WHEN_CONTROL> { when = token.image; }
   {
-    BankDebitCredit spending = new BankDebitCredit(new Money(amount), when);
-    scenario.transactionals.add(spending);
+    BankDepositWithdrawal bankAction = new BankDepositWithdrawal(deposit, withdrawal, when);
+    scenario.transactionals.add(bankAction);
   }
 }
 void spendBankBalanceAbove(): { String amount = ""; String when = "";} {
