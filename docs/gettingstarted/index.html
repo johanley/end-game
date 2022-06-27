@@ -140,9 +140,9 @@ the method described above.
 <h3>Common Kinds of Errors</h3>
 
 <P>There are two common kinds of error you may see. 
-First, take the case of a syntax error in the scenario file, where you have typed
+First, take the case of a syntax error in the scenario file, where you have mistakenly typed:
 <pre>ban-withdrawal 925.00 on *-02</pre>
-which should really be
+which should be:
 <pre>bank-withdrawal 925.00 on *-02</pre>
 When you try to run the code using that scenario file, you'll see an error message in the Console window,
 and it will tell you the exact location of the problem (in this case, line 230 and column 6 of the scenario file):
@@ -159,7 +159,7 @@ and it will tell you the exact location of the problem (in this case, line 230 a
 This is called a <em>stack trace</em>. 
 
 <P>A different sort of error can occur later, after the scenario file has been successfully read and parsed.
-An example is an operation that's not allow for some reason.
+An example is an operation that's not allowed for some reason.
 For instance, if you try to withdraw too much money from your bank account, you'll see this error message 
 in the Console window:
 <pre>java.lang.RuntimeException: You're trying to withdraw 85000.00 but you only have 7130.27.
