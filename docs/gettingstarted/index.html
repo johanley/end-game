@@ -126,6 +126,17 @@ The log file and .csv files are saved to the same directory as the scenario itse
 <P>The <em>RunMultipleSimulations</em> class works in a similar way. 
 The only difference is that it is passed a top-level folder that contains multiple scenario folders.
  
+
+
+<h3>Step 5 - Create your own Scenario</h3>
+Now you are ready to experiment with your own scenarios.
+You can place the scenario file anywhere you want. 
+But most will find it convenient to follow the existing structure established with the example scenarios, all located under the <em>scenario</em> folder in the project.
+The idea is simple: you just create a new folder for each scenario.
+
+<P>Of course, in order to run your new scenario, you will need to point the <em>RunSimulation</em> class to the scenario file, using 
+the method described above.
+
 <h3>Common Kinds of Errors</h3>
 
 <P>There are two common kinds of error you may see. 
@@ -158,20 +169,6 @@ in the Console window:
   at endgame.RunSimulation.transactionsUpdateThe(RunSimulation.java:240)
   at endgame.RunSimulation.run(RunSimulation.java:123)
   at endgame.RunSimulation.main(RunSimulation.java:71)</pre>
- 
-
-
-
-
-<h3>Step 5 - Create your own Scenario</h3>
-Now you are ready to experiment with your own scenarios.
-You can place the scenario file anywhere you want. 
-But most will find it convenient to follow the existing structure established with the example scenarios, all located under the <em>scenario</em> folder in the project.
-The idea is simple: you just create a new folder for each scenario.
-
-<P>Of course, in order to run your new scenario, you will need to point the <em>RunSimulation</em> class to the scenario file, using 
-the method described above.
-
 
 
 <h3>Step 6 (Optional) - Install the JavaCC plugin</h3>
