@@ -26,6 +26,7 @@ public final class GisBracketFetcher {
    This implementation uses the JSoup tool (jsoup.org). 
   */
   public static void main(String... args) throws IOException {
+    Log.log("Fetching data for GIS brackets from the GOC web site. Number of pages = " + NUM_PAGES);
     GisBracketFetcher fetcher = new GisBracketFetcher();
     fetcher.run();
     Log.log("Done");
@@ -36,7 +37,9 @@ public final class GisBracketFetcher {
    It goes from tab1-1 to tab1-52.
   */
   public static final String BASE_URL = "https://www.canada.ca/en/services/benefits/publicpensions/cpp/old-age-security/payments/tab1-";
-  public static final Integer NUM_PAGES = 52;
+  
+  /** WARNING: THIS NUMBER INCREASES YEARLY. Make sure you don't truncate the data. */
+  public static final Integer NUM_PAGES = 54;
   
   // PRIVATE
   
@@ -73,8 +76,7 @@ public final class GisBracketFetcher {
   }
   
   private void overwriteInputFile(List<String> lines) throws IOException {
-    Log.log(Consts.PROJECT_PATH);
-    Path path = Paths.get(Consts.PROJECT_PATH,"input","gis", "gis-brackets.utf8");
+    Path path = Paths.get(System.getProperty("user.dir"),"input","gis", "gis-brackets.utf8");
     Files.write(path, lines, Consts.ENCODING);
   }
 }

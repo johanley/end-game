@@ -17,9 +17,6 @@ public final class Consts {
   /** 0.00 amount. */
   public static final Money ZERO = new Money(new BigDecimal("0.00"));
   
-  /** You need to set this in your execution environment. */
-  public static final String PROJECT_PATH = System.getProperty("project_path");
-  
   public static final Integer NOT_FOUND = -1;
   
   /** 
