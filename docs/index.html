@@ -436,7 +436,6 @@ In that case, your CPP payment can be increased by a survivor benefit.
  # the start of each year.
  # The left-hand side is your age on Jan 1. 
  # For ages outside this range, a formula applies
- # Ref: https://www.budget.gc.ca/2015/docs/plan/anx5-1-eng.html
  71 = 5.28%
  72 = 5.40%
  ...elided for brevity...
@@ -445,6 +444,7 @@ In that case, your CPP payment can be increased by a survivor benefit.
 }</pre>
 Optional. RIF accounts always have a minimum annual withdrawal.
 For some ages, a formula applies; for others, this table is used.
+Reference: <a href='https://www.budget.gc.ca/2015/docs/plan/anx5-1-eng.html'>here</a>.
 
 
 <P id='federal-tax'><pre>federal-tax {
@@ -483,7 +483,8 @@ The numbers need to be updated yearly.
 The <em>initial-year</em> must agree with the <em>start-date</em> entered above, near the start of the scenario file.
 
 <P id='provincial-tax'><pre>provincial-tax {
-  # Usually there are significant differences between jurisdictions!
+  # Usually there are significant differences 
+  # between jurisdictions!
   # Each jurisdiction has its own set of fields.
   # Numbers from 2021 
   jurisdiction = PE 
@@ -509,8 +510,10 @@ It's important to realize that different provinces have different data in this b
 Reference: <a href='https://www.canada.ca/en/revenue-agency/services/forms-publications/tax-packages-years/general-income-tax-benefit-package.html'>link</a>.
 
 <P id='stocks'><pre>stocks {
-  # Initial data on stocks; not related to an account.
-  # All stocks must be defined here, even those you don't initially own.
+  # Initial data on stocks
+  # Not related to an account.
+  # All stocks in the sim must be defined here, 
+  # even those you don't own at the start.
   "ABC" {   
     price = 56.00
     dividend {
@@ -676,7 +679,7 @@ Attempts to move cash into the <em>rif</em> account will fail.
 Moving cash out of the <em>rif</em> account will often resulting in withholding tax.
 Moving cash into or out of the <em>tfsa</em> account will affect your TFSA room.
 
-<p id='spend-bank-balance-above'><pre>spend-bank-balance-above 5000.00 on *-02-15,*-05-15,*-08-15,*-11-15</pre>
+<p id='spend-bank-balance-above'><pre>spend-bank-balance-above 5000.00 on *-15</pre>
 A generic way of spending the cash in your bank account.
 Only the amount above the given base amount is spent.
 When the money is spent, it simply disappears from the bank account.
