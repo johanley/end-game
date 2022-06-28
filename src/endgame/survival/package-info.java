@@ -31,7 +31,9 @@
   
    <p>The core data is updated by statcan every few years. 
    This tool should attempt to stay up to date with those tables.
-   The current core reference is here : https://www150.statcan.gc.ca/n1/pub/84-537-x/84-537-x2021001-eng.htm
+   The current core reference is here : 
+   <pre>https://www150.statcan.gc.ca/n1/pub/84-537-x/84-537-x2021001-eng.htm
+   https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1310011401&pickMembers%5B0%5D=1.1&pickMembers%5B1%5D=3.2&pickMembers%5B2%5D=4.1&cubeTimeFrame.startYear=2018+%2F+2020&cubeTimeFrame.endYear=2018+%2F+2020&referencePeriods=20180101%2C20180101</pre>
    
    <P>Statcan has a 1-year version and a 3-year version of this data.
    I'm not sure what exactly that means, because the tables in both versions have 1-year intervals.
