@@ -325,9 +325,12 @@ This means on every March 1, June 1, September 1, and December 1 (quarterly divi
 Executed every November 26, in the years 2027 to 2034. When the "|" appears, it adds start-date, end-date, or both.
 There are 3 variations 
 <pre>
-sell 6.0% on *-11-26 | 2027-01-01..2034-12-31  # start-date and end-date
-sell 6.0% on *-11-26 | 2027-01-01..            # only start-date
-sell 6.0% on *-11-26 | ..2034-12-31            # only end-date</pre>
+# start-date and end-date:
+sell 6.0% on *-11-26 | 2027-01-01..2034-12-31  
+# only start-date:
+sell 6.0% on *-11-26 | 2027-01-01..           
+ # only end-date:
+sell 6.0% on *-11-26 | ..2034-12-31</pre>
 An exception to the above is the purchase of a GIC, which always uses a specific date.
 In this case, the ":" character is used instead of the <em>on</em> statement:
 <pre>buy-gic rif "Cda Trust" 5700.00 2.5% 1-year : 2024-06-21</pre>
@@ -650,7 +653,8 @@ There's simply a gross amount that is deposited to your bank account, and that i
 <h2 id='descriptionsnippetstransactions'>Description of Snippets - Transactions Block</h2>
 
 <p id='transactions'><pre>transactions {
-  # Transactions in your accounts, not yet defined implicitly.
+  # Transactions in your accounts, 
+  # not yet defined implicitly.
   ...
 }</pre>
 Transactions against your accounts that aren't specified elsewhere.
@@ -668,7 +672,7 @@ A deposit to or withdrawal from your bank account.
 This line usually represents regular spending.
 
 <P id='move-cash'><pre>move-cash from nra to bank 1500.00 on *-01
-move-cash from rif to bank on *-03-01,*-06-01,*-09-01,*-12-01
+move-cash from rif to bank on *-06-01,*-12-01
 </pre>
 Move cash from one account to another.
 If you don't specify an amount, then the entire cash balance of the source account is moved.
