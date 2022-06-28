@@ -1,6 +1,7 @@
 package endgame.entitlements;
 
 import java.io.IOException;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -46,9 +47,9 @@ public final class GisAmount {
   /** Called only once upon startup, to read the config file that specifies the GIS brackets. */
   public static void lookupGisBrackets(String projectRoot) {
     try {
-      String fileLocation= projectRoot + "input\\gis\\gis-brackets.utf8";
+      Path fileLocation = Path.of(projectRoot, "input", "gis", "gis-brackets.utf8");
       Log.log("Reading file " + fileLocation);
-      List<String> lines = Util.read(fileLocation);
+      List<String> lines = Util.read(fileLocation.toString());
       for (String line : lines) {
         BRACKETS.add(parseLine(line));
       }

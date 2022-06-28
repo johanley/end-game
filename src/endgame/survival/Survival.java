@@ -1,6 +1,7 @@
 package endgame.survival;
 
 import java.io.IOException;
+import java.nio.file.Path;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -90,9 +91,9 @@ public final class Survival {
   private static void populate(Sex sex, String projectRoot) {
     Map<Integer, Integer> table = tableFor(sex);
     try {
-      String fileLocation= projectRoot + "input\\probability-of-survival\\" + sex.name().toLowerCase() + "-lx.utf8";
+      Path fileLocation = Path.of(projectRoot, "input", "probability-of-survival", sex.name().toLowerCase() + "-lx.utf8");
       Log.log("Reading file " + fileLocation);
-      List<String> lines = Util.read(fileLocation);
+      List<String> lines = Util.read(fileLocation.toString());
       for (String line : lines) {
         if (Util.isPresent(line)) {
           if (!line.trim().startsWith("#")) {
