@@ -86,7 +86,7 @@ The main purpose of this project is:
 </ul>
 
 <P><b>This tool is focused almost entirely on the retirement phase of life (spending), not on the working phase of life (saving)</b>.
-It can be useful even if you aren't close to retirement, by letting you explore how to generate a target income.
+It can be useful even if you aren't close to retirement, by letting you explore how cash flow works in retirement.
 
 <p><b>The main steps in using this tool:</b>
 <ul>
@@ -107,25 +107,20 @@ It can be useful even if you aren't close to retirement, by letting you explore 
 <P>A second example chart made with Google Sheets. 
 This chart shows the scatter in net cash flow when a certain policy for selling shares reacts to stock prices generated using a probability distribution.
 In this case, the simulation has been run 20 times by the system, with stock prices being different each time. 
-After 2027, the points below the main body of points are years in which the stock prices were low, and no stocks were sold:
+After 2027, the points below the main body of points are years in which stock prices were low and no stocks were sold, resulting in lower cash flow:
 <P><img src='chart-google-sheets-scatter.png'>
  
 <P>The level of detail in this tool is higher than usual.
 Whereas most tools focus on a high-level rate of return, this tool actually goes through every single day of your retirement, 
 and applies transactions to your accounts.
-It also calculates a basic tax return at the end of every year.
-
-<P>The level of detail will not reflect your actual reality 100%, but it will get you closer to reality than most other tools.
-It's a trade off: in a perfect world, matching reality 100% is of course desirable; but to implement all possible cases
-for all possible conditions is not practical here. 
-So this tool tries to reach a compromise, and <b>tries to reflect reality to a reasonable degree, but not with 100% accuracy</b>. 
+It includes a basic tax return at the end of each year.
 
 <P>
-Every retirement financial plan should be supported by a robust simulation showing you the numbers.
+Every retirement financial plan should be supported by a robust simulation showing you the details.
 Personal finance is quite complex.
 There are many moving parts, and how those parts all work together in your particular case can be found only with a simulator. 
 <b>You can't do these calculations in your head, and you shouldn't rely entirely on <em>rules of thumb</em>, because such 
-rules usually have exceptions.</b>
+rules usually have exceptions.</b> 
 
 <P>This tool has:
 <ul>
@@ -136,7 +131,7 @@ rules usually have exceptions.</b>
 </ul>
 
 <h2 id='limitations'>Limitations</h2>
-This tool has a limited scope:
+This tool is currently restricted in scope:
 <ul>
  <li>there's no spousal logic.
  <li>the set of supported securities is very limited at present: only cash, stocks, GICs, and simple annuities. 
@@ -147,14 +142,6 @@ This tool has a limited scope:
 </ul>
 
 In spite of these limitations, you may still find it useful.
-
-<P>There are <b>two important issues which I hope to address soon</b>:
-<ul>
-  <li>add support for ETFs (Exchange-Traded Funds, an asset class that is very widely held)
-  <li>add support for LIRA/LIF accounts
- </ul>
-
-In general, I would like to improve the tool. I could use some assistance with that.
 
 <h2 id='features'>Features</h2>
 Features include:
@@ -167,10 +154,10 @@ Features include:
  <li>some scenarios have randomness, and some don't 
  <li>the randomness only comes from variation in the market price of securities
  <li>basic tax returns are calculated, both federal and provincial (territories not included at present)
- <li>the output is in .csv (comma-separated values) files, which are easily imported into spreadsheet tools
+ <li>the output is in <em>.csv</em> (comma-separated values) files, which are easily imported into spreadsheet tools
  such as Google Sheets or Open Office (and thereby charted)
- <li>log output shows transactions, yearly summaries, and tax returns
- <li>you can repeat a scenario multiple times, to reflect the spread in outcomes caused by randomness (Monte Carlo simulation)
+ <li>the logging output shows transactions, yearly summaries, tax returns, and so on
+ <li>you can repeat a scenario multiple times, to reflect the spread in outcomes caused by variations in market prices (Monte Carlo simulation)
  <li>the tool can run multiple scenarios in sequence 
  <li>the code is implemented in Java, and can be run on any computer
  <li>changes to the market prices of stock are applied once a year
@@ -427,6 +414,8 @@ The <em>start-month</em> is especially important.
 The earliest <em>start-month</em> is the month AFTER you turn 65.
 The latest <em>start-month</em> is the month AFTER you turn 70.
 
+<P>For both OAS and CPP, there are (in a sense) two start-months.
+One is used to calculate the amount of the payment, and the other (1 month later) is the month you actually receive the first payment.
 
 <P id='cpp'><pre>cpp { 
   # can be used for QPP as well, since they 
