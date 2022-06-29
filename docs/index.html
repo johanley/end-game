@@ -26,7 +26,7 @@ Use with caution!</b>
  <li><a href="#limitations">Limitations</a>
  <li><a href="#features">Features</a>
  <li><a href="#scenarios">Example Scenarios</a>
- <li><a href="#lessons">Lessons Learned</a>
+ <!--   <li><a href="#lessons">Lessons Learned</a> -->
 </ul>
 
 <P>Scenario File
@@ -197,7 +197,7 @@ Features include:
 
 <h2 id='scenarios'>Example Scenarios</h2>
 Example scenarios are included in the source code. 
-They are listed here in rough order of increasing complexity.
+They are listed here in rough order of decreasing complexity.
 
 <P><b>When creating your own scenario, it's always best to start with a working example.</b>
 Then you gradually change the scenario, step by step, to get closer to your own case.
@@ -211,22 +211,23 @@ that's where the author resides. The tool allows for all other provinces as well
 
 <table class='report'>
  <tr><th>ID<th>Description
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/01.1'>01.1</a><td>Never worked, no savings, retires at 65. OAS/GIS, rent 700. PE. Deterministic.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/01.2'>01.2</a><td>Worker with no savings, retires at 65. CPP 300/month, OAS/GIS. PE. Deterministic.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/01.3'>01.3</a><td>Worker with no savings, retires at 65. Average CPP 673/month, OAS/GIS, PE. Deterministic.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/01.4'>01.4</a><td> Worker with no savings, retires at 65. CPP max monthly 1175.75, OAS/GIS. PE. Deterministic.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/02.1'>02.1</a><td>Only a TFSA with 50k in blue-chip dividends. Half the average CPP. 3% dividend growth, 3% stock price growth.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/02.2'>02.2</a><td>Only a TFSA with 100k in blue-chip dividends. Half the average CPP. 3% dividend growth, 3% stock price growth.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/08.2'>08.2</a><td>Fixed 3% growth in stock prices. Liquidate rif-nra-tfsa 6-3% when 65+. Top up TFSA first with RIF, then NRA. PE.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/08.1'>08.1</a><td>Fixed 3% growth in stock prices. Liquidate rif-nra-tfsa 6-3% when 65+. Top up TFSA first with NRA, then RIF. PE.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/07.3'>07.3</a><td>GOC large pension 5483/month, no other savings, house unsold, retires at 65. Average CPP 673/month, OAS/GIS. PE. Deterministic.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/07.2'>07.2</a><td>Govt of Canada pension 2234.00/month, no other savings, house unsold, retires at 65. Average CPP 673/month, OAS/GIS. PE. Deterministic.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/07.1'>07.1</a><td>Pension 2000 monthly, no other savings, house unsold, retires at 65. Average CPP 673/month, OAS/GIS. PE. Deterministic.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/03.1'>03.1</a><td>Dividends only, never sell stocks. 3% dividend growth, 3% stock price growth.
  <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/02.3'>02.3</a><td>Only a RIF with 100k in blue-chip dividends. Half the average CPP. 3% dividend growth, 3% stock price growth.
  <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/02.4'>02.4</a><td>Only a NRA with 100k in blue-chip dividends. Half the average CPP. 3% dividend growth, 3% stock price growth.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/03.1'>03.1</a><td>Dividends only, never sell stocks. 3% dividend growth, 3% stock price growth.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/07.1'>07.1</a><td>Pension 2000 monthly, no other savings, house unsold, retires at 65. Average CPP 673/month, OAS/GIS. PE. Deterministic.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/07.2'>07.2</a><td>Govt of Canada pension 2234.00/month, no other savings, house unsold, retires at 65. Average CPP 673/month, OAS/GIS. PE. Deterministic.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/07.3'>07.3</a><td>GOC large pension 5483/month, no other savings, house unsold, retires at 65. Average CPP 673/month, OAS/GIS. PE. Deterministic.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/08.1'>08.1</a><td>Fixed 3% growth in stock prices. Liquidate rif-nra-tfsa 6-3% when 65+. Top up TFSA first with NRA, then RIF. PE.
- <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/08.2'>08.2</a><td>Fixed 3% growth in stock prices. Liquidate rif-nra-tfsa 6-3% when 65+. Top up TFSA first with RIF, then NRA. PE.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/02.2'>02.2</a><td>Only a TFSA with 100k in blue-chip dividends. Half the average CPP. 3% dividend growth, 3% stock price growth.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/02.1'>02.1</a><td>Only a TFSA with 50k in blue-chip dividends. Half the average CPP. 3% dividend growth, 3% stock price growth.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/01.4'>01.4</a><td> Worker with no savings, retires at 65. CPP max monthly 1175.75, OAS/GIS. PE. Deterministic.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/01.3'>01.3</a><td>Worker with no savings, retires at 65. Average CPP 673/month, OAS/GIS, PE. Deterministic.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/01.2'>01.2</a><td>Worker with no savings, retires at 65. CPP 300/month, OAS/GIS. PE. Deterministic.
+ <tr><td><a href='https://github.com/johanley/end-game/tree/master/scenario/01.1'>01.1</a><td>Never worked, no savings, retires at 65. OAS/GIS, rent 700. PE. Deterministic.
 </table>
 
+<!-- 
 <h2 id='lessons'>Lessons Learned</h2>
 
 <b>Those with no savings will have cash flow in the low 20s.</b>
@@ -300,6 +301,7 @@ Here are some numbers for Canada as a whole, showing the number remaining at a g
 </table>
 
 <P>The output spreadsheet files of this project usually incorporate this stat as a reminder of its importance.
+ -->
 
 <h2 id='syntax'>General Syntax</h2>
 The scenario file has a specific syntax.
