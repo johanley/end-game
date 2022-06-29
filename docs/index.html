@@ -105,7 +105,7 @@ It can be useful even if you aren't close to retirement, by letting you explore 
 <P><img src='chart-google-sheets.png'>
 
 <P>A second example chart made with Google Sheets. 
-This chart shows the scatter in net cash flow when a certain policy for selling shares reacts to randomly generated stock prices.
+This chart shows the scatter in net cash flow when a certain policy for selling shares reacts to stock prices generated using a probability distribution.
 In this case, the simulation has been run 20 times by the system, with stock prices being different each time. 
 After 2027, the points below the main body of points are years in which the stock prices were low, and no stocks were sold:
 <P><img src='chart-google-sheets-scatter.png'>
@@ -129,7 +129,7 @@ rules usually have exceptions.</b>
 
 <P>This tool has:
 <ul>
- <li>helped me find thousands of additional dollars in cash flow
+ <li>helped me find thousands of dollars in additional cash flow
  <li>increased my level of confidence in my financial plan
  <li>helped me answer many different questions
  <li>helped me in speaking to a financial advisor
@@ -179,7 +179,8 @@ Features include:
 
 <P>Some items that aren't modeled explicitly can still be effectively modeled by the system. 
  For example, the sale of a primary residence can be modeled as a simple windfall deposited to your bank account, since 
- no tax is paid on the capital gain when you sell your home.  
+ no tax is paid on the capital gain when you sell your home. From there, the cash can be transferred into 
+ an investment account to buy securities.
 
 <P>There are two distinct types of scenarios:
 <ul> 
@@ -326,8 +327,8 @@ If you have a syntax error, then an error message will tell you the exact locati
 <P>There's a special <em>on</em> syntax for controlling when transactions are applied, and it occurs in various places.
 Examples:
 
-<pre>bank-debit-credit 925.00 on *-01</pre>
-This means your bank is debited 925.00 on the first of every single month. 
+<pre>bank-withdrawal 925.00 on *-01</pre>
+This means that 925.00 is withdrawn from your bank account on the first of every single month. 
  
 <pre>on 2027-11-25</pre>
 This means on that specific day, and no other.
