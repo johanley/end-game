@@ -47,6 +47,9 @@ public final class MoveCash extends Transactional {
       Money withheld = fromAcct.withdrawCash(grossAmount, when);
       Money netAmount = grossAmount.minus(withheld);
       toAcct.depositCash(netAmount, when); //will fail for a RIF/RSP.
+      if (sim.bank == toAcct) {
+        sim.yearlyCashFlows.cashSwept = sim.yearlyCashFlows.cashSwept.plus(netAmount); 
+      }
       if (withheld.isZero()) {
         logMe(when, netAmount); 
       }
