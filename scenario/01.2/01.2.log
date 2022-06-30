@@ -11,75 +11,75 @@ History #1
 Incrementing one day at a time, starting with 2028-01-01
 2028-01-01:BANK WITHDRAWAL:  700.00
 2028-01-23:BANK WITHDRAWAL:  950.00
-2028-01-28:OAS/GIS payment: 807.46
+2028-01-28:OAS/GIS payment: 835.46
 2028-01-28:CPP payment:  300.00
 2028-02-01:BANK WITHDRAWAL:  700.00
-2028-02-15:SPLURGE SPENDING:  1257.46
+2028-02-15:SPLURGE SPENDING:  1285.46
 2028-02-23:BANK WITHDRAWAL:  950.00
-2028-02-28:OAS/GIS payment: 807.46
+2028-02-28:OAS/GIS payment: 835.46
 2028-02-28:CPP payment:  300.00
 2028-03-01:BANK WITHDRAWAL:  700.00
 2028-03-23:BANK WITHDRAWAL:  950.00
-2028-03-28:OAS/GIS payment: 807.46
+2028-03-28:OAS/GIS payment: 835.46
 2028-03-28:CPP payment:  300.00
 2028-04-01:BANK WITHDRAWAL:  700.00
 2028-04-23:BANK WITHDRAWAL:  950.00
-2028-04-28:OAS/GIS payment: 807.46
+2028-04-28:OAS/GIS payment: 835.46
 2028-04-28:CPP payment:  300.00
 2028-05-01:BANK WITHDRAWAL:  700.00
 2028-05-23:BANK WITHDRAWAL:  950.00
-2028-05-28:OAS/GIS payment: 807.46
+2028-05-28:OAS/GIS payment: 835.46
 2028-05-28:CPP payment:  300.00
 2028-06-01:BANK WITHDRAWAL:  700.00
 2028-06-23:BANK WITHDRAWAL:  950.00
-2028-06-28:OAS/GIS payment: 807.46
+2028-06-28:OAS/GIS payment: 835.46
 2028-06-28:CPP payment:  300.00
 2028-07-01:BANK WITHDRAWAL:  700.00
 2028-07-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 3837.30 is under the small-balance limit of 4000.00
-2028-07-28:OAS/GIS payment: 807.46
+  Bank balance: 3977.30 is under the small-balance limit of 4000.00
+2028-07-28:OAS/GIS payment: 835.46
 2028-07-28:CPP payment:  300.00
 2028-08-01:BANK WITHDRAWAL:  700.00
 2028-08-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 3294.76 is under the small-balance limit of 4000.00
-2028-08-28:OAS/GIS payment: 807.46
+  Bank balance: 3462.76 is under the small-balance limit of 4000.00
+2028-08-28:OAS/GIS payment: 835.46
 2028-08-28:CPP payment:  300.00
 2028-09-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3702.22 is under the small-balance limit of 4000.00
+  Bank balance: 3898.22 is under the small-balance limit of 4000.00
 2028-09-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2752.22 is under the small-balance limit of 4000.00
-2028-09-28:OAS/GIS payment: 807.46
+  Bank balance: 2948.22 is under the small-balance limit of 4000.00
+2028-09-28:OAS/GIS payment: 835.46
 2028-09-28:CPP payment:  300.00
 2028-10-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3159.68 is under the small-balance limit of 4000.00
+  Bank balance: 3383.68 is under the small-balance limit of 4000.00
 2028-10-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2209.68 is under the small-balance limit of 4000.00
-2028-10-28:OAS/GIS payment: 807.46
+  Bank balance: 2433.68 is under the small-balance limit of 4000.00
+2028-10-28:OAS/GIS payment: 835.46
 2028-10-28:CPP payment:  300.00
 2028-11-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 2617.14 is under the small-balance limit of 4000.00
+  Bank balance: 2869.14 is under the small-balance limit of 4000.00
 2028-11-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 1667.14 is under the small-balance limit of 4000.00
-2028-11-28:OAS/GIS payment: 807.46
+  Bank balance: 1919.14 is under the small-balance limit of 4000.00
+2028-11-28:OAS/GIS payment: 835.46
 2028-11-28:CPP payment:  300.00
 2028-12-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 2074.60 is under the small-balance limit of 4000.00
+  Bank balance: 2354.60 is under the small-balance limit of 4000.00
 2028-12-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 1124.60 is under the small-balance limit of 4000.00
-2028-12-28:OAS/GIS payment: 807.46
+  Bank balance: 1404.60 is under the small-balance limit of 4000.00
+2028-12-28:OAS/GIS payment: 835.46
 2028-12-28:CPP payment:  300.00
 2028-12-31:PAY TAXES:  0.00
 2028 year-end.
 Cash generated
      3,600.00 CPP
      7,784.04 OAS
-     1,905.48 GIS
+     2,241.48 GIS
          0.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    13,289.52 Total cash generated
+    13,625.52 Total cash generated
 
 Tax return 2028
     11,384.04 Taxable income
@@ -96,96 +96,96 @@ Tax return 2028
          0.00 RIF withdrawals
 
 Accounts
-     2,232.06 -BANKACCOUNT-
-     2,232.06 Cash
+     2,540.06 -BANKACCOUNT-
+     2,540.06 Cash
 
-     2,232.06 Net worth
+     2,540.06 Net worth
          0.00 Investments worth
 
 2029-01-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 1532.06 is under the small-balance limit of 4000.00
+  Bank balance: 1840.06 is under the small-balance limit of 4000.00
 2029-01-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 582.06 is under the small-balance limit of 4000.00
-2029-01-28:OAS/GIS payment: 1401.39
+  Bank balance: 890.06 is under the small-balance limit of 4000.00
+2029-01-28:OAS/GIS payment: 1434.53
 2029-01-28:CPP payment:  300.00
 2029-02-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 1583.45 is under the small-balance limit of 4000.00
+  Bank balance: 1924.59 is under the small-balance limit of 4000.00
 2029-02-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 633.45 is under the small-balance limit of 4000.00
-2029-02-28:OAS/GIS payment: 1401.39
+  Bank balance: 974.59 is under the small-balance limit of 4000.00
+2029-02-28:OAS/GIS payment: 1434.53
 2029-02-28:CPP payment:  300.00
 2029-03-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 1634.84 is under the small-balance limit of 4000.00
+  Bank balance: 2009.12 is under the small-balance limit of 4000.00
 2029-03-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 684.84 is under the small-balance limit of 4000.00
-2029-03-28:OAS/GIS payment: 1401.39
+  Bank balance: 1059.12 is under the small-balance limit of 4000.00
+2029-03-28:OAS/GIS payment: 1434.53
 2029-03-28:CPP payment:  300.00
 2029-04-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 1686.23 is under the small-balance limit of 4000.00
+  Bank balance: 2093.65 is under the small-balance limit of 4000.00
 2029-04-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 736.23 is under the small-balance limit of 4000.00
-2029-04-28:OAS/GIS payment: 1401.39
+  Bank balance: 1143.65 is under the small-balance limit of 4000.00
+2029-04-28:OAS/GIS payment: 1434.53
 2029-04-28:CPP payment:  300.00
 2029-05-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 1737.62 is under the small-balance limit of 4000.00
+  Bank balance: 2178.18 is under the small-balance limit of 4000.00
 2029-05-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 787.62 is under the small-balance limit of 4000.00
-2029-05-28:OAS/GIS payment: 1401.39
+  Bank balance: 1228.18 is under the small-balance limit of 4000.00
+2029-05-28:OAS/GIS payment: 1434.53
 2029-05-28:CPP payment:  300.00
 2029-06-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 1789.01 is under the small-balance limit of 4000.00
+  Bank balance: 2262.71 is under the small-balance limit of 4000.00
 2029-06-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 839.01 is under the small-balance limit of 4000.00
-2029-06-28:OAS/GIS payment: 1401.39
+  Bank balance: 1312.71 is under the small-balance limit of 4000.00
+2029-06-28:OAS/GIS payment: 1434.53
 2029-06-28:CPP payment:  300.00
 2029-07-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 1840.40 is under the small-balance limit of 4000.00
+  Bank balance: 2347.24 is under the small-balance limit of 4000.00
 2029-07-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 890.40 is under the small-balance limit of 4000.00
-2029-07-28:OAS/GIS payment: 1401.39
+  Bank balance: 1397.24 is under the small-balance limit of 4000.00
+2029-07-28:OAS/GIS payment: 1434.53
 2029-07-28:CPP payment:  300.00
 2029-08-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 1891.79 is under the small-balance limit of 4000.00
+  Bank balance: 2431.77 is under the small-balance limit of 4000.00
 2029-08-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 941.79 is under the small-balance limit of 4000.00
-2029-08-28:OAS/GIS payment: 1401.39
+  Bank balance: 1481.77 is under the small-balance limit of 4000.00
+2029-08-28:OAS/GIS payment: 1434.53
 2029-08-28:CPP payment:  300.00
 2029-09-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 1943.18 is under the small-balance limit of 4000.00
+  Bank balance: 2516.30 is under the small-balance limit of 4000.00
 2029-09-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 993.18 is under the small-balance limit of 4000.00
-2029-09-28:OAS/GIS payment: 1401.39
+  Bank balance: 1566.30 is under the small-balance limit of 4000.00
+2029-09-28:OAS/GIS payment: 1434.53
 2029-09-28:CPP payment:  300.00
 2029-10-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 1994.57 is under the small-balance limit of 4000.00
+  Bank balance: 2600.83 is under the small-balance limit of 4000.00
 2029-10-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 1044.57 is under the small-balance limit of 4000.00
-2029-10-28:OAS/GIS payment: 1401.39
+  Bank balance: 1650.83 is under the small-balance limit of 4000.00
+2029-10-28:OAS/GIS payment: 1434.53
 2029-10-28:CPP payment:  300.00
 2029-11-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 2045.96 is under the small-balance limit of 4000.00
+  Bank balance: 2685.36 is under the small-balance limit of 4000.00
 2029-11-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 1095.96 is under the small-balance limit of 4000.00
-2029-11-28:OAS/GIS payment: 1401.39
+  Bank balance: 1735.36 is under the small-balance limit of 4000.00
+2029-11-28:OAS/GIS payment: 1434.53
 2029-11-28:CPP payment:  300.00
 2029-12-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 2097.35 is under the small-balance limit of 4000.00
+  Bank balance: 2769.89 is under the small-balance limit of 4000.00
 2029-12-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 1147.35 is under the small-balance limit of 4000.00
-2029-12-28:OAS/GIS payment: 1401.39
+  Bank balance: 1819.89 is under the small-balance limit of 4000.00
+2029-12-28:OAS/GIS payment: 1434.53
 2029-12-28:CPP payment:  300.00
 2029-12-31:PAY TAXES:  0.00
 2029 year-end.
 Cash generated
      3,600.00 CPP
      7,784.04 OAS
-     9,032.64 GIS
+     9,430.32 GIS
          0.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    20,416.68 Total cash generated
+    20,814.36 Total cash generated
 
 Tax return 2029
     11,384.04 Taxable income
@@ -202,96 +202,96 @@ Tax return 2029
          0.00 RIF withdrawals
 
 Accounts
-     2,848.74 -BANKACCOUNT-
-     2,848.74 Cash
+     3,554.42 -BANKACCOUNT-
+     3,554.42 Cash
 
-     2,848.74 Net worth
+     3,554.42 Net worth
          0.00 Investments worth
 
 2030-01-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 2148.74 is under the small-balance limit of 4000.00
+  Bank balance: 2854.42 is under the small-balance limit of 4000.00
 2030-01-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 1198.74 is under the small-balance limit of 4000.00
-2030-01-28:OAS/GIS payment: 1401.39
+  Bank balance: 1904.42 is under the small-balance limit of 4000.00
+2030-01-28:OAS/GIS payment: 1434.53
 2030-01-28:CPP payment:  300.00
 2030-02-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 2200.13 is under the small-balance limit of 4000.00
+  Bank balance: 2938.95 is under the small-balance limit of 4000.00
 2030-02-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 1250.13 is under the small-balance limit of 4000.00
-2030-02-28:OAS/GIS payment: 1401.39
+  Bank balance: 1988.95 is under the small-balance limit of 4000.00
+2030-02-28:OAS/GIS payment: 1434.53
 2030-02-28:CPP payment:  300.00
 2030-03-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 2251.52 is under the small-balance limit of 4000.00
+  Bank balance: 3023.48 is under the small-balance limit of 4000.00
 2030-03-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 1301.52 is under the small-balance limit of 4000.00
-2030-03-28:OAS/GIS payment: 1401.39
+  Bank balance: 2073.48 is under the small-balance limit of 4000.00
+2030-03-28:OAS/GIS payment: 1434.53
 2030-03-28:CPP payment:  300.00
 2030-04-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 2302.91 is under the small-balance limit of 4000.00
+  Bank balance: 3108.01 is under the small-balance limit of 4000.00
 2030-04-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 1352.91 is under the small-balance limit of 4000.00
-2030-04-28:OAS/GIS payment: 1401.39
+  Bank balance: 2158.01 is under the small-balance limit of 4000.00
+2030-04-28:OAS/GIS payment: 1434.53
 2030-04-28:CPP payment:  300.00
 2030-05-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 2354.30 is under the small-balance limit of 4000.00
+  Bank balance: 3192.54 is under the small-balance limit of 4000.00
 2030-05-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 1404.30 is under the small-balance limit of 4000.00
-2030-05-28:OAS/GIS payment: 1401.39
+  Bank balance: 2242.54 is under the small-balance limit of 4000.00
+2030-05-28:OAS/GIS payment: 1434.53
 2030-05-28:CPP payment:  300.00
 2030-06-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 2405.69 is under the small-balance limit of 4000.00
+  Bank balance: 3277.07 is under the small-balance limit of 4000.00
 2030-06-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 1455.69 is under the small-balance limit of 4000.00
-2030-06-28:OAS/GIS payment: 1401.39
+  Bank balance: 2327.07 is under the small-balance limit of 4000.00
+2030-06-28:OAS/GIS payment: 1434.53
 2030-06-28:CPP payment:  300.00
 2030-07-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 2457.08 is under the small-balance limit of 4000.00
+  Bank balance: 3361.60 is under the small-balance limit of 4000.00
 2030-07-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 1507.08 is under the small-balance limit of 4000.00
-2030-07-28:OAS/GIS payment: 1401.39
+  Bank balance: 2411.60 is under the small-balance limit of 4000.00
+2030-07-28:OAS/GIS payment: 1434.53
 2030-07-28:CPP payment:  300.00
 2030-08-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 2508.47 is under the small-balance limit of 4000.00
+  Bank balance: 3446.13 is under the small-balance limit of 4000.00
 2030-08-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 1558.47 is under the small-balance limit of 4000.00
-2030-08-28:OAS/GIS payment: 1401.39
+  Bank balance: 2496.13 is under the small-balance limit of 4000.00
+2030-08-28:OAS/GIS payment: 1434.53
 2030-08-28:CPP payment:  300.00
 2030-09-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 2559.86 is under the small-balance limit of 4000.00
+  Bank balance: 3530.66 is under the small-balance limit of 4000.00
 2030-09-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 1609.86 is under the small-balance limit of 4000.00
-2030-09-28:OAS/GIS payment: 1401.39
+  Bank balance: 2580.66 is under the small-balance limit of 4000.00
+2030-09-28:OAS/GIS payment: 1434.53
 2030-09-28:CPP payment:  300.00
 2030-10-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 2611.25 is under the small-balance limit of 4000.00
+  Bank balance: 3615.19 is under the small-balance limit of 4000.00
 2030-10-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 1661.25 is under the small-balance limit of 4000.00
-2030-10-28:OAS/GIS payment: 1401.39
+  Bank balance: 2665.19 is under the small-balance limit of 4000.00
+2030-10-28:OAS/GIS payment: 1434.53
 2030-10-28:CPP payment:  300.00
 2030-11-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 2662.64 is under the small-balance limit of 4000.00
+  Bank balance: 3699.72 is under the small-balance limit of 4000.00
 2030-11-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 1712.64 is under the small-balance limit of 4000.00
-2030-11-28:OAS/GIS payment: 1401.39
+  Bank balance: 2749.72 is under the small-balance limit of 4000.00
+2030-11-28:OAS/GIS payment: 1434.53
 2030-11-28:CPP payment:  300.00
 2030-12-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 2714.03 is under the small-balance limit of 4000.00
+  Bank balance: 3784.25 is under the small-balance limit of 4000.00
 2030-12-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 1764.03 is under the small-balance limit of 4000.00
-2030-12-28:OAS/GIS payment: 1401.39
+  Bank balance: 2834.25 is under the small-balance limit of 4000.00
+2030-12-28:OAS/GIS payment: 1434.53
 2030-12-28:CPP payment:  300.00
 2030-12-31:PAY TAXES:  0.00
 2030 year-end.
 Cash generated
      3,600.00 CPP
      7,784.04 OAS
-     9,032.64 GIS
+     9,430.32 GIS
          0.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    20,416.68 Total cash generated
+    20,814.36 Total cash generated
 
 Tax return 2030
     11,384.04 Taxable income
@@ -308,96 +308,86 @@ Tax return 2030
          0.00 RIF withdrawals
 
 Accounts
-     3,465.42 -BANKACCOUNT-
-     3,465.42 Cash
+     4,568.78 -BANKACCOUNT-
+     4,568.78 Cash
 
-     3,465.42 Net worth
+     4,568.78 Net worth
          0.00 Investments worth
 
 2031-01-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 2765.42 is under the small-balance limit of 4000.00
+  Bank balance: 3868.78 is under the small-balance limit of 4000.00
 2031-01-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 1815.42 is under the small-balance limit of 4000.00
-2031-01-28:OAS/GIS payment: 1401.39
+  Bank balance: 2918.78 is under the small-balance limit of 4000.00
+2031-01-28:OAS/GIS payment: 1434.53
 2031-01-28:CPP payment:  300.00
 2031-02-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 2816.81 is under the small-balance limit of 4000.00
+  Bank balance: 3953.31 is under the small-balance limit of 4000.00
 2031-02-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 1866.81 is under the small-balance limit of 4000.00
-2031-02-28:OAS/GIS payment: 1401.39
+  Bank balance: 3003.31 is under the small-balance limit of 4000.00
+2031-02-28:OAS/GIS payment: 1434.53
 2031-02-28:CPP payment:  300.00
 2031-03-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 2868.20 is under the small-balance limit of 4000.00
 2031-03-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 1918.20 is under the small-balance limit of 4000.00
-2031-03-28:OAS/GIS payment: 1401.39
+  Bank balance: 3087.84 is under the small-balance limit of 4000.00
+2031-03-28:OAS/GIS payment: 1434.53
 2031-03-28:CPP payment:  300.00
 2031-04-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 2919.59 is under the small-balance limit of 4000.00
 2031-04-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 1969.59 is under the small-balance limit of 4000.00
-2031-04-28:OAS/GIS payment: 1401.39
+  Bank balance: 3172.37 is under the small-balance limit of 4000.00
+2031-04-28:OAS/GIS payment: 1434.53
 2031-04-28:CPP payment:  300.00
 2031-05-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 2970.98 is under the small-balance limit of 4000.00
 2031-05-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2020.98 is under the small-balance limit of 4000.00
-2031-05-28:OAS/GIS payment: 1401.39
+  Bank balance: 3256.90 is under the small-balance limit of 4000.00
+2031-05-28:OAS/GIS payment: 1434.53
 2031-05-28:CPP payment:  300.00
 2031-06-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3022.37 is under the small-balance limit of 4000.00
 2031-06-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2072.37 is under the small-balance limit of 4000.00
-2031-06-28:OAS/GIS payment: 1401.39
+  Bank balance: 3341.43 is under the small-balance limit of 4000.00
+2031-06-28:OAS/GIS payment: 1434.53
 2031-06-28:CPP payment:  300.00
 2031-07-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3073.76 is under the small-balance limit of 4000.00
 2031-07-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2123.76 is under the small-balance limit of 4000.00
-2031-07-28:OAS/GIS payment: 1401.39
+  Bank balance: 3425.96 is under the small-balance limit of 4000.00
+2031-07-28:OAS/GIS payment: 1434.53
 2031-07-28:CPP payment:  300.00
 2031-08-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3125.15 is under the small-balance limit of 4000.00
 2031-08-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2175.15 is under the small-balance limit of 4000.00
-2031-08-28:OAS/GIS payment: 1401.39
+  Bank balance: 3510.49 is under the small-balance limit of 4000.00
+2031-08-28:OAS/GIS payment: 1434.53
 2031-08-28:CPP payment:  300.00
 2031-09-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3176.54 is under the small-balance limit of 4000.00
 2031-09-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2226.54 is under the small-balance limit of 4000.00
-2031-09-28:OAS/GIS payment: 1401.39
+  Bank balance: 3595.02 is under the small-balance limit of 4000.00
+2031-09-28:OAS/GIS payment: 1434.53
 2031-09-28:CPP payment:  300.00
 2031-10-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3227.93 is under the small-balance limit of 4000.00
 2031-10-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2277.93 is under the small-balance limit of 4000.00
-2031-10-28:OAS/GIS payment: 1401.39
+  Bank balance: 3679.55 is under the small-balance limit of 4000.00
+2031-10-28:OAS/GIS payment: 1434.53
 2031-10-28:CPP payment:  300.00
 2031-11-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3279.32 is under the small-balance limit of 4000.00
 2031-11-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2329.32 is under the small-balance limit of 4000.00
-2031-11-28:OAS/GIS payment: 1401.39
+  Bank balance: 3764.08 is under the small-balance limit of 4000.00
+2031-11-28:OAS/GIS payment: 1434.53
 2031-11-28:CPP payment:  300.00
 2031-12-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3330.71 is under the small-balance limit of 4000.00
 2031-12-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2380.71 is under the small-balance limit of 4000.00
-2031-12-28:OAS/GIS payment: 1401.39
+  Bank balance: 3848.61 is under the small-balance limit of 4000.00
+2031-12-28:OAS/GIS payment: 1434.53
 2031-12-28:CPP payment:  300.00
 2031-12-31:PAY TAXES:  0.00
 2031 year-end.
 Cash generated
      3,600.00 CPP
      7,784.04 OAS
-     9,032.64 GIS
+     9,430.32 GIS
          0.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    20,416.68 Total cash generated
+    20,814.36 Total cash generated
 
 Tax return 2031
     11,384.04 Taxable income
@@ -414,96 +404,73 @@ Tax return 2031
          0.00 RIF withdrawals
 
 Accounts
-     4,082.10 -BANKACCOUNT-
-     4,082.10 Cash
+     5,583.14 -BANKACCOUNT-
+     5,583.14 Cash
 
-     4,082.10 Net worth
+     5,583.14 Net worth
          0.00 Investments worth
 
 2032-01-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3382.10 is under the small-balance limit of 4000.00
 2032-01-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2432.10 is under the small-balance limit of 4000.00
-2032-01-28:OAS/GIS payment: 1401.39
+  Bank balance: 3933.14 is under the small-balance limit of 4000.00
+2032-01-28:OAS/GIS payment: 1434.53
 2032-01-28:CPP payment:  300.00
 2032-02-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3433.49 is under the small-balance limit of 4000.00
 2032-02-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2483.49 is under the small-balance limit of 4000.00
-2032-02-28:OAS/GIS payment: 1401.39
+2032-02-28:OAS/GIS payment: 1434.53
 2032-02-28:CPP payment:  300.00
 2032-03-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3484.88 is under the small-balance limit of 4000.00
 2032-03-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2534.88 is under the small-balance limit of 4000.00
-2032-03-28:OAS/GIS payment: 1401.39
+2032-03-28:OAS/GIS payment: 1434.53
 2032-03-28:CPP payment:  300.00
 2032-04-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3536.27 is under the small-balance limit of 4000.00
 2032-04-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2586.27 is under the small-balance limit of 4000.00
-2032-04-28:OAS/GIS payment: 1401.39
+2032-04-28:OAS/GIS payment: 1434.53
 2032-04-28:CPP payment:  300.00
 2032-05-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3587.66 is under the small-balance limit of 4000.00
 2032-05-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2637.66 is under the small-balance limit of 4000.00
-2032-05-28:OAS/GIS payment: 1401.39
+2032-05-28:OAS/GIS payment: 1434.53
 2032-05-28:CPP payment:  300.00
 2032-06-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3639.05 is under the small-balance limit of 4000.00
 2032-06-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2689.05 is under the small-balance limit of 4000.00
-2032-06-28:OAS/GIS payment: 1401.39
+2032-06-28:OAS/GIS payment: 1434.53
 2032-06-28:CPP payment:  300.00
 2032-07-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3690.44 is under the small-balance limit of 4000.00
 2032-07-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2740.44 is under the small-balance limit of 4000.00
-2032-07-28:OAS/GIS payment: 1401.39
+2032-07-28:OAS/GIS payment: 1434.53
 2032-07-28:CPP payment:  300.00
 2032-08-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3741.83 is under the small-balance limit of 4000.00
 2032-08-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2791.83 is under the small-balance limit of 4000.00
-2032-08-28:OAS/GIS payment: 1401.39
+2032-08-28:OAS/GIS payment: 1434.53
 2032-08-28:CPP payment:  300.00
 2032-09-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3793.22 is under the small-balance limit of 4000.00
 2032-09-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2843.22 is under the small-balance limit of 4000.00
-2032-09-28:OAS/GIS payment: 1401.39
+2032-09-28:OAS/GIS payment: 1434.53
 2032-09-28:CPP payment:  300.00
 2032-10-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3844.61 is under the small-balance limit of 4000.00
 2032-10-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2894.61 is under the small-balance limit of 4000.00
-2032-10-28:OAS/GIS payment: 1401.39
+2032-10-28:OAS/GIS payment: 1434.53
 2032-10-28:CPP payment:  300.00
 2032-11-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3896.00 is under the small-balance limit of 4000.00
 2032-11-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2946.00 is under the small-balance limit of 4000.00
-2032-11-28:OAS/GIS payment: 1401.39
+2032-11-28:OAS/GIS payment: 1434.53
 2032-11-28:CPP payment:  300.00
 2032-12-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3947.39 is under the small-balance limit of 4000.00
 2032-12-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 2997.39 is under the small-balance limit of 4000.00
-2032-12-28:OAS/GIS payment: 1401.39
+2032-12-28:OAS/GIS payment: 1434.53
 2032-12-28:CPP payment:  300.00
 2032-12-31:PAY TAXES:  0.00
 2032 year-end.
 Cash generated
      3,600.00 CPP
      7,784.04 OAS
-     9,032.64 GIS
+     9,430.32 GIS
          0.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    20,416.68 Total cash generated
+    20,814.36 Total cash generated
 
 Tax return 2032
     11,384.04 Taxable income
@@ -520,85 +487,72 @@ Tax return 2032
          0.00 RIF withdrawals
 
 Accounts
-     4,698.78 -BANKACCOUNT-
-     4,698.78 Cash
+     6,597.50 -BANKACCOUNT-
+     6,597.50 Cash
 
-     4,698.78 Net worth
+     6,597.50 Net worth
          0.00 Investments worth
 
 2033-01-01:BANK WITHDRAWAL:  700.00
-  Bank balance: 3998.78 is under the small-balance limit of 4000.00
 2033-01-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 3048.78 is under the small-balance limit of 4000.00
-2033-01-28:OAS/GIS payment: 1401.39
+2033-01-28:OAS/GIS payment: 1434.53
 2033-01-28:CPP payment:  300.00
 2033-02-01:BANK WITHDRAWAL:  700.00
 2033-02-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 3100.17 is under the small-balance limit of 4000.00
-2033-02-28:OAS/GIS payment: 1401.39
+2033-02-28:OAS/GIS payment: 1434.53
 2033-02-28:CPP payment:  300.00
 2033-03-01:BANK WITHDRAWAL:  700.00
 2033-03-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 3151.56 is under the small-balance limit of 4000.00
-2033-03-28:OAS/GIS payment: 1401.39
+2033-03-28:OAS/GIS payment: 1434.53
 2033-03-28:CPP payment:  300.00
 2033-04-01:BANK WITHDRAWAL:  700.00
 2033-04-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 3202.95 is under the small-balance limit of 4000.00
-2033-04-28:OAS/GIS payment: 1401.39
+2033-04-28:OAS/GIS payment: 1434.53
 2033-04-28:CPP payment:  300.00
 2033-05-01:BANK WITHDRAWAL:  700.00
 2033-05-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 3254.34 is under the small-balance limit of 4000.00
-2033-05-28:OAS/GIS payment: 1401.39
+2033-05-28:OAS/GIS payment: 1434.53
 2033-05-28:CPP payment:  300.00
 2033-06-01:BANK WITHDRAWAL:  700.00
 2033-06-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 3305.73 is under the small-balance limit of 4000.00
-2033-06-28:OAS/GIS payment: 1401.39
+2033-06-28:OAS/GIS payment: 1434.53
 2033-06-28:CPP payment:  300.00
 2033-07-01:BANK WITHDRAWAL:  700.00
 2033-07-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 3357.12 is under the small-balance limit of 4000.00
-2033-07-28:OAS/GIS payment: 1401.39
+2033-07-28:OAS/GIS payment: 1434.53
 2033-07-28:CPP payment:  300.00
 2033-08-01:BANK WITHDRAWAL:  700.00
 2033-08-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 3408.51 is under the small-balance limit of 4000.00
-2033-08-28:OAS/GIS payment: 1401.39
+2033-08-28:OAS/GIS payment: 1434.53
 2033-08-28:CPP payment:  300.00
 2033-09-01:BANK WITHDRAWAL:  700.00
 2033-09-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 3459.90 is under the small-balance limit of 4000.00
-2033-09-28:OAS/GIS payment: 1401.39
+2033-09-28:OAS/GIS payment: 1434.53
 2033-09-28:CPP payment:  300.00
 2033-10-01:BANK WITHDRAWAL:  700.00
 2033-10-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 3511.29 is under the small-balance limit of 4000.00
-2033-10-28:OAS/GIS payment: 1401.39
+2033-10-28:OAS/GIS payment: 1434.53
 2033-10-28:CPP payment:  300.00
 2033-11-01:BANK WITHDRAWAL:  700.00
 2033-11-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 3562.68 is under the small-balance limit of 4000.00
-2033-11-28:OAS/GIS payment: 1401.39
+2033-11-28:OAS/GIS payment: 1434.53
 2033-11-28:CPP payment:  300.00
 2033-12-01:BANK WITHDRAWAL:  700.00
 2033-12-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 3614.07 is under the small-balance limit of 4000.00
-2033-12-28:OAS/GIS payment: 1401.39
+2033-12-28:OAS/GIS payment: 1434.53
 2033-12-28:CPP payment:  300.00
 2033-12-31:PAY TAXES:  0.00
 2033 year-end.
 Cash generated
      3,600.00 CPP
      7,784.04 OAS
-     9,032.64 GIS
+     9,430.32 GIS
          0.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    20,416.68 Total cash generated
+    20,814.36 Total cash generated
 
 Tax return 2033
     11,384.04 Taxable income
@@ -615,79 +569,74 @@ Tax return 2033
          0.00 RIF withdrawals
 
 Accounts
-     5,315.46 -BANKACCOUNT-
-     5,315.46 Cash
+     7,611.86 -BANKACCOUNT-
+     7,611.86 Cash
 
-     5,315.46 Net worth
+     7,611.86 Net worth
          0.00 Investments worth
 
 2034-01-01:BANK WITHDRAWAL:  700.00
 2034-01-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 3665.46 is under the small-balance limit of 4000.00
-2034-01-28:OAS/GIS payment: 1401.39
+2034-01-28:OAS/GIS payment: 1434.53
 2034-01-28:CPP payment:  300.00
 2034-02-01:BANK WITHDRAWAL:  700.00
 2034-02-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 3716.85 is under the small-balance limit of 4000.00
-2034-02-28:OAS/GIS payment: 1401.39
+2034-02-28:OAS/GIS payment: 1434.53
 2034-02-28:CPP payment:  300.00
 2034-03-01:BANK WITHDRAWAL:  700.00
 2034-03-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 3768.24 is under the small-balance limit of 4000.00
-2034-03-28:OAS/GIS payment: 1401.39
+2034-03-28:OAS/GIS payment: 1434.53
 2034-03-28:CPP payment:  300.00
 2034-04-01:BANK WITHDRAWAL:  700.00
 2034-04-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 3819.63 is under the small-balance limit of 4000.00
-2034-04-28:OAS/GIS payment: 1401.39
+2034-04-28:OAS/GIS payment: 1434.53
 2034-04-28:CPP payment:  300.00
 2034-05-01:BANK WITHDRAWAL:  700.00
 2034-05-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 3871.02 is under the small-balance limit of 4000.00
-2034-05-28:OAS/GIS payment: 1401.39
+2034-05-28:OAS/GIS payment: 1434.53
 2034-05-28:CPP payment:  300.00
 2034-06-01:BANK WITHDRAWAL:  700.00
 2034-06-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 3922.41 is under the small-balance limit of 4000.00
-2034-06-28:OAS/GIS payment: 1401.39
+2034-06-28:OAS/GIS payment: 1434.53
 2034-06-28:CPP payment:  300.00
 2034-07-01:BANK WITHDRAWAL:  700.00
 2034-07-23:BANK WITHDRAWAL:  950.00
-  Bank balance: 3973.80 is under the small-balance limit of 4000.00
-2034-07-28:OAS/GIS payment: 1401.39
+2034-07-28:OAS/GIS payment: 1434.53
 2034-07-28:CPP payment:  300.00
 2034-08-01:BANK WITHDRAWAL:  700.00
+2034-08-15:SPLURGE SPENDING:  3.57
 2034-08-23:BANK WITHDRAWAL:  950.00
-2034-08-28:OAS/GIS payment: 1401.39
+2034-08-28:OAS/GIS payment: 1434.53
 2034-08-28:CPP payment:  300.00
 2034-09-01:BANK WITHDRAWAL:  700.00
 2034-09-23:BANK WITHDRAWAL:  950.00
-2034-09-28:OAS/GIS payment: 1401.39
+2034-09-28:OAS/GIS payment: 1434.53
 2034-09-28:CPP payment:  300.00
 2034-10-01:BANK WITHDRAWAL:  700.00
 2034-10-23:BANK WITHDRAWAL:  950.00
-2034-10-28:OAS/GIS payment: 1401.39
+2034-10-28:OAS/GIS payment: 1434.53
 2034-10-28:CPP payment:  300.00
 2034-11-01:BANK WITHDRAWAL:  700.00
+2034-11-15:SPLURGE SPENDING:  253.59
 2034-11-23:BANK WITHDRAWAL:  950.00
-2034-11-28:OAS/GIS payment: 1401.39
+2034-11-28:OAS/GIS payment: 1434.53
 2034-11-28:CPP payment:  300.00
 2034-12-01:BANK WITHDRAWAL:  700.00
 2034-12-23:BANK WITHDRAWAL:  950.00
-2034-12-28:OAS/GIS payment: 1401.39
+2034-12-28:OAS/GIS payment: 1434.53
 2034-12-28:CPP payment:  300.00
 2034-12-31:PAY TAXES:  0.00
 2034 year-end.
 Cash generated
      3,600.00 CPP
      7,784.04 OAS
-     9,032.64 GIS
+     9,430.32 GIS
          0.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    20,416.68 Total cash generated
+    20,814.36 Total cash generated
 
 Tax return 2034
     11,384.04 Taxable income
@@ -704,72 +653,76 @@ Tax return 2034
          0.00 RIF withdrawals
 
 Accounts
-     5,932.14 -BANKACCOUNT-
-     5,932.14 Cash
+     8,369.06 -BANKACCOUNT-
+     8,369.06 Cash
 
-     5,932.14 Net worth
+     8,369.06 Net worth
          0.00 Investments worth
 
 2035-01-01:BANK WITHDRAWAL:  700.00
 2035-01-23:BANK WITHDRAWAL:  950.00
-2035-01-28:OAS/GIS payment: 1401.39
+2035-01-28:OAS/GIS payment: 1434.53
 2035-01-28:CPP payment:  300.00
 2035-02-01:BANK WITHDRAWAL:  700.00
+2035-02-15:SPLURGE SPENDING:  253.59
 2035-02-23:BANK WITHDRAWAL:  950.00
-2035-02-28:OAS/GIS payment: 1401.39
+2035-02-28:OAS/GIS payment: 1434.53
 2035-02-28:CPP payment:  300.00
 2035-03-01:BANK WITHDRAWAL:  700.00
 2035-03-23:BANK WITHDRAWAL:  950.00
-2035-03-28:OAS/GIS payment: 1401.39
+2035-03-28:OAS/GIS payment: 1434.53
 2035-03-28:CPP payment:  300.00
 2035-04-01:BANK WITHDRAWAL:  700.00
 2035-04-23:BANK WITHDRAWAL:  950.00
-2035-04-28:OAS/GIS payment: 1401.39
+2035-04-28:OAS/GIS payment: 1434.53
 2035-04-28:CPP payment:  300.00
 2035-05-01:BANK WITHDRAWAL:  700.00
+2035-05-15:SPLURGE SPENDING:  253.59
 2035-05-23:BANK WITHDRAWAL:  950.00
-2035-05-28:OAS/GIS payment: 1401.39
+2035-05-28:OAS/GIS payment: 1434.53
 2035-05-28:CPP payment:  300.00
 2035-06-01:BANK WITHDRAWAL:  700.00
 2035-06-23:BANK WITHDRAWAL:  950.00
-2035-06-28:OAS/GIS payment: 1401.39
+2035-06-28:OAS/GIS payment: 1434.53
 2035-06-28:CPP payment:  300.00
 2035-07-01:BANK WITHDRAWAL:  700.00
 2035-07-23:BANK WITHDRAWAL:  950.00
-2035-07-28:OAS/GIS payment: 1401.39
+2035-07-28:OAS/GIS payment: 1434.53
 2035-07-28:CPP payment:  300.00
 2035-08-01:BANK WITHDRAWAL:  700.00
+2035-08-15:SPLURGE SPENDING:  253.59
 2035-08-23:BANK WITHDRAWAL:  950.00
-2035-08-28:OAS/GIS payment: 1401.39
+2035-08-28:OAS/GIS payment: 1434.53
 2035-08-28:CPP payment:  300.00
 2035-09-01:BANK WITHDRAWAL:  700.00
 2035-09-23:BANK WITHDRAWAL:  950.00
-2035-09-28:OAS/GIS payment: 1401.39
+2035-09-28:OAS/GIS payment: 1434.53
 2035-09-28:CPP payment:  300.00
 2035-10-01:BANK WITHDRAWAL:  700.00
 2035-10-23:BANK WITHDRAWAL:  950.00
-2035-10-28:OAS/GIS payment: 1401.39
+2035-10-28:OAS/GIS payment: 1434.53
 2035-10-28:CPP payment:  300.00
 2035-11-01:BANK WITHDRAWAL:  700.00
+2035-11-15:SPLURGE SPENDING:  253.59
 2035-11-23:BANK WITHDRAWAL:  950.00
-2035-11-28:OAS/GIS payment: 1401.39
+2035-11-28:OAS/GIS payment: 1434.53
 2035-11-28:CPP payment:  300.00
 2035-12-01:BANK WITHDRAWAL:  700.00
 2035-12-23:BANK WITHDRAWAL:  950.00
-2035-12-28:OAS/GIS payment: 1401.39
+2035-12-28:OAS/GIS payment: 1434.53
 2035-12-28:CPP payment:  300.00
 2035-12-31:PAY TAXES:  0.00
 2035 year-end.
 Cash generated
      3,600.00 CPP
      7,784.04 OAS
-     9,032.64 GIS
+     9,430.32 GIS
          0.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    20,416.68 Total cash generated
+    20,814.36 Total cash generated
 
 Tax return 2035
     11,384.04 Taxable income
@@ -786,72 +739,76 @@ Tax return 2035
          0.00 RIF withdrawals
 
 Accounts
-     6,548.82 -BANKACCOUNT-
-     6,548.82 Cash
+     8,369.06 -BANKACCOUNT-
+     8,369.06 Cash
 
-     6,548.82 Net worth
+     8,369.06 Net worth
          0.00 Investments worth
 
 2036-01-01:BANK WITHDRAWAL:  700.00
 2036-01-23:BANK WITHDRAWAL:  950.00
-2036-01-28:OAS/GIS payment: 1401.39
+2036-01-28:OAS/GIS payment: 1434.53
 2036-01-28:CPP payment:  300.00
 2036-02-01:BANK WITHDRAWAL:  700.00
+2036-02-15:SPLURGE SPENDING:  253.59
 2036-02-23:BANK WITHDRAWAL:  950.00
-2036-02-28:OAS/GIS payment: 1401.39
+2036-02-28:OAS/GIS payment: 1434.53
 2036-02-28:CPP payment:  300.00
 2036-03-01:BANK WITHDRAWAL:  700.00
 2036-03-23:BANK WITHDRAWAL:  950.00
-2036-03-28:OAS/GIS payment: 1401.39
+2036-03-28:OAS/GIS payment: 1434.53
 2036-03-28:CPP payment:  300.00
 2036-04-01:BANK WITHDRAWAL:  700.00
 2036-04-23:BANK WITHDRAWAL:  950.00
-2036-04-28:OAS/GIS payment: 1401.39
+2036-04-28:OAS/GIS payment: 1434.53
 2036-04-28:CPP payment:  300.00
 2036-05-01:BANK WITHDRAWAL:  700.00
+2036-05-15:SPLURGE SPENDING:  253.59
 2036-05-23:BANK WITHDRAWAL:  950.00
-2036-05-28:OAS/GIS payment: 1401.39
+2036-05-28:OAS/GIS payment: 1434.53
 2036-05-28:CPP payment:  300.00
 2036-06-01:BANK WITHDRAWAL:  700.00
 2036-06-23:BANK WITHDRAWAL:  950.00
-2036-06-28:OAS/GIS payment: 1401.39
+2036-06-28:OAS/GIS payment: 1434.53
 2036-06-28:CPP payment:  300.00
 2036-07-01:BANK WITHDRAWAL:  700.00
 2036-07-23:BANK WITHDRAWAL:  950.00
-2036-07-28:OAS/GIS payment: 1401.39
+2036-07-28:OAS/GIS payment: 1434.53
 2036-07-28:CPP payment:  300.00
 2036-08-01:BANK WITHDRAWAL:  700.00
+2036-08-15:SPLURGE SPENDING:  253.59
 2036-08-23:BANK WITHDRAWAL:  950.00
-2036-08-28:OAS/GIS payment: 1401.39
+2036-08-28:OAS/GIS payment: 1434.53
 2036-08-28:CPP payment:  300.00
 2036-09-01:BANK WITHDRAWAL:  700.00
 2036-09-23:BANK WITHDRAWAL:  950.00
-2036-09-28:OAS/GIS payment: 1401.39
+2036-09-28:OAS/GIS payment: 1434.53
 2036-09-28:CPP payment:  300.00
 2036-10-01:BANK WITHDRAWAL:  700.00
 2036-10-23:BANK WITHDRAWAL:  950.00
-2036-10-28:OAS/GIS payment: 1401.39
+2036-10-28:OAS/GIS payment: 1434.53
 2036-10-28:CPP payment:  300.00
 2036-11-01:BANK WITHDRAWAL:  700.00
+2036-11-15:SPLURGE SPENDING:  253.59
 2036-11-23:BANK WITHDRAWAL:  950.00
-2036-11-28:OAS/GIS payment: 1401.39
+2036-11-28:OAS/GIS payment: 1434.53
 2036-11-28:CPP payment:  300.00
 2036-12-01:BANK WITHDRAWAL:  700.00
 2036-12-23:BANK WITHDRAWAL:  950.00
-2036-12-28:OAS/GIS payment: 1401.39
+2036-12-28:OAS/GIS payment: 1434.53
 2036-12-28:CPP payment:  300.00
 2036-12-31:PAY TAXES:  0.00
 2036 year-end.
 Cash generated
      3,600.00 CPP
      7,784.04 OAS
-     9,032.64 GIS
+     9,430.32 GIS
          0.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    20,416.68 Total cash generated
+    20,814.36 Total cash generated
 
 Tax return 2036
     11,384.04 Taxable income
@@ -868,72 +825,76 @@ Tax return 2036
          0.00 RIF withdrawals
 
 Accounts
-     7,165.50 -BANKACCOUNT-
-     7,165.50 Cash
+     8,369.06 -BANKACCOUNT-
+     8,369.06 Cash
 
-     7,165.50 Net worth
+     8,369.06 Net worth
          0.00 Investments worth
 
 2037-01-01:BANK WITHDRAWAL:  700.00
 2037-01-23:BANK WITHDRAWAL:  950.00
-2037-01-28:OAS/GIS payment: 1401.39
+2037-01-28:OAS/GIS payment: 1434.53
 2037-01-28:CPP payment:  300.00
 2037-02-01:BANK WITHDRAWAL:  700.00
+2037-02-15:SPLURGE SPENDING:  253.59
 2037-02-23:BANK WITHDRAWAL:  950.00
-2037-02-28:OAS/GIS payment: 1401.39
+2037-02-28:OAS/GIS payment: 1434.53
 2037-02-28:CPP payment:  300.00
 2037-03-01:BANK WITHDRAWAL:  700.00
 2037-03-23:BANK WITHDRAWAL:  950.00
-2037-03-28:OAS/GIS payment: 1401.39
+2037-03-28:OAS/GIS payment: 1434.53
 2037-03-28:CPP payment:  300.00
 2037-04-01:BANK WITHDRAWAL:  700.00
 2037-04-23:BANK WITHDRAWAL:  950.00
-2037-04-28:OAS/GIS payment: 1401.39
+2037-04-28:OAS/GIS payment: 1434.53
 2037-04-28:CPP payment:  300.00
 2037-05-01:BANK WITHDRAWAL:  700.00
+2037-05-15:SPLURGE SPENDING:  253.59
 2037-05-23:BANK WITHDRAWAL:  950.00
-2037-05-28:OAS/GIS payment: 1466.26
+2037-05-28:OAS/GIS payment: 1499.40
 2037-05-28:CPP payment:  300.00
 2037-06-01:BANK WITHDRAWAL:  700.00
 2037-06-23:BANK WITHDRAWAL:  950.00
-2037-06-28:OAS/GIS payment: 1466.26
+2037-06-28:OAS/GIS payment: 1499.40
 2037-06-28:CPP payment:  300.00
 2037-07-01:BANK WITHDRAWAL:  700.00
 2037-07-23:BANK WITHDRAWAL:  950.00
-2037-07-28:OAS/GIS payment: 1466.26
+2037-07-28:OAS/GIS payment: 1499.40
 2037-07-28:CPP payment:  300.00
 2037-08-01:BANK WITHDRAWAL:  700.00
+2037-08-15:SPLURGE SPENDING:  448.20
 2037-08-23:BANK WITHDRAWAL:  950.00
-2037-08-28:OAS/GIS payment: 1466.26
+2037-08-28:OAS/GIS payment: 1499.40
 2037-08-28:CPP payment:  300.00
 2037-09-01:BANK WITHDRAWAL:  700.00
 2037-09-23:BANK WITHDRAWAL:  950.00
-2037-09-28:OAS/GIS payment: 1466.26
+2037-09-28:OAS/GIS payment: 1499.40
 2037-09-28:CPP payment:  300.00
 2037-10-01:BANK WITHDRAWAL:  700.00
 2037-10-23:BANK WITHDRAWAL:  950.00
-2037-10-28:OAS/GIS payment: 1466.26
+2037-10-28:OAS/GIS payment: 1499.40
 2037-10-28:CPP payment:  300.00
 2037-11-01:BANK WITHDRAWAL:  700.00
+2037-11-15:SPLURGE SPENDING:  448.20
 2037-11-23:BANK WITHDRAWAL:  950.00
-2037-11-28:OAS/GIS payment: 1466.26
+2037-11-28:OAS/GIS payment: 1499.40
 2037-11-28:CPP payment:  300.00
 2037-12-01:BANK WITHDRAWAL:  700.00
 2037-12-23:BANK WITHDRAWAL:  950.00
-2037-12-28:OAS/GIS payment: 1466.26
+2037-12-28:OAS/GIS payment: 1499.40
 2037-12-28:CPP payment:  300.00
 2037-12-31:PAY TAXES:  0.00
 2037 year-end.
 Cash generated
      3,600.00 CPP
      8,303.00 OAS
-     9,032.64 GIS
+     9,430.32 GIS
          0.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    20,935.64 Total cash generated
+    21,333.32 Total cash generated
 
 Tax return 2037
     11,903.00 Taxable income
@@ -950,76 +911,76 @@ Tax return 2037
          0.00 RIF withdrawals
 
 Accounts
-     8,301.14 -BANKACCOUNT-
-     8,301.14 Cash
+     8,498.80 -BANKACCOUNT-
+     8,498.80 Cash
 
-     8,301.14 Net worth
+     8,498.80 Net worth
          0.00 Investments worth
 
 2038-01-01:BANK WITHDRAWAL:  700.00
 2038-01-23:BANK WITHDRAWAL:  950.00
-2038-01-28:OAS/GIS payment: 1466.26
+2038-01-28:OAS/GIS payment: 1499.40
 2038-01-28:CPP payment:  300.00
 2038-02-01:BANK WITHDRAWAL:  700.00
-2038-02-15:SPLURGE SPENDING:  217.40
+2038-02-15:SPLURGE SPENDING:  448.20
 2038-02-23:BANK WITHDRAWAL:  950.00
-2038-02-28:OAS/GIS payment: 1466.26
+2038-02-28:OAS/GIS payment: 1499.40
 2038-02-28:CPP payment:  300.00
 2038-03-01:BANK WITHDRAWAL:  700.00
 2038-03-23:BANK WITHDRAWAL:  950.00
-2038-03-28:OAS/GIS payment: 1466.26
+2038-03-28:OAS/GIS payment: 1499.40
 2038-03-28:CPP payment:  300.00
 2038-04-01:BANK WITHDRAWAL:  700.00
 2038-04-23:BANK WITHDRAWAL:  950.00
-2038-04-28:OAS/GIS payment: 1466.26
+2038-04-28:OAS/GIS payment: 1499.40
 2038-04-28:CPP payment:  300.00
 2038-05-01:BANK WITHDRAWAL:  700.00
-2038-05-15:SPLURGE SPENDING:  348.78
+2038-05-15:SPLURGE SPENDING:  448.20
 2038-05-23:BANK WITHDRAWAL:  950.00
-2038-05-28:OAS/GIS payment: 1466.26
+2038-05-28:OAS/GIS payment: 1499.40
 2038-05-28:CPP payment:  300.00
 2038-06-01:BANK WITHDRAWAL:  700.00
 2038-06-23:BANK WITHDRAWAL:  950.00
-2038-06-28:OAS/GIS payment: 1466.26
+2038-06-28:OAS/GIS payment: 1499.40
 2038-06-28:CPP payment:  300.00
 2038-07-01:BANK WITHDRAWAL:  700.00
 2038-07-23:BANK WITHDRAWAL:  950.00
-2038-07-28:OAS/GIS payment: 1466.26
+2038-07-28:OAS/GIS payment: 1499.40
 2038-07-28:CPP payment:  300.00
 2038-08-01:BANK WITHDRAWAL:  700.00
-2038-08-15:SPLURGE SPENDING:  348.78
+2038-08-15:SPLURGE SPENDING:  448.20
 2038-08-23:BANK WITHDRAWAL:  950.00
-2038-08-28:OAS/GIS payment: 1466.26
+2038-08-28:OAS/GIS payment: 1499.40
 2038-08-28:CPP payment:  300.00
 2038-09-01:BANK WITHDRAWAL:  700.00
 2038-09-23:BANK WITHDRAWAL:  950.00
-2038-09-28:OAS/GIS payment: 1466.26
+2038-09-28:OAS/GIS payment: 1499.40
 2038-09-28:CPP payment:  300.00
 2038-10-01:BANK WITHDRAWAL:  700.00
 2038-10-23:BANK WITHDRAWAL:  950.00
-2038-10-28:OAS/GIS payment: 1466.26
+2038-10-28:OAS/GIS payment: 1499.40
 2038-10-28:CPP payment:  300.00
 2038-11-01:BANK WITHDRAWAL:  700.00
-2038-11-15:SPLURGE SPENDING:  348.78
+2038-11-15:SPLURGE SPENDING:  448.20
 2038-11-23:BANK WITHDRAWAL:  950.00
-2038-11-28:OAS/GIS payment: 1466.26
+2038-11-28:OAS/GIS payment: 1499.40
 2038-11-28:CPP payment:  300.00
 2038-12-01:BANK WITHDRAWAL:  700.00
 2038-12-23:BANK WITHDRAWAL:  950.00
-2038-12-28:OAS/GIS payment: 1466.26
+2038-12-28:OAS/GIS payment: 1499.40
 2038-12-28:CPP payment:  300.00
 2038-12-31:PAY TAXES:  0.00
 2038 year-end.
 Cash generated
      3,600.00 CPP
      8,562.48 OAS
-     9,032.64 GIS
+     9,430.32 GIS
          0.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    21,195.12 Total cash generated
+    21,592.80 Total cash generated
 
 Tax return 2038
     12,162.48 Taxable income
@@ -1036,76 +997,76 @@ Tax return 2038
          0.00 RIF withdrawals
 
 Accounts
-     8,432.52 -BANKACCOUNT-
-     8,432.52 Cash
+     8,498.80 -BANKACCOUNT-
+     8,498.80 Cash
 
-     8,432.52 Net worth
+     8,498.80 Net worth
          0.00 Investments worth
 
 2039-01-01:BANK WITHDRAWAL:  700.00
 2039-01-23:BANK WITHDRAWAL:  950.00
-2039-01-28:OAS/GIS payment: 1466.26
+2039-01-28:OAS/GIS payment: 1499.40
 2039-01-28:CPP payment:  300.00
 2039-02-01:BANK WITHDRAWAL:  700.00
-2039-02-15:SPLURGE SPENDING:  348.78
+2039-02-15:SPLURGE SPENDING:  448.20
 2039-02-23:BANK WITHDRAWAL:  950.00
-2039-02-28:OAS/GIS payment: 1466.26
+2039-02-28:OAS/GIS payment: 1499.40
 2039-02-28:CPP payment:  300.00
 2039-03-01:BANK WITHDRAWAL:  700.00
 2039-03-23:BANK WITHDRAWAL:  950.00
-2039-03-28:OAS/GIS payment: 1466.26
+2039-03-28:OAS/GIS payment: 1499.40
 2039-03-28:CPP payment:  300.00
 2039-04-01:BANK WITHDRAWAL:  700.00
 2039-04-23:BANK WITHDRAWAL:  950.00
-2039-04-28:OAS/GIS payment: 1466.26
+2039-04-28:OAS/GIS payment: 1499.40
 2039-04-28:CPP payment:  300.00
 2039-05-01:BANK WITHDRAWAL:  700.00
-2039-05-15:SPLURGE SPENDING:  348.78
+2039-05-15:SPLURGE SPENDING:  448.20
 2039-05-23:BANK WITHDRAWAL:  950.00
-2039-05-28:OAS/GIS payment: 1466.26
+2039-05-28:OAS/GIS payment: 1499.40
 2039-05-28:CPP payment:  300.00
 2039-06-01:BANK WITHDRAWAL:  700.00
 2039-06-23:BANK WITHDRAWAL:  950.00
-2039-06-28:OAS/GIS payment: 1466.26
+2039-06-28:OAS/GIS payment: 1499.40
 2039-06-28:CPP payment:  300.00
 2039-07-01:BANK WITHDRAWAL:  700.00
 2039-07-23:BANK WITHDRAWAL:  950.00
-2039-07-28:OAS/GIS payment: 1466.26
+2039-07-28:OAS/GIS payment: 1499.40
 2039-07-28:CPP payment:  300.00
 2039-08-01:BANK WITHDRAWAL:  700.00
-2039-08-15:SPLURGE SPENDING:  348.78
+2039-08-15:SPLURGE SPENDING:  448.20
 2039-08-23:BANK WITHDRAWAL:  950.00
-2039-08-28:OAS/GIS payment: 1466.26
+2039-08-28:OAS/GIS payment: 1499.40
 2039-08-28:CPP payment:  300.00
 2039-09-01:BANK WITHDRAWAL:  700.00
 2039-09-23:BANK WITHDRAWAL:  950.00
-2039-09-28:OAS/GIS payment: 1466.26
+2039-09-28:OAS/GIS payment: 1499.40
 2039-09-28:CPP payment:  300.00
 2039-10-01:BANK WITHDRAWAL:  700.00
 2039-10-23:BANK WITHDRAWAL:  950.00
-2039-10-28:OAS/GIS payment: 1466.26
+2039-10-28:OAS/GIS payment: 1499.40
 2039-10-28:CPP payment:  300.00
 2039-11-01:BANK WITHDRAWAL:  700.00
-2039-11-15:SPLURGE SPENDING:  348.78
+2039-11-15:SPLURGE SPENDING:  448.20
 2039-11-23:BANK WITHDRAWAL:  950.00
-2039-11-28:OAS/GIS payment: 1466.26
+2039-11-28:OAS/GIS payment: 1499.40
 2039-11-28:CPP payment:  300.00
 2039-12-01:BANK WITHDRAWAL:  700.00
 2039-12-23:BANK WITHDRAWAL:  950.00
-2039-12-28:OAS/GIS payment: 1466.26
+2039-12-28:OAS/GIS payment: 1499.40
 2039-12-28:CPP payment:  300.00
 2039-12-31:PAY TAXES:  0.00
 2039 year-end.
 Cash generated
      3,600.00 CPP
      8,562.48 OAS
-     9,032.64 GIS
+     9,430.32 GIS
          0.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    21,195.12 Total cash generated
+    21,592.80 Total cash generated
 
 Tax return 2039
     12,162.48 Taxable income
@@ -1122,76 +1083,76 @@ Tax return 2039
          0.00 RIF withdrawals
 
 Accounts
-     8,432.52 -BANKACCOUNT-
-     8,432.52 Cash
+     8,498.80 -BANKACCOUNT-
+     8,498.80 Cash
 
-     8,432.52 Net worth
+     8,498.80 Net worth
          0.00 Investments worth
 
 2040-01-01:BANK WITHDRAWAL:  700.00
 2040-01-23:BANK WITHDRAWAL:  950.00
-2040-01-28:OAS/GIS payment: 1466.26
+2040-01-28:OAS/GIS payment: 1499.40
 2040-01-28:CPP payment:  300.00
 2040-02-01:BANK WITHDRAWAL:  700.00
-2040-02-15:SPLURGE SPENDING:  348.78
+2040-02-15:SPLURGE SPENDING:  448.20
 2040-02-23:BANK WITHDRAWAL:  950.00
-2040-02-28:OAS/GIS payment: 1466.26
+2040-02-28:OAS/GIS payment: 1499.40
 2040-02-28:CPP payment:  300.00
 2040-03-01:BANK WITHDRAWAL:  700.00
 2040-03-23:BANK WITHDRAWAL:  950.00
-2040-03-28:OAS/GIS payment: 1466.26
+2040-03-28:OAS/GIS payment: 1499.40
 2040-03-28:CPP payment:  300.00
 2040-04-01:BANK WITHDRAWAL:  700.00
 2040-04-23:BANK WITHDRAWAL:  950.00
-2040-04-28:OAS/GIS payment: 1466.26
+2040-04-28:OAS/GIS payment: 1499.40
 2040-04-28:CPP payment:  300.00
 2040-05-01:BANK WITHDRAWAL:  700.00
-2040-05-15:SPLURGE SPENDING:  348.78
+2040-05-15:SPLURGE SPENDING:  448.20
 2040-05-23:BANK WITHDRAWAL:  950.00
-2040-05-28:OAS/GIS payment: 1466.26
+2040-05-28:OAS/GIS payment: 1499.40
 2040-05-28:CPP payment:  300.00
 2040-06-01:BANK WITHDRAWAL:  700.00
 2040-06-23:BANK WITHDRAWAL:  950.00
-2040-06-28:OAS/GIS payment: 1466.26
+2040-06-28:OAS/GIS payment: 1499.40
 2040-06-28:CPP payment:  300.00
 2040-07-01:BANK WITHDRAWAL:  700.00
 2040-07-23:BANK WITHDRAWAL:  950.00
-2040-07-28:OAS/GIS payment: 1466.26
+2040-07-28:OAS/GIS payment: 1499.40
 2040-07-28:CPP payment:  300.00
 2040-08-01:BANK WITHDRAWAL:  700.00
-2040-08-15:SPLURGE SPENDING:  348.78
+2040-08-15:SPLURGE SPENDING:  448.20
 2040-08-23:BANK WITHDRAWAL:  950.00
-2040-08-28:OAS/GIS payment: 1466.26
+2040-08-28:OAS/GIS payment: 1499.40
 2040-08-28:CPP payment:  300.00
 2040-09-01:BANK WITHDRAWAL:  700.00
 2040-09-23:BANK WITHDRAWAL:  950.00
-2040-09-28:OAS/GIS payment: 1466.26
+2040-09-28:OAS/GIS payment: 1499.40
 2040-09-28:CPP payment:  300.00
 2040-10-01:BANK WITHDRAWAL:  700.00
 2040-10-23:BANK WITHDRAWAL:  950.00
-2040-10-28:OAS/GIS payment: 1466.26
+2040-10-28:OAS/GIS payment: 1499.40
 2040-10-28:CPP payment:  300.00
 2040-11-01:BANK WITHDRAWAL:  700.00
-2040-11-15:SPLURGE SPENDING:  348.78
+2040-11-15:SPLURGE SPENDING:  448.20
 2040-11-23:BANK WITHDRAWAL:  950.00
-2040-11-28:OAS/GIS payment: 1466.26
+2040-11-28:OAS/GIS payment: 1499.40
 2040-11-28:CPP payment:  300.00
 2040-12-01:BANK WITHDRAWAL:  700.00
 2040-12-23:BANK WITHDRAWAL:  950.00
-2040-12-28:OAS/GIS payment: 1466.26
+2040-12-28:OAS/GIS payment: 1499.40
 2040-12-28:CPP payment:  300.00
 2040-12-31:PAY TAXES:  0.00
 2040 year-end.
 Cash generated
      3,600.00 CPP
      8,562.48 OAS
-     9,032.64 GIS
+     9,430.32 GIS
          0.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    21,195.12 Total cash generated
+    21,592.80 Total cash generated
 
 Tax return 2040
     12,162.48 Taxable income
@@ -1208,76 +1169,76 @@ Tax return 2040
          0.00 RIF withdrawals
 
 Accounts
-     8,432.52 -BANKACCOUNT-
-     8,432.52 Cash
+     8,498.80 -BANKACCOUNT-
+     8,498.80 Cash
 
-     8,432.52 Net worth
+     8,498.80 Net worth
          0.00 Investments worth
 
 2041-01-01:BANK WITHDRAWAL:  700.00
 2041-01-23:BANK WITHDRAWAL:  950.00
-2041-01-28:OAS/GIS payment: 1466.26
+2041-01-28:OAS/GIS payment: 1499.40
 2041-01-28:CPP payment:  300.00
 2041-02-01:BANK WITHDRAWAL:  700.00
-2041-02-15:SPLURGE SPENDING:  348.78
+2041-02-15:SPLURGE SPENDING:  448.20
 2041-02-23:BANK WITHDRAWAL:  950.00
-2041-02-28:OAS/GIS payment: 1466.26
+2041-02-28:OAS/GIS payment: 1499.40
 2041-02-28:CPP payment:  300.00
 2041-03-01:BANK WITHDRAWAL:  700.00
 2041-03-23:BANK WITHDRAWAL:  950.00
-2041-03-28:OAS/GIS payment: 1466.26
+2041-03-28:OAS/GIS payment: 1499.40
 2041-03-28:CPP payment:  300.00
 2041-04-01:BANK WITHDRAWAL:  700.00
 2041-04-23:BANK WITHDRAWAL:  950.00
-2041-04-28:OAS/GIS payment: 1466.26
+2041-04-28:OAS/GIS payment: 1499.40
 2041-04-28:CPP payment:  300.00
 2041-05-01:BANK WITHDRAWAL:  700.00
-2041-05-15:SPLURGE SPENDING:  348.78
+2041-05-15:SPLURGE SPENDING:  448.20
 2041-05-23:BANK WITHDRAWAL:  950.00
-2041-05-28:OAS/GIS payment: 1466.26
+2041-05-28:OAS/GIS payment: 1499.40
 2041-05-28:CPP payment:  300.00
 2041-06-01:BANK WITHDRAWAL:  700.00
 2041-06-23:BANK WITHDRAWAL:  950.00
-2041-06-28:OAS/GIS payment: 1466.26
+2041-06-28:OAS/GIS payment: 1499.40
 2041-06-28:CPP payment:  300.00
 2041-07-01:BANK WITHDRAWAL:  700.00
 2041-07-23:BANK WITHDRAWAL:  950.00
-2041-07-28:OAS/GIS payment: 1466.26
+2041-07-28:OAS/GIS payment: 1499.40
 2041-07-28:CPP payment:  300.00
 2041-08-01:BANK WITHDRAWAL:  700.00
-2041-08-15:SPLURGE SPENDING:  348.78
+2041-08-15:SPLURGE SPENDING:  448.20
 2041-08-23:BANK WITHDRAWAL:  950.00
-2041-08-28:OAS/GIS payment: 1466.26
+2041-08-28:OAS/GIS payment: 1499.40
 2041-08-28:CPP payment:  300.00
 2041-09-01:BANK WITHDRAWAL:  700.00
 2041-09-23:BANK WITHDRAWAL:  950.00
-2041-09-28:OAS/GIS payment: 1466.26
+2041-09-28:OAS/GIS payment: 1499.40
 2041-09-28:CPP payment:  300.00
 2041-10-01:BANK WITHDRAWAL:  700.00
 2041-10-23:BANK WITHDRAWAL:  950.00
-2041-10-28:OAS/GIS payment: 1466.26
+2041-10-28:OAS/GIS payment: 1499.40
 2041-10-28:CPP payment:  300.00
 2041-11-01:BANK WITHDRAWAL:  700.00
-2041-11-15:SPLURGE SPENDING:  348.78
+2041-11-15:SPLURGE SPENDING:  448.20
 2041-11-23:BANK WITHDRAWAL:  950.00
-2041-11-28:OAS/GIS payment: 1466.26
+2041-11-28:OAS/GIS payment: 1499.40
 2041-11-28:CPP payment:  300.00
 2041-12-01:BANK WITHDRAWAL:  700.00
 2041-12-23:BANK WITHDRAWAL:  950.00
-2041-12-28:OAS/GIS payment: 1466.26
+2041-12-28:OAS/GIS payment: 1499.40
 2041-12-28:CPP payment:  300.00
 2041-12-31:PAY TAXES:  0.00
 2041 year-end.
 Cash generated
      3,600.00 CPP
      8,562.48 OAS
-     9,032.64 GIS
+     9,430.32 GIS
          0.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    21,195.12 Total cash generated
+    21,592.80 Total cash generated
 
 Tax return 2041
     12,162.48 Taxable income
@@ -1294,76 +1255,76 @@ Tax return 2041
          0.00 RIF withdrawals
 
 Accounts
-     8,432.52 -BANKACCOUNT-
-     8,432.52 Cash
+     8,498.80 -BANKACCOUNT-
+     8,498.80 Cash
 
-     8,432.52 Net worth
+     8,498.80 Net worth
          0.00 Investments worth
 
 2042-01-01:BANK WITHDRAWAL:  700.00
 2042-01-23:BANK WITHDRAWAL:  950.00
-2042-01-28:OAS/GIS payment: 1466.26
+2042-01-28:OAS/GIS payment: 1499.40
 2042-01-28:CPP payment:  300.00
 2042-02-01:BANK WITHDRAWAL:  700.00
-2042-02-15:SPLURGE SPENDING:  348.78
+2042-02-15:SPLURGE SPENDING:  448.20
 2042-02-23:BANK WITHDRAWAL:  950.00
-2042-02-28:OAS/GIS payment: 1466.26
+2042-02-28:OAS/GIS payment: 1499.40
 2042-02-28:CPP payment:  300.00
 2042-03-01:BANK WITHDRAWAL:  700.00
 2042-03-23:BANK WITHDRAWAL:  950.00
-2042-03-28:OAS/GIS payment: 1466.26
+2042-03-28:OAS/GIS payment: 1499.40
 2042-03-28:CPP payment:  300.00
 2042-04-01:BANK WITHDRAWAL:  700.00
 2042-04-23:BANK WITHDRAWAL:  950.00
-2042-04-28:OAS/GIS payment: 1466.26
+2042-04-28:OAS/GIS payment: 1499.40
 2042-04-28:CPP payment:  300.00
 2042-05-01:BANK WITHDRAWAL:  700.00
-2042-05-15:SPLURGE SPENDING:  348.78
+2042-05-15:SPLURGE SPENDING:  448.20
 2042-05-23:BANK WITHDRAWAL:  950.00
-2042-05-28:OAS/GIS payment: 1466.26
+2042-05-28:OAS/GIS payment: 1499.40
 2042-05-28:CPP payment:  300.00
 2042-06-01:BANK WITHDRAWAL:  700.00
 2042-06-23:BANK WITHDRAWAL:  950.00
-2042-06-28:OAS/GIS payment: 1466.26
+2042-06-28:OAS/GIS payment: 1499.40
 2042-06-28:CPP payment:  300.00
 2042-07-01:BANK WITHDRAWAL:  700.00
 2042-07-23:BANK WITHDRAWAL:  950.00
-2042-07-28:OAS/GIS payment: 1466.26
+2042-07-28:OAS/GIS payment: 1499.40
 2042-07-28:CPP payment:  300.00
 2042-08-01:BANK WITHDRAWAL:  700.00
-2042-08-15:SPLURGE SPENDING:  348.78
+2042-08-15:SPLURGE SPENDING:  448.20
 2042-08-23:BANK WITHDRAWAL:  950.00
-2042-08-28:OAS/GIS payment: 1466.26
+2042-08-28:OAS/GIS payment: 1499.40
 2042-08-28:CPP payment:  300.00
 2042-09-01:BANK WITHDRAWAL:  700.00
 2042-09-23:BANK WITHDRAWAL:  950.00
-2042-09-28:OAS/GIS payment: 1466.26
+2042-09-28:OAS/GIS payment: 1499.40
 2042-09-28:CPP payment:  300.00
 2042-10-01:BANK WITHDRAWAL:  700.00
 2042-10-23:BANK WITHDRAWAL:  950.00
-2042-10-28:OAS/GIS payment: 1466.26
+2042-10-28:OAS/GIS payment: 1499.40
 2042-10-28:CPP payment:  300.00
 2042-11-01:BANK WITHDRAWAL:  700.00
-2042-11-15:SPLURGE SPENDING:  348.78
+2042-11-15:SPLURGE SPENDING:  448.20
 2042-11-23:BANK WITHDRAWAL:  950.00
-2042-11-28:OAS/GIS payment: 1466.26
+2042-11-28:OAS/GIS payment: 1499.40
 2042-11-28:CPP payment:  300.00
 2042-12-01:BANK WITHDRAWAL:  700.00
 2042-12-23:BANK WITHDRAWAL:  950.00
-2042-12-28:OAS/GIS payment: 1466.26
+2042-12-28:OAS/GIS payment: 1499.40
 2042-12-28:CPP payment:  300.00
 2042-12-31:PAY TAXES:  0.00
 2042 year-end.
 Cash generated
      3,600.00 CPP
      8,562.48 OAS
-     9,032.64 GIS
+     9,430.32 GIS
          0.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    21,195.12 Total cash generated
+    21,592.80 Total cash generated
 
 Tax return 2042
     12,162.48 Taxable income
@@ -1380,23 +1341,23 @@ Tax return 2042
          0.00 RIF withdrawals
 
 Accounts
-     8,432.52 -BANKACCOUNT-
-     8,432.52 Cash
+     8,498.80 -BANKACCOUNT-
+     8,498.80 Cash
 
-     8,432.52 Net worth
+     8,498.80 Net worth
          0.00 Investments worth
 
 Summations (nominal)
 Cash generated
     54,000.00 CPP
    121,171.76 OAS
-   128,362.44 GIS
+   134,265.96 GIS
          0.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-   303,534.20 Total cash generated
+   309,437.72 Total cash generated
 
 Tax return 
    175,171.76 Taxable income
@@ -1416,13 +1377,13 @@ Summations (per year)
 Cash generated
      3,600.00 CPP
      8,078.12 OAS
-     8,557.50 GIS
+     8,951.06 GIS
          0.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    20,235.62 Total cash generated
+    20,629.18 Total cash generated
 
 Tax return 
     11,678.12 Taxable income
@@ -1439,27 +1400,27 @@ Tax return
          0.00 RIF withdrawals
 
 # Net, gross, tax paid:
-# 2028 net: 13289.52 = 13289.52 - 0.00.  [Net worth:2232.06] (age 66)
-# 2029 net: 20416.68 = 20416.68 - 0.00.  [Net worth:2848.74] (age 67)
-# 2030 net: 20416.68 = 20416.68 - 0.00.  [Net worth:3465.42] (age 68)
-# 2031 net: 20416.68 = 20416.68 - 0.00.  [Net worth:4082.10] (age 69)
-# 2032 net: 20416.68 = 20416.68 - 0.00.  [Net worth:4698.78] (age 70)
-# 2033 net: 20416.68 = 20416.68 - 0.00.  [Net worth:5315.46] (age 71)
-# 2034 net: 20416.68 = 20416.68 - 0.00.  [Net worth:5932.14] (age 72)
-# 2035 net: 20416.68 = 20416.68 - 0.00.  [Net worth:6548.82] (age 73)
-# 2036 net: 20416.68 = 20416.68 - 0.00.  [Net worth:7165.50] (age 74)
-# 2037 net: 20935.64 = 20935.64 - 0.00.  [Net worth:8301.14] (age 75)
-# 2038 net: 21195.12 = 21195.12 - 0.00.  [Net worth:8432.52] (age 76)
-# 2039 net: 21195.12 = 21195.12 - 0.00.  [Net worth:8432.52] (age 77)
-# 2040 net: 21195.12 = 21195.12 - 0.00.  [Net worth:8432.52] (age 78)
-# 2041 net: 21195.12 = 21195.12 - 0.00.  [Net worth:8432.52] (age 79)
-# 2042 net: 21195.12 = 21195.12 - 0.00.  [Net worth:8432.52] (age 80)
-#   Total: 303534.20 = 303534.20 - 0.00   (Net Worth: 8432.52)
+# 2028 net: 13625.52 = 13625.52 - 0.00.  [Net worth:2540.06] (age 66)
+# 2029 net: 20814.36 = 20814.36 - 0.00.  [Net worth:3554.42] (age 67)
+# 2030 net: 20814.36 = 20814.36 - 0.00.  [Net worth:4568.78] (age 68)
+# 2031 net: 20814.36 = 20814.36 - 0.00.  [Net worth:5583.14] (age 69)
+# 2032 net: 20814.36 = 20814.36 - 0.00.  [Net worth:6597.50] (age 70)
+# 2033 net: 20814.36 = 20814.36 - 0.00.  [Net worth:7611.86] (age 71)
+# 2034 net: 20814.36 = 20814.36 - 0.00.  [Net worth:8369.06] (age 72)
+# 2035 net: 20814.36 = 20814.36 - 0.00.  [Net worth:8369.06] (age 73)
+# 2036 net: 20814.36 = 20814.36 - 0.00.  [Net worth:8369.06] (age 74)
+# 2037 net: 21333.32 = 21333.32 - 0.00.  [Net worth:8498.80] (age 75)
+# 2038 net: 21592.80 = 21592.80 - 0.00.  [Net worth:8498.80] (age 76)
+# 2039 net: 21592.80 = 21592.80 - 0.00.  [Net worth:8498.80] (age 77)
+# 2040 net: 21592.80 = 21592.80 - 0.00.  [Net worth:8498.80] (age 78)
+# 2041 net: 21592.80 = 21592.80 - 0.00.  [Net worth:8498.80] (age 79)
+# 2042 net: 21592.80 = 21592.80 - 0.00.  [Net worth:8498.80] (age 80)
+#   Total: 309437.72 = 309437.72 - 0.00   (Net Worth: 8498.80)
 Saving reports. Number of histories: 1.
 Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\01.2\01.2-cash-and-tax-summary.csv
 Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\01.2\01.2-cash-flows.csv
 Scenario description: 01.2: Worker with no savings, retires at 65. CPP 300/month, OAS/GIS. PE. Deterministic.
 Start-date: 2028-01-01 end-date: 2042-12-31
-Execution time: 1.5609566s
+Execution time: 1.6120516s
 Done.
 Writing to log file C:\johanley\ProjectsPhoton\end-game\scenario\01.2\01.2.log

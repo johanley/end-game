@@ -12,78 +12,78 @@ Incrementing one day at a time, starting with 2028-01-01
 2028-01-01:BANK WITHDRAWAL:  700.00
 2028-01-23:BANK WITHDRAWAL:  950.00
 2028-01-25:ANNUITY payment:  5483.00
-2028-01-28:OAS/GIS payment: 807.46
+2028-01-28:OAS/GIS payment: 835.46
 2028-01-28:CPP payment:  673.00
 2028-02-01:BANK WITHDRAWAL:  700.00
 2028-02-23:BANK WITHDRAWAL:  950.00
 2028-02-25:ANNUITY payment:  5483.00
-2028-02-28:OAS/GIS payment: 807.46
+2028-02-28:OAS/GIS payment: 835.46
 2028-02-28:CPP payment:  673.00
 2028-03-01:BANK WITHDRAWAL:  700.00
 2028-03-23:BANK WITHDRAWAL:  950.00
 2028-03-25:ANNUITY payment:  5483.00
-2028-03-28:OAS/GIS payment: 807.46
+2028-03-28:OAS/GIS payment: 835.46
 2028-03-28:CPP payment:  673.00
 2028-04-01:BANK WITHDRAWAL:  700.00
 2028-04-23:BANK WITHDRAWAL:  950.00
 2028-04-25:ANNUITY payment:  5483.00
-2028-04-28:OAS/GIS payment: 807.46
+2028-04-28:OAS/GIS payment: 835.46
 2028-04-28:CPP payment:  673.00
 2028-05-01:BANK WITHDRAWAL:  700.00
-2028-05-15:SPLURGE SPENDING:  10553.84
+2028-05-15:SPLURGE SPENDING:  10665.84
 2028-05-23:BANK WITHDRAWAL:  950.00
 2028-05-25:ANNUITY payment:  5483.00
-2028-05-28:OAS/GIS payment: 807.46
+2028-05-28:OAS/GIS payment: 835.46
 2028-05-28:CPP payment:  673.00
 2028-06-01:BANK WITHDRAWAL:  700.00
 2028-06-23:BANK WITHDRAWAL:  950.00
 2028-06-25:ANNUITY payment:  5483.00
-2028-06-28:OAS/GIS payment: 807.46
+2028-06-28:OAS/GIS payment: 835.46
 2028-06-28:CPP payment:  673.00
 2028-07-01:BANK WITHDRAWAL:  700.00
 2028-07-23:BANK WITHDRAWAL:  950.00
 2028-07-25:ANNUITY payment:  5483.00
-2028-07-28:OAS/GIS payment: 807.46
+2028-07-28:OAS/GIS payment: 835.46
 2028-07-28:CPP payment:  673.00
 2028-08-01:BANK WITHDRAWAL:  700.00
-2028-08-15:SPLURGE SPENDING:  15940.38
+2028-08-15:SPLURGE SPENDING:  16024.38
 2028-08-23:BANK WITHDRAWAL:  950.00
 2028-08-25:ANNUITY payment:  5483.00
-2028-08-28:OAS/GIS payment: 807.46
+2028-08-28:OAS/GIS payment: 835.46
 2028-08-28:CPP payment:  673.00
 2028-09-01:BANK WITHDRAWAL:  700.00
 2028-09-23:BANK WITHDRAWAL:  950.00
 2028-09-25:ANNUITY payment:  5483.00
-2028-09-28:OAS/GIS payment: 807.46
+2028-09-28:OAS/GIS payment: 835.46
 2028-09-28:CPP payment:  673.00
 2028-10-01:BANK WITHDRAWAL:  700.00
 2028-10-23:BANK WITHDRAWAL:  950.00
 2028-10-25:ANNUITY payment:  5483.00
-2028-10-28:OAS/GIS payment: 807.46
+2028-10-28:OAS/GIS payment: 835.46
 2028-10-28:CPP payment:  673.00
 2028-11-01:BANK WITHDRAWAL:  700.00
-2028-11-15:SPLURGE SPENDING:  15940.38
+2028-11-15:SPLURGE SPENDING:  16024.38
 2028-11-23:BANK WITHDRAWAL:  950.00
 2028-11-25:ANNUITY payment:  5483.00
-2028-11-28:OAS/GIS payment: 807.46
+2028-11-28:OAS/GIS payment: 835.46
 2028-11-28:CPP payment:  673.00
 2028-12-01:BANK WITHDRAWAL:  700.00
 2028-12-23:BANK WITHDRAWAL:  950.00
 2028-12-25:ANNUITY payment:  5483.00
-2028-12-28:OAS/GIS payment: 807.46
+2028-12-28:OAS/GIS payment: 835.46
 2028-12-28:CPP payment:  673.00
 2028-12-31:PAY TAXES:  20879.51
 2028 year-end.
 Cash generated
      8,076.00 CPP
      7,784.04 OAS
-     1,905.48 GIS
+     2,241.48 GIS
     65,796.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    83,561.52 Total cash generated
+    83,897.52 Total cash generated
 
 Tax return 2028
     81,656.04 Taxable income
@@ -100,10 +100,10 @@ Tax return 2028
          0.00 RIF withdrawals
 
 Accounts
-    10,447.41 -BANKACCOUNT-
-    10,447.41 Cash
+    10,503.41 -BANKACCOUNT-
+    10,503.41 Cash
 
-    10,447.41 Net worth
+    10,503.41 Net worth
          0.00 Investments worth
 
 2029-01-01:BANK WITHDRAWAL:  700.00
@@ -127,7 +127,7 @@ Accounts
 2029-04-28:OAS/GIS payment: 648.67
 2029-04-28:CPP payment:  673.00
 2029-05-01:BANK WITHDRAWAL:  700.00
-2029-05-15:SPLURGE SPENDING:  10366.09
+2029-05-15:SPLURGE SPENDING:  10422.09
 2029-05-23:BANK WITHDRAWAL:  950.00
 2029-05-25:ANNUITY payment:  5483.00
 2029-05-28:OAS/GIS payment: 648.67
@@ -1468,13 +1468,13 @@ Summations (nominal)
 Cash generated
    121,140.00 CPP
    120,754.88 OAS
-     1,905.48 GIS
+     2,241.48 GIS
    986,940.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
- 1,230,740.36 Total cash generated
+ 1,231,076.36 Total cash generated
 
 Tax return 
  1,228,834.88 Taxable income
@@ -1494,13 +1494,13 @@ Summations (per year)
 Cash generated
      8,076.00 CPP
      8,050.33 OAS
-       127.03 GIS
+       149.43 GIS
     65,796.00 Pension
          0.00 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
          0.00 Total cash swept from tfsa-rif-nra to bank
-    82,049.36 Total cash generated
+    82,071.76 Total cash generated
 
 Tax return 
     81,922.33 Taxable income
@@ -1517,7 +1517,7 @@ Tax return
          0.00 RIF withdrawals
 
 # Net, gross, tax paid:
-# 2028 net: 62682.01 = 83561.52 - 20879.51.  [Net worth:10447.41] (age 66)
+# 2028 net: 63018.01 = 83897.52 - 20879.51.  [Net worth:10503.41] (age 66)
 # 2029 net: 60776.53 = 81656.04 - 20879.51.  [Net worth:10129.83] (age 67)
 # 2030 net: 60776.53 = 81656.04 - 20879.51.  [Net worth:10129.83] (age 68)
 # 2031 net: 60776.53 = 81656.04 - 20879.51.  [Net worth:10129.83] (age 69)
@@ -1532,12 +1532,12 @@ Tax return
 # 2040 net: 61195.06 = 82347.24 - 21152.18.  [Net worth:9972.36] (age 78)
 # 2041 net: 61194.62 = 82346.52 - 21151.90.  [Net worth:9972.52] (age 79)
 # 2042 net: 61194.69 = 82346.64 - 21151.95.  [Net worth:9972.49] (age 80)
-#   Total: 915972.00 = 1230740.36 - 314768.36   (Net Worth: 9972.49)
+#   Total: 916308.00 = 1231076.36 - 314768.36   (Net Worth: 9972.49)
 Saving reports. Number of histories: 1.
 Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\07.3\07.3-cash-and-tax-summary.csv
 Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\07.3\07.3-cash-flows.csv
 Scenario description: 07.3: GOC large pension 5483/month, no other savings, house unsold, retires at 65. Average CPP 673/month, OAS/GIS. PE. Deterministic.
 Start-date: 2028-01-01 end-date: 2042-12-31
-Execution time: 0.8176097s
+Execution time: 0.8613387s
 Done.
 Writing to log file C:\johanley\ProjectsPhoton\end-game\scenario\07.3\07.3.log

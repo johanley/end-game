@@ -106,7 +106,7 @@ Cash generated
     20,360.88 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
-         0.00 Total cash swept from tfsa-rif-nra to bank
+    20,201.52 Total cash swept from tfsa-rif-nra to bank
     24,200.24 Total cash generated
 
 Tax return 2022
@@ -249,7 +249,7 @@ Cash generated
     21,030.88 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
-         0.00 Total cash swept from tfsa-rif-nra to bank
+    20,598.27 Total cash swept from tfsa-rif-nra to bank
     27,612.64 Total cash generated
 
 Tax return 2023
@@ -392,7 +392,7 @@ Cash generated
     21,564.88 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
-         0.00 Total cash swept from tfsa-rif-nra to bank
+    21,154.80 Total cash swept from tfsa-rif-nra to bank
     28,146.64 Total cash generated
 
 Tax return 2024
@@ -535,7 +535,7 @@ Cash generated
     22,234.88 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
-         0.00 Total cash swept from tfsa-rif-nra to bank
+    21,844.51 Total cash swept from tfsa-rif-nra to bank
     28,816.64 Total cash generated
 
 Tax return 2025
@@ -678,7 +678,7 @@ Cash generated
     22,904.88 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
-         0.00 Total cash swept from tfsa-rif-nra to bank
+    22,539.60 Total cash swept from tfsa-rif-nra to bank
     29,486.64 Total cash generated
 
 Tax return 2026
@@ -826,7 +826,7 @@ Cash generated
     23,627.28 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
-         0.00 Total cash swept from tfsa-rif-nra to bank
+    23,289.87 Total cash swept from tfsa-rif-nra to bank
     34,749.73 Total cash generated
 
 Tax return 2027
@@ -977,7 +977,7 @@ Cash generated
     24,297.28 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
-         0.00 Total cash swept from tfsa-rif-nra to bank
+    23,997.81 Total cash swept from tfsa-rif-nra to bank
     38,663.08 Total cash generated
 
 Tax return 2028
@@ -1128,7 +1128,7 @@ Cash generated
     25,019.68 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
-         0.00 Total cash swept from tfsa-rif-nra to bank
+    24,762.62 Total cash swept from tfsa-rif-nra to bank
     39,385.48 Total cash generated
 
 Tax return 2029
@@ -1279,7 +1279,7 @@ Cash generated
     25,742.08 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
-         0.00 Total cash swept from tfsa-rif-nra to bank
+    25,536.25 Total cash swept from tfsa-rif-nra to bank
     40,107.88 Total cash generated
 
 Tax return 2030
@@ -1430,7 +1430,7 @@ Cash generated
     26,502.56 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
-         0.00 Total cash swept from tfsa-rif-nra to bank
+    26,354.33 Total cash swept from tfsa-rif-nra to bank
     40,868.36 Total cash generated
 
 Tax return 2031
@@ -1581,7 +1581,7 @@ Cash generated
     27,360.96 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
-         0.00 Total cash swept from tfsa-rif-nra to bank
+    27,278.19 Total cash swept from tfsa-rif-nra to bank
     41,726.76 Total cash generated
 
 Tax return 2032
@@ -1630,7 +1630,7 @@ Cash generated
    260,646.24 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
-         0.00 Total cash swept from tfsa-rif-nra to bank
+   257,557.77 Total cash swept from tfsa-rif-nra to bank
    373,764.09 Total cash generated
 
 Tax return 
@@ -1656,7 +1656,7 @@ Cash generated
     23,695.11 Dividends
          0.00 Net liquidation (sell-buy)
          0.00 Interest
-         0.00 Total cash swept from tfsa-rif-nra to bank
+    23,414.34 Total cash swept from tfsa-rif-nra to bank
     33,978.55 Total cash generated
 
 Tax return 
@@ -1691,6 +1691,6 @@ Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\03.1\03.1-cash-an
 Writing report to C:\johanley\ProjectsPhoton\end-game\scenario\03.1\03.1-cash-flows.csv
 Scenario description: Dividends only, never sell stocks. 3% dividend growth, 3% stock price growth.
 Start-date: 2022-01-01 end-date: 2032-12-31
-Execution time: 1.0513768s
+Execution time: 1.0228591s
 Done.
 Writing to log file C:\johanley\ProjectsPhoton\end-game\scenario\03.1\03.1.log
