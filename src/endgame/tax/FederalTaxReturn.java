@@ -101,7 +101,7 @@ public final class FederalTaxReturn {
   public void addPensionIncome(Money monthly) {
     coll.pensionIncome = coll.pensionIncome.plus(monthly);
   }
-  /** Part of Line 11500, along with RIF after the age of 65. */
+  /** Part of Line 11500, along with RIF-LIF after the age of 65. */
   public Money pensionIncome() { return coll.pensionIncome; }
   
   /** Non-registered account, dividend income. Line 12000. */
@@ -310,7 +310,7 @@ public final class FederalTaxReturn {
   private FederalTaxReturn(
    Scenario scenario, Integer year, DateTime dateOfBirth, Money personalAmount, Money personalAmountAdditional, 
    MoneyRange personalAmountClawback, Money ageAmount, Money ageAmountClawback, Money pensionAmount, 
-   TaxBrackets taxBrackets, TaxBrackets rifWithholdingTaxBrackets, 
+   TaxBrackets taxBrackets, TaxBrackets rifLifWithholdingTaxBrackets, 
    Integer stdRetAge, Double taxCapGainFrac, 
    Integer divTaxCreditNumer, Integer divTaxCreditDenom
   ) {
@@ -324,7 +324,7 @@ public final class FederalTaxReturn {
     this.ageAmountClawback = ageAmountClawback;
     this.pensionAmount = pensionAmount;
     this.taxBrackets = taxBrackets;
-    this.rifLifWithholdingTaxBrackets = rifWithholdingTaxBrackets;
+    this.rifLifWithholdingTaxBrackets = rifLifWithholdingTaxBrackets;
     this.standardRetirementAge = stdRetAge;
     this.taxableCapitalGainFrac = taxCapGainFrac;
     this.divTaxCreditNumer = divTaxCreditNumer;
