@@ -138,6 +138,7 @@ This tool is currently restricted in scope:
  <li>the set of supported securities is very limited at present: only cash, stocks, GICs, and simple annuities. 
  <li>the set of supported account types is : RSP/RIF, LIRA/LIF, TFSA, non-registered accounts (referred to as NRA here), and simple bank accounts. 
  RSPs are supported in a limited way, because no contributions are allowed.
+ <li>only one account of each account type is supported.
  <li>there's no logic specific to insurance, debt, real estate, charitable donations, and so on.
  <li>all amounts are assumed to be in Canadian dollars, and multiple currencies aren't supported  
 </ul>
@@ -656,7 +657,7 @@ Before this date, the RIF account simply has no minimum annual withdrawal.
 Other than that, it acts the same. 
 That means no contributions to the RSP can be made before the conversion date in this simulation.
 In other words, RSPs are modeled here in a limited way.
-<b>Note the names of the accounts used here: rif, tfsa, and nra (non-registered account).</b> 
+<b>Note the names of the accounts used here: rif, lif, tfsa, and nra (non-registered account).</b> 
 
 
 <P id='sequential-liquidation'><pre>sequential-liquidation {
