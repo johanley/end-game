@@ -67,7 +67,7 @@ public class Account implements Cashable {
   /** Returns the withholding tax (if any). */
   @Override public Money withdrawCash(Money amount, DateTime when) {
     if (cash.lt(amount)){
-      throw new RuntimeException("Can't withdraw more money than you have.");
+      throw new RuntimeException("Trying to withdraw " + amount + " but you only have " + cash);
     }
     cash = cash.minus(amount);
     return ZERO;
@@ -77,7 +77,7 @@ public class Account implements Cashable {
   public Money buyShares(Integer numShares, Stock stock, Money commission) {
     Money costToMe = stock.price().times(numShares).plus(commission);
     if (cash.lt(costToMe)) {
-      throw new RuntimeException("Can't buy stock because the account has insufficient cash.");
+      throw new RuntimeException("Can't buy stock costing " + costToMe + " because the account has only " + cash);
     }
     cash = cash.minus(costToMe);
     increasePosition(numShares, stock);

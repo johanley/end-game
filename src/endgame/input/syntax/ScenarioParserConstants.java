@@ -87,13 +87,15 @@ public interface ScenarioParserConstants {
   /** RegularExpression Id. */
   int RIF = 42;
   /** RegularExpression Id. */
-  int TFSA = 43;
+  int LIF = 43;
   /** RegularExpression Id. */
-  int NRA = 44;
+  int TFSA = 44;
   /** RegularExpression Id. */
-  int PROV_TERR = 45;
+  int NRA = 45;
   /** RegularExpression Id. */
-  int SPEND_BANK_BALANCE_ABOVE = 46;
+  int PROV_TERR = 46;
+  /** RegularExpression Id. */
+  int SPEND_BANK_BALANCE_ABOVE = 47;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -143,6 +145,7 @@ public interface ScenarioParserConstants {
     "<QUOTED_TEXT>",
     "\"bank\"",
     "\"rif\"",
+    "\"lif\"",
     "\"tfsa\"",
     "\"nra\"",
     "<PROV_TERR>",
@@ -215,10 +218,12 @@ public interface ScenarioParserConstants {
     "\"initial-room\"",
     "\"yearly-limit\"",
     "\"rif-minimum-withdrawals\"",
+    "\"lif-maximum-withdrawals\"",
     "\"accounts\"",
     "\"cash\"",
     "\"small-balance-limit\"",
     "\"convert-rsp-to-rif\"",
+    "\"convert-lira-to-lif\"",
     "\"stock-positions\"",
     "\"stock-book-values\"",
     "\"gic-positions\"",

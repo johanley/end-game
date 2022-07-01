@@ -25,6 +25,7 @@ public final class CashFlow {
   public Money liquidationProceeds = ZERO;
   public Money interest = ZERO;
   
+  /** Cash moved from investment accounts into the bank account. */
   public Money cashSwept = ZERO;
 
   /** Entitlements (CPP, OAS, GIS), dividends, pensions, and sales of stocks. */

@@ -5,7 +5,6 @@ import static endgame.util.Consts.SPACE;
 import static endgame.util.Consts.ZERO;
 
 import java.util.Collection;
-import java.util.List;
 
 import endgame.model.Money;
 import endgame.tax.FederalTaxReturn;
@@ -31,7 +30,7 @@ public final class TaxSummary {
   public Money netIncomeBeforeAdjustments = ZERO;
   public Money oas = ZERO;
   public Money employmentIncome = ZERO;
-  public Money rifIncome = ZERO;
+  public Money rifLifIncome = ZERO;
   
   public TaxSummary(FederalTaxReturn tr) {
     this.year = tr.year();
@@ -46,7 +45,7 @@ public final class TaxSummary {
     this.netIncomeBeforeAdjustments = tr.netIncomeBeforeAdjustments();
     this.oas = tr.oasIncome();
     this.employmentIncome = tr.employmentIncome();
-    this.rifIncome = tr.rifIncome();
+    this.rifLifIncome = tr.rifIncome().plus(tr.lifIncome());
   }
   
   /** Sum all of the monetary items in a completed list of {@link TaxSummary} objects. */
@@ -64,7 +63,7 @@ public final class TaxSummary {
       result.netIncomeBeforeAdjustments = result.netIncomeBeforeAdjustments.plus(trs.netIncomeBeforeAdjustments);
       result.oas = result.oas.plus(trs.netIncome);
       result.employmentIncome = result.employmentIncome.plus(trs.employmentIncome);
-      result.rifIncome = result.rifIncome.plus(trs.rifIncome);
+      result.rifLifIncome = result.rifLifIncome.plus(trs.rifLifIncome);
     }
     return result;
   }
@@ -82,7 +81,7 @@ public final class TaxSummary {
     result.netIncome = result.netIncome.divByInt(numYears);
     result.oas = result.oas.divByInt(numYears);
     result.employmentIncome = result.employmentIncome.divByInt(numYears);
-    result.rifIncome = result.rifIncome.divByInt(numYears);
+    result.rifLifIncome = result.rifLifIncome.divByInt(numYears);
     return result;
   }
 
@@ -102,7 +101,7 @@ public final class TaxSummary {
     result.append(lineFor(netIncomeBeforeAdjustments, "Net income before adj"));
     result.append(lineFor(oas, "OAS income"));
     result.append(lineFor(employmentIncome, "Employment income"));
-    result.append(lineFor(rifIncome, "RIF withdrawals"));
+    result.append(lineFor(rifLifIncome, "RIF-LIF withdrawals"));
     return result.toString();
   }
 

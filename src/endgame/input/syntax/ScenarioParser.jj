@@ -21,6 +21,7 @@ import endgame.model.*;
 import endgame.account.*;
 import endgame.account.tfsa.*;
 import endgame.account.rif.*; 
+import endgame.account.lif.*; 
 import endgame.account.nra.*;
 import endgame.bank.*;
 import endgame.entitlements.*;
@@ -178,9 +179,10 @@ TOKEN : {
 TOKEN : {
  < BANK: "bank" > | 
  < RIF : "rif" > | 
+ < LIF : "lif" > | 
  < TFSA : "tfsa" > | 
  < NRA : "nra" > |
- < PROV_TERR : ("NL"|"NS"|"PE"|"NB"|"QC"|"ON"|"MN"|"SK"|"AB"|"BC"|"YT"|"NT"|"NU") > |
+ < PROV_TERR : ("NL"|"NS"|"PE"|"NB"|"QC"|"ON"|"MN"|"SK"|"AB"|"BC"|"YT"|"NT"|"NU"|"CA") > |
  < SPEND_BANK_BALANCE_ABOVE : "spend-bank-balance-above" >  /* to avoid cross-talk with 'bank' token */ 
 }
 
@@ -201,6 +203,7 @@ void all() : { } {
   oas()
   (cpp())?
   (rifMinimumWithdrawals())?
+  (lifMaximumWithdrawals())?  
   federalTaxes()
   provincialTax()
   (stocks())?
@@ -429,23 +432,40 @@ void tfsaRoom() : { String initialRoom = ""; String yearlyLimit = "";} {
 }
 
 void rifMinimumWithdrawals() : { } {
-  { scenario.rifMinima = new RifMinima(scenario.dateOfBirth);  }
   "rif-minimum-withdrawals" <BLOCK_START>
-      (rifMinimumWithdrawal())+
+      (rifLifMinimumWithdrawal())+
   <BLOCK_END>
 }
-void rifMinimumWithdrawal() : { String age = ""; String percent = ""; String noPercentSign = "";} {
- < NUM > { age = token.image; } < EQUALS > < PERCENT > { percent = token.image; }
+void rifLifMinimumWithdrawal() : {String age = ""; String percent = "";} {
+ < NUM > {age = token.image;} <EQUALS> <PERCENT> {percent = token.image;}
  {
-   noPercentSign = percent.substring(0, percent.length()-1);
-   scenario.rifMinima.addTableRow(Integer.valueOf(age), Double.valueOf(noPercentSign)/100.0D);
+   RifLifMinima.addTableRow(Integer.valueOf(age), Util.percentFrom(percent));
  }
 }
 
-void accounts() : { BankAccount bank = null; Tfsa tfsa = null; Rif rif = null; Nra nra = null;} {
+void lifMaximumWithdrawals() : {} {
+  "lif-maximum-withdrawals" <BLOCK_START>
+    (lifMaximumWithdrawal())+
+  <BLOCK_END>
+}
+void lifMaximumWithdrawal() : { Integer age = 0; String percentCA=""; String percentMN=""; String percentAB=""; } {
+ <NUM> { age = Integer.valueOf(token.image); }
+ <PERCENT> 
+ <PERCENT> { percentCA = token.image; }
+ <PERCENT> { percentMN = token.image; }
+ <PERCENT> { percentAB = token.image; }
+ {
+   LifMaxima.addTableRow(LifMaxima.CA_ETC, age, Util.percentFrom(percentCA));
+   LifMaxima.addTableRow(LifMaxima.MN_ETC, age, Util.percentFrom(percentMN));
+   LifMaxima.addTableRow(LifMaxima.AB_ETC, age, Util.percentFrom(percentAB));
+ }
+}
+
+void accounts() : { BankAccount bank = null; Tfsa tfsa = null; Rif rif = null; Nra nra = null; Lif lif = null;} {
   "accounts" <BLOCK_START>
     bank = bank() { scenario.bank = bank; }
     (rif = rif() { scenario.rif = rif; } )?
+    (lif = lif() { scenario.lif = lif; } )?
     (tfsa = tfsa()  { scenario.tfsa = tfsa; } )?
     (nra = nra() {  scenario.nra = nra; })?
   <BLOCK_END>
@@ -469,8 +489,27 @@ Rif rif() : {
      (gicPositions = gicPositions())?
    <BLOCK_END>
    {
-     result = Rif.valueOf(cash, stockPositions, gicPositions, scenario.taxReturn, conversionDate);  
+     result = Rif.valueOf(cash, stockPositions, gicPositions, scenario.taxReturn, conversionDate, scenario.dateOfBirth);  
      scenario.rifValueJan1 = result.value();
+     return result;
+   }
+}
+Lif lif() : {
+   String cash = ""; String conversionDate="";    
+   Set<StockPosition> stockPositions = new LinkedHashSet<StockPosition>(); Lif result = null;
+   Set<GtdInvestmentCert> gicPositions = new LinkedHashSet<GtdInvestmentCert>();
+   String jurisdiction = "";
+} {
+   "lif" <BLOCK_START>
+     "convert-lira-to-lif" <EQUALS> <YYYY_MM_DD> { conversionDate = token.image;}
+     "jurisdiction" <EQUALS> <PROV_TERR> { jurisdiction=token.image;} 
+     "cash" < EQUALS > < MONEY > { cash = token.image; }
+     (stockPositions = stockPositions())?
+     (gicPositions = gicPositions())?
+   <BLOCK_END>
+   {
+     result = Lif.valueOf(cash, stockPositions, gicPositions, scenario.taxReturn, conversionDate, jurisdiction, scenario.dateOfBirth);  
+     scenario.lifValueJan1 = result.value();
      return result;
    }
 }
@@ -533,7 +572,6 @@ Set<GtdInvestmentCert> gicPositions() : {
   { return result;  }
 }
 
-
 void sequentialLiquidation(): {
    List<Account> accounts = new ArrayList<Account>(); List<Stock> stocks = new ArrayList<Stock>();
    String avoid=""; String when=""; String amount=""; String percent="";
@@ -542,6 +580,7 @@ void sequentialLiquidation(): {
       "avoid-downturn-years" <EQUALS> <NUM> {avoid = token.image;}
       "account-sequence" < EQUALS > ((<NRA> {accounts.add(scenario.nra);} |
                                       <RIF> {accounts.add(scenario.rif);}  |
+                                      <LIF> {accounts.add(scenario.lif);}  |
                                       <TFSA> {accounts.add(scenario.tfsa);})(<COMMA>)?)+  
        "stock-sequence" <EQUALS> < QUOTED_TEXT > { for(String ticker : Util.chopList(noQuotes(token.image))) {
                                               stocks.add(scenario.stockFrom(ticker));
@@ -559,7 +598,10 @@ void annualTfsaTopUp() : {
    String when= ""; Transactional tfsaTopUp = null;
 } {  
     "annual-tfsa-top-up" <BLOCK_START>
-      "account-sequence" < EQUALS > ((<NRA> {accounts.add(scenario.nra);} | <RIF> {accounts.add(scenario.rif);})(<COMMA>)?)+  
+      "account-sequence" < EQUALS > ((
+       <NRA> {accounts.add(scenario.nra);} |
+       <RIF> {accounts.add(scenario.rif);} |
+       <LIF> {accounts.add(scenario.lif);} )(<COMMA>)?)+  
       "stock-sequence" <EQUALS> < QUOTED_TEXT > { for(String ticker : Util.chopList(noQuotes(token.image))) {
                                               stocks.add(scenario.stockFrom(ticker));
                                           }}
@@ -592,11 +634,18 @@ void transactions() : { } {
   }
 }
 Account nonBankAccount() : { Account account = null; } {
-  (< TFSA > { account = scenario.tfsa; }| < RIF> { account = scenario.rif; }| < NRA> { account = scenario.nra; }) 
+  (<TFSA> { account = scenario.tfsa; }|
+   <RIF> { account = scenario.rif; } |
+   <LIF> {account = scenario.lif;} | 
+   <NRA> { account = scenario.nra; }) 
   { return account; }
 }
 Cashable account() : { Cashable cashable = null; } {
-  (< TFSA > {cashable=scenario.tfsa;}| < RIF> {cashable=scenario.rif;}| < NRA> {cashable=scenario.nra;} | <BANK> {cashable=scenario.bank;}) 
+  (<TFSA> {cashable=scenario.tfsa;} |
+   <RIF> {cashable=scenario.rif;} |
+   <LIF> {cashable=scenario.lif;} |
+   <NRA> {cashable=scenario.nra;} |
+   <BANK> {cashable=scenario.bank;}) 
   { return cashable; }
 }
 void bankDepositWithdrawal(): { String deposit =""; String withdrawal=""; String when="";} {

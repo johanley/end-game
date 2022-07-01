@@ -33,7 +33,7 @@ public final class Util {
     return percent.replace("%", "").trim();
   }
   
-  /** '5%' is converted to 0.05. */ 
+  /** '5.2%' is converted to 0.052. No control over the number of decimal places. */ 
   public static Double percentFrom(String rawString) {
     String value = rawString.substring(0, rawString.length()-1);
     return Double.valueOf(value)/100.0;

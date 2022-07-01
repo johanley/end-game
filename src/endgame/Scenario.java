@@ -8,8 +8,10 @@ import java.util.Collections;
 import java.util.List;
 
 import endgame.account.Account;
+import endgame.account.lif.Lif;
+import endgame.account.lif.LifMaxima;
 import endgame.account.rif.Rif;
-import endgame.account.rif.RifMinima;
+import endgame.account.rif.RifLifMinima;
 import endgame.account.tfsa.TfsaRoom;
 import endgame.bank.BankAccount;
 import endgame.entitlements.GisAmount;
@@ -90,18 +92,24 @@ public final class Scenario {
   
   /** The person's Retirement Income Fund. Can have RSP or RIF, but not both. */
   public Rif rif = null;
-  /** Calculates minimum amount to be withdrawn from a RIF in a given year. */
-  public RifMinima rifMinima = null;
   /** 
    The market value of the RIF account at the start of business on Jan 1. Updated each year.
    If the value is zero, the account will have a minimum yearly withdrawal of 0. 
   */
   public Money rifValueJan1 = Consts.ZERO;
+  
   /** The person's Non-registered Account (sometimes referred to as a Cash Account). */
   public Account nra = null;
   /** Capital gains and losses in a non-registered account. Has no entry in scenario.ini. */
   public CapitalGainLoss capitalGainLoss = new CapitalGainLoss();
-  
+
+  public Lif lif = null;
+  /** 
+   The market value of the LIF account at the start of business on Jan 1. Updated each year.
+   If the value is zero, the account will have withdrawal limits of 0 dollars (max and min). 
+  */
+  public Money lifValueJan1 = Consts.ZERO;
+
   /** Yearly federal tax return. */
   public FederalTaxReturn taxReturn = null;
   /** Yearly provincial tax return. */
@@ -127,6 +135,7 @@ public final class Scenario {
   public List<Account> investmentAccounts(){
     List<Account> result = new ArrayList<Account>();
     addAccount(rif, result);
+    addAccount(lif, result);
     addAccount(tfsa, result);
     addAccount(nra, result);
     return Collections.unmodifiableList(result);
@@ -178,7 +187,7 @@ public final class Scenario {
     addLineToString("tfsa", tfsa, result);
     addLineToString("tfsaRoom", tfsaRoom, result);
     addLineToString("rif", rif, result);
-    addLineToString("rifMinima", rifMinima, result);
+    addLineToString("lif", lif, result);
     addLineToString("nra", nra, result);
     addLineToString("capitalGainLoss", capitalGainLoss, result);
     addLineToString("taxReturn", taxReturn, result);
@@ -189,7 +198,6 @@ public final class Scenario {
 
   /** Read in data files, and do miscellaneous checks on the data, that aren't otherwise validated. */
   public void populateAndValidate() {
-    if (rif != null) rif.validateTheRspConversionDate(dateOfBirth);
     String projRoot = System.getProperty("user.dir") + File.separator;
     GisAmount.lookupGisBrackets(projRoot); 
     Survival.populateTables(projRoot);

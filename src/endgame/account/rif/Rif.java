@@ -13,12 +13,26 @@ import hirondelle.date4j.DateTime;
 /** 
  Self-directed Retirement Income Fund (RIF).
  
- See the {@link endgame.account.rsp} package for information about RSPs
-*/
-public final class Rif extends Account {
+ Before the conversion date, the account:
+ <ul> 
+  <li>acts like an RSP to which no contributions are made
+  <li>has no minimum annual withdrawal
+  <li>has withholding tax applied to all withdrawals
+ </ul>
 
-  public static Rif valueOf(String cash, Set<StockPosition> stocks, Set<GtdInvestmentCert> gics, FederalTaxReturn taxReturn, String rspToRifConversionDate) {
-    return new Rif(cash, stocks, gics, taxReturn, rspToRifConversionDate);
+ <P>After the conversion date:
+  <ul>
+   <li>there is minimum yearly withdrawal
+   <li>the minimum depends on your age on Jan 1, and the value of the account on Jan 1
+   <li>withholding tax applies to amounts above the minimum
+  </ul>
+ 
+ <P>If the conversion date is in year n, the minimum-logic starts in year n+1.
+*/
+public class Rif extends Account {
+
+  public static Rif valueOf(String cash, Set<StockPosition> stocks, Set<GtdInvestmentCert> gics, FederalTaxReturn taxReturn, String conversionDate, String dob) {
+    return new Rif(cash, stocks, gics, taxReturn, conversionDate, dob);
   }
   
   /** Not permitted. */
@@ -43,7 +57,7 @@ public final class Rif extends Account {
   
   /** 
    Counts as taxable income, using fair market value on the date of the transfer.
-   Possible withholding tax, to be paid with funds already in the account! 
+   Possible withholding tax, to be paid with funds already in the account.
   */
   @Override public Integer transferSharesOut(Integer numShares, Stock stock, DateTime when) {
     Integer numOrigShares = super.transferSharesOut(numShares, stock, when);
@@ -53,30 +67,48 @@ public final class Rif extends Account {
   }
 
   @Override public String toString() {
-    return "Rif {cash:" + cash + " stocks:" + stockPositions + " GICs:" + gics + "}";  
+    return "Rif {cash:" + cash + " stocks:" + stockPositions + " GICs:" + gics + " date of birth:" + dateOfBirth + " conversion date:" + conversionDate + "}";  
   }
   
-  public DateTime rspToRifConversionDate() {
-    return rspToRifConversionDate;
+  /** When the RSP was converted to a RIF. */
+  public DateTime conversionDate() {
+    return conversionDate;
+  }
+  
+  /** The yearly minimum you can withdraw from the account. */
+  public Money withdrawalMin(Money accountValueOnJan1, Integer year) {
+    RifLifMinima min = new RifLifMinima(dateOfBirth);
+    return min.compute(accountValueOnJan1, year, conversionDate);
+  }
+  
+  protected Rif(String cash, Set<StockPosition> stocks, Set<GtdInvestmentCert> gics, FederalTaxReturn taxReturn, String rspToRifConversionDate, String dob) {
+    super(cash, stocks, gics);
+    this.taxReturn = taxReturn;
+    this.conversionDate = new DateTime(rspToRifConversionDate);
+    this.dateOfBirth = new DateTime(dob);
+    validateTheConversionDate();
+  }
+
+  protected DateTime dateOfBirth;
+  protected DateTime conversionDate;
+  protected FederalTaxReturn taxReturn;
+  
+  /** Provided to add access to this code from the Lif subclass. */
+  protected Money baseWithdrawCash(Money grossAmount, DateTime when) {
+    return super.withdrawCash(grossAmount, when); 
+  }
+  
+  /** Provided to add access to this code from the Lif subclass. */
+  protected Integer baseTransferSharesOut(Integer numShares, Stock stock, DateTime when) {
+    return super.transferSharesOut(numShares, stock, when);
   }
   
   /** Last day is x-12-31, where x is the year you turn 71. */
-  public void validateTheRspConversionDate(String dateOfBirth) {
-    DateTime dob = new DateTime(dateOfBirth);
-    Integer yearTurn71 = dob.getYear() + 71; 
+  private void validateTheConversionDate() {
+    Integer yearTurn71 = dateOfBirth.getYear() + 71; 
     DateTime lastChance = new DateTime(yearTurn71 + "-12-31");
-    if (rspToRifConversionDate.gt(lastChance)){
-      throw new RuntimeException("Rsp-to-rif conversion date " + rspToRifConversionDate + " is too late. The last day is " + lastChance);
+    if (conversionDate.gt(lastChance)){
+      throw new RuntimeException("Conversion date " + conversionDate + " is too late. The last day is " + lastChance);
     }
   }
-  
-  private FederalTaxReturn taxReturn;
-  private DateTime rspToRifConversionDate;
-  
-  private Rif(String cash, Set<StockPosition> stocks, Set<GtdInvestmentCert> gics, FederalTaxReturn taxReturn, String rspToRifConversionDate) {
-    super(cash, stocks, gics);
-    this.taxReturn = taxReturn;
-    this.rspToRifConversionDate = new DateTime(rspToRifConversionDate);
-  }
-  
 }

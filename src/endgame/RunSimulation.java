@@ -241,33 +241,47 @@ public final class RunSimulation implements Runnable {
     }
   }
   
-  /** Housekeeping of various data objects. Not called for very first Jan 1. */
+  /** Housekeeping of various data objects. Not called for the very first Jan 1. */
   private void resetForNewYear(Scenario sim, DateTime when) {
     //fresh object needed; the old one has already been added to history
     sim.yearlyCashFlows = new CashFlow();
     
     Integer year = when.getYear();
 
-    //remember data needed for the rif minimum
+    //remember data needed for the rif min
     if (sim.rif != null && sim.rifValueJan1.isPlus()) {
       sim.rifValueJan1 = sim.rif.value();
-      Money rifMin = sim.rifMinima.compute(sim.rifValueJan1, year, sim.rif.rspToRifConversionDate());
-      if (rifMin.eq(Consts.ZERO)) {
-        Log.log(format(Consts.ZERO) + " No RIF minimum for " + year + " (RSP converts on " + sim.rif.rspToRifConversionDate() + ")." );
-      }
-      else {
-        Log.log(format(rifMin) + " RIF minimum for " + year);
-      }
+      
+      Money limit = sim.rif.withdrawalMin(sim.rifValueJan1, year);
+      logLimit("RIF minimum", limit, sim.rif.conversionDate(), year);
+    }
+    //remember data needed for the lif min and max
+    if (sim.lif != null && sim.lifValueJan1.isPlus()) {
+      sim.lifValueJan1 = sim.lif.value();
+      
+      Money limit = sim.lif.withdrawalMin(sim.lifValueJan1, year);
+      logLimit("LIF minimum", limit, sim.lif.conversionDate(), year);
+      limit = sim.lif.withdrawalMax(sim.lifValueJan1, year);
+      logLimit("LIF maximum", limit, sim.lif.conversionDate(), year);
     }
     
     sim.taxReturn.resetNewYear(year);
-    //reset of the provincial is not needed
+    //reset of the provincial tax return is not needed
     
     //recalc tfsa room for this year, reflecting both the new yearly-limit and past withdrawals
     if (sim.tfsaRoom != null) {
       sim.tfsaRoom.yearlyIncrease(); // increase by the 'standard' yearly amount
       Money tfsaRoom = sim.tfsaRoom.roomFor(year); //includes past withdrawals
       Log.log(format(tfsaRoom) + " TFSA room for " + year  );
+    }
+  }
+  
+  private void logLimit(String name /* RIF minimum or LIF maximum*/, Money limit, DateTime conversionDate, Integer year) {
+    if (limit.eq(Consts.ZERO)) {
+      Log.log(format(Consts.ZERO) + " No " + name + " for "  + year + " (Converts on " + conversionDate + ")." );
+    }
+    else {
+      Log.log(format(limit) + " " + name + " for " + year);
     }
   }
 

@@ -3,7 +3,6 @@ package endgame.tax;
 import static endgame.util.Consts.ZERO;
 
 import java.math.BigDecimal;
-import java.util.Optional;
 
 import endgame.Scenario;
 import endgame.model.Money;
@@ -46,7 +45,8 @@ public final class FederalTaxReturn {
   
   /** 
    UNUSUAL: this is called after the object is constructed!
-   The inter-dependence of the federal and provincial taxes is a bit weird.  
+   The inter-dependence of the federal and provincial taxes is a bit weird. 
+   That might indicate a defective design. 
   */ 
   public void setProvincialReturn(ProvincialTax provTax) {
     this.provTax = provTax;
@@ -57,7 +57,7 @@ public final class FederalTaxReturn {
   
   /** 
    Add to line 47600.
-   Do not explicitly call this method for RIF withholding tax.
+   Do not explicitly call this method for RIF-LIF withholding tax.
    That's handled by {@link #addRifIncome(Money)} (which calls this method internally). 
   */
   public void addInstallment(Money installment) {
@@ -129,7 +129,7 @@ public final class FederalTaxReturn {
     
     coll.rifIncome = coll.rifIncome.plus(rifWithdrawal);
     Money amountAboveMin = coll.rifIncome.minus(rifMinimum());
-    Money newTax = rifWithholdingTaxBrackets.taxFor(amountAboveMin);
+    Money newTax = rifLifWithholdingTaxBrackets.taxFor(amountAboveMin);
     Money increaseInWithholdingTax = newTax.minus(oldTax);
     
     coll.rifWithholdingTax = newTax;
@@ -138,13 +138,37 @@ public final class FederalTaxReturn {
   }
   /** Check this at the end of the year, to see if it has met the minimum. Line 13000 before 65, line 11500 after 65. */
   public Money rifIncome() { return coll.rifIncome; }
-  public Money rifWithholdingTax() { return coll.rifWithholdingTax; }
 
-  /** Line 15000. */
+  /** Similar to {@link #addRifIncome(Money)}. */
+  public Money addLifIncome(Money lifWithdrawal) {
+    Money oldTax = coll.lifWithholdingTax;
+    
+    coll.lifIncome = coll.lifIncome.plus(lifWithdrawal);
+    Money amountAboveMin = coll.lifIncome.minus(lifMinimum());
+    Money newTax = rifLifWithholdingTaxBrackets.taxFor(amountAboveMin);
+    Money increaseInWithholdingTax = newTax.minus(oldTax);
+    
+    coll.lifWithholdingTax = newTax;
+    addInstallment(increaseInWithholdingTax);
+    return increaseInWithholdingTax;
+  }
+  /** 
+   Check this at the end of the year, to see if it has met the minimum, and not exceeded the max. 
+   Line 13000 before 65, line 11500 after 65. 
+  */
+  public Money lifIncome() { return coll.lifIncome; }
+
+  /** Line 15000. Side effect: checks RIF-LIF min and max. */
   public Money totalIncome() {
     Money result = new Money(new BigDecimal("0.00"));
     if (coll.rifIncome.lt(rifMinimum())) {
       throw new RuntimeException("RIF income " + coll.rifIncome + " is less than the minimum " + rifMinimum());
+    }
+    if (coll.lifIncome.lt(lifMinimum())) {
+      throw new RuntimeException("LIF income " + coll.lifIncome + " is less than the minimum " + lifMinimum());
+    }
+    if (coll.lifIncome.gt(lifMaximum())) {
+      throw new RuntimeException("LIF income " + coll.lifIncome + " is greater than the maximum " + lifMaximum());
     }
     result = result.plus(coll.employmentIncome);
     result = result.plus(coll.oasIncome);
@@ -152,6 +176,7 @@ public final class FederalTaxReturn {
     result = result.plus(coll.cppIncome);
     result = result.plus(coll.pensionIncome); 
     result = result.plus(coll.rifIncome);
+    result = result.plus(coll.lifIncome);
     result = result.plus(dividendGrossUp());
     result = result.plus(coll.nraInterestIncome);
     result = result.plus(taxableCapitalGain());
@@ -239,7 +264,7 @@ public final class FederalTaxReturn {
     Money result = ZERO;
     if (ageOnDec31() >= standardRetirementAge) {
       //CPP is not included here!
-      Money pensionPlusRif = coll.pensionIncome.plus(coll.rifIncome);
+      Money pensionPlusRif = coll.pensionIncome.plus(coll.rifIncome).plus(coll.lifIncome);
       result = Util.lesserOf(pensionPlusRif, pensionIncomeMax);
     }
     return result;
@@ -272,7 +297,7 @@ public final class FederalTaxReturn {
   private Integer year = 0;
   private Collector coll = new Collector();
   
-  private TaxBrackets rifWithholdingTaxBrackets;
+  private TaxBrackets rifLifWithholdingTaxBrackets;
   
   private TaxBrackets taxBrackets;
   private ProvincialTax provTax;
@@ -299,7 +324,7 @@ public final class FederalTaxReturn {
     this.ageAmountClawback = ageAmountClawback;
     this.pensionAmount = pensionAmount;
     this.taxBrackets = taxBrackets;
-    this.rifWithholdingTaxBrackets = rifWithholdingTaxBrackets;
+    this.rifLifWithholdingTaxBrackets = rifWithholdingTaxBrackets;
     this.standardRetirementAge = stdRetAge;
     this.taxableCapitalGainFrac = taxCapGainFrac;
     this.divTaxCreditNumer = divTaxCreditNumer;
@@ -316,6 +341,8 @@ public final class FederalTaxReturn {
     Money employmentIncome = ZERO;
     Money rifIncome = ZERO;
     Money rifWithholdingTax = ZERO;
+    Money lifIncome = ZERO;
+    Money lifWithholdingTax = ZERO;
     Money nraDvdIncome = ZERO;
     Money nraInterestIncome = ZERO;
     void resetToZero() {
@@ -378,7 +405,23 @@ public final class FederalTaxReturn {
   private Money rifMinimum() {
     Money result = Consts.ZERO;
     if (scenario.rif != null) {
-      result = scenario.rifMinima.compute(scenario.rifValueJan1, year, scenario.rif.rspToRifConversionDate());
+      result = scenario.rif.withdrawalMin(scenario.rifValueJan1, year);
+    }
+    return result;
+  }
+  
+  private Money lifMinimum() {
+    Money result = Consts.ZERO;
+    if (scenario.lif != null) {
+      result = scenario.lif.withdrawalMin(scenario.lifValueJan1, year);
+    }
+    return result;
+  }
+  
+  private Money lifMaximum() {
+    Money result = Consts.ZERO;
+    if (scenario.lif != null) {
+      result = scenario.lif.withdrawalMax(scenario.lifValueJan1, year);
     }
     return result;
   }
