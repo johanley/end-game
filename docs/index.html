@@ -135,7 +135,8 @@ rules usually have exceptions.</b>
 This tool is currently restricted in scope:
 <ul>
  <li>there's no spousal logic.
- <li>the set of supported securities is very limited at present: only cash, stocks, GICs, and simple annuities. 
+ <li>the set of supported securities is very limited at present: only cash, stocks, GICs, and simple annuities.
+ ETFs can usually be approximated as a stock. 
  <li>the set of supported account types is : TFSA, RSP/RIF, LIRA/LIF, non-registered accounts (referred to as NRA here), and simple bank accounts. 
  RSPs are supported in a limited way, because no contributions are allowed.
  <li>only one account of each account type is supported.
@@ -180,6 +181,8 @@ Features include:
 <P>Examples of approximations made by the tool:
 <ul> 
  <li>stock prices are updated just once a year (using a policy you define) 
+ <li>stocks pay eligible dividends only
+ <li>GICs are always held in the account until they are redeemed
  <li>the tax return is calculated and applied simply at the end of the year, and not later in the following year
  <li>OAS clawbacks are applied (for high income earners) all in one year; in reality, the clawback is applied over 2 calendar years
  <li>the life-table stats from Statistics Canada are for the Canada-wide case, not for the specific province
