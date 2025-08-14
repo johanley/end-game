@@ -17,7 +17,7 @@ public final class Transfer {
   public Boolean isPartial;
   
   @Override public String toString() {
-    return account + "Top-up TFSA from " + account + " " + numShares + " " + symbol + " value: " + value; 
+    return account + "Transfer to TFSA from " + account + " " + numShares + " " + symbol + " value: " + value; 
   }
 
 }

@@ -11,7 +11,7 @@ import endgame.model.Money;
 import endgame.util.MoneyFormatter;
 
 /** 
- Various yearly totals of interest, focusing on cash flows of various sorts.
+ Various yearly totals, focusing on cash flows of various sorts.
 */
 public final class CashFlow {
   
@@ -38,6 +38,16 @@ public final class CashFlow {
     result = result.plus(dividends);
     result = result.plus(liquidationProceeds);
     result = result.plus(interest);
+    return result;
+  }
+  
+  public Money entitlementsAndSweeps() {
+    Money result = ZERO;
+    result = result.plus(cpp);
+    result = result.plus(oas);
+    result = result.plus(gis);
+    result = result.plus(pension);
+    result = result.plus(cashSwept);
     return result;
   }
   
@@ -80,14 +90,15 @@ public final class CashFlow {
   @Override public String toString() {
     StringBuilder result = new StringBuilder("Cash generated" + NL);
     MoneyFormatter money = new MoneyFormatter();
+    result.append(money.format(entitlementsAndSweeps()) + SPACE + "Entitlements and Sweeps" + NL);
     result.append(money.format(cpp) + SPACE + "CPP" + NL);
     result.append(money.format(oas) + SPACE + "OAS" + NL);
     result.append(money.format(gis) + SPACE + "GIS" + NL);
     result.append(money.format(pension) + SPACE + "Pension" + NL);
     result.append(money.format(dividends) + SPACE + "Dividends" + NL);
-    result.append(money.format(liquidationProceeds) + SPACE + "Net liquidation (sell-buy)" + NL);
+    result.append(money.format(liquidationProceeds) + SPACE + "Net liquidation (sell-minus-buy)" + NL);
     result.append(money.format(interest) + SPACE + "Interest" + NL);
-    result.append(money.format(cashSwept) + SPACE + "Total cash swept from tfsa-rif-nra to bank" + NL);
+    result.append(money.format(cashSwept) + SPACE + "Total cash swept from investment acct's into the bank" + NL);
     result.append(money.format(cashFlow()) + SPACE + "Total cash generated" + NL);
     return result.toString();
   }

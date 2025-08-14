@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import endgame.Scenario;
 import endgame.account.Account;
+import endgame.account.rif.Rif;
 import endgame.model.Money;
 import endgame.security.stock.Stock;
 import endgame.security.stock.StockPosition;
@@ -15,6 +16,9 @@ import hirondelle.date4j.DateTime;
 /** 
  Use up the current room in the TFSA by transferring stock in kind from other investment accounts.
  In the current implementation, your bank account is excluded.
+ 
+ If the transfer is from the RIF, then the amount transferred is no more than the RIF-minimum for the year; if such a transaction happens 
+ the first week of January, then this completely avoids issues with RIF withholding tax.
 
  <P>WARNING: avoid executing this transaction on January 1, because that's the day the system recalculates your TFSA room for the year. 
  It's best to avoid the possibility of the code mis-timing the sequence of actions. 
@@ -39,15 +43,23 @@ public final class TfsaTopUp extends Transactional {
       for(Stock stock : stocks) {
         Optional<StockPosition> position = account.positionFor(stock);
         if (position.isPresent()) {
-          Money remainingRoom = tfsaRoom.minus(totalTransferredSoFar);
-          Transfer transfer = numSharesToTransfer(position.get(), remainingRoom);
+          Money transferAmount = tfsaRoom.minus(totalTransferredSoFar);
+          if (account instanceof Rif) {
+            //from the rif, don't transfer more than the RIF withdrawal min; this avoid withholding tax, if done the first week of Jan
+            Money rifMinimum = sim.rif.withdrawalMin(sim.rifValueJan1, when.getYear());
+            if (transferAmount.gt(rifMinimum)) {
+              transferAmount = rifMinimum;
+              logMe(when, "Transferring the RIF-minimum, not the full TFSA room.");
+            }
+          }
+          Transfer transfer = numSharesToTransfer(position.get(), transferAmount);
           if (transfer.numShares > 0) { 
             transfer.account = account.getClass().getSimpleName();
             totalTransferredSoFar = totalTransferredSoFar.plus(transfer.value);
             
             account.transferSharesOut(transfer.numShares, stock, when);
             sim.tfsa.transferSharesIn(transfer.numShares, stock, when); //this adjusts the room 
-            logMe(when, " Transfer from " + transfer.account + " " + transfer.value + " (" +  transfer.numShares + " shares) of "+ transfer.symbol + ". Room remaining " + sim.tfsaRoom.roomFor(when.getYear()));
+            logMe(when, "Transfer from " + transfer.account + " " + transfer.value + " (" +  transfer.numShares + " shares) of "+ transfer.symbol + ". Room remaining " + sim.tfsaRoom.roomFor(when.getYear()));
             
             if (transfer.isPartial) {
               break transferShares; //exit the account loop
@@ -65,11 +77,11 @@ public final class TfsaTopUp extends Transactional {
   private List<Account> accounts;
   private List<Stock> stocks;
   
-  private Transfer numSharesToTransfer(StockPosition position, Money remaining) {
+  private Transfer numSharesToTransfer(StockPosition position, Money tfsaRoom) {
     Transfer result = new Transfer();
     result.symbol = position.stock().symbol();
     Money value = position.marketValue();
-    if (value.lteq(remaining)) {
+    if (value.lteq(tfsaRoom)) {
       //all shares can be transferred
       result.isPartial = Boolean.FALSE;
       result.numShares = position.numShares();
@@ -81,7 +93,7 @@ public final class TfsaTopUp extends Transactional {
       //no others should be transferred after this 
       result.isPartial = Boolean.TRUE;
       double price = position.stock().price().asDouble();
-      result.numShares = remaining.flooredDiv(price);
+      result.numShares = tfsaRoom.flooredDiv(price);
       result.value = position.stock().price().times(result.numShares);
     }
     return result;

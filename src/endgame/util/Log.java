@@ -53,7 +53,7 @@ public final class Log {
   */
   public static void forceConsole(Object thing) {
     System.out.println(thing.toString());
-    addToBuffer(thing);
+    //addToBuffer(thing);
   }
 
   /** The user should always see a stack trace if one is created. */

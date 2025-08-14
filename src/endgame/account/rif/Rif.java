@@ -57,7 +57,8 @@ public class Rif extends Account {
   
   /** 
    Counts as taxable income, using fair market value on the date of the transfer.
-   Possible withholding tax, to be paid with funds already in the account.
+   Possible withholding tax, to be paid with funds already in the account (not enforced here!).
+   It's possible to avoid withholding tax when the rif-minimum is greater than the market-value of the stock being transfered out.
   */
   @Override public Integer transferSharesOut(Integer numShares, Stock stock, DateTime when) {
     Integer numOrigShares = super.transferSharesOut(numShares, stock, when);
